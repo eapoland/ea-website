@@ -1,8 +1,21 @@
 {
   "main_nav": {
-    "about_movement": "O ruchu",
-    "about_foundation": "O fundacji",
-    "join_us": "Dołącz do nas",
+    "about_us": {
+      "title": "O nas",
+      "movement": "O ruchu",
+      "foundation": "O fundacji",
+      "team": "Zespół"
+    },
+    "coop": {
+      "title": "Współpraca",
+      "media": "Dla mediów",
+      "company": "Dla firm"
+    },
+    "act": {
+      "title": "Działaj",
+      "donate": "Przekaż darowiznę",
+      "join": "Wolontariat"
+    },
     "contact": "Kontakt",
     "blog": "Blog"
   },
