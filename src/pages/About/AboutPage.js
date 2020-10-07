@@ -1,7 +1,7 @@
 import React from "react";
 import IntroSection from "../../components/IntroSection/IntroSection";
 
-const MovementPage = () => {
+const AboutPage = () => {
   return (
     <>
       <IntroSection content={"movement"} />
@@ -9,4 +9,4 @@ const MovementPage = () => {
   );
 };
 
-export default MovementPage;
+export default AboutPage;

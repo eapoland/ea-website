@@ -19,6 +19,7 @@ import eaLogo from "../../assets/images/efektywny-altruizm-logo.svg";
 import { Link } from "react-router-dom";
 import plFlag from "../../assets/images/pl.png";
 import ukFlag from "../../assets/images/uk.png";
+import { HashLink, NavHashLink } from "react-router-hash-link";
 
 const TopBar = () => {
   const { t, i18n } = useTranslation("common");
@@ -64,24 +65,42 @@ const TopBar = () => {
                 onMouseLeave={toggleAboutDropdown}
                 toggle={toggleAboutDropdown}
               >
-                <DropdownToggle nav className="main-nav__item">
+                <DropdownToggle
+                  nav
+                  className="main-nav__item"
+                  tag={NavHashLink}
+                  to="/about"
+                  activeStyle={{ fontWeight: "bold" }}
+                >
                   {t("main_nav.about_us.title")}
                 </DropdownToggle>
                 <DropdownMenu>
                   <DropdownItem>
-                    <Link to="/movement" className="main-nav__item">
+                    <HashLink
+                      smooth
+                      to={{ pathname: "/about", hash: "#movement" }}
+                      className="main-nav__item"
+                    >
                       {t("main_nav.about_us.movement")}
-                    </Link>
+                    </HashLink>
                   </DropdownItem>
                   <DropdownItem>
-                    <Link to="/movement" className="main-nav__item">
+                    <HashLink
+                      smooth
+                      to={{ pathname: "/about", hash: "#foundation" }}
+                      className="main-nav__item"
+                    >
                       {t("main_nav.about_us.foundation")}
-                    </Link>
+                    </HashLink>
                   </DropdownItem>
                   <DropdownItem>
-                    <Link to="/movement" className="main-nav__item">
+                    <HashLink
+                      smooth
+                      to={{ pathname: "/about", hash: "#team" }}
+                      className="main-nav__item"
+                    >
                       {t("main_nav.about_us.team")}
-                    </Link>
+                    </HashLink>
                   </DropdownItem>
                 </DropdownMenu>
               </Dropdown>
@@ -91,7 +110,13 @@ const TopBar = () => {
                 onMouseLeave={toggleCoopDropdown}
                 toggle={toggleCoopDropdown}
               >
-                <DropdownToggle nav className="main-nav__item">
+                <DropdownToggle
+                  nav
+                  className="main-nav__item"
+                  tag={NavHashLink}
+                  to="/cooperation"
+                  activeStyle={{ fontWeight: "bold" }}
+                >
                   {t("main_nav.coop.title")}
                 </DropdownToggle>
                 <DropdownMenu>

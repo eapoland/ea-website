@@ -12,7 +12,7 @@ const content = [
     label: "O NAS",
     heading: "Czym jest Efektywny Altruizm?",
     text:
-      "Które działania wspierać? Którą ścieżkę kariery wybrać? Które organizacje charytatywne zagospodarują moją darowiznę w najbardziej efektywny sposób? Jeśli nie wybierzesz dobrze, ryzykujesz utratę czasu i pieniędzy. Jeśli jednak podejmiesz właściwy wybór, masz ogromną szansę na zmianę świata na lepsze.",
+      "Efektywny Altruizm to pytanie o to, jak przynieść światu najwięcej dobra. To międzynarodowa społeczność, której to pytanie spędza sen z powiek i miesza w życiowych planach. Budujemy nowe organizacje dobroczynne i zasilamy te istniejące. Prowadzimy projekty badawcze i wykłady popularyzatorskie.",
     cta: "dowiedz się więcej",
     img: photo,
     imgAlt: "test",
@@ -21,7 +21,7 @@ const content = [
     label: "O NAS",
     heading: "Jak działamy w Polsce?",
     text:
-      "Fundacja Efektywny Altruizm jest częścią międzynarodowej społeczności Effective Altruism. Tworzą ją organizacje dobroczynne, przedsiębiorcy społeczni, pracownicy akademiccy i rozległa sieć sympatyków na świecie.",
+      "W Polsce szkolimy z podstaw i dobrych praktyk dobroczynności. W trakcie naszych spotkań szukamy odpowiedzi na trudne pytania. Przyglądamy się problemom filozoficznym, naukowym, jak i praktycznym aspektom czynienia dobra. Łączymy ludzi i organizacje. Tym pierwszym doradzamy w wyborze priorytetów w zgodzie z ich wartościami. Tym drugim pomagamy w maksymalizacji ich korzystnego wpływu.",
     cta: "dowiedz się więcej",
     img: photo,
     imgAlt: "test",

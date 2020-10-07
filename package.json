@@ -19,6 +19,7 @@
     "react-reveal": "^1.2.2",
     "react-router": "^5.2.0",
     "react-router-dom": "^5.2.0",
+    "react-router-hash-link": "^2.1.0",
     "react-scripts": "3.4.3",
     "react-slick": "^0.27.11",
     "react-transition-group": "^4.4.1",

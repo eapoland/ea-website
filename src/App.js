@@ -2,8 +2,8 @@ import React, { Suspense } from "react";
 import "./App.scss";
 import TopBar from "./components/TopBar/TopBar";
 import HomePage from "./pages/Home/HomePage";
-import MovementPage from "./pages/Movement/MovementPage";
-import FoundationPage from "./pages/Foundation/FoundationPage";
+import AboutPage from "./pages/About/AboutPage";
+import CooperationPage from "./pages/Cooperation/CooperationPage";
 import JoinUsPage from "./pages/JoinUs/JoinUsPage";
 import Footer from "./components/Footer/Footer";
 import { Container } from "reactstrap";
@@ -20,11 +20,11 @@ function App() {
             <Route path="/" exact>
               <HomePage />
             </Route>
-            <Route path="/movement" exact>
-              <MovementPage />
+            <Route path="/about" exact>
+              <AboutPage />
             </Route>
-            <Route path="/foundation" exact>
-              <FoundationPage />
+            <Route path="/cooperation" exact>
+              <CooperationPage />
             </Route>
             <Route path="/join-us" exact>
               <JoinUsPage />
