@@ -1,9 +1,13 @@
 import React, { useState } from "react";
+import { useTranslation } from "react-i18next";
+import "./NewsletterSignupForm.scss";
 
 const NewsletterSignupForm = () => {
-  const [email, setEmail] = useState(null);
+  const [email, setEmail] = useState("");
+  const { t } = useTranslation("common");
+
   return (
-    <div id="mc_embed_signup">
+    <div id="mc_embed_signup" className="signup-form">
       <form
         action="https://efektywnyaltruizm.us10.list-manage.com/subscribe/post?u=6efc200ccd45a00a03773d871&amp;id=da6abdece5"
         method="post"
@@ -11,15 +15,16 @@ const NewsletterSignupForm = () => {
         name="mc-embedded-subscribe-form"
         className="validate"
         target="_blank"
-        novalidate
+        noValidate
       >
         <div id="mc_embed_signup_scroll">
-          <div className="indicates-required">
-            <span className="asterisk">*</span> indicates required
-          </div>
-          <div className="mc-field-group">
-            <label for="mce-EMAIL">
-              Adres Email <span className="asterisk">*</span>
+          {/* <div className="indicates-required">
+            <span className="asterisk">*</span> {t("newsletter.required")}
+          </div> */}
+          <div className="signup-form__input-group mc-field-group">
+            <label htmlFor="mce-EMAIL">
+              {t("newsletter.email")}&nbsp;
+              {/*  <span className="asterisk">*</span> */}
             </label>
             <input
               type="email"
@@ -49,17 +54,18 @@ const NewsletterSignupForm = () => {
             <input
               type="text"
               name="b_6efc200ccd45a00a03773d871_da6abdece5"
-              tabindex="-1"
+              tabIndex="-1"
               value=""
+              readOnly
             />
           </div>
-          <div class="clear">
+          <div className="clear">
             <input
               type="submit"
-              value="Subscribe"
+              value={t("newsletter.subscribe")}
               name="subscribe"
               id="mc-embedded-subscribe"
-              className="button"
+              className="signup-form__button btn btn-primary"
             />
           </div>
         </div>

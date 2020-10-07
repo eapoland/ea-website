@@ -43,5 +43,10 @@
         "number": "Nr konta: PL 67 1050 1012 1000 0090 8040 3265"
       }
     }
+  },
+  "newsletter": {
+    "required": "pole wymagane",
+    "email": "Twój adres e-mail",
+    "subscribe": "Zapisz się"
   }
 }
