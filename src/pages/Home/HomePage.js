@@ -31,7 +31,7 @@ const content = [
 const HomePage = () => {
   return (
     <>
-      <IntroSection content={"welcome"} />
+      <IntroSection content={"welcome"} withButton />
       <QuoteSection />
       <ContentPreviewSection content={content[0]} />
       <ContentPreviewSection reversed content={content[1]} />

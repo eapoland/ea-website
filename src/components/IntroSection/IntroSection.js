@@ -4,7 +4,7 @@ import { useTranslation } from "react-i18next";
 import "./IntroSection.scss";
 import Fade from "react-reveal/Fade";
 
-const IntroSection = ({ content }) => {
+const IntroSection = ({ content, withButton }) => {
   const { t } = useTranslation("common");
 
   return (
@@ -16,7 +16,9 @@ const IntroSection = ({ content }) => {
           </div>
         </Fade>
         <p className="intro-section__subtitle">{t(`${content}.text`)}</p>
-        <Button className="intro-section__button">Dowiedz się więcej</Button>
+        {withButton && (
+          <Button className="intro-section__button">Dowiedz się więcej</Button>
+        )}
       </Col>
     </Row>
   );

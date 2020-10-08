@@ -8,7 +8,7 @@ import JoinUsPage from "./pages/Act/JoinUsPage";
 import Footer from "./components/Footer/Footer";
 import { Container } from "reactstrap";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import CookiesPage from "./pages/Cookies/Cookies";
+import PrivacyPolicyPage from "./pages/PrivacyPolicy/PrivacyPolicyPage";
 import CookieConsent from "react-cookie-consent";
 import BlogPage from "./pages/Blog/BlogPage";
 
@@ -31,8 +31,8 @@ function App() {
             <Route path="/join-us" exact>
               <JoinUsPage />
             </Route>
-            <Route path="/cookies" exact>
-              <CookiesPage />
+            <Route path="/privacy-policy" exact>
+              <PrivacyPolicyPage />
             </Route>
             <Route path="/blog" exact>
               <BlogPage />
@@ -43,7 +43,11 @@ function App() {
             buttonText="Akceptuję"
             cookieName="eaCookie"
             style={{ background: "#2B373B" }}
-            buttonStyle={{ color: "#4e503b", fontSize: "13px" }}
+            buttonStyle={{
+              backgroundColor: "#0b879d",
+              fontSize: "13px",
+              color: "#fff",
+            }}
             expires={150}
           >
             Ta strona korzysta z ciasteczek.

@@ -15,7 +15,7 @@ import {
   DropdownToggle,
   Row,
 } from "reactstrap";
-import eaLogo from "../../assets/images/efektywny-altruizm-logo.svg";
+import { ReactComponent as Logo } from "../../assets/images/efektywny-altruizm-logo.svg";
 import { Link } from "react-router-dom";
 import plFlag from "../../assets/images/pl.png";
 import ukFlag from "../../assets/images/uk.png";
@@ -47,10 +47,8 @@ const TopBar = () => {
       {/* <!-- desktop --> */}
       <Navbar className="main-nav__desktop">
         <Col xs={2} className="main-nav__brand">
-          <NavbarBrand href="/">
-            <object type="image/svg+xml" data={eaLogo} className="logo">
-              EA Logo
-            </object>
+          <NavbarBrand tag={Link} to="/">
+            <Logo style={{ width: "100%" }}></Logo>
           </NavbarBrand>
         </Col>
         <Col xs={10} className="d-flex justify-content-end">
@@ -180,10 +178,8 @@ const TopBar = () => {
       {/* mobile */}
       <Navbar className="main-nav__mobile flex-column justify-content-center">
         <Row className="main-nav__brand w-100 justify-content-between">
-          <NavbarBrand href="/">
-            <object type="image/svg+xml" data={eaLogo} className="logo">
-              EA Logo
-            </object>
+          <NavbarBrand tag={Link} to="/">
+            <Logo style={{ width: "100%" }}></Logo>
           </NavbarBrand>
           <NavbarToggler className="main-nav__toggler" onClick={toggle} />
         </Row>

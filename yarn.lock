@@ -1004,7 +1004,7 @@
   dependencies:
     regenerator-runtime "^0.13.4"
 
-"@babel/runtime@^7.1.2", "@babel/runtime@^7.10.1", "@babel/runtime@^7.10.2", "@babel/runtime@^7.10.3", "@babel/runtime@^7.2.0", "@babel/runtime@^7.3.1", "@babel/runtime@^7.5.1", "@babel/runtime@^7.5.5":
+"@babel/runtime@^7.1.2", "@babel/runtime@^7.10.1", "@babel/runtime@^7.10.2", "@babel/runtime@^7.10.3", "@babel/runtime@^7.11.2", "@babel/runtime@^7.2.0", "@babel/runtime@^7.3.1", "@babel/runtime@^7.5.1", "@babel/runtime@^7.5.5":
   version "7.11.2"
   resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.11.2.tgz#f549c13c754cc40b87644b9fa9f09a6a95fe0736"
   integrity sha512-TeWkU52so0mPtDcaCTxNBI/IHiz0pZgr8VEFqXFtZWpYD08ZB6FaSwVAS8MKRQAP3bYKiVjwysOJgMFY28o6Tw==
@@ -1449,6 +1449,13 @@
     "@svgr/plugin-jsx" "^4.3.3"
     "@svgr/plugin-svgo" "^4.3.1"
     loader-utils "^1.2.3"
+
+"@tanem/svg-injector@^8.0.70":
+  version "8.0.71"
+  resolved "https://registry.yarnpkg.com/@tanem/svg-injector/-/svg-injector-8.0.71.tgz#810e1b0de741c774d68722499a4a48fb61dfa9e9"
+  integrity sha512-JOlNQDnhWjWyR9g2P3cYA+CPiBstxS0rLoSFOFtHxavpwwPiQf2JtyqAqMVxgR8XV1USadLrTFUtk4fEq3Pxow==
+  dependencies:
+    "@babel/runtime" "^7.11.2"
 
 "@testing-library/dom@*":
   version "7.24.2"
@@ -9262,6 +9269,15 @@ react-slick@^0.27.11:
     json2mq "^0.2.0"
     lodash.debounce "^4.0.8"
     resize-observer-polyfill "^1.5.0"
+
+react-svg@^11.0.42:
+  version "11.0.42"
+  resolved "https://registry.yarnpkg.com/react-svg/-/react-svg-11.0.42.tgz#742edae2c5b43e2a36f5ea17e953fce4c4f25b24"
+  integrity sha512-DYRpk4St3oNQBwaFdyYKA7yz2/VUrT07QHuHDTZXVeEfijZlRbzDYj4rSGe3MvEdzOoLUJCcjIYPvki2sUNqfA==
+  dependencies:
+    "@babel/runtime" "^7.11.2"
+    "@tanem/svg-injector" "^8.0.70"
+    prop-types "^15.7.2"
 
 react-transition-group@^2.3.1:
   version "2.9.0"

@@ -32,13 +32,14 @@ const Footer = () => {
             </NavLink>
           </NavItem>
           <NavItem>
-            <NavLink className="footer__item">Napisz do nas</NavLink>
+            <NavLink className="footer__item" tag={Link} to="/contact">
+              Napisz do nas
+            </NavLink>
           </NavItem>
           <NavItem>
-            <Link to="/cookies" className="footer__item">Ciasteczka</Link>
-          </NavItem>
-          <NavItem>
-            <NavLink className="footer__item">Polityka prywatności</NavLink>
+            <NavLink className="footer__item" tag={Link} to="/privacy-policy">
+              Polityka prywatności
+            </NavLink>
           </NavItem>
         </Nav>
       </Col>

@@ -7,11 +7,13 @@ export default class BlogPage extends Component {
   };
 
   componentDidMount() {
-    axios.get("/wp-json/wp/v2/posts").then((res) =>
-      this.setState({
-        blogPosts: res.data,
-      })
-    );
+    axios
+      .get("http://ea-poland-wordpress.azurewebsites.net/wp-json/wp/v2/posts")
+      .then((res) =>
+        this.setState({
+          blogPosts: res.data,
+        })
+      );
   }
 
   render() {

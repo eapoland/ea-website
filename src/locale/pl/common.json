@@ -48,5 +48,9 @@
     "required": "pole wymagane",
     "email": "Twój adres e-mail",
     "subscribe": "Zapisz się"
+  },
+  "privacy-policy": {
+    "title": "Polityka prywatności",
+    "text": ""
   }
 }
