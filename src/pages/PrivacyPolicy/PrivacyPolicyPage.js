@@ -1,11 +1,13 @@
 import React from "react";
 import { Container } from "reactstrap";
 import IntroSection from "../../components/IntroSection/IntroSection";
+import ScrollToTop from "../../components/ScrollToTop";
 import "./PrivacyPolicyPage.scss";
 
 const PrivacyPolicyPage = () => {
   return (
     <>
+      <ScrollToTop />
       <IntroSection content={"privacy-policy"} />
       <Container>
         <h2>Wprowadzenie</h2>
