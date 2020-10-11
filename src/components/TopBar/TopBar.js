@@ -68,7 +68,7 @@ const TopBar = () => {
                   className="main-nav__item"
                   tag={NavHashLink}
                   to="/about"
-                  activeStyle={{ fontWeight: "bold" }}
+                  activeClassName="main-nav__item--active"
                 >
                   {t("main_nav.about_us.title")}
                 </DropdownToggle>
@@ -113,7 +113,7 @@ const TopBar = () => {
                   className="main-nav__item"
                   tag={NavHashLink}
                   to="/cooperation"
-                  activeStyle={{ fontWeight: "bold" }}
+                  activeClassName="main-nav__item--active"
                 >
                   {t("main_nav.coop.title")}
                 </DropdownToggle>
@@ -136,7 +136,9 @@ const TopBar = () => {
                 onMouseLeave={toggleActDropdown}
                 toggle={toggleActDropdown}
               >
-                <DropdownToggle nav className="main-nav__item">
+                <DropdownToggle nav className="main-nav__item" tag={NavHashLink}
+                  to="/act"
+                  activeClassName="main-nav__item--active">
                   {t("main_nav.act.title")}
                 </DropdownToggle>
                 <DropdownMenu>
@@ -152,12 +154,12 @@ const TopBar = () => {
                   </DropdownItem>
                 </DropdownMenu>
               </Dropdown>
-              <Link to="/blog" className="main-nav__item">
+              <NavHashLink to="/blog" className="main-nav__item" activeClassName="main-nav__item--active">
                 {t("main_nav.blog")}
-              </Link>
-              <Link to="/blog" className="main-nav__item">
+              </NavHashLink>
+              <NavHashLink to="/contact" className="main-nav__item" activeClassName="main-nav__item--active">
                 {t("main_nav.contact")}
-              </Link>
+              </NavHashLink>
               <div onClick={switchLanguage} className="main-nav__item">
                 <img
                   src={lang === "pl" ? ukFlag : plFlag}
@@ -168,9 +170,11 @@ const TopBar = () => {
           </Col>
           <Col xs={2}>
             <div className="main-nav__button--wrapper">
-              <Button className="main-nav__button">
-                {t("main_nav.act.donate")}
-              </Button>
+                <a href="https://www.paypal.com/donate/?cmd=_s-xclick&hosted_button_id=FFLJ8KDN5CAUA" target="_blank" rel="noopener noreferrer">
+                  <Button className="main-nav__button">
+                    {t("main_nav.act.donate")}           
+                  </Button>
+                </a>
             </div>
           </Col>
         </Col>
@@ -187,9 +191,9 @@ const TopBar = () => {
           <Collapse isOpen={isOpen} navbar className="justify-content-end">
             <Row className="justify-content-center">
               <Nav navbar className="justify-content-center">
-                <Link to="/movement" className="main-nav__item">
+                <NavHashLink className="main-nav__item" to="/about" activeClassName="main-nav__item--active">
                   {t("main_nav.about_us.title")}
-                </Link>
+                </NavHashLink>
                 <Link to="/movement" className="main-nav__item">
                   {t("main_nav.coop.title")}
                 </Link>

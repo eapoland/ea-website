@@ -23,6 +23,9 @@
     img {
       height: 20px;
     }
+    &--active {
+      font-weight: bold;
+    }
   }
   &__button.btn {
     padding: 12px 25px;
@@ -39,6 +42,15 @@
     -moz-transition: background-color 400ms ease, opacity 400ms ease, color 400ms ease;
     -ms-transition: background-color 400ms ease, opacity 400ms ease, color 400ms ease;
     -o-transition: background-color 400ms ease, opacity 400ms ease, color 400ms ease;
+    a {
+      color: white;
+      &:hover {
+        text-decoration: none;
+      }
+      &:focus {
+        outline: none;
+      }
+    }
   }
   &__toggler {
     .navbar-toggler-icon {
