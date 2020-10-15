@@ -24,11 +24,75 @@
     "text": "Jak przynieść światu najwięcej dobra wykorzystując ograniczone środki? Efektywny Altruizm szuka odpowiedzi na to pytanie.",
     "quote": "Ruch zwany Efektywnym Altruizmem zdobywa coraz większą popularność. To ważne, bo łączy ze sobą serce i rozum."
   },
-  "movement": {
-    "title": "Czym jest Efektywny Altruizm?"
-  },
-  "foundation": {
-    "title": "Jak działamy w Polsce?"
+  "about": {
+    "title": "Czym jest Efektywny Altruizm?",
+    "text": "",
+    "movement": {
+      "heading": "Czym jest Efektywny Altruizm?",
+      "text": "",
+      "content": [
+        {
+          "subheading": "",
+          "text": "Efektywny Altruizm to pytanie o to, jak przynieść światu najwięcej dobra. To międzynarodowa społeczność szukająca odpowiedzi na to pytanie po to, by wykorzystać tę wiedzę w praktyce."
+        },
+        {
+          "subheading": "",
+          "text": "Łączymy naukowe, oparte na dowodach podejście do świata z dobroczynnością. Naszym celem jest zwiększanie świadomości, oraz angażowanie się w takie działania, które najefektywniej poprawią sytuację istot odczuwających."
+        },
+        {
+          "subheading": "",
+          "text": "Obecnie główne, choć nie wyłączne obszary naszego zainteresowania, to:"
+        },
+        {
+          "subheading": "Globalne zdrowie publiczne, w tym zdrowie psychiczne",
+          "text": "W krajach o niskim i średnim dochodzie ludzie codziennie umierają na skutek chorób, którym potrafimy już łatwo zapobiegać. Wspierając najefektywniejsze organizacje walczące z tym problemem możemy niewielkim nakładem środków chronić zdrowie i życie innych ludzi. Wspieramy też działalność badawczą w domenie globalnego zdrowia psychicznego."
+        },
+        {
+          "subheading": "Dalekosiężna przyszłość, w tym regulacja technologii",
+          "text": "Nie chcemy ograniczać się jedynie do walki z obecnymi problemami. Musimy myśleć także o przyszłych pokoleniach oraz o świecie jaki dla nich pozostawimy. Przykładem jest zapobieżenie przyszłym pandemiom, ale też zagrożeniom od strony nowych technologii, jak zaawansowana sztuczna inteligencja, lub biologia syntetyczna. Obecnie tylko kilkaset osób zajmuje się tymi problemami pomimo iż zagadnienia te mogą okazać się kluczowe dla bezpieczeństwa przyszłości."
+        },
+        {
+          "subheading": "Dobrostan zwierząt hodowlanych",
+          "text": "Na świecie co roku 60 miliardów zwierząt lądowych i 80 miliardów zwierząt wodnych jest hodowanych i zabijanych w okropnych warunkach. Obecnie tylko znikoma część funduszy charytatywnych przekazywanych jest na poprawę tej sytuacji. W połączeniu z dużą skalą zjawiska oznacza to, że posiadamy obecnie możliwość ograniczenia ogromnej skali cierpienia i tylko od nas zależy jak tą szansę wykorzystamy."
+        },
+        {
+          "subheading": "Efektywny enwironmentalizm",
+          "text": "Silnie rozwinięte ekonomie, jak USA i kraje UE skupiają się dzisiaj na redukcji emisji gazów cieplarnianych. Jednak w 2040 roku 75% emisji pochodzić będzie z dynamicznie rozwijających się państw, takich jak Chiny czy Indie. Czysta energia może rozpowszechnić się we wszystkich krajach tylko wtedy jeśli stanie się odpowiednio tania. Do tego potrzebny jest rozwój technologii. Niestety obecnie na samą energię wydajemy 300 razy więcej niż na prace badawcze, których zadaniem jest jej udoskonalenie."
+        }
+      ]
+    },
+    "foundation": {
+      "heading": "Jak działamy w Polsce?",
+      "content": [
+        {
+          "subheading": "",
+          "text": "Fundacja Efektywny Altruizm to polska odnoga globalnego projektu Effective Altruism."
+        },
+        {
+          "subheading": "",
+          "text": "Prowadzimy działalność badawczą w zakresie priorytetów dobroczynnych dla Polski i regionu."
+        },
+        {
+          "subheading": "",
+          "text": "Szkolimy z podstaw i dobrych praktyk efektywnej dobroczynności. W trakcie naszych spotkań szukamy odpowiedzi na trudne pytania. Przyglądamy się problemom filozoficznym, naukowym, jak i praktycznym aspektom czynienia dobra."
+        },
+        {
+          "subheading": "",
+          "text": "Łączymy ludzi i organizacje. Tym pierwszym doradzamy w wyborze kariery lub celu darowizn w zgodzie z ich wartościami. Tym drugim pomagamy w pozyskaniu talentu i maksymalizacji ich korzystnego wpływu poprzez doradztwo."
+        },
+        {
+          "subheading": "",
+          "text": "Prowadzimy zbiórki na rzecz najefektywniejszych organizacji dobroczynnych wg. ewaluatorów GiveWell i Animal Charity Evaluators."
+        },
+        {
+          "subheading": "",
+          "text": "Działamy we współpracy z The Centre for Effective Altruism w Oksfordzie i zaprzyjaźnionymi organizacjami na całym świecie."
+        }
+      ]
+    },
+    "team": {
+      "heading": "Nasz zespół"
+    }
   },
   "join-us": {
     "title": "Dołącz do nas!"

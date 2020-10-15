@@ -183,7 +183,7 @@ const TopBar = () => {
       <Navbar className="main-nav__mobile flex-column justify-content-center">
         <Row className="main-nav__brand w-100 justify-content-between">
           <NavbarBrand tag={Link} to="/">
-            <Logo style={{ width: "100%" }}></Logo>
+            <Logo style={{ height: "100%" }}></Logo>
           </NavbarBrand>
           <NavbarToggler className="main-nav__toggler" onClick={toggle} />
         </Row>
