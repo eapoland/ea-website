@@ -16,9 +16,15 @@ const BlogPage = ({ setLoading }) => {
 
   return (
     <div>
-      {posts.map((post) => (
-        <h1 key={post.id}>{post.title.rendered}</h1>
-      ))}
+      {posts.map((post) => {
+        console.log(post);
+        return (
+          <>
+            <h1 key={post.id}>{post.title.rendered}</h1>
+            <div dangerouslySetInnerHTML={{ __html: post.content.rendered }} />
+          </>
+        );
+      })}
     </div>
   );
 };

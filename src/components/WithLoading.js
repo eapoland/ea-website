@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { WaveLoading } from "react-loadingg";
+import { Spinner } from "reactstrap";
 
 const WithLoading = (WrappedComponent) => {
   function LoadedComponent(props) {
@@ -10,7 +12,7 @@ const WithLoading = (WrappedComponent) => {
 
     return (
       <>
-        {isLoading && <h1>LOADING</h1>}
+        {isLoading && <Spinner animation="border" className="wide-spinner" />}
         <WrappedComponent {...props} setLoading={setLoadingState} />
       </>
     );

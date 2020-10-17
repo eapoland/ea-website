@@ -19,6 +19,8 @@
     "react-cookie-consent": "^5.1.4",
     "react-dom": "^16.13.1",
     "react-i18next": "^11.7.2",
+    "react-loading": "^2.0.3",
+    "react-loadingg": "^1.7.2",
     "react-reveal": "^1.2.2",
     "react-router": "^5.2.0",
     "react-router-dom": "^5.2.0",
