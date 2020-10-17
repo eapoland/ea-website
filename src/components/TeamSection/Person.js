@@ -9,7 +9,9 @@ const Person = ({ data }) => {
   return (
     <Row className="team-section__member">
       <Col>
-        <Row className="justify-content-center">PHOTO</Row>
+        <Row className="justify-content-center">
+          <img className="team-section__member-photo" src={data.photo} alt={`${data.name}`} />
+        </Row>
         <Row className="justify-content-center">
           <a href={data.linkedIn}>
             <FontAwesomeIcon icon={faLinkedin} className="fa-3x" />
