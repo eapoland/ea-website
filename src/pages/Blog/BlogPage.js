@@ -12,7 +12,7 @@ const BlogPage = ({ setLoading }) => {
       .then(() => {
         setLoading(false);
       });
-  }, []);
+  }, [setLoading]);
 
   return (
     <div>

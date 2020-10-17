@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { WaveLoading } from "react-loadingg";
 import { Spinner } from "reactstrap";
 
 const WithLoading = (WrappedComponent) => {
