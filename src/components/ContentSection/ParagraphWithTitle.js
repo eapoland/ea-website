@@ -3,9 +3,9 @@ import Paragraph from "./Paragraph";
 import SectionTitle from "./SectionTitle";
 import { Row, Col } from "reactstrap";
 
-const ParagraphWithTitle = ({ content }) => {
+const ParagraphWithTitle = ({ content, id }) => {
   return (
-    <Row className={`content-section mx-auto justify-content-center`}>
+    <Row id={id} className={`content-section mx-auto justify-content-center`}>
       <Col xs={9} className="content-section__column">
         <SectionTitle title={content}></SectionTitle>
         <Paragraph content={content}></Paragraph>
