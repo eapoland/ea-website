@@ -2,6 +2,7 @@ import React from "react";
 import { Row, Col } from "reactstrap";
 import SectionTitle from "../ContentSection/SectionTitle";
 import Person from "./Person";
+import "./TeamSection.scss";
 
 const teamMembers = [
   {
@@ -50,7 +51,7 @@ const teamMembers = [
 
 const TeamSection = () => {
   return (
-    <Row className={`mx-auto justify-content-center`}>
+    <Row className={`team-section mx-auto justify-content-center`}>
       <Col xs={9}>
         <SectionTitle title="about.team" />
         <ul>

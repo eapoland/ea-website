@@ -1,5 +1,10 @@
-.team-section__member {
-  a {
-    margin: 0.5em;
+.team-section {
+  &__member {
+    a {
+      margin: 0.5em;
+    }
+  }
+  ul {
+    padding: 0;
   }
 }

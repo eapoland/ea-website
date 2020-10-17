@@ -7,7 +7,7 @@ const BlogPage = ({ setLoading }) => {
 
   useEffect(() => {
     axios
-      .get("http://ea-poland-wordpress.azurewebsites.net/wp-json/wp/v2/posts")
+      .get("https://ea-poland-wordpress.azurewebsites.net/wp-json/wp/v2/posts")
       .then((res) => setPosts(res.data))
       .then(() => {
         setLoading(false);
