@@ -1,5 +1,5 @@
 .content-section {
-  padding-bottom: 2em;
+  padding: 3em 0;
   text-align: left;
   &__heading {
     font-family: Raleway, sans-serif;
@@ -14,5 +14,8 @@
     font-size: 25px;
     text-align: center;
     margin: 1em 0;
+  }
+  &--grey {
+    background-color: #f4f4f4;
   }
 }

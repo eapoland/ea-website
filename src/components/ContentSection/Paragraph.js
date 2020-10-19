@@ -6,7 +6,7 @@ const Paragraph = ({ content }) => {
 
   return (
     <div>
-      {t(`${content}.content`, { returnObjects: true }).map((element, index) => (
+      {t(`${content}`, { returnObjects: true }).map((element, index) => (
         <div key={index}>
           {element.subheading && <h5 className="content-section__subheading">{element.subheading}</h5>}
           <p>{element.text}</p>

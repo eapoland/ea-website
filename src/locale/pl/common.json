@@ -30,7 +30,7 @@
     "movement": {
       "heading": "Czym jest Efektywny Altruizm?",
       "text": "",
-      "content": [
+      "intro": [
         {
           "subheading": "",
           "text": "Efektywny Altruizm to pytanie o to, jak przynieść światu najwięcej dobra. To międzynarodowa społeczność szukająca odpowiedzi na to pytanie po to, by wykorzystać tę wiedzę w praktyce."
@@ -42,7 +42,9 @@
         {
           "subheading": "",
           "text": "Obecnie główne, choć nie wyłączne obszary naszego zainteresowania, to:"
-        },
+        }
+      ],
+      "content": [
         {
           "subheading": "Globalne zdrowie publiczne, w tym zdrowie psychiczne",
           "text": "W krajach o niskim i średnim dochodzie ludzie codziennie umierają na skutek chorób, którym potrafimy już łatwo zapobiegać. Wspierając najefektywniejsze organizacje walczące z tym problemem możemy niewielkim nakładem środków chronić zdrowie i życie innych ludzi. Wspieramy też działalność badawczą w domenie globalnego zdrowia psychicznego."

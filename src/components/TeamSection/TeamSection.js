@@ -63,14 +63,14 @@ const teamMembers = [
 
 const TeamSection = () => {
   return (
-    <Row id="team" className={`team-section mx-auto justify-content-center`}>
-      <Col xs={9}>
+    <Row id="team" className={`team-section justify-content-center`}>
+      <Col xs={9} className="mx-auto">
         <SectionTitle title="about.team" />
-        <ul>
+        <div className="d-flex flex-wrap justify-content-around">
           {teamMembers.map((member) => (
             <Person key={member.name} data={member} />
           ))}
-        </ul>
+        </div>
         <h5 className="content-section__subheading">Pracowali z nami</h5>
         <ul>
           <li>Karolina Sarek</li>
