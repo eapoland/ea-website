@@ -30,10 +30,11 @@
   &__button.btn {
     padding: 12px 25px;
     border-radius: 0px;
-    background-color: #1a1b1f;
+    background-color: #edcf00;
     -webkit-transition: background-color 400ms ease, opacity 400ms ease, color 400ms ease;
     transition: background-color 400ms ease, opacity 400ms ease, color 400ms ease;
-    color: #fff;
+    color: #1a1b1f;
+    border: 0px;
     font-size: 12px;
     line-height: 20px;
     letter-spacing: 2px;
@@ -67,11 +68,12 @@
 .main-nav-button.btn {
   padding: 12px 25px;
   border-radius: 0px;
-  background-color: #1a1b1f;
+  background-color: #edcf00;
+  border: 0px;
   -webkit-transition: background-color 400ms ease, opacity 400ms ease, color 400ms ease;
   transition: background-color 400ms ease, opacity 400ms ease, color 400ms ease;
   font-family: "Raleway", sans-serif;
-  color: #fff;
+  color: #1a1b1f;
   font-size: 12px;
   line-height: 20px;
   letter-spacing: 2px;
