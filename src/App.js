@@ -16,7 +16,7 @@ import { loadStripe } from "@stripe/stripe-js";
 import DonatePage from "./pages/Act/DonatePage";
 
 const stripePromise = loadStripe(
-  "pk_test_51HZHu8G8B2G3UlOn4VHqKopxD3fTLETdtXcgaX4TaU8tpz8kUWvJ8lJ6kzQ0VrimQjujCmLJrIeKB1Ye5MCFJ7F000cqBnkrg6"
+  "pk_test_51HiOnnDDHV7JDkB9tHxmUobKY4ZezsR5lsWsviFG5NPEPbpgFGBeGqyYHyMeSnMi5Ulv5pV29i6Vr8sbDyfNJDcA00U862gUpU"
 );
 
 function App() {
