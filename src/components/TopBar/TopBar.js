@@ -29,10 +29,8 @@ const TopBar = () => {
   const [coopDropdownOpen, setCoopDropdownOpen] = useState(false);
   const [actDropdownOpen, setActDropdownOpen] = useState(false);
 
-  const toggleAboutDropdown = () =>
-    setAboutDropdownOpen((prevState) => !prevState);
-  const toggleCoopDropdown = () =>
-    setCoopDropdownOpen((prevState) => !prevState);
+  const toggleAboutDropdown = () => setAboutDropdownOpen((prevState) => !prevState);
+  const toggleCoopDropdown = () => setCoopDropdownOpen((prevState) => !prevState);
   const toggleActDropdown = () => setActDropdownOpen((prevState) => !prevState);
 
   const toggle = () => setIsOpen(!isOpen);
@@ -52,10 +50,7 @@ const TopBar = () => {
           </NavbarBrand>
         </Col>
         <Col xs={10} className="d-flex justify-content-end">
-          <Col
-            xs={10}
-            className="d-flex align-items-center justify-content-center"
-          >
+          <Col xs={10} className="d-flex align-items-center justify-content-center">
             <Nav navbar className="justify-content-center flex-row">
               <Dropdown
                 isOpen={aboutDropdownOpen}
@@ -92,11 +87,7 @@ const TopBar = () => {
                     </HashLink>
                   </DropdownItem>
                   <DropdownItem>
-                    <HashLink
-                      smooth
-                      to={{ pathname: "/about", hash: "#team" }}
-                      className="main-nav__item"
-                    >
+                    <HashLink smooth to={{ pathname: "/about", hash: "#team" }} className="main-nav__item">
                       {t("main_nav.about_us.team")}
                     </HashLink>
                   </DropdownItem>
@@ -136,14 +127,18 @@ const TopBar = () => {
                 onMouseLeave={toggleActDropdown}
                 toggle={toggleActDropdown}
               >
-                <DropdownToggle nav className="main-nav__item" tag={NavHashLink}
+                <DropdownToggle
+                  nav
+                  className="main-nav__item"
+                  tag={NavHashLink}
                   to="/act"
-                  activeClassName="main-nav__item--active">
+                  activeClassName="main-nav__item--active"
+                >
                   {t("main_nav.act.title")}
                 </DropdownToggle>
                 <DropdownMenu>
                   <DropdownItem>
-                    <Link to="/movement" className="main-nav__item">
+                    <Link to="/donate" className="main-nav__item">
                       {t("main_nav.act.donate")}
                     </Link>
                   </DropdownItem>
@@ -161,20 +156,19 @@ const TopBar = () => {
                 {t("main_nav.contact")}
               </NavHashLink>
               <div onClick={switchLanguage} className="main-nav__item">
-                <img
-                  src={lang === "pl" ? ukFlag : plFlag}
-                  alt={lang === "pl" ? "ukFlag" : "plFlag"}
-                />
+                <img src={lang === "pl" ? ukFlag : plFlag} alt={lang === "pl" ? "ukFlag" : "plFlag"} />
               </div>
             </Nav>
           </Col>
           <Col xs={2}>
             <div className="main-nav__button--wrapper">
-                <a href="https://www.paypal.com/donate/?cmd=_s-xclick&hosted_button_id=FFLJ8KDN5CAUA" target="_blank" rel="noopener noreferrer">
-                  <Button className="main-nav__button">
-                    {t("main_nav.act.donate")}           
-                  </Button>
-                </a>
+              <a
+                href="https://www.paypal.com/donate/?cmd=_s-xclick&hosted_button_id=FFLJ8KDN5CAUA"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button className="main-nav__button">{t("main_nav.act.donate")}</Button>
+              </a>
             </div>
           </Col>
         </Col>
@@ -207,18 +201,13 @@ const TopBar = () => {
                   {t("main_nav.contact")}
                 </Link>
                 <div onClick={switchLanguage} className="main-nav__item">
-                  <img
-                    src={lang === "pl" ? ukFlag : plFlag}
-                    alt={lang === "pl" ? "ukFlag" : "plFlag"}
-                  />
+                  <img src={lang === "pl" ? ukFlag : plFlag} alt={lang === "pl" ? "ukFlag" : "plFlag"} />
                 </div>
               </Nav>
             </Row>
             <Row>
               <div className="main-nav__button--wrapper">
-                <Button className="main-nav__button">
-                  {t("main_nav.act.donate")}
-                </Button>
+                <Button className="main-nav__button">{t("main_nav.act.donate")}</Button>
               </div>
             </Row>
           </Collapse>

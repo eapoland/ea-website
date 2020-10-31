@@ -6,7 +6,7 @@ const BlogPage = ({ setLoading }) => {
   const [posts, setPosts] = useState([]);
 
   useEffect(() => {
-    WordpressService.getPosts()
+    WordpressService.getPosts(1)
       .then((res) => setPosts(res.data))
       .then(() => {
         setLoading(false);
