@@ -1,5 +1,5 @@
 import React from "react";
-import { Card, CardBody, CardImg, CardText, CardTitle, Col, Row } from "reactstrap";
+import { Card, CardBody, CardImg, CardText, CardTitle, Row } from "reactstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
