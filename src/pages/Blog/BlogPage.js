@@ -1,13 +1,12 @@
 import React, { useState, useEffect } from "react";
-import axios from "axios";
 import WithLoading from "../../components/WithLoading";
+import WordpressService from "../../utils/WordpressService";
 
 const BlogPage = ({ setLoading }) => {
   const [posts, setPosts] = useState([]);
 
   useEffect(() => {
-    axios
-      .get("https://ea-poland-wordpress.azurewebsites.net/wp-json/wp/v2/posts")
+    WordpressService.getPosts()
       .then((res) => setPosts(res.data))
       .then(() => {
         setLoading(false);
