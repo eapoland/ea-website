@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import "./TopBar.scss";
 import {
@@ -14,6 +14,7 @@ import {
   DropdownToggle,
 } from "reactstrap";
 import { ReactComponent as Logo } from "../../assets/images/efektywny-altruizm-logo.svg";
+import { ReactComponent as WhiteLogo } from "../../assets/images/efektywny-altruizm-logo-white.svg";
 import { Link } from "react-router-dom";
 import plFlag from "../../assets/images/pl.png";
 import ukFlag from "../../assets/images/uk.png";
@@ -26,23 +27,36 @@ const TopBar = () => {
   const [aboutDropdownOpen, setAboutDropdownOpen] = useState(false);
   const [coopDropdownOpen, setCoopDropdownOpen] = useState(false);
   const [actDropdownOpen, setActDropdownOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
   const toggleAboutDropdown = () => setAboutDropdownOpen((prevState) => !prevState);
   const toggleCoopDropdown = () => setCoopDropdownOpen((prevState) => !prevState);
   const toggleActDropdown = () => setActDropdownOpen((prevState) => !prevState);
 
   const toggle = () => setIsOpen(!isOpen);
+
   const switchLanguage = () => {
     const langToSet = lang === "pl" ? "en" : "pl";
     setLang(langToSet);
     i18n.changeLanguage(langToSet);
   };
 
+  const handleScroll = () => {
+    setScrolled(window.scrollY > 50);
+  };
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+  });
+
   return (
     <div>
-      <Navbar expand="lg" className="p-0 main-nav">
+      <Navbar expand="lg" className={`p-0 main-nav ${scrolled && "main-nav--scrolled"}`} fixed="top">
         <NavbarBrand tag={Link} to="/" className="main-nav__brand">
-          <Logo style={{ height: "60px" }}></Logo>
+          {scrolled ? (
+            <Logo style={{ height: "60px" }}></Logo>
+          ) : (
+            <WhiteLogo style={{ height: "60px" }}></WhiteLogo>
+          )}
         </NavbarBrand>
         <NavbarToggler className="main-nav__toggler" onClick={toggle} />
         <Collapse isOpen={isOpen} navbar className="justify-content-end">
@@ -64,7 +78,11 @@ const TopBar = () => {
               </DropdownToggle>
               <DropdownMenu>
                 <DropdownItem>
-                  <HashLink smooth to={{ pathname: "/about", hash: "#movement" }} className="main-nav__item">
+                  <HashLink
+                    smooth
+                    to={{ pathname: "/about", hash: "#movement" }}
+                    className="main-nav__dropdown-item"
+                  >
                     {t("main_nav.about_us.movement")}
                   </HashLink>
                 </DropdownItem>
@@ -72,13 +90,17 @@ const TopBar = () => {
                   <HashLink
                     smooth
                     to={{ pathname: "/about", hash: "#foundation" }}
-                    className="main-nav__item"
+                    className="main-nav__dropdown-item"
                   >
                     {t("main_nav.about_us.foundation")}
                   </HashLink>
                 </DropdownItem>
                 <DropdownItem>
-                  <HashLink smooth to={{ pathname: "/about", hash: "#team" }} className="main-nav__item">
+                  <HashLink
+                    smooth
+                    to={{ pathname: "/about", hash: "#team" }}
+                    className="main-nav__dropdown-item"
+                  >
                     {t("main_nav.about_us.team")}
                   </HashLink>
                 </DropdownItem>
@@ -101,12 +123,12 @@ const TopBar = () => {
               </DropdownToggle>
               <DropdownMenu>
                 <DropdownItem>
-                  <Link to="/movement" className="main-nav__item">
+                  <Link to="/movement" className="main-nav__dropdown-item">
                     {t("main_nav.coop.company")}
                   </Link>
                 </DropdownItem>
                 <DropdownItem>
-                  <Link to="/movement" className="main-nav__item">
+                  <Link to="/movement" className="main-nav__dropdown-item">
                     {t("main_nav.coop.media")}
                   </Link>
                 </DropdownItem>
@@ -129,12 +151,12 @@ const TopBar = () => {
               </DropdownToggle>
               <DropdownMenu>
                 <DropdownItem>
-                  <Link to="/donate" className="main-nav__item">
+                  <Link to="/donate" className="main-nav__dropdown-item">
                     {t("main_nav.act.donate")}
                   </Link>
                 </DropdownItem>
                 <DropdownItem>
-                  <Link to="/movement" className="main-nav__item">
+                  <Link to="/movement" className="main-nav__dropdown-item">
                     {t("main_nav.act.join")}
                   </Link>
                 </DropdownItem>

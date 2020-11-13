@@ -1,13 +1,18 @@
 .main-nav {
   height: 80px;
-  &__item {
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+  &__item,
+  &__dropdown-item {
     font-weight: bold;
     text-transform: uppercase;
-    opacity: 0.6;
     font-size: 12px;
     line-height: 20px;
     text-decoration: none;
-    color: #222222;
+    color: #ffffff;
     text-align: left;
     transition: 0.3s ease;
     -webkit-transition: 0.3s ease;
@@ -31,6 +36,9 @@
     &--active {
       font-weight: bold;
     }
+  }
+  &__dropdown-item {
+    color: #000;
   }
   &__button.btn {
     border-radius: 0px;
@@ -77,6 +85,13 @@
   }
   &__brand {
     padding-left: 40px;
+  }
+  &--scrolled {
+    background-color: #ffffff;
+    .main-nav__item {
+      color: #000;
+      opacity: 0.6;
+    }
   }
 }
 
