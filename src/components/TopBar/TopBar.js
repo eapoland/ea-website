@@ -40,7 +40,7 @@ const TopBar = () => {
 
   return (
     <div>
-      <Navbar expand="lg" className="p-0 main-nav" fixed>
+      <Navbar expand="lg" className="p-0 main-nav">
         <NavbarBrand tag={Link} to="/" className="main-nav__brand">
           <Logo style={{ height: "60px" }}></Logo>
         </NavbarBrand>
