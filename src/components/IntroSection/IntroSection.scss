@@ -2,7 +2,6 @@
   height: auto;
   padding-top: 5em;
   padding-bottom: 5em;
-  margin-bottom: 100px;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
@@ -37,19 +36,14 @@
     padding: 12px 25px;
     border-radius: 0px;
     border: 0px;
-    -webkit-transition: background-color 400ms ease, opacity 400ms ease,
-      color 400ms ease;
-    transition: background-color 400ms ease, opacity 400ms ease,
-      color 400ms ease;
+    -webkit-transition: background-color 400ms ease, opacity 400ms ease, color 400ms ease;
+    transition: background-color 400ms ease, opacity 400ms ease, color 400ms ease;
     letter-spacing: 2px;
     text-decoration: none;
     text-transform: uppercase;
-    -moz-transition: background-color 400ms ease, opacity 400ms ease,
-      color 400ms ease;
-    -ms-transition: background-color 400ms ease, opacity 400ms ease,
-      color 400ms ease;
-    -o-transition: background-color 400ms ease, opacity 400ms ease,
-      color 400ms ease;
+    -moz-transition: background-color 400ms ease, opacity 400ms ease, color 400ms ease;
+    -ms-transition: background-color 400ms ease, opacity 400ms ease, color 400ms ease;
+    -o-transition: background-color 400ms ease, opacity 400ms ease, color 400ms ease;
     &:hover {
       color: #0b879d;
       background-color: rgba(218, 218, 218, 0.988);

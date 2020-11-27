@@ -8,8 +8,8 @@ const QuoteSection = () => {
   const { t } = useTranslation("common");
 
   return (
-    <Row className="quote-section">
-      <Col xs={7} className="quote-section-column text-center mx-auto">
+    <Row className="quote-section mx-auto">
+      <Col className="quote-section__column">
         <Slide left cascade>
           <div>
             <p className="quote-section__quote">"{t("welcome.quote")}"</p>

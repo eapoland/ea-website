@@ -37,6 +37,21 @@
       font-weight: bold;
     }
   }
+  &__icon {
+    font-size: 16px;
+    vertical-align: middle;
+    color: white;
+    transition: 0.3s ease;
+    -webkit-transition: 0.3s ease;
+    -moz-transition: 0.3s ease;
+    -ms-transition: 0.3s ease;
+    -o-transition: 0.3s ease;
+    &:hover {
+      opacity: 1;
+      color: #222222;
+      text-decoration: none;
+    }
+  }
   &__dropdown-item {
     color: #000;
   }
@@ -91,6 +106,9 @@
     .main-nav__item {
       color: #000;
       opacity: 0.6;
+    }
+    .main-nav__icon {
+      color: #000;
     }
   }
 }

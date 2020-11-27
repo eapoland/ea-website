@@ -16,14 +16,16 @@ import {
 import { ReactComponent as Logo } from "../../assets/images/efektywny-altruizm-logo.svg";
 import { ReactComponent as WhiteLogo } from "../../assets/images/efektywny-altruizm-logo-white.svg";
 import { Link } from "react-router-dom";
-import plFlag from "../../assets/images/pl.png";
-import ukFlag from "../../assets/images/uk.png";
+// import plFlag from "../../assets/images/pl.png";
+// import ukFlag from "../../assets/images/uk.png";
 import { HashLink, NavHashLink } from "react-router-hash-link";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faFacebookSquare, faLinkedinIn, faYoutube } from "@fortawesome/free-brands-svg-icons";
 
 const TopBar = () => {
-  const { t, i18n } = useTranslation("common");
+  const { t } = useTranslation("common");
   const [isOpen, setIsOpen] = useState(false);
-  const [lang, setLang] = useState("pl");
+  // const [lang, setLang] = useState("pl");
   const [aboutDropdownOpen, setAboutDropdownOpen] = useState(false);
   const [coopDropdownOpen, setCoopDropdownOpen] = useState(false);
   const [actDropdownOpen, setActDropdownOpen] = useState(false);
@@ -35,11 +37,11 @@ const TopBar = () => {
 
   const toggle = () => setIsOpen(!isOpen);
 
-  const switchLanguage = () => {
-    const langToSet = lang === "pl" ? "en" : "pl";
-    setLang(langToSet);
-    i18n.changeLanguage(langToSet);
-  };
+  // const switchLanguage = () => {
+  //   const langToSet = lang === "pl" ? "en" : "pl";
+  //   setLang(langToSet);
+  //   i18n.changeLanguage(langToSet);
+  // };
 
   const handleScroll = () => {
     setScrolled(window.scrollY > 50);
@@ -168,8 +170,23 @@ const TopBar = () => {
             <NavHashLink to="/contact" className="main-nav__item" activeClassName="main-nav__item--active">
               {t("main_nav.contact")}
             </NavHashLink>
-            <div onClick={switchLanguage} className="main-nav__item">
+            {/* <div onClick={switchLanguage} className="main-nav__item">
               <img src={lang === "pl" ? ukFlag : plFlag} alt={lang === "pl" ? "ukFlag" : "plFlag"} />
+            </div> */}
+            <div className="main-nav__item">
+              <a href="https://www.facebook.com/efektywnyaltruizmfundacja">
+                <FontAwesomeIcon icon={faFacebookSquare} className="main-nav__icon" />
+              </a>
+            </div>
+            <div className="main-nav__item">
+              <a href="https://www.linkedin.com/company/efektywnyaltruizm/">
+                <FontAwesomeIcon icon={faLinkedinIn} className="main-nav__icon" />
+              </a>
+            </div>
+            <div className="main-nav__item">
+              <a href="https://www.youtube.com/channel/UCj6HkTu_5nYypCRKc-7y27A">
+                <FontAwesomeIcon icon={faYoutube} className="main-nav__icon" />
+              </a>
             </div>
           </Nav>
         </Collapse>

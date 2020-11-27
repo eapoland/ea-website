@@ -2,8 +2,6 @@ import React from "react";
 import IntroSection from "../../components/IntroSection/IntroSection";
 import QuoteSection from "../../components/QuoteSection/QuoteSection";
 import ContentPreviewSection from "../../components/ContentPreviewSection/ContentPreviewSection";
-import NewsletterCtaSection from "../../components/NewsletterCtaSection/NewsletterCtaSection";
-import SocialSection from "../../components/SocialSection/SocialSection";
 import RecommendedSlider from "../../components/RecommendedSlider/RecommendedSlider";
 import photo from "../../assets/images/test-photo.jpg";
 import photo2 from "../../assets/images/preview2.png";
@@ -37,8 +35,6 @@ const HomePage = () => {
       <ContentPreviewSection content={content[0]} />
       <ContentPreviewSection reversed content={content[1]} />
       <RecommendedSlider />
-      <NewsletterCtaSection />
-      <SocialSection />
     </>
   );
 };
