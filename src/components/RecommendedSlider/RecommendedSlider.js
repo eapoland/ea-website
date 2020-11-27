@@ -34,9 +34,7 @@ const RecommendedSlider = () => {
     <Fade bottom>
       <Row className="recommended-slider">
         <Col className="recommended-slider-column text-center mx-auto">
-          <h1 className="recommended-slider__heading">
-            Zaprzyjaźnione organizacje
-          </h1>
+          <h1 className="recommended-slider__heading">Przyjaciele</h1>
           <Slider {...settings}>
             <div>
               <img src={okLogo} alt="OK logo" />
