@@ -1,0 +1,64 @@
+.carousel-item img {
+  width: 100%;
+  max-height: 580px;
+}
+
+.main-slider {
+  color: white;
+  .slick-dots {
+    bottom: 0px;
+  }
+  &__item {
+    height: 580px;
+    padding-left: 100px;
+    h1 {
+      text-align: left;
+      font: normal normal normal 44px/58px Roboto Slab;
+      letter-spacing: 0px;
+      color: #ffffff;
+    }
+    p {
+      text-align: left;
+      font: normal normal normal 16px/24px Raleway;
+      letter-spacing: 0px;
+      color: #ffffff;
+      opacity: 1;
+    }
+    &--first {
+      background: linear-gradient(
+          180deg,
+          rgba(0, 0, 0, 0.5452556022408963) 0%,
+          rgba(9, 9, 121, 0) 40%,
+          rgba(255, 255, 255, 0) 100%
+        ),
+        url("../../assets/images/baner.png") center no-repeat;
+      background-size: 100%;
+    }
+    &--second {
+      background: linear-gradient(
+          180deg,
+          rgba(0, 0, 0, 0.5452556022408963) 0%,
+          rgba(9, 9, 121, 0) 40%,
+          rgba(255, 255, 255, 0) 100%
+        ),
+        url("../../assets/images/test-photo.jpg") center no-repeat;
+      background-size: 100%;
+    }
+    &--button.btn {
+      background: #0b879d 0% 0% no-repeat padding-box;
+      opacity: 1;
+      padding: 13px 11px;
+      text-align: center;
+      font: normal normal bold 12px/14px Raleway;
+      letter-spacing: 0px;
+      color: #ffffff;
+      text-transform: uppercase;
+      border-radius: unset;
+      -webkit-border-radius: unset;
+      -moz-border-radius: unset;
+      -ms-border-radius: unset;
+      -o-border-radius: unset;
+      border: unset;
+    }
+  }
+}

@@ -173,17 +173,17 @@ const TopBar = () => {
             {/* <div onClick={switchLanguage} className="main-nav__item">
               <img src={lang === "pl" ? ukFlag : plFlag} alt={lang === "pl" ? "ukFlag" : "plFlag"} />
             </div> */}
-            <div className="main-nav__item">
+            <div className="main-nav__item main-nav__item--social">
               <a href="https://www.facebook.com/efektywnyaltruizmfundacja">
                 <FontAwesomeIcon icon={faFacebookSquare} className="main-nav__icon" />
               </a>
             </div>
-            <div className="main-nav__item">
+            <div className="main-nav__item main-nav__item--social">
               <a href="https://www.linkedin.com/company/efektywnyaltruizm/">
                 <FontAwesomeIcon icon={faLinkedinIn} className="main-nav__icon" />
               </a>
             </div>
-            <div className="main-nav__item">
+            <div className="main-nav__item main-nav__item--social">
               <a href="https://www.youtube.com/channel/UCj6HkTu_5nYypCRKc-7y27A">
                 <FontAwesomeIcon icon={faYoutube} className="main-nav__icon" />
               </a>

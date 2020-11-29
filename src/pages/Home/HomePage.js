@@ -1,10 +1,10 @@
 import React from "react";
-import IntroSection from "../../components/IntroSection/IntroSection";
 import QuoteSection from "../../components/QuoteSection/QuoteSection";
 import ContentPreviewSection from "../../components/ContentPreviewSection/ContentPreviewSection";
 import RecommendedSlider from "../../components/RecommendedSlider/RecommendedSlider";
 import photo from "../../assets/images/test-photo.jpg";
 import photo2 from "../../assets/images/preview2.png";
+import MainSlider from "../../components/MainSlider/MainSlider";
 
 const content = [
   {
@@ -30,7 +30,7 @@ const content = [
 const HomePage = () => {
   return (
     <>
-      <IntroSection content={"welcome"} withButton />
+      <MainSlider />
       <QuoteSection />
       <ContentPreviewSection content={content[0]} />
       <ContentPreviewSection reversed content={content[1]} />
