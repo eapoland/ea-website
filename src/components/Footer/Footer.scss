@@ -1,5 +1,6 @@
 .footer {
-  padding: 2em 0;
+  padding: 60px 0;
+  height: 300px;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
@@ -8,26 +9,37 @@
   background-color: #0b879d;
   opacity: 1;
   color: #fff;
-  &__item {
-    font-weight: 500;
-    text-transform: uppercase;
-    font-size: 12px;
-    line-height: 20px;
-    letter-spacing: 1px;
-    text-decoration: none;
-    color: #fff;
+  &__column {
+    &:first-of-type {
+      margin-left: 60px;
+    }
+    &:last-of-type {
+      margin-left: 30px;
+    }
+  }
+  h1 {
     text-align: left;
-    margin-left: auto;
-    margin-right: auto;
-    transition: 0.3s ease;
-    -webkit-transition: 0.3s ease;
-    -moz-transition: 0.3s ease;
-    -ms-transition: 0.3s ease;
-    -o-transition: 0.3s ease;
-    padding: 0.5rem 1rem;
+    font: normal normal normal 24px/32px Roboto Slab;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    opacity: 1;
+  }
+  &__item.nav-link {
+    padding: 0px 1rem 0px 0px;
+    text-align: left;
+    font: normal normal bold 12px/34px Raleway;
+    letter-spacing: 0px;
+    color: #FFFFFF;
     &:hover {
       color: #222222;
     }
+  }
+  &__text {
+    text-align: left;
+    font: normal normal bold 12px/34px Raleway;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    text-transform: uppercase;
   }
 }
 

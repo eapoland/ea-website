@@ -1,8 +1,8 @@
 .newsletter-cta-section {
-  padding-right: 80px;
-  padding-left: 80px;
-  background-color: #f4f4f4;
-  padding: 110px 80px 120px 80px;
+  padding: 60px 100px 40px 100px;
+  background-color: #EDCF00;
+  height: 300px;
+  min-width: 512px;;
   &__button.btn {
     padding: 12px 25px;
     border-radius: 0px;
@@ -19,14 +19,63 @@
     text-transform: uppercase;
   }
   &__heading {
-    margin-top: 10px;
-    margin-bottom: 30px;
-    font-family: Raleway, sans-serif;
-    font-size: 36px;
-    line-height: 50px;
-    font-weight: 300;
-    text-transform: none;
+    text-align: center;
+    font: normal normal normal 24px/32px Roboto Slab;
+    letter-spacing: 0px;
+    color: #000000;
+    opacity: 1;
   }
+}
+
+.signup-form {
+  padding: 2em 0;
+  margin-left: auto;
+  margin-right: auto;
+  &__button.btn {
+    text-align: center;
+    font: normal normal bold 12px/14px Raleway;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    opacity: 1;
+    background: #0B879D 0% 0% no-repeat padding-box;
+    padding: 13px 29px;
+    border-radius: unset;
+  }
+  &__email-input {
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 1px solid #000000;
+    opacity: 1;
+    height: 40px;
+    width: 220px;
+  }
+  &__input-group {
+    margin-bottom: 1em;
+  }
+}
+
+::placeholder,
+::-ms-input-placeholder {
+  text-align: left;
+  font: normal normal medium 12px/14px Raleway;
+  letter-spacing: 0px;
+  color: red;
+  opacity: 1;
+}
+
+@media (max-width: 991.98px) {
+  .signup-form {
+    width: 80%;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .signup-form {
+    width: 100%;
+  }
+}
+
+@media (max-width: 575.98px) {
 }
 
 @media (max-width: 575.98px) {

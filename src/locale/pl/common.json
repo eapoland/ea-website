@@ -112,7 +112,7 @@
   },
   "newsletter": {
     "required": "pole wymagane",
-    "email": "Twój adres e-mail",
+    "email": "Adres e-mail",
     "subscribe": "Zapisz się"
   },
   "privacy-policy": {

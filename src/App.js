@@ -6,6 +6,7 @@ import AboutPage from "./pages/About/AboutPage";
 import CooperationPage from "./pages/Cooperation/CooperationPage";
 import JoinUsPage from "./pages/Act/JoinUsPage";
 import Footer from "./components/Footer/Footer";
+import NewsletterCtaSection from "./components/NewsletterCtaSection/NewsletterCtaSection";
 import { Container } from "reactstrap";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import PrivacyPolicyPage from "./pages/PrivacyPolicy/PrivacyPolicyPage";
@@ -72,7 +73,11 @@ function App() {
                 plików cookie.
               </span>
             </CookieConsent>
-            <Footer />
+            <div className="d-flex">
+              <Footer />
+              <NewsletterCtaSection />
+            </div>
+            
           </Container>
         </Elements>
       </Suspense>
