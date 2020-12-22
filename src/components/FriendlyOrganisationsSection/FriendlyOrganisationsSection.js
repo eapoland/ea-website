@@ -1,6 +1,5 @@
 import React from "react";
-import Slider from "react-slick";
-import "./RecommendedSlider.scss";
+import "./FriendlyOrganisationsSection.scss";
 import okLogo from "../../assets/images/ok-logo.png";
 import paretoLogo from "../../assets/images/pareto-logo.png";
 import altruistoLogo from "../../assets/images/altruisto-logo.png";
@@ -9,53 +8,33 @@ import schweitzerLogo from "../../assets/images/schweitzer-logo.png";
 import { Col, Row } from "reactstrap";
 import { Fade } from "react-reveal";
 
-const RecommendedSlider = () => {
-  const settings = {
-    infinite: true,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 4000,
-    cssEase: "linear",
-    pauseOnHover: true,
-    className: "d-flex align-items-center",
-    dots: true,
-    responsive: [
-      {
-        breakpoint: 576,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
-      },
-    ],
-  };
+const FriendlyOrganisationsSection = () => {
   return (
     <Fade bottom>
-      <Row className="recommended-slider">
-        <Col className="recommended-slider-column text-center mx-auto">
-          <h1 className="recommended-slider__heading">Przyjaciele</h1>
-          <Slider {...settings}>
-            <div>
+      <Row className="friendly-section">
+        <Col className="friendly-section-column text-center mx-auto">
+          <h1 className="friendly-section__heading">Przyjaciele</h1>
+          <div className="d-flex justify-content-center align-items-center">
+            <div className="friendly-section__logo">
               <img src={okLogo} alt="OK logo" />
             </div>
-            <div>
+            <div className="friendly-section__logo">
               <img src={schweitzerLogo} alt="Albert Schweitzer logo" />
             </div>
-            <div>
+            <div className="friendly-section__logo">
               <img src={provegLogo} alt="ProVeg logo" />
             </div>
-            <div>
+            <div className="friendly-section__logo">
               <img src={altruistoLogo} alt="Altruisto logo" />
             </div>
-            <div>
+            <div className="friendly-section__logo">
               <img src={paretoLogo} alt="Pareto logo" />
             </div>
-          </Slider>
+          </div>
         </Col>
       </Row>
     </Fade>
   );
 };
 
-export default RecommendedSlider;
+export default FriendlyOrganisationsSection;

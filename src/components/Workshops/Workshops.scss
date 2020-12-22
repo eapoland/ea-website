@@ -1,0 +1,19 @@
+.promoted-workshop {
+  width: 1166px;
+  height: 420px;
+  background-color: red;
+}
+
+.workshop-card {
+  width: 560px;
+  height: 390px;
+  background-color: blueviolet;
+  margin-top: 40px;
+}
+
+.workshop-list {
+  .workshop-card:nth-of-type(even) {
+    margin-left: 46px;
+  }
+  margin-bottom: 80px;
+}

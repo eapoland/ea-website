@@ -1,7 +1,7 @@
 import React from "react";
 import QuoteSection from "../../components/QuoteSection/QuoteSection";
 import ContentPreviewSection from "../../components/ContentPreviewSection/ContentPreviewSection";
-import RecommendedSlider from "../../components/RecommendedSlider/RecommendedSlider";
+import FriendlyOrganisationsSection from "../../components/FriendlyOrganisationsSection/FriendlyOrganisationsSection";
 import photo from "../../assets/images/test-photo.jpg";
 import photo2 from "../../assets/images/preview2.png";
 import MainSlider from "../../components/MainSlider/MainSlider";
@@ -34,7 +34,7 @@ const HomePage = () => {
       <QuoteSection />
       <ContentPreviewSection content={content[0]} />
       <ContentPreviewSection reversed content={content[1]} />
-      <RecommendedSlider />
+      <FriendlyOrganisationsSection />
     </>
   );
 };

@@ -1,6 +1,7 @@
 .footer {
   padding: 60px 0;
   height: 300px;
+  width: 100vw;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
@@ -21,7 +22,7 @@
     text-align: left;
     font: normal normal normal 24px/32px Roboto Slab;
     letter-spacing: 0px;
-    color: #FFFFFF;
+    color: #ffffff;
     opacity: 1;
   }
   &__item.nav-link {
@@ -29,7 +30,7 @@
     text-align: left;
     font: normal normal bold 12px/34px Raleway;
     letter-spacing: 0px;
-    color: #FFFFFF;
+    color: #ffffff;
     &:hover {
       color: #222222;
     }
@@ -38,7 +39,7 @@
     text-align: left;
     font: normal normal bold 12px/34px Raleway;
     letter-spacing: 0px;
-    color: #FFFFFF;
+    color: #ffffff;
     text-transform: uppercase;
   }
 }

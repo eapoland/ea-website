@@ -1,4 +1,4 @@
-.recommended-slider {
+.friendly-section {
   padding-right: 80px;
   padding-left: 80px;
   background: #fafafa 0% 0% no-repeat padding-box;
@@ -16,10 +16,16 @@
     color: #000000;
     opacity: 1;
   }
+  &__logo {
+    margin-left: 40px;
+  }
+  &__logo:first-child {
+    margin-left: 0px;
+  }
 }
 
 @media (max-width: 1199.98px) {
-  .recommended-slider {
+  .friendly-section {
     img {
       width: 80%;
     }
@@ -27,7 +33,7 @@
 }
 
 @media (max-width: 575.98px) {
-  .recommended-slider {
+  .friendly-section {
     padding: 2em 10px 5em 10px;
     &__heading {
       font-size: 30px;

@@ -136,6 +136,9 @@ const TopBar = () => {
                 </DropdownItem>
               </DropdownMenu>
             </Dropdown>
+            <NavHashLink to="/workshops" className="main-nav__item" activeClassName="main-nav__item--active">
+              {t("main_nav.workshops")}
+            </NavHashLink>
             <Dropdown
               isOpen={actDropdownOpen}
               onMouseEnter={toggleActDropdown}
@@ -174,17 +177,29 @@ const TopBar = () => {
               <img src={lang === "pl" ? ukFlag : plFlag} alt={lang === "pl" ? "ukFlag" : "plFlag"} />
             </div> */}
             <div className="main-nav__item main-nav__item--social">
-              <a href="https://www.facebook.com/efektywnyaltruizmfundacja">
+              <a
+                href="https://www.facebook.com/efektywnyaltruizmfundacja"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <FontAwesomeIcon icon={faFacebookSquare} className="main-nav__icon" />
               </a>
             </div>
             <div className="main-nav__item main-nav__item--social">
-              <a href="https://www.linkedin.com/company/efektywnyaltruizm/">
+              <a
+                href="https://www.linkedin.com/company/efektywnyaltruizm/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <FontAwesomeIcon icon={faLinkedinIn} className="main-nav__icon" />
               </a>
             </div>
             <div className="main-nav__item main-nav__item--social">
-              <a href="https://www.youtube.com/channel/UCj6HkTu_5nYypCRKc-7y27A">
+              <a
+                href="https://www.youtube.com/channel/UCj6HkTu_5nYypCRKc-7y27A"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <FontAwesomeIcon icon={faYoutube} className="main-nav__icon" />
               </a>
             </div>
