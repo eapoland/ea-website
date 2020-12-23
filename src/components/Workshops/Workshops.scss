@@ -12,8 +12,53 @@
 }
 
 .workshop-list {
+  max-width: 1366px;
   .workshop-card:nth-of-type(even) {
     margin-left: 46px;
   }
   margin-bottom: 80px;
+}
+
+.testimonials {
+  min-height: 700px;
+  width: 100vw;
+  background: #fafafa 0% 0% no-repeat padding-box;
+  opacity: 1;
+  &-content.col {
+    max-width: 1366px;
+  }
+}
+
+.workshops-faq {
+  h1 {
+    text-align: center;
+    font: normal normal normal 34px/45px Roboto Slab;
+    letter-spacing: 0px;
+    color: #000000;
+    opacity: 1;
+    margin-top: 70px;
+    margin-bottom: 60px;
+  }
+  margin-bottom: 75px;
+}
+
+.faq-item {
+  &.card {
+    width: 1000px;
+    margin-bottom: 10px;
+    background: #fafafa 0% 0% no-repeat padding-box;
+    opacity: 1;
+  }
+
+  &__title {
+    text-align: left;
+    font: normal normal normal 24px/34px Roboto Slab;
+    letter-spacing: 0px;
+    color: #000000;
+    opacity: 1;
+    margin: 0;
+  }
+  &__content {
+    margin-top: 20px;
+  }
 }
