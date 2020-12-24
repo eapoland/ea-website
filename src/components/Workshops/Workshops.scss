@@ -148,4 +148,12 @@
   &__content {
     margin-top: 20px;
   }
+
+  &__toggle {
+    border: 0;
+    width: 30px;
+    height: 30px;
+    background-color: inherit;
+    transition: 0.3s ease;
+  }
 }

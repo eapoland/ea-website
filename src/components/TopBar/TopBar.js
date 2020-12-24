@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
+import { useLocation } from "react-router-dom";
 import "./TopBar.scss";
 import {
   Collapse,
@@ -36,6 +37,7 @@ const TopBar = () => {
   const toggleActDropdown = () => setActDropdownOpen((prevState) => !prevState);
 
   const toggle = () => setIsOpen(!isOpen);
+  const location = useLocation();
 
   // const switchLanguage = () => {
   //   const langToSet = lang === "pl" ? "en" : "pl";
@@ -52,9 +54,13 @@ const TopBar = () => {
 
   return (
     <div>
-      <Navbar expand="lg" className={`p-0 main-nav ${scrolled && "main-nav--scrolled"}`} fixed="top">
+      <Navbar
+        expand="lg"
+        className={`p-0 main-nav ${(location.pathname !== "/" || scrolled) && "main-nav--scrolled"}`}
+        fixed="top"
+      >
         <NavbarBrand tag={Link} to="/" className="main-nav__brand">
-          {scrolled ? (
+          {location.pathname !== "/" || scrolled ? (
             <Logo style={{ height: "60px" }}></Logo>
           ) : (
             <WhiteLogo style={{ height: "60px" }}></WhiteLogo>

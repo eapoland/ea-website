@@ -1,6 +1,8 @@
 import React, { useState } from "react";
-import { Collapse, Button, CardBody, Card } from "reactstrap";
+import { Collapse, CardBody, Card } from "reactstrap";
 import "./Workshops.scss";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faChevronDown, faChevronLeft } from "@fortawesome/free-solid-svg-icons";
 
 const FaqItem = ({ item }) => {
   const [collapse, setCollapse] = useState(false);
@@ -13,9 +15,9 @@ const FaqItem = ({ item }) => {
         <CardBody>
           <div className="d-flex justify-content-between align-items-center">
             <p className="faq-item__title">{item.title}</p>
-            <Button color="primary" onClick={toggle}>
-              Toggle
-            </Button>
+            <button onClick={toggle} className="faq-item__toggle">
+              <FontAwesomeIcon icon={collapse ? faChevronLeft : faChevronDown} />
+            </button>
           </div>
 
           <Collapse isOpen={collapse}>
