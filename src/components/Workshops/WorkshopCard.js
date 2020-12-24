@@ -1,8 +1,15 @@
 import React from "react";
+import EAButton from "../Common/EAButton/EAButton";
 import "./Workshops.scss";
 
-const WorkshopCard = () => {
-  return <div className="workshop-card">TEST</div>;
+const WorkshopCard = ({ workshopData }) => {
+  return (
+    <div className="workshop-card d-flex flex-column">
+      <h1>{workshopData.title}</h1>
+      <p>{workshopData.summary}</p>
+      <EAButton title="Czytaj więcej" />
+    </div>
+  );
 };
 
 export default WorkshopCard;

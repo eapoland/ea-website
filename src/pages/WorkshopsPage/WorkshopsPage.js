@@ -9,7 +9,7 @@ import "./WorkshopsPage.scss";
 const WorkshopsPage = () => {
   return (
     <>
-      <Row className="justify-content-center">
+      <Row className="flex-column align-items-center">
         <div className="workshops d-flex flex-column justify-content-center">
           <h2>Zapoznaj się z naszą ofertą</h2>
           <h1>Warsztaty i szkolenia</h1>

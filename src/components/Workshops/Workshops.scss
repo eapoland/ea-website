@@ -1,7 +1,31 @@
 .promoted-workshop {
   width: 1166px;
   height: 420px;
-  background-color: red;
+  background: url("../../assets/images/recommended_workshop.png") center no-repeat;
+  background-size: 100%;
+  padding-right: 91px;
+  h4 {
+    text-align: left;
+    font: normal normal bold 16px/24px Raleway;
+    letter-spacing: 0px;
+    color: #000000;
+    text-transform: uppercase;
+    opacity: 1;
+  }
+  h1 {
+    text-align: left;
+    font: normal normal normal 34px/45px Roboto Slab;
+    letter-spacing: 0px;
+    color: #000000;
+    opacity: 1;
+  }
+  p {
+    text-align: left;
+    font: normal normal normal 16px/24px Raleway;
+    letter-spacing: 0px;
+    color: #000000;
+    opacity: 1;
+  }
 }
 
 .workshop-card {
@@ -9,6 +33,33 @@
   height: 390px;
   background-color: blueviolet;
   margin-top: 40px;
+  padding: 60px 60px 50px 60px;
+  h1 {
+    text-align: left;
+    font: normal normal normal 34px/45px Roboto Slab;
+    letter-spacing: 0px;
+    color: #000000;
+    opacity: 1;
+  }
+  p {
+    text-align: left;
+    font: normal normal normal 16px/24px Raleway;
+    letter-spacing: 0px;
+    color: #000000;
+    opacity: 1;
+  }
+  &:nth-of-type(1n) {
+    background: url("../../assets/images/workshop-bg-1.png") center no-repeat;
+  }
+  &:nth-of-type(2n) {
+    background: url("../../assets/images/workshop-bg-2.png") center no-repeat;
+  }
+  &:nth-of-type(3n) {
+    background: url("../../assets/images/workshop-bg-3.png") center no-repeat;
+  }
+  &:nth-of-type(4n) {
+    background: url("../../assets/images/workshop-bg-4.png") center no-repeat;
+  }
 }
 
 .workshop-list {
@@ -25,7 +76,43 @@
   background: #fafafa 0% 0% no-repeat padding-box;
   opacity: 1;
   &-content.col {
-    max-width: 1366px;
+    max-width: 750px;
+  }
+  padding-top: 70px;
+  h1 {
+    text-align: center;
+    font: normal normal normal 34px/45px Roboto Slab;
+    letter-spacing: 0px;
+    color: #000000;
+    opacity: 1;
+    margin: 0;
+  }
+  h3 {
+    text-align: left;
+    font: normal normal bold 16px/24px Raleway;
+    letter-spacing: 0px;
+    color: #000000;
+    text-transform: uppercase;
+    opacity: 1;
+    margin-top: 40px;
+  }
+  h4 {
+    text-align: left;
+    font: normal normal normal 16px/24px Raleway;
+    letter-spacing: -0.08px;
+    color: #000000;
+    opacity: 1;
+    margin-top: 20px;
+  }
+  .testimonial {
+    margin-top: 60px;
+  }
+  p {
+    text-align: left;
+    font: normal normal normal 24px Roboto Slab;
+    letter-spacing: 0px;
+    color: #000000;
+    opacity: 1;
   }
 }
 
