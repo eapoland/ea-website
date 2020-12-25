@@ -7,7 +7,7 @@ const WorkshopCard = ({ workshopData }) => {
     <div className="workshop-card d-flex flex-column">
       <h1>{workshopData.title}</h1>
       <p>{workshopData.summary}</p>
-      <EAButton title="Czytaj więcej" />
+      <EAButton title="Czytaj więcej" target={workshopData.id} />
     </div>
   );
 };

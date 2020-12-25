@@ -25,7 +25,7 @@ const WorkshopsFaq = () => {
     <div className="workshops-faq">
       <h1>FAQ - Pytania i odpowiedzi</h1>
       {items.map((item) => (
-        <FaqItem item={item} />
+        <FaqItem item={item} key={item.title} />
       ))}
     </div>
   );

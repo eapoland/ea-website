@@ -16,6 +16,7 @@ import { Elements } from "@stripe/react-stripe-js";
 import { loadStripe } from "@stripe/stripe-js";
 import DonatePage from "./pages/Act/DonatePage";
 import WorkshopsPage from "./pages/WorkshopsPage/WorkshopsPage";
+import WorkshopDetailsPage from "./pages/WorkshopDetailsPage/WorkshopDetailsPage";
 
 const stripePromise = loadStripe(
   "pk_test_51HiOnnDDHV7JDkB9tHxmUobKY4ZezsR5lsWsviFG5NPEPbpgFGBeGqyYHyMeSnMi5Ulv5pV29i6Vr8sbDyfNJDcA00U862gUpU"
@@ -37,6 +38,9 @@ function App() {
               </Route>
               <Route path="/workshops" exact>
                 <WorkshopsPage />
+              </Route>
+              <Route path="/workshops/:id" exact>
+                <WorkshopDetailsPage />
               </Route>
               <Route path="/cooperation" exact>
                 <CooperationPage />
