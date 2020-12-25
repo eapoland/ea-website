@@ -1,10 +1,10 @@
 import React from "react";
-import IntroSection from "../../components/IntroSection/IntroSection";
+import SectionTitleWithTranslation from "../../components/SectionTitle/SectionTitleWithTranslation";
 
 const CooperationPage = () => {
   return (
     <>
-      <IntroSection content={"cooperation"} />
+      <SectionTitleWithTranslation content={"cooperation"} />
       <h2>Z organizacjami</h2>
       <p>
         Prowadzisz firmę lub organizację pozarządową? Porozmawiajmy o tym, jak powiększyć Twój dobroczynny

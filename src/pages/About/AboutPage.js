@@ -1,5 +1,4 @@
 import React from "react";
-import IntroSection from "../../components/IntroSection/IntroSection";
 import TeamSection from "../../components/TeamSection/TeamSection";
 import Paragraph from "../../components/ContentSection/Paragraph";
 import SectionTitle from "../../components/ContentSection/SectionTitle";
@@ -12,7 +11,7 @@ const AboutPage = () => {
 
   return (
     <>
-      <IntroSection content={"about"} />
+      <SectionTitle content={"about"} />
       <Row id="movement" className={`content-section justify-content-center`}>
         <Col xs={6} className="content-section__column mx-auto">
           <SectionTitle title={"about.movement"}></SectionTitle>
