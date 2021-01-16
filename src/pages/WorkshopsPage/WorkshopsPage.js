@@ -12,7 +12,7 @@ const WorkshopsPage = () => {
   return (
     <>
       <ScrollToTop />
-      <Row className="flex-column align-items-center">
+      <Row className="flex-column align-items-center" style={{ marginRight: "0px", marginLeft: "0px" }}>
         <SectionTitleWithTranslation content="workshops" />
         <PromotedWorkshop />
         <WorkshopList />

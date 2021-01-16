@@ -27,7 +27,7 @@ function App() {
     <Router>
       <Suspense fallback="loading">
         <Elements stripe={stripePromise}>
-          <Container fluid className="p-0">
+          <Container className="p-0 ea-container">
             <TopBar />
             <Switch>
               <Route path="/" exact>

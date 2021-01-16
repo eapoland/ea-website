@@ -48,7 +48,7 @@ const WorkshopDetailsPage = () => {
           <EAButton title="Zapytaj o szkolenie" size="180" />
         </Col>
       </Row>
-      <Row className="workshop-details__host">
+      <Row className="ea-row workshop-details__host">
         <Col>
           <h1>Prowadzący</h1>
           <Row className="justify-content-center">

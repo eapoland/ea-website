@@ -11,7 +11,7 @@ const Footer = () => {
   //const { t } = useTranslation("common");
 
   return (
-    <Row className="footer">
+    <Row className="footer ea-row">
       <Col className="footer__column">
         <div className="d-flex align-items-center" style={{ marginBottom: "24px" }}>
           <WhiteLogo style={{ height: "60px" }}></WhiteLogo>

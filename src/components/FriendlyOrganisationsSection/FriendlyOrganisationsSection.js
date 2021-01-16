@@ -11,7 +11,7 @@ import { Fade } from "react-reveal";
 const FriendlyOrganisationsSection = () => {
   return (
     <Fade bottom>
-      <Row className="friendly-section">
+      <Row className="friendly-section ea-row">
         <Col className="friendly-section-column text-center mx-auto">
           <h1 className="friendly-section__heading">Przyjaciele</h1>
           <div className="d-flex justify-content-center align-items-center">
