@@ -4,6 +4,8 @@ import Row from "reactstrap/lib/Row";
 import "./Workshops.scss";
 import Slider from "react-slick";
 import testimonial from "../../assets/images/karolina.png";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faChevronLeft, faChevronRight } from "@fortawesome/free-solid-svg-icons";
 
 const Testimonials = () => {
   const settings = {
@@ -16,13 +18,15 @@ const Testimonials = () => {
     pauseOnHover: true,
     className: "d-flex align-items-center",
     dots: true,
+    prevArrow: <FontAwesomeIcon icon={faChevronLeft} className="ea-slider__arrow testimonials" />,
+    nextArrow: <FontAwesomeIcon icon={faChevronRight} className="ea-slider__arrow" />,
   };
   return (
     <Row className="testimonials justify-content-center">
       <Col className="testimonials-content">
         <h1>Uczestnicy o nas</h1>
         <Slider {...settings}>
-          <div className="d-flex testimonial">
+          <div className="d-flex testimonial justify-content-center">
             <div style={{ width: "250px", marginRight: "40px" }}>
               <img src={testimonial} alt="Karolina Sarek" />
 
@@ -42,7 +46,7 @@ const Testimonials = () => {
               </p>
             </div>
           </div>
-          <div className="d-flex testimonial">
+          <div className="d-flex testimonial justify-content-center">
             <div style={{ width: "250px", marginRight: "40px" }}>
               <img src={testimonial} alt="Karolina Sarek" />
 
