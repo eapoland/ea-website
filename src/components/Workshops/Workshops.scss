@@ -114,6 +114,11 @@
     color: #000000;
     opacity: 1;
   }
+
+  .slick-dots {
+    bottom: -50px;
+  }
+
   .slick-dots li button:before {
     font-size: 10px;
   }

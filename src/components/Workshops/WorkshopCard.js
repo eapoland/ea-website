@@ -6,7 +6,7 @@ const WorkshopCard = ({ workshopData }) => {
   return (
     <div className="workshop-card d-flex flex-column">
       <h1>{workshopData.title}</h1>
-      <p>{workshopData.summary}</p>
+      <p>{workshopData.shortSummary}</p>
       <EAButton title="Czytaj więcej" target={workshopData.id} />
     </div>
   );

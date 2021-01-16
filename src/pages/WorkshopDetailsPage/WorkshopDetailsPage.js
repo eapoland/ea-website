@@ -30,19 +30,19 @@ const WorkshopDetailsPage = () => {
           <div style={{ marginBottom: "37px" }}>
             <div className="d-flex">
               <p className="workshop-details__pricing--title">DLA</p>
-              <p className="workshop-details__pricing--content">kogos</p>
+              <p className="workshop-details__pricing--content">{workshopDetails.audience}</p>
             </div>
             <div className="d-flex">
               <p className="workshop-details__pricing--title">LIMIT</p>
-              <p className="workshop-details__pricing--content">kogos</p>
+              <p className="workshop-details__pricing--content">{workshopDetails.limit}</p>
             </div>
             <div className="d-flex">
               <p className="workshop-details__pricing--title">CZAS</p>
-              <p className="workshop-details__pricing--content">kogos</p>
+              <p className="workshop-details__pricing--content">{workshopDetails.duration}</p>
             </div>
             <div className="d-flex">
               <p className="workshop-details__pricing--title">CENA</p>
-              <p className="workshop-details__pricing--content">kogos</p>
+              <p className="workshop-details__pricing--content">{workshopDetails.price}</p>
             </div>
           </div>
           <EAButton title="Zapytaj o szkolenie" size="180" />
@@ -71,11 +71,9 @@ const WorkshopDetailsPage = () => {
         <h1>Spis modułów</h1>
         <div className="workshop-details__modules--list">
           <ol>
-            <li>ASDF</li>
-            <li>ASDF</li>
-            <li>ASDF</li>
-            <li>ASDF</li>
-            <li>ASDF</li>
+            {workshopDetails.modules.map((module, index) => (
+              <li key={index}>{module}</li>
+            ))}
           </ol>
         </div>
       </Row>

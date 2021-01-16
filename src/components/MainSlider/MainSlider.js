@@ -15,6 +15,7 @@ const MainSlider = () => {
     pauseOnHover: true,
     className: "d-flex align-items-center",
     dots: true,
+    arrows: false,
   };
   return (
     <Row className="main-slider">

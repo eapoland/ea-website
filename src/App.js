@@ -3,7 +3,7 @@ import "./App.scss";
 import TopBar from "./components/TopBar/TopBar";
 import HomePage from "./pages/Home/HomePage";
 import AboutPage from "./pages/About/AboutPage";
-import CooperationPage from "./pages/Cooperation/CooperationPage";
+import ActivitiesPage from "./pages/Activities/ActivitiesPage";
 import JoinUsPage from "./pages/Act/JoinUsPage";
 import Footer from "./components/Footer/Footer";
 import NewsletterCtaSection from "./components/NewsletterCtaSection/NewsletterCtaSection";
@@ -42,8 +42,8 @@ function App() {
               <Route path="/workshops/:id" exact>
                 <WorkshopDetailsPage />
               </Route>
-              <Route path="/cooperation" exact>
-                <CooperationPage />
+              <Route path="/activities" exact>
+                <ActivitiesPage />
               </Route>
               <Route path="/join-us" exact>
                 <JoinUsPage />

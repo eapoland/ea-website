@@ -6,7 +6,18 @@
 .main-slider {
   color: white;
   .slick-dots {
-    bottom: 0px;
+    bottom: 20px;
+  }
+  .slick-dots li button:before {
+    color: white;
+    font-size: 10px;
+    opacity: 0.75;
+  }
+
+  .slick-dots li.slick-active button:before {
+    color: white;
+    font-size: 14px;
+    opacity: 1;
   }
   &__item {
     height: 580px;

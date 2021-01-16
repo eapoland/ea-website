@@ -2,27 +2,83 @@
   {
     "id": 1,
     "title": "Warsztaty dla organizacji, które chcą robić najwięcej dobra",
-    "summary": "W Polsce szkolimy z podstaw i dobrych praktyk dobroczynności. W trakcie naszych spotkań szukamy odpowiedzi na trudne pytania."
+    "shortSummary": "W Polsce szkolimy z podstaw i dobrych praktyk dobroczynności. W trakcie naszych spotkań szukamy odpowiedzi na trudne pytania.",
+    "audience": "pracowników kadry zarządczej",
+    "limit": "brak limitu uczestników",
+    "duration": "30 - 60 minut",
+    "price": "pierwszy wykład bez opłaty",
+    "modules": [
+      "Czy istnieje możliwość przygotowania indywidualnego szkolenia?",
+      "Jak wygląda polityka zwrotów?",
+      "Czy możliwe jest przeprowadzenie warsztatów online?",
+      "Czy istnieje możliwość przygotowania indywidualnego szkolenia?",
+      "Jak wygląda polityka zwrotów?"
+    ]
   },
   {
     "id": 2,
     "title": "Warsztaty z ocalania świata. O globalnych ryzykach katastroficznych",
-    "summary": "W Polsce szkolimy z podstaw i dobrych praktyk dobroczynności. W trakcie naszych spotkań szukamy odpowiedzi na trudne pytania."
+    "shortSummary": "W Polsce szkolimy z podstaw i dobrych praktyk dobroczynności. W trakcie naszych spotkań szukamy odpowiedzi na trudne pytania.",
+    "audience": "pracowników kadry zarządczej",
+    "limit": "brak limitu uczestników",
+    "duration": "30 - 60 minut",
+    "price": "pierwszy wykład bez opłaty",
+    "modules": [
+      "Czy istnieje możliwość przygotowania indywidualnego szkolenia?",
+      "Jak wygląda polityka zwrotów?",
+      "Czy możliwe jest przeprowadzenie warsztatów online?",
+      "Czy istnieje możliwość przygotowania indywidualnego szkolenia?",
+      "Jak wygląda polityka zwrotów?"
+    ]
   },
   {
     "id": 3,
     "title": "Które organizacje wspierać? Dlaczego?",
-    "summary": "W Polsce szkolimy z podstaw i dobrych praktyk dobroczynności. W trakcie naszych spotkań szukamy odpowiedzi na trudne pytania. W Polsce szkolimy z podstaw i dobrych praktyk dobroczynności. W trakcie naszych spotkań szukamy odpowiedzi na trudne pytania."
+    "shortSummary": "W Polsce szkolimy z podstaw i dobrych praktyk dobroczynności. W trakcie naszych spotkań szukamy odpowiedzi na trudne pytania. W Polsce szkolimy z podstaw i dobrych praktyk dobroczynności. W trakcie naszych spotkań szukamy odpowiedzi na trudne pytania.",
+    "audience": "pracowników kadry zarządczej",
+    "limit": "brak limitu uczestników",
+    "duration": "30 - 60 minut",
+    "price": "pierwszy wykład bez opłaty",
+    "modules": [
+      "Czy istnieje możliwość przygotowania indywidualnego szkolenia?",
+      "Jak wygląda polityka zwrotów?",
+      "Czy możliwe jest przeprowadzenie warsztatów online?",
+      "Czy istnieje możliwość przygotowania indywidualnego szkolenia?",
+      "Jak wygląda polityka zwrotów?"
+    ]
   },
   {
     "id": 4,
     "title": "Warsztaty dla altruistów z opieki nad samym sobą",
-    "summary": "W Polsce szkolimy z podstaw i dobrych praktyk dobroczynności. W trakcie naszych spotkań szukamy odpowiedzi na trudne pytania."
+    "shortSummary": "W Polsce szkolimy z podstaw i dobrych praktyk dobroczynności. W trakcie naszych spotkań szukamy odpowiedzi na trudne pytania.",
+    "audience": "pracowników kadry zarządczej",
+    "limit": "brak limitu uczestników",
+    "duration": "30 - 60 minut",
+    "price": "pierwszy wykład bez opłaty",
+    "modules": [
+      "Czy istnieje możliwość przygotowania indywidualnego szkolenia?",
+      "Jak wygląda polityka zwrotów?",
+      "Czy możliwe jest przeprowadzenie warsztatów online?",
+      "Czy istnieje możliwość przygotowania indywidualnego szkolenia?",
+      "Jak wygląda polityka zwrotów?"
+    ]
   },
   {
     "id": 5,
     "title": "Wprowadzenie do Efektywnego Altruizmu",
-    "summary": "Poznaj naszą historię oraz ideę, z której ten ruch wyrasta. Omówmy szereg praktycznych zagadnień związanych z dobroczynnością. Przekonaj się, że każdy – także Ty – może zostać Efektywnym Altruistą.",
-    "recommended": true
+    "shortSummary": "W Polsce szkolimy z podstaw i dobrych praktyk dobroczynności. W trakcie naszych spotkań szukamy odpowiedzi na trudne pytania.",
+    "summary": "Efektywny Altruizm to pytanie o to, jak przynieść światu najwięcej dobra. To międzynarodowa społeczność poszukująca odpowiedzi na to pytanie, by wykorzystać tę wiedzę w praktyce. Podczas spotkania opowiemy Wam historię Efektywnego Altruizmu ruchu i efektywnego altruizmu idei z której ten ruch wyrasta. Wychodząc od pytań filozoficznych, omówimy szereg praktycznych zagadnień związanych z dobroczynnością. Mamy nadzieję, że podczas tego spotkania przekonamy Cię, że każdy – także Ty – może zostać Efektywnym Altruistą.",
+    "recommended": true,
+    "audience": "pracowników kadry zarządczej",
+    "limit": "brak limitu uczestników",
+    "duration": "30 - 60 minut",
+    "price": "pierwszy wykład bez opłaty",
+    "modules": [
+      "Czy istnieje możliwość przygotowania indywidualnego szkolenia?",
+      "Jak wygląda polityka zwrotów?",
+      "Czy możliwe jest przeprowadzenie warsztatów online?",
+      "Czy istnieje możliwość przygotowania indywidualnego szkolenia?",
+      "Jak wygląda polityka zwrotów?"
+    ]
   }
 ]

@@ -1,0 +1,67 @@
+.activities {
+  h3 {
+    text-align: center;
+    font: normal normal normal 34px/45px Roboto Slab;
+    letter-spacing: 0px;
+    color: #000000;
+    margin-top: 70px;
+  }
+  .col {
+    padding-left: 183px;
+    padding-right: 183px;
+    p {
+      padding-top: 60px;
+      text-align: left;
+      font: normal normal normal 16px/24px Raleway;
+      letter-spacing: 0px;
+      color: #000000;
+    }
+  }
+  &__cta {
+    background: url("../../assets/images/cta-activities.png") center no-repeat;
+    height: 530px;
+    h2 {
+      text-align: left;
+      font: normal normal normal 34px/45px Roboto Slab;
+      letter-spacing: 0px;
+      color: #000000;
+      margin-left: 160px;
+      width: 440px;
+    }
+    p {
+      text-align: left;
+      font: normal normal normal 16px/24px Raleway;
+      letter-spacing: 0px;
+      color: #000000;
+      margin-left: 160px;
+      width: 440px;
+    }
+    input {
+      width: 260px;
+      margin-bottom: 20px;
+      background: #ffffff 0% 0% no-repeat padding-box;
+      border: 0px;
+      border-bottom: 2px solid #cccccc;
+      padding-left: 13px;
+      opacity: 1;
+      height: 42px;
+      font-size: 12px;
+      font-family: Raleway;
+      letter-spacing: 0px;
+    }
+    textarea {
+      height: 100px !important;
+      margin-bottom: 20px !important;
+      background: #ffffff 0% 0% no-repeat padding-box;
+      border: 0px;
+      border-bottom: 2px solid #cccccc;
+      padding-left: 13px;
+      padding-top: 13px;
+      width: 440px;
+      opacity: 1;
+      font-size: 12px;
+      font-family: Raleway;
+      letter-spacing: 0px;
+    }
+  }
+}
