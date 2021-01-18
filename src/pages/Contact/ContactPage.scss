@@ -1,0 +1,75 @@
+.contact {
+  &__data.col {
+    padding: 70px 100px;
+    background: #fafafa 0% 0% no-repeat padding-box;
+    h2 {
+      text-align: left;
+      font: normal normal bold 16px/24px Raleway;
+      letter-spacing: 0px;
+      color: #000000;
+      text-transform: uppercase;
+    }
+    tr {
+      td:first-of-type {
+        padding-right: 10px;
+      }
+      a {
+        text-align: left;
+        text-decoration: underline;
+        font: normal normal bold 16px/24px Raleway;
+        letter-spacing: 0px;
+        color: #0b879d;
+      }
+    }
+  }
+  &__social {
+    margin-top: 40px;
+    width: 40%;
+  }
+  &__icon {
+    font-size: 24px;
+    vertical-align: middle;
+    color: #0b879d;
+    transition: 0.3s ease;
+    -webkit-transition: 0.3s ease;
+    -moz-transition: 0.3s ease;
+    -ms-transition: 0.3s ease;
+    -o-transition: 0.3s ease;
+    &:hover {
+      opacity: 1;
+      color: #222222;
+      text-decoration: none;
+    }
+  }
+  &__form.col {
+    padding: 70px 70px 70px 83px;
+    input {
+      margin-bottom: 20px;
+      background: #fafafa 0% 0% no-repeat padding-box;
+      border: 0px;
+      border-bottom: 2px solid #cccccc;
+      padding-left: 13px;
+      opacity: 1;
+      height: 42px;
+      font-size: 12px;
+      font-family: Raleway;
+      letter-spacing: 0px;
+      width: 100%;
+    }
+
+    textarea {
+      height: 200px !important;
+      margin-bottom: 20px !important;
+      background: #fafafa 0% 0% no-repeat padding-box;
+      border: 0px;
+      border-bottom: 2px solid #cccccc;
+      padding-left: 13px;
+      padding-top: 13px;
+      opacity: 1;
+      font-size: 12px;
+      font-family: Raleway;
+      letter-spacing: 0px;
+      width: 100%;
+    }
+  }
+}

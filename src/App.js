@@ -17,6 +17,7 @@ import { loadStripe } from "@stripe/stripe-js";
 import DonatePage from "./pages/Act/DonatePage";
 import WorkshopsPage from "./pages/WorkshopsPage/WorkshopsPage";
 import WorkshopDetailsPage from "./pages/WorkshopDetailsPage/WorkshopDetailsPage";
+import ContactPage from "./pages/Contact/ContactPage";
 
 const stripePromise = loadStripe(
   "pk_test_51HiOnnDDHV7JDkB9tHxmUobKY4ZezsR5lsWsviFG5NPEPbpgFGBeGqyYHyMeSnMi5Ulv5pV29i6Vr8sbDyfNJDcA00U862gUpU"
@@ -56,6 +57,9 @@ function App() {
               </Route>
               <Route path="/donate" exact>
                 <DonatePage />
+              </Route>
+              <Route path="/contact" exact>
+                <ContactPage />
               </Route>
             </Switch>
             <CookieConsent

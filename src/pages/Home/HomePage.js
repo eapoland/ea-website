@@ -5,6 +5,7 @@ import FriendlyOrganisationsSection from "../../components/FriendlyOrganisations
 import photo from "../../assets/images/test-photo.jpg";
 import photo2 from "../../assets/images/preview2.png";
 import MainSlider from "../../components/MainSlider/MainSlider";
+import ScrollToTop from "../../components/ScrollToTop";
 
 const content = [
   {
@@ -30,6 +31,7 @@ const content = [
 const HomePage = () => {
   return (
     <>
+      <ScrollToTop />
       <MainSlider />
       <QuoteSection />
       <ContentPreviewSection content={content[0]} />

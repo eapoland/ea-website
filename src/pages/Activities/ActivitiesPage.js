@@ -7,12 +7,14 @@ import michal from "../../assets/images/marcin.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 import { NavHashLink } from "react-router-hash-link";
+import ScrollToTop from "../../components/ScrollToTop";
 
 const ActivitiesPage = () => {
   return (
     <div className="activities">
+      <ScrollToTop />
       <SectionTitleWithTranslation content={"activities"} />
-      <Row className="activities__cta justify-content-center">
+      <Row className="activities__cta justify-content-center" id="companies">
         <Col
           className="d-flex flex-column justify-content-center align-items-center"
           style={{ maxWidth: "683px" }}
@@ -43,7 +45,7 @@ const ActivitiesPage = () => {
           <EAButton title="Zapoznaj się z ofertą" />
         </Col>
       </Row>
-      <Row className="activities__advisory">
+      <Row className="activities__advisory ea-row">
         <Col>
           <h3>Doradztwo</h3>
           <Row className="justify-content-center">
@@ -61,7 +63,7 @@ const ActivitiesPage = () => {
           </Row>
         </Col>
       </Row>
-      <Row>
+      <Row id="media">
         <Col className="activities__col--narrow">
           <h3>Media</h3>
           <p className="activities__paragraph">

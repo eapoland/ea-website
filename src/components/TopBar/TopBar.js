@@ -131,14 +131,22 @@ const TopBar = () => {
               </DropdownToggle>
               <DropdownMenu>
                 <DropdownItem>
-                  <Link to="/movement" className="main-nav__dropdown-item">
+                  <HashLink
+                    smooth
+                    to={{ pathname: "/activities", hash: "#companies" }}
+                    className="main-nav__dropdown-item"
+                  >
                     {t("main_nav.coop.company")}
-                  </Link>
+                  </HashLink>
                 </DropdownItem>
                 <DropdownItem>
-                  <Link to="/movement" className="main-nav__dropdown-item">
+                  <HashLink
+                    smooth
+                    to={{ pathname: "/activities", hash: "#media" }}
+                    className="main-nav__dropdown-item"
+                  >
                     {t("main_nav.coop.media")}
-                  </Link>
+                  </HashLink>
                 </DropdownItem>
               </DropdownMenu>
             </Dropdown>
