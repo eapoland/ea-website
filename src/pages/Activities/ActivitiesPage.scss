@@ -6,16 +6,36 @@
     color: #000000;
     margin-top: 70px;
   }
-  .col {
-    padding-left: 183px;
-    padding-right: 183px;
-    p {
-      padding-top: 60px;
+  &__media {
+    &--btn {
+      background: #fafafa 0% 0% no-repeat padding-box;
       text-align: left;
-      font: normal normal normal 16px/24px Raleway;
+      font: normal normal bold 16px/34px Raleway;
       letter-spacing: 0px;
       color: #000000;
+      text-transform: uppercase;
+      width: 336px;
+      height: 60px;
+      padding: 13px 20px;
+      border: 0px;
+      transition: 0.25s ease;
+      -webkit-transition: 0.25s ease;
+      -moz-transition: 0.25s ease;
+      -ms-transition: 0.25s ease;
+      -o-transition: 0.25s ease;
     }
+
+    &--btn:hover {
+      background: #fafafa 0% 0% no-repeat padding-box;
+      box-shadow: 0px 0px 60px #0000001a;
+    }
+  }
+  &__paragraph {
+    padding-top: 60px;
+    text-align: left;
+    font: normal normal normal 16px/24px Raleway;
+    letter-spacing: 0px;
+    color: #000000;
   }
   &__cta {
     background: url("../../assets/images/cta-activities.png") center no-repeat;
@@ -62,6 +82,39 @@
       font-size: 12px;
       font-family: Raleway;
       letter-spacing: 0px;
+    }
+  }
+  &__col--narrow.col {
+    padding-left: 183px;
+    padding-right: 183px;
+    margin-bottom: 70px;
+  }
+  &__advisory {
+    background: #edcf00 0% 0% no-repeat padding-box;
+    img {
+      padding-left: 150px;
+    }
+    h1 {
+      margin-top: 70px;
+      margin-bottom: 60px;
+      text-align: center;
+      font: normal normal normal 34px/45px Roboto Slab;
+      letter-spacing: 0px;
+      color: #000000;
+    }
+    h4 {
+      text-align: left;
+      font: normal normal bold 16px/24px Raleway;
+      letter-spacing: 0px;
+      color: #000000;
+      text-transform: uppercase;
+    }
+    p {
+      text-align: left;
+      font: normal normal normal 16px/24px Raleway;
+      letter-spacing: -0.08px;
+      color: #000000;
+      padding-right: 160px;
     }
   }
 }

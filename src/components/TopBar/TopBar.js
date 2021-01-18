@@ -124,7 +124,7 @@ const TopBar = () => {
                 nav
                 className="main-nav__item"
                 tag={NavHashLink}
-                to="/cooperation"
+                to="/activities"
                 activeClassName="main-nav__item--active"
               >
                 {t("main_nav.coop.title")}
