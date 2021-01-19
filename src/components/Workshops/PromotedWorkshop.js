@@ -18,7 +18,7 @@ const PromotedWorkshop = () => {
           </h4>
           <h1>{item.title}</h1>
           <p>{item.shortSummary}</p>
-          <EAButton title="Czytaj więcej" target={item.id} />
+          <EAButton title="Czytaj więcej" target={`workshops/${item.id}`} />
         </Col>
       </div>
     ));

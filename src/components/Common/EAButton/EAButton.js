@@ -5,7 +5,7 @@ import "./EAButton.scss";
 
 const EAButton = ({ title, target, size }) => {
   return (
-    <NavHashLink to={`workshops/${target}`}>
+    <NavHashLink to={`${target}`}>
       <Button
         className="ea-button"
         style={

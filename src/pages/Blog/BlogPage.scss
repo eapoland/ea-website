@@ -1,0 +1,55 @@
+.author {
+  &__img {
+    border-radius: 25px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -ms-border-radius: 25px;
+    -o-border-radius: 25px;
+    margin-right: 20px !important;
+  }
+}
+
+.recommended-post {
+  &__author {
+    text-align: left;
+    font: normal normal bold 16px/24px Raleway;
+    letter-spacing: 0px;
+    color: #ffffff;
+    text-transform: uppercase;
+    opacity: 1;
+    margin: 0px;
+  }
+}
+
+.recommended-slider {
+  .slick-dots {
+    bottom: 20px;
+  }
+  .slick-dots li button:before {
+    color: white;
+    font-size: 10px;
+    opacity: 0.75;
+  }
+
+  .slick-dots li.slick-active button:before {
+    color: white;
+    font-size: 14px;
+    opacity: 1;
+  }
+  &__item {
+    height: 580px;
+    padding-left: 100px;
+    h1 {
+      text-align: left;
+      font: normal normal normal 44px/58px Roboto Slab;
+      letter-spacing: 0px;
+      color: #ffffff;
+      opacity: 1;
+      margin: 20px 0px;
+    }
+  }
+}
+
+.blog-posts {
+  padding: 0px 100px;
+}
