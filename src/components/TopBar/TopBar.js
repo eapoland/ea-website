@@ -50,17 +50,21 @@ const TopBar = () => {
   };
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
+    console.log(location.pathname);
   });
 
   return (
     <div>
       <Navbar
         expand="lg"
-        className={`p-0 main-nav ${(location.pathname !== "/" || scrolled) && "main-nav--scrolled"}`}
+        className={`p-0 main-nav ${
+          ((location.pathname !== "/" && !location.pathname.includes("/blog")) || scrolled) &&
+          "main-nav--scrolled"
+        }`}
         fixed="top"
       >
         <NavbarBrand tag={Link} to="/" className="main-nav__brand">
-          {location.pathname !== "/" || scrolled ? (
+          {(location.pathname !== "/" && !location.pathname.includes("/blog")) || scrolled ? (
             <Logo style={{ height: "60px" }}></Logo>
           ) : (
             <WhiteLogo style={{ height: "60px" }}></WhiteLogo>

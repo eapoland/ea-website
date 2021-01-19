@@ -9,6 +9,8 @@ const WordpressService = {
   getPost: (id) => axios.get(`https://ea-poland-wordpress.azurewebsites.net/wp-json/wp/v2/posts/${id}`),
 
   getUsers: () => axios.get("https://ea-poland-wordpress.azurewebsites.net/wp-json/wp/v2/users"),
+
+  getCategories: () => axios.get("https://ea-poland-wordpress.azurewebsites.net/wp-json/wp/v2/categories"),
 };
 
 export default WordpressService;
