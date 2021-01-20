@@ -6,7 +6,13 @@ import "./BlogPostPage.scss";
 import DateService from "../../utils/DateService";
 import Row from "reactstrap/lib/Row";
 import Col from "reactstrap/lib/Col";
-import EAButton from "../../components/Common/EAButton/EAButton";
+import TagButton from "../../components/Common/TagButton/TagButton";
+import { FacebookShareButton, LinkedinShareButton, TwitterShareButton } from "react-share";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faFacebookSquare, faLinkedinIn, faTwitter } from "@fortawesome/free-brands-svg-icons";
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import { NavHashLink } from "react-router-hash-link";
+import ScrollToTop from "../../components/ScrollToTop";
 
 const BlogPostPage = ({ setLoading }) => {
   const { slug } = useParams();
@@ -14,6 +20,7 @@ const BlogPostPage = ({ setLoading }) => {
   const [post, setPost] = useState(null);
   const [categories, setCategories] = useState([]);
   const [tags, setTags] = useState([]);
+  const [recommendedPosts, setRecommendedPosts] = useState([]);
 
   useEffect(() => {
     WordpressService.getCategories().then((res) =>
@@ -40,11 +47,13 @@ const BlogPostPage = ({ setLoading }) => {
           }))
         );
       });
+    WordpressService.getRecommendedPosts().then((res) => setRecommendedPosts(res.data));
   }, [setLoading, post, slug]);
 
   return (
     post && (
       <div>
+        <ScrollToTop />
         <div className="d-flex flex-column justify-content-center align-items-start">
           <div
             className="d-flex flex-column justify-content-center align-items-center post__header"
@@ -72,11 +81,24 @@ const BlogPostPage = ({ setLoading }) => {
             className="post__content"
             dangerouslySetInnerHTML={{ __html: post ? post.content.rendered : "" }}
           ></div>
-          <div>
-            {tags.map((tag) => (
-              //CREATE TAG BUTTON
-              <EAButton title={tag.name} />
-            ))}
+          <div className="post__tags d-flex justify-content-between align-items-center">
+            <div>
+              {tags.map((tag) => (
+                //CREATE TAG BUTTON
+                <TagButton title={tag.name} slug={tag.slug} />
+              ))}
+            </div>
+            <div>
+              <FacebookShareButton url={window.location.href}>
+                <FontAwesomeIcon icon={faFacebookSquare} className="social-icon" />
+              </FacebookShareButton>
+              <TwitterShareButton url={window.location.href}>
+                <FontAwesomeIcon icon={faTwitter} className="social-icon" />
+              </TwitterShareButton>
+              <LinkedinShareButton url={window.location.href}>
+                <FontAwesomeIcon icon={faLinkedinIn} className="social-icon" />
+              </LinkedinShareButton>
+            </div>
           </div>
           <Row className="post__author">
             <Col xs={4}>
@@ -90,10 +112,49 @@ const BlogPostPage = ({ setLoading }) => {
               <h3>Autor</h3>
               <h2>{post._embedded.author[0].name}</h2>
               <p>{post._embedded.author[0].description}</p>
-              <div>LINKI</div>
+              <div>
+                <a href={post._embedded.author[0].acf.linkedin} target="_blank" rel="noopener noreferrer">
+                  <FontAwesomeIcon icon={faLinkedinIn} className="social-icon" />
+                </a>
+                <a
+                  href={`mailto:${post._embedded.author[0].acf.email}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FontAwesomeIcon icon={faEnvelope} className="social-icon" />
+                </a>
+              </div>
             </Col>
           </Row>
         </div>
+        <Row className="post__recommended">
+          <Col>
+            <h2>Polecamy</h2>
+            <Row className="post__recommended--list justify-content-between">
+              {recommendedPosts.map((post) => {
+                return (
+                  <NavHashLink to={`${post.slug}`} style={{ textDecoration: "none" }} key={post.id}>
+                    <div>
+                      <img
+                        src={`https://ea-poland-wordpress.azurewebsites.net${post._embedded["wp:featuredmedia"][0].source_url}`}
+                        alt={post._embedded.author[0].slug}
+                        style={{
+                          height: "220px",
+                          width: "362px",
+                          borderRadius: "10px",
+                        }}
+                      />
+                      <h4>
+                        {categories.filter((cat) => cat.id === post.categories[0]).map((cat) => cat.name)}
+                      </h4>
+                      <h3>{post.title.rendered}</h3>
+                    </div>
+                  </NavHashLink>
+                );
+              })}
+            </Row>
+          </Col>
+        </Row>
       </div>
     )
   );
