@@ -50,7 +50,6 @@ const TopBar = () => {
   };
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
-    console.log(location.pathname);
   });
 
   return (

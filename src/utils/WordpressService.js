@@ -12,11 +12,13 @@ const WordpressService = {
     ),
 
   getPost: (slug) =>
-    axios.get(`https://ea-poland-wordpress.azurewebsites.net/wp-json/wp/v2/posts?slug=${slug}`),
+    axios.get(`https://ea-poland-wordpress.azurewebsites.net/wp-json/wp/v2/posts?_embed=1&slug=${slug}`),
 
   getUsers: () => axios.get("https://ea-poland-wordpress.azurewebsites.net/wp-json/wp/v2/users"),
 
   getCategories: () => axios.get("https://ea-poland-wordpress.azurewebsites.net/wp-json/wp/v2/categories"),
+
+  getTags: (tagIds) => axios.get("https://ea-poland-wordpress.azurewebsites.net/wp-json/wp/v2/tags?include="),
 };
 
 export default WordpressService;

@@ -1,0 +1,123 @@
+.post {
+  padding-left: 183px;
+  padding-right: 183px;
+  &__header {
+    height: 580px;
+    h1 {
+      text-align: left;
+      font: normal normal normal 44px/58px Roboto Slab;
+      letter-spacing: 0px;
+      color: #ffffff;
+      opacity: 1;
+      margin: 20px 0px;
+    }
+    p {
+      text-align: center;
+      font: normal normal bold 16px/24px Raleway;
+      letter-spacing: 0px;
+      color: #ffffff;
+      text-transform: uppercase;
+      opacity: 1;
+    }
+  }
+  &__content {
+    padding-bottom: 36px;
+    padding-top: 70px;
+    p {
+      text-align: left;
+      font: normal normal normal 16px/24px Raleway;
+      letter-spacing: -0.16px;
+      color: #000000;
+    }
+    h1 {
+      text-align: left;
+      font: normal normal normal 54px/72px Roboto Slab;
+      letter-spacing: 0px;
+      color: #000000;
+    }
+    h2 {
+      text-align: left;
+      font: normal normal normal 44px/58px Roboto Slab;
+      letter-spacing: 0px;
+      color: #000000;
+    }
+    h3 {
+      text-align: left;
+      font: normal normal normal 34px/45px Roboto Slab;
+      letter-spacing: 0px;
+      color: #000000;
+    }
+    h4 {
+      text-align: left;
+      font: normal normal normal 24px/32px Roboto Slab;
+      letter-spacing: 0px;
+      color: #000000;
+    }
+    h5 {
+      text-align: left;
+      font: normal normal bold 16px/24px Raleway;
+      letter-spacing: 0px;
+      color: #000000;
+      text-transform: uppercase;
+    }
+    h6 {
+      text-align: left;
+      font: normal normal bold 12px/24px Raleway;
+      letter-spacing: 0px;
+      color: #000000;
+      text-transform: uppercase;
+    }
+    figcaption {
+      text-align: center;
+      font: normal normal normal 16px/24px Roboto Slab;
+      letter-spacing: -0.16px;
+      color: #000000;
+    }
+    figure {
+      text-align: center;
+    }
+    blockquote {
+      padding: 70px 95px 75px 95px;
+      margin: 45px 0px 40px 0px;
+      background: url("../../assets/images/quote.png") bottom left no-repeat,
+        #fafafa 0% 0% no-repeat padding-box;
+      cite {
+        text-align: left;
+        font: normal normal normal 34px/45px Roboto Slab;
+        letter-spacing: -0.34px;
+        color: #000000;
+      }
+    }
+    ol,
+    ul {
+      text-align: left;
+      font: normal normal normal 16px/34px Raleway;
+      letter-spacing: -0.16px;
+      color: #000000;
+    }
+  }
+  &__author {
+    background: #fafafa 0% 0% no-repeat padding-box;
+    padding: 40px;
+    margin-bottom: 80px;
+    h3 {
+      text-align: left;
+      font: normal normal bold 16px/24px Raleway;
+      letter-spacing: 0px;
+      color: #000000;
+      text-transform: uppercase;
+    }
+    h2 {
+      text-align: left;
+      font: normal normal normal 34px/45px Roboto Slab;
+      letter-spacing: 0px;
+      color: #000000;
+    }
+    p {
+      text-align: left;
+      font: normal normal normal 16px/24px Raleway;
+      letter-spacing: -0.08px;
+      color: #000000;
+    }
+  }
+}
