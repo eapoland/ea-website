@@ -16,6 +16,7 @@ const content = [
     cta: "czytaj więcej",
     img: photo,
     imgAlt: "test",
+    page: "about",
   },
   {
     label: "O NAS",
@@ -25,6 +26,7 @@ const content = [
     cta: "czytaj więcej",
     img: photo2,
     imgAlt: "test",
+    page: "activities",
   },
 ];
 

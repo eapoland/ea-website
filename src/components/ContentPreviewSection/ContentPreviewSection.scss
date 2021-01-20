@@ -32,20 +32,7 @@
     opacity: 1;
   }
   &__button.btn {
-    padding: 12px 25px;
-    border-radius: 0px;
     margin-top: 20px;
-    background: #0b879d 0% 0% no-repeat padding-box;
-    opacity: 1;
-    -webkit-transition: background-color 400ms ease, opacity 400ms ease, color 400ms ease;
-    transition: background-color 400ms ease, opacity 400ms ease, color 400ms ease;
-    color: #fff;
-    text-decoration: none;
-    text-align: center;
-    font: normal normal bold 12px/14px Raleway;
-    letter-spacing: 0px;
-    color: #ffffff;
-    text-transform: uppercase;
   }
   .content-preview-section__column {
     padding: 0px;

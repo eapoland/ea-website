@@ -1,6 +1,7 @@
 import React from "react";
 import Slider from "react-slick";
-import { Row, Col, Button } from "reactstrap";
+import { Row, Col } from "reactstrap";
+import EAButton from "../Common/EAButton/EAButton";
 
 import "./MainSlider.scss";
 
@@ -30,7 +31,7 @@ const MainSlider = () => {
               Jak czynić najwięcej dobra wykorzystując ograniczone środki?
               <br /> Efektywny Altruizm szuka odpowiedzi na to pytanie.
             </p>
-            <Button className="main-slider__item--button">Dowiedz się więcej</Button>
+            <EAButton title="Dowiedz się więcej" size={160} target="about" />
           </div>
           <div className="main-slider__item main-slider__item--second">TEST2</div>
         </Slider>

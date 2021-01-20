@@ -1,8 +1,9 @@
 import React from "react";
 //import { useTranslation } from "react-i18next";
 import "./ContentPreviewSection.scss";
-import { Button, Col, Row } from "reactstrap";
+import { Col, Row } from "reactstrap";
 import Fade from "react-reveal/Fade";
+import EAButton from "../Common/EAButton/EAButton";
 
 const ContentPreviewSection = ({ reversed, content }) => {
   //const { t, i18n } = useTranslation("common");
@@ -17,7 +18,7 @@ const ContentPreviewSection = ({ reversed, content }) => {
         <Col xs={6} className="content-preview-section__column content-preview-section__info">
           <h1 className="content-preview-section__heading">{content.heading}</h1>
           <p className="content-preview-section__text">{content.text}</p>
-          <Button className="content-preview-section__button">{content.cta}</Button>
+          <EAButton customClass="content-preview-section__button" title={content.cta} target={content.page} />
         </Col>
         <Col xs={6} className="content-preview-section__column">
           <img src={content.img} alt={content.imgAlt} />
