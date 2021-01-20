@@ -40,7 +40,7 @@ const BlogPostPage = ({ setLoading }) => {
           }))
         );
       });
-  }, [setLoading]);
+  }, [setLoading, post, slug]);
 
   return (
     post && (

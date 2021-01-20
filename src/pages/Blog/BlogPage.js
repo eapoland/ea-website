@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import WithLoading from "../../components/WithLoading";
 import WordpressService from "../../utils/WordpressService";
-import { Row, Col, Button } from "reactstrap";
+import { Row, Col } from "reactstrap";
 import Slider from "react-slick";
 import "./BlogPage.scss";
 import EAButton from "../../components/Common/EAButton/EAButton";
