@@ -147,6 +147,17 @@
     padding: 40px;
     margin-top: 40px;
     margin-bottom: 80px;
+    .author {
+      &__img {
+        width: 250px;
+        border-radius: 25px;
+        -webkit-border-radius: 25px;
+        -moz-border-radius: 25px;
+        -ms-border-radius: 25px;
+        -o-border-radius: 25px;
+        margin-right: 20px !important;
+      }
+    }
     h3 {
       text-align: left;
       font: normal normal bold 16px/24px Raleway;

@@ -19,6 +19,7 @@ import WorkshopsPage from "./pages/WorkshopsPage/WorkshopsPage";
 import WorkshopDetailsPage from "./pages/WorkshopDetailsPage/WorkshopDetailsPage";
 import ContactPage from "./pages/Contact/ContactPage";
 import BlogPostPage from "./pages/BlogPostPage/BlogPostPage";
+import ActPage from "./pages/Act/ActPage";
 
 const stripePromise = loadStripe(
   "pk_test_51HiOnnDDHV7JDkB9tHxmUobKY4ZezsR5lsWsviFG5NPEPbpgFGBeGqyYHyMeSnMi5Ulv5pV29i6Vr8sbDyfNJDcA00U862gUpU"
@@ -55,6 +56,9 @@ function App() {
               </Route>
               <Route path="/blog" exact>
                 <BlogPage />
+              </Route>
+              <Route path="/act" exact>
+                <ActPage />
               </Route>
               <Route path="/blog/:slug" exact>
                 <BlogPostPage />

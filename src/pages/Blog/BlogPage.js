@@ -16,20 +16,25 @@ const BlogPage = ({ setLoading }) => {
   const [categories, setCategories] = useState([]);
 
   useEffect(() => {
-    WordpressService.getCategories().then((res) =>
-      setCategories(
-        res.data.map((category) => ({
-          id: category.id,
-          name: category.name,
-          slug: category.slug,
-        }))
+    WordpressService.getCategories()
+      .then((res) =>
+        setCategories(
+          res.data.map((category) => ({
+            id: category.id,
+            name: category.name,
+            slug: category.slug,
+          }))
+        )
       )
-    );
-    WordpressService.getRecommendedPosts().then((res) => setRecommendedPosts(res.data));
-    WordpressService.getPosts(1)
-      .then((res) => setPosts(res.data))
       .then(() => {
-        setLoading(false);
+        WordpressService.getRecommendedPosts().then((res) => setRecommendedPosts(res.data));
+      })
+      .then(() => {
+        WordpressService.getPosts(1)
+          .then((res) => setPosts(res.data))
+          .then(() => {
+            setLoading(false);
+          });
       });
   }, [setLoading]);
 
@@ -70,7 +75,7 @@ const BlogPage = ({ setLoading }) => {
                   <span className="d-flex align-items-center">
                     <img
                       className="author__img"
-                      src={post._embedded.author[0].avatar_urls[48]}
+                      src={`https://ea-poland-wordpress.azurewebsites.net${post._embedded.author[0].acf.photo}`}
                       alt={post._embedded.author[0].slug}
                     />
                     <p className="recommended-post__author">

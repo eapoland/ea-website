@@ -1,0 +1,99 @@
+.act {
+  &__type.row {
+    margin: 0px;
+    background: #fafafa 0% 0% no-repeat padding-box;
+    .col {
+      padding: 0px;
+    }
+    .act__type--desc {
+      padding: 77px 83px;
+      h2 {
+        margin-bottom: 10px;
+        font-family: Raleway, sans-serif;
+        font-size: 34px;
+        text-align: left;
+        font: normal normal normal 34px/45px Roboto Slab;
+        letter-spacing: 0px;
+        color: #000000;
+        opacity: 1;
+      }
+      p {
+        text-align: left;
+        font: normal normal normal 16px/24px Raleway;
+        letter-spacing: 0px;
+        margin-bottom: 0px;
+        color: #000000;
+        opacity: 1;
+      }
+      button {
+        margin-top: 23px;
+      }
+    }
+  }
+  &__tabs.row {
+    h2 {
+      text-align: center;
+      font: normal normal normal 34px/45px Roboto Slab;
+      letter-spacing: 0px;
+      color: #000000;
+      margin-top: 70px;
+      margin-bottom: 60px;
+    }
+    margin: 0px;
+    padding-left: 100px;
+    padding-right: 100px;
+    .rc-tabs {
+      border: none !important;
+      display: flex;
+    }
+    .rc-tabs-tab {
+      padding: 5px;
+      background: #fafafa 0% 0% no-repeat padding-box;
+      margin-bottom: 10px;
+    }
+    .rc-tabs-tab .rc-tabs-tab-btn {
+      font-weight: normal;
+      width: 370px;
+      height: 100px;
+      background: #fafafa 0% 0% no-repeat padding-box;
+      color: #000;
+      text-align: left;
+      font: normal normal normal 24px/34px Roboto Slab;
+      letter-spacing: 0px;
+      padding: 34px 40px;
+    }
+    .rc-tabs-tab.rc-tabs-tab-active {
+      background: #edcf00 0% 0% no-repeat padding-box;
+      box-shadow: 0px 0px 60px #0000001a;
+      .rc-tabs-tab-btn {
+        background: #edcf00 0% 0% no-repeat padding-box;
+      }
+    }
+
+    .rc-tabs-content-holder {
+      padding-left: 56px;
+      h3 {
+        text-align: left;
+        font: normal normal normal 34px/45px Roboto Slab;
+        letter-spacing: 0px;
+        color: #000000;
+      }
+      p {
+        text-align: left;
+        font: normal normal normal 16px/24px Raleway;
+        letter-spacing: 0px;
+        color: #000000;
+      }
+      a {
+        text-align: left;
+        text-decoration: underline;
+        font: normal normal bold 16px/24px Raleway;
+        letter-spacing: 0px;
+        color: #0b879d;
+      }
+      p:last-of-type {
+        margin-bottom: 40px;
+      }
+    }
+  }
+}

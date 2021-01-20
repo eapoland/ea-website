@@ -23,31 +23,37 @@ const BlogPostPage = ({ setLoading }) => {
   const [recommendedPosts, setRecommendedPosts] = useState([]);
 
   useEffect(() => {
-    WordpressService.getCategories().then((res) =>
-      setCategories(
-        res.data.map((category) => ({
-          id: category.id,
-          name: category.name,
-          slug: category.slug,
-        }))
+    WordpressService.getCategories()
+      .then((res) =>
+        setCategories(
+          res.data.map((category) => ({
+            id: category.id,
+            name: category.name,
+            slug: category.slug,
+          }))
+        )
       )
-    );
-    WordpressService.getPost(slug)
-      .then((res) => setPost(res.data[0]))
+      .then(() => {
+        WordpressService.getPost(slug).then((res) => setPost(res.data[0]));
+      })
+      .then(() => {
+        post &&
+          WordpressService.getTags(post.tags.join()).then((res) => {
+            setTags(
+              res.data.map((tag) => ({
+                id: tag.id,
+                name: tag.name,
+                slug: tag.slug,
+              }))
+            );
+          });
+      })
+      .then(() => {
+        WordpressService.getRecommendedPosts().then((res) => setRecommendedPosts(res.data));
+      })
       .then(() => {
         setLoading(false);
       });
-    post &&
-      WordpressService.getTags(post.tags.join()).then((res) => {
-        setTags(
-          res.data.map((tag) => ({
-            id: tag.id,
-            name: tag.name,
-            slug: tag.slug,
-          }))
-        );
-      });
-    WordpressService.getRecommendedPosts().then((res) => setRecommendedPosts(res.data));
   }, [setLoading, post, slug]);
 
   return (
