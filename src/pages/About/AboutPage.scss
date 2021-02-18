@@ -10,4 +10,29 @@
     -o-border-radius: 0%;
     color: white;
   }
+  &__intro.row {
+    margin: 0px;
+    background: #edcf00 0% 0% no-repeat padding-box;
+    .col-sm-6:first-of-type {
+      padding: 10em 4.4em 10em 5em;
+      width: 50%;
+    }
+    .col-sm-6:last-of-type {
+      background: url("../../assets/images/aboutIntro.png") center no-repeat;
+      background-size: cover;
+    }
+  }
+  h3 {
+    text-align: left;
+    font: normal normal normal 2.125em/2.8rem Roboto Slab;
+    letter-spacing: 0px;
+    color: #000000;
+  }
+  p {
+    text-align: left;
+    font: normal normal normal 1em/1.5rem Raleway;
+    letter-spacing: 0px;
+    color: #000000;
+    opacity: 1;
+  }
 }
