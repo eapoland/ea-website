@@ -21,7 +21,7 @@ const AboutPage = () => {
           <p>Efektywny Altruizm to międzynarodowa społeczność szukająca odpowiedzi na to pytanie. Zdobytą tą drogą wiedzę wykorzystujemy później w praktyce, pracując na rzecz obszarów, które najbardziej potrzebują naszej pomocy. Okazuje się, że przy użyciu ograniczonych środków możemy mieć wpływ na realne zmiany na świecie.</p>
         </Col>
         <Col sm={6}>
-        </Col>
+        </Col> 
       </Row>
       <Row id="movement" className={`content-section justify-content-center`}>
         <Col xs={6} className="content-section__column mx-auto">

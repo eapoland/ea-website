@@ -6,7 +6,8 @@ body {
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
 }
 
 .slick-track {
@@ -25,4 +26,28 @@ code {
 
 *:focus {
   outline: none;
+}
+
+@media (max-width: 1365px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 1024px) {
+  html {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  html {
+    font-size: 8px;
+  }
 }

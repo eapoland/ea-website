@@ -1,7 +1,8 @@
 .promoted-workshop {
-  width: 1166px;
+  margin: 0 7%;
   height: 420px;
-  background: url("../../assets/images/recommended_workshop.png") center no-repeat;
+  background: url("../../assets/images/recommended_workshop.png") center
+    no-repeat;
   background-size: 100%;
   padding-right: 91px;
   h4 {
@@ -63,7 +64,6 @@
 }
 
 .workshop-list {
-  max-width: 1366px;
   .workshop-card:nth-of-type(even) {
     margin-left: 46px;
   }
@@ -143,7 +143,7 @@
 
 .faq-item {
   &.card {
-    width: 1000px;
+    max-width: 1000px;
     margin-bottom: 10px;
     background: #fafafa 0% 0% no-repeat padding-box;
     opacity: 1;
