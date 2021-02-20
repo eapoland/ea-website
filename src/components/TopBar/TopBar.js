@@ -85,7 +85,7 @@ const TopBar = () => {
                 to="/about"
                 activeClassName="main-nav__item--active"
               >
-                {t("main_nav.about_us.title")}
+                O&nbsp;nas
               </DropdownToggle>
               <DropdownMenu>
                 <DropdownItem>
