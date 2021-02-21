@@ -24,17 +24,17 @@ const Testimonials = () => {
   return (
     <Row className="testimonials justify-content-center">
       <Col className="testimonials-content">
-        <h1>Uczestnicy o nas</h1>
+        <h3 className="m-0">Uczestnicy o nas</h3>
         <Slider {...settings}>
           <div className="d-flex testimonial justify-content-center">
             <div style={{ width: "250px", marginRight: "40px" }}>
               <img src={testimonial} alt="Karolina Sarek" />
 
-              <h3>Karolina Sarek</h3>
-              <h4>
+              <h5>Karolina Sarek</h5>
+              <h6>
                 Współzałożycielka i Dyrektor Badań w Charity Entrepreneurship Fund Manager at Effective
                 Altruism Animal Welfare Fund
-              </h4>
+              </h6>
             </div>
             <div style={{ width: "450px" }}>
               <p>
@@ -50,11 +50,11 @@ const Testimonials = () => {
             <div style={{ width: "250px", marginRight: "40px" }}>
               <img src={testimonial} alt="Karolina Sarek" />
 
-              <h3>Karolina Sarek</h3>
-              <h4>
+              <h5>Karolina Sarek</h5>
+              <h6>
                 Współzałożycielka i Dyrektor Badań w Charity Entrepreneurship Fund Manager at Effective
                 Altruism Animal Welfare Fund
-              </h4>
+              </h6>
             </div>
             <div style={{ width: "450px" }}>
               <p>

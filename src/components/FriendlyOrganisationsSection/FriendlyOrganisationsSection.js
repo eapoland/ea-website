@@ -13,7 +13,7 @@ const FriendlyOrganisationsSection = () => {
     <Fade bottom>
       <Row className="friendly-section ea-row">
         <Col className="friendly-section-column text-center mx-auto">
-          <h1 className="friendly-section__heading">Przyjaciele</h1>
+          <h3 className="friendly-section__heading">Przyjaciele</h3>
           <div className="d-flex justify-content-center align-items-center">
             <div className="friendly-section__logo">
               <img src={okLogo} alt="OK logo" />

@@ -1,5 +1,5 @@
 import React from "react";
-import SectionTitleWithTranslation from "../../components/SectionTitle/SectionTitleWithTranslation";
+import SectionTitle from "../../components/SectionTitle/SectionTitle";
 import { Row, Col } from "reactstrap";
 import EAButton from "../../components/Common/EAButton/EAButton";
 import "./ActivitiesPage.scss";
@@ -13,7 +13,7 @@ const ActivitiesPage = () => {
   return (
     <div className="activities">
       <ScrollToTop />
-      <SectionTitleWithTranslation content={"activities"} />
+      <SectionTitle title="Nasze działania" text="Współpraca i doradztwo" />
       <Row className="activities__cta justify-content-center" id="companies">
         <Col
           className="d-flex flex-column justify-content-center align-items-center"

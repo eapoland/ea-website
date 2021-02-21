@@ -1,54 +1,18 @@
 .promoted-workshop {
   margin: 0 7%;
-  height: 420px;
+  height: 26.25rem;
   background: url("../../assets/images/recommended_workshop.png") center
     no-repeat;
   background-size: 100%;
-  padding-right: 91px;
-  h4 {
-    text-align: left;
-    font: normal normal bold 16px/24px Raleway;
-    letter-spacing: 0px;
-    color: #000000;
-    text-transform: uppercase;
-    opacity: 1;
-  }
-  h1 {
-    text-align: left;
-    font: normal normal normal 34px/45px Roboto Slab;
-    letter-spacing: 0px;
-    color: #000000;
-    opacity: 1;
-  }
-  p {
-    text-align: left;
-    font: normal normal normal 16px/24px Raleway;
-    letter-spacing: 0px;
-    color: #000000;
-    opacity: 1;
-  }
+  padding-right: 5.687rem;
 }
 
 .workshop-card {
-  width: 560px;
-  height: 390px;
+  width: 35rem;
+  height: 24.375rem;
   background-color: blueviolet;
-  margin-top: 40px;
-  padding: 60px 60px 50px 60px;
-  h1 {
-    text-align: left;
-    font: normal normal normal 34px/45px Roboto Slab;
-    letter-spacing: 0px;
-    color: #000000;
-    opacity: 1;
-  }
-  p {
-    text-align: left;
-    font: normal normal normal 16px/24px Raleway;
-    letter-spacing: 0px;
-    color: #000000;
-    opacity: 1;
-  }
+  margin-top: 2.5rem;
+  padding: 3.75rem 3.75rem 3.125rem 3.75rem;
   &:nth-of-type(1n) {
     background: url("../../assets/images/workshop-bg-1.png") center no-repeat;
   }
@@ -65,106 +29,73 @@
 
 .workshop-list {
   .workshop-card:nth-of-type(even) {
-    margin-left: 46px;
+    margin-left: 2.875rem;
   }
-  margin-bottom: 80px;
+  margin-bottom: 5rem;
 }
 
 .testimonials {
-  min-height: 700px;
+  min-height: 43.75rem;
   width: 100%;
   background: #fafafa 0% 0% no-repeat padding-box;
   opacity: 1;
   &-content.col {
-    max-width: 1200px;
+    max-width: 75rem;
   }
-  padding-top: 70px;
-  h1 {
-    text-align: center;
-    font: normal normal normal 34px/45px Roboto Slab;
-    letter-spacing: 0px;
-    color: #000000;
-    opacity: 1;
-    margin: 0;
+  padding-top: 4.375rem;
+  h5 {
+    margin-top: 3.125rem;
   }
-  h3 {
-    text-align: left;
-    font: normal normal bold 16px/24px Raleway;
-    letter-spacing: 0px;
-    color: #000000;
-    text-transform: uppercase;
-    opacity: 1;
-    margin-top: 40px;
-  }
-  h4 {
-    text-align: left;
-    font: normal normal normal 16px/24px Raleway;
+  h6 {
+    font: normal normal normal 1em/1.5rem Raleway;
     letter-spacing: -0.08px;
-    color: #000000;
-    opacity: 1;
-    margin-top: 20px;
+    margin-top: 1.25rem;
+    text-transform: unset;
   }
   .testimonial {
     margin-top: 60px;
   }
   p {
-    text-align: left;
-    font: normal normal normal 24px Roboto Slab;
+    font: normal normal normal 1.5em Roboto Slab;
     letter-spacing: 0px;
-    color: #000000;
-    opacity: 1;
   }
 
   .slick-dots {
-    bottom: -50px;
+    bottom: -3.125rem;
   }
 
   .slick-dots li button:before {
-    font-size: 10px;
+    font-size: 0.625rem;
   }
 
   .slick-dots li.slick-active button:before {
-    font-size: 14px;
+    font-size: 0.875rem;
   }
 }
 
 .workshops-faq {
-  h1 {
-    text-align: center;
-    font: normal normal normal 34px/45px Roboto Slab;
-    letter-spacing: 0px;
-    color: #000000;
-    opacity: 1;
-    margin-top: 70px;
-    margin-bottom: 60px;
+  h3 {
+    margin-top: 4.375rem;
+    margin-bottom: 3.75rem;
   }
-  margin-bottom: 75px;
+  margin-bottom: 4.687rem;
 }
 
 .faq-item {
   &.card {
-    max-width: 1000px;
-    margin-bottom: 10px;
+    width: 62.5rem;
+    margin-bottom: 0.625rem;
     background: #fafafa 0% 0% no-repeat padding-box;
     opacity: 1;
   }
-
-  &__title {
-    text-align: left;
-    font: normal normal normal 24px/34px Roboto Slab;
-    letter-spacing: 0px;
-    color: #000000;
-    opacity: 1;
-    margin: 0;
-  }
   &__content {
-    margin-top: 20px;
+    margin-top: 1.25rem;
   }
 
   &__toggle {
     border: 0;
-    width: 30px;
-    height: 30px;
+    width: 2rem;
+    height: 2rem;
     background-color: inherit;
     transition: 0.3s ease;
   }
@@ -173,6 +104,6 @@
 .slick-prev.slick-arrow,
 .slick-next.slick-arrow {
   color: black;
-  font-size: 64px;
-  height: 64px;
+  font-size: 4rem;
+  height: 4rem;
 }

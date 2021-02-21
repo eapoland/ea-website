@@ -16,8 +16,8 @@ const ContentPreviewSection = ({ reversed, content }) => {
         } justify-content-center`}
       >
         <Col xs={6} className="content-preview-section__column content-preview-section__info">
-          <h1 className="content-preview-section__heading">{content.heading}</h1>
-          <p className="content-preview-section__text">{content.text}</p>
+          <h3>{content.heading}</h3>
+          <p>{content.text}</p>
           <EAButton customClass="content-preview-section__button" title={content.cta} target={content.page} />
         </Col>
         <Col xs={6} className="content-preview-section__column">

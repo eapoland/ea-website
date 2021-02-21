@@ -1,27 +1,22 @@
 .newsletter-cta-section {
-  padding: 74px 85px 40px 85px;
+  padding: 4.625rem 5.312rem 2.5rem 5.312rem;
   background-color: #edcf00;
-  height: 300px;
-  min-width: 512px;
+  height: 18.75rem;
+  min-width: 32rem;
   &__button.btn {
-    padding: 12px 25px;
+    padding: 0.75rem 1.562rem;
     border-radius: 0px;
     background-color: #1a1b1f;
-    -webkit-transition: background-color 400ms ease, opacity 400ms ease, color 400ms ease;
-    transition: background-color 400ms ease, opacity 400ms ease, color 400ms ease;
+    -webkit-transition: background-color 400ms ease, opacity 400ms ease,
+      color 400ms ease;
+    transition: background-color 400ms ease, opacity 400ms ease,
+      color 400ms ease;
     color: #fff;
-    font-size: 12px;
-    line-height: 20px;
-    letter-spacing: 2px;
+    font-size: 0.75em;
+    line-height: 1.25rem;
+    letter-spacing: 0.125rem;
     text-decoration: none;
     text-transform: uppercase;
-  }
-  &__heading {
-    text-align: center;
-    font: normal normal normal 24px/32px Roboto Slab;
-    letter-spacing: 0px;
-    color: #000000;
-    opacity: 1;
   }
 }
 
@@ -31,13 +26,13 @@
   margin-right: auto;
   &__button.btn {
     text-align: center;
-    font: normal normal bold 12px/14px Raleway;
+    font: normal normal bold 0.75em/0.875rem Raleway;
     letter-spacing: 0px;
     color: #ffffff;
     text-transform: uppercase;
     opacity: 1;
     background: #0b879d 0% 0% no-repeat padding-box;
-    padding: 13px 29px;
+    padding: 0.812rem 1.812rem;
     border: 0px;
     border-radius: unset;
   }
@@ -45,11 +40,11 @@
     background: #ffffff 0% 0% no-repeat padding-box;
     border: 0px;
     border-bottom: 2px solid #cccccc;
-    padding-left: 13px;
+    padding-left: 0.812rem;
     opacity: 1;
-    height: 42px;
-    width: 220px;
-    font-size: 12px;
+    height: 2.625rem;
+    width: 13.75rem;
+    font-size: 0.75em;
     font-family: Raleway;
     letter-spacing: 0px;
     color: #bfbfbf;

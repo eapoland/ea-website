@@ -3,7 +3,7 @@ import Col from "reactstrap/lib/Col";
 import Row from "reactstrap/lib/Row";
 import ScrollToTop from "../../components/ScrollToTop";
 import "./ActPage.scss";
-import SectionTitleWithTranslation from "../../components/SectionTitle/SectionTitleWithTranslation";
+import SectionTitle from "../../components/SectionTitle/SectionTitle";
 import act from "../../assets/images/act.png";
 import change from "../../assets/images/change.png";
 import volunteer from "../../assets/images/volunteer.png";
@@ -41,7 +41,7 @@ const ActPage = () => {
   return (
     <div className="act">
       <ScrollToTop />
-      <SectionTitleWithTranslation content={"act"} />
+      <SectionTitle title="Działaj z nami" text="Wesprzyj nas" />
       <Row className="act__type" style={{ backgroundColor: "#edcf00" }}>
         <Col className="act__type--photo">
           <img src={content[0].img} alt={content[0].imgAlt} />

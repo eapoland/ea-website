@@ -23,11 +23,11 @@ const MainSlider = () => {
       <Col className="recommended-slider-column text-center mx-auto">
         <Slider {...settings}>
           <div className="d-flex flex-column justify-content-center align-items-start main-slider__item main-slider__item--first">
-            <h1>
+            <h2 className="text-white">
               Jak przynieść światu <br />
               <b>najwięcej dobra?</b>
-            </h1>
-            <p>
+            </h2>
+            <p className="text-white">
               Jak czynić najwięcej dobra wykorzystując ograniczone środki?
               <br /> Efektywny Altruizm szuka odpowiedzi na to pytanie.
             </p>

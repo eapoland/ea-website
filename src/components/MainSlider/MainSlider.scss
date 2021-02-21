@@ -1,40 +1,27 @@
 .carousel-item img {
   width: 100%;
-  max-height: 580px;
+  max-height: 36.25rem;
 }
 
 .main-slider {
-  color: white;
+  color: #ffffff;
   .slick-dots {
-    bottom: 20px;
+    bottom: 1.25rem;
   }
   .slick-dots li button:before {
-    color: white;
-    font-size: 10px;
+    color: #ffffff;
+    font-size: 0.625em;
     opacity: 0.75;
   }
 
   .slick-dots li.slick-active button:before {
-    color: white;
-    font-size: 14px;
+    color: #ffffff;
+    font-size: 0.875em;
     opacity: 1;
   }
   &__item {
-    height: 580px;
-    padding-left: 100px;
-    h1 {
-      text-align: left;
-      font: normal normal normal 44px/58px Roboto Slab;
-      letter-spacing: 0px;
-      color: #ffffff;
-    }
-    p {
-      text-align: left;
-      font: normal normal normal 16px/24px Raleway;
-      letter-spacing: 0px;
-      color: #ffffff;
-      opacity: 1;
-    }
+    height: 36.25rem;
+    padding-left: 6.25rem;
     &--first {
       background: linear-gradient(
           180deg,
@@ -54,22 +41,6 @@
         ),
         url("../../assets/images/test-photo.jpg") center no-repeat;
       background-size: 100%;
-    }
-    &--button.btn {
-      background: #0b879d 0% 0% no-repeat padding-box;
-      opacity: 1;
-      padding: 13px 11px;
-      text-align: center;
-      font: normal normal bold 12px/14px Raleway;
-      letter-spacing: 0px;
-      color: #ffffff;
-      text-transform: uppercase;
-      border-radius: unset;
-      -webkit-border-radius: unset;
-      -moz-border-radius: unset;
-      -ms-border-radius: unset;
-      -o-border-radius: unset;
-      border: unset;
     }
   }
 }

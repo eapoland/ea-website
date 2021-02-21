@@ -2,22 +2,19 @@
   justify-content: center;
   &__column.col {
     max-width: 1366px;
-    padding: 70px 183px 75px 183px;
+    padding: 4.687rem 11.437rem;
     background: url("../../assets/images/quote.png") bottom left no-repeat;
   }
   background: #fafafa no-repeat;
 
   opacity: 1;
-  &__quote {
-    text-transform: none;
+  h3 {
     text-align: left;
-    font: normal normal normal 34px/45px Roboto Slab;
     letter-spacing: -0.34px;
-    color: #000000;
   }
   &__author {
     text-align: left;
-    font: italic normal 300 34px/45px Roboto Slab;
+    font: italic normal 300 2.125em/2.812rem Roboto Slab;
     letter-spacing: 0px;
     color: #000000;
   }

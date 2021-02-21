@@ -14,7 +14,7 @@ const FaqItem = ({ item }) => {
       <Card className="faq-item">
         <CardBody>
           <div className="d-flex justify-content-between align-items-center">
-            <p className="faq-item__title">{item.title}</p>
+            <h4 className="faq-item__title">{item.title}</h4>
             <button onClick={toggle} className="faq-item__toggle">
               <FontAwesomeIcon icon={collapse ? faChevronLeft : faChevronDown} />
             </button>

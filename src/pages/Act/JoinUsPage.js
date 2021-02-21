@@ -1,11 +1,11 @@
 import React from "react";
-import SectionTitleWithTranslation from "../../components/SectionTitle/SectionTitleWithTranslation";
+import SectionTitle from "../../components/SectionTitle/SectionTitle";
 import ContentPreviewSection from "../../components/ContentPreviewSection/ContentPreviewSection";
 
 const JoinUsPage = () => {
   return (
     <>
-      <SectionTitleWithTranslation content={"join-us"} />
+      <SectionTitle title="Dołącz do nas!" />
       <ContentPreviewSection />
     </>
   );

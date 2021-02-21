@@ -1,11 +1,10 @@
 import React from "react";
 import TeamSection from "../../components/TeamSection/TeamSection";
 import Paragraph from "../../components/ContentSection/Paragraph";
-import SectionTitle from "../../components/ContentSection/SectionTitle";
 import { Row, Col, Card, CardTitle, CardText } from "reactstrap";
 import { useTranslation } from "react-i18next";
 import ScrollToTop from "../../components/ScrollToTop";
-import SectionTitleWithTranslation from "../../components/SectionTitle/SectionTitleWithTranslation";
+import SectionTitle from "../../components/SectionTitle/SectionTitle";
 import "./AboutPage.scss";
 
 const AboutPage = () => {
@@ -14,7 +13,7 @@ const AboutPage = () => {
   return (
     <div className="about">
       <ScrollToTop />
-      <SectionTitleWithTranslation content={"about"}  />
+      <SectionTitle text="O nas" title="Czym jest Efektywny Altruizm?"  />
       <Row className="about__intro">
         <Col sm={6}>
           <h3>,,Jak przynieść światu<br />najwięcej dobra?”</h3>

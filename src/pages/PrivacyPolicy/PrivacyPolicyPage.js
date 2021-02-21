@@ -1,6 +1,6 @@
 import React from "react";
 import { Container } from "reactstrap";
-import SectionTitleWithTranslation from "../../components/SectionTitle/SectionTitleWithTranslation";
+import SectionTitle from "../../components/SectionTitle/SectionTitle";
 import ScrollToTop from "../../components/ScrollToTop";
 import "./PrivacyPolicyPage.scss";
 
@@ -8,7 +8,7 @@ const PrivacyPolicyPage = () => {
   return (
     <>
       <ScrollToTop />
-      <SectionTitleWithTranslation content={"privacy-policy"} />
+      <SectionTitle title="Polityka prywatności" />
 
       <Container>
         <h2>Wprowadzenie</h2>

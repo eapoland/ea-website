@@ -11,7 +11,7 @@ const NewsletterCtaSection = () => {
   return (
     <Row className="newsletter-cta-section ea-row">
       <Col className="text-center mx-auto">
-        <h1 className="newsletter-cta-section__heading">Zostańmy w kontakcie</h1>
+        <h4 className="text-center">Zostańmy w kontakcie</h4>
         <div id="mc_embed_signup" className="signup-form">
           <form
             action="https://efektywnyaltruizm.us10.list-manage.com/subscribe/post?u=6efc200ccd45a00a03773d871&amp;id=da6abdece5"

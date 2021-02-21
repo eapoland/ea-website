@@ -89,7 +89,7 @@ const Footer = () => {
         </p> */}
       </Col>
       <Col className="footer__column">
-        <h1>Adres</h1>
+        <h4>Adres</h4>
         <p className="footer__text" style={{ lineHeight: "26px" }}>
           Fundacja Efektywny Altruizm <br />
           Plac Bankowy 2, 00-095 Warszawa <br />

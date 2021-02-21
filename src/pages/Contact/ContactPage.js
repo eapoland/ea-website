@@ -12,12 +12,7 @@ const ContactPage = () => {
   return (
     <div className="contact">
       <ScrollToTop />
-      <SectionTitle
-        content={{
-          text: "Odezwij się",
-          title: "Skontaktuj się z nami",
-        }}
-      />
+      <SectionTitle text="Odezwij się" title="Skontaktuj się z nami" />
       <Row className="ea-row">
         <Col className="contact__data">
           <h2>Fundacja Efektywny Altruizm</h2>

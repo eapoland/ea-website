@@ -12,11 +12,11 @@ const PromotedWorkshop = () => {
     .map((item) => (
       <div className="promoted-workshop d-flex justify-content-end align-items-center" key={item.id}>
         <Col sm={5}>
-          <h4>
+          <h5>
             <FontAwesomeIcon icon={faStar} />
             &nbsp;&nbsp;polecamy
-          </h4>
-          <h1>{item.title}</h1>
+          </h5>
+          <h3 className="text-left">{item.title}</h3>
           <p>{item.shortSummary}</p>
           <EAButton title="Czytaj więcej" target={`workshops/${item.id}`} />
         </Col>

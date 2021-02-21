@@ -8,15 +8,15 @@ const EAButton = ({ title, target, size, customClass }) => {
     <NavHashLink to={`${target}`}>
       <Button
         className={`ea-button ${customClass}`}
-        style={
-          size
-            ? {
-                width: `${size}px`,
-              }
-            : {
-                width: "120px",
-              }
-        }
+        // style={
+        //   // size
+        //   //   ? {
+        //   //       width: `${size}px`,
+        //   //     }
+        //   //   : {
+        //   //       width: "120px",
+        //   //     }
+        // }
       >
         {title}
       </Button>

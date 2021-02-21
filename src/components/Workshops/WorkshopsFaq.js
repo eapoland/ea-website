@@ -6,24 +6,19 @@ const items = [
   {
     title: "Czy istnieje możliwość przygotowania indywidualnego szkolenia?",
     content:
-      "Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.",
-  },
-  {
-    title: "Jak wygląda polityka zwrotów?",
-    content:
-      "Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.",
+      "Chętnie o tym porozmawiamy. Napisz proszę maila na adres marcin.tischner@efektywnyaltruizm.org i opisz jakie masz oczekiwania wobec szkolenia/warsztatu. Wkrótce wrócimy z odpowiedzią."
   },
   {
     title: "Czy możliwe jest przeprowadzenie warsztatów online?",
     content:
-      "Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.",
+      "Oczywiście. Zarówno nasze warsztaty jak i szkolenia są dostosowane do formy online.",
   },
 ];
 
 const WorkshopsFaq = () => {
   return (
     <div className="workshops-faq">
-      <h1>FAQ - Pytania i odpowiedzi</h1>
+      <h3>FAQ - Pytania i odpowiedzi</h3>
       {items.map((item) => (
         <FaqItem item={item} key={item.title} />
       ))}
