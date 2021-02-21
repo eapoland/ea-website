@@ -47,14 +47,14 @@ const ActPage = () => {
           <img src={content[0].img} alt={content[0].imgAlt} />
         </Col>
         <Col className="act__type--desc">
-          <h2>{content[0].heading}</h2>
+          <h3>{content[0].heading}</h3>
           <p>{content[0].text}</p>
           <EAButton title={content[0].cta} size={180} />
         </Col>
       </Row>
       <Row className="act__type">
         <Col className="act__type--desc">
-          <h2>{content[1].heading}</h2>
+          <h3>{content[1].heading}</h3>
           <p>{content[1].text}</p>
           <EAButton title={content[1].cta} size={180} />
         </Col>
@@ -67,14 +67,14 @@ const ActPage = () => {
           <img src={content[2].img} alt={content[2].imgAlt} />
         </Col>
         <Col className="act__type--desc">
-          <h2>{content[2].heading}</h2>
+          <h3>{content[2].heading}</h3>
           <p>{content[2].text}</p>
           <EAButton title={content[2].cta} size={180} />
         </Col>
       </Row>
       <Row className="act__tabs">
         <Col>
-          <h2>Jak jeszcze możesz pomóc?</h2>
+          <h3>Jak jeszcze możesz pomóc?</h3>
           <Tabs defaultActiveKey="1" tabPosition={"left"}>
             <TabPane tab="Poznaj podstawy EA" key="1">
               <div>
