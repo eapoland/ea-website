@@ -1,10 +1,69 @@
 import React from "react";
-import TeamSection from "../../components/TeamSection/TeamSection";
 import { Row, Col } from "reactstrap";
 import ScrollToTop from "../../components/ScrollToTop";
 import SectionTitle from "../../components/SectionTitle/SectionTitle";
 import "./AboutPage.scss";
 import Tabs, { TabPane } from "rc-tabs";
+import kmizio from "../../assets/images/team/kmizio.png";
+import mtruong from "../../assets/images/team/mtruong.png";
+import mtischner from "../../assets/images/team/mtischner.png";
+import mtrzesimiech from "../../assets/images/team/mtrzesimiech.png";
+import mjaryczewska from "../../assets/images/team/mjaryczewska.png";
+import mhawelka from "../../assets/images/team/mhawelka.png";
+import MemberCard from "./MemberCard";
+
+const teamMembers = [
+  {
+    name: "Katarzyna Mizio",
+    photo: kmizio,
+    position: "stanowisko",
+    desc: "opis osoby",
+    email: "katarzyna.mizio@efektywnyaltruizm.org",
+    linkedin: "URL"
+  },
+  {
+    name: "Maja Laura Jaryczewska",
+    photo: mjaryczewska,
+    position: "stanowisko",
+    desc: "opis osoby",
+    email: "maja.laura.jaryczewska@efektywnyaltruizm.org",
+    linkedin: "URL"
+  },
+  {
+    name: "Maria Gembarzewska-Truong",
+    photo: mtruong,
+    position: "stanowisko",
+    desc: "opis osoby",
+    email: "maria.gembarzewska-truong@efektywnyaltruizm.org",
+    linkedin: "URL"
+  },
+  {
+    name: "Michał Trzęsimiech",
+    photo: mtrzesimiech,
+    position: "stanowisko",
+    desc: "opis osoby",
+    email: "michal.trzesimiech@efektywnyaltruizm.org",
+    linkedin: "URL"
+  },
+  {
+    name: "Marcin Tischner",
+    photo: mtischner,
+    position: "stanowisko",
+    desc: "opis osoby",
+    email: "marcin.tischner@efektywnyaltruizm.org",
+    linkedin: "URL"
+  },
+  {
+    name: "Michał Hawełka",
+    photo: mhawelka,
+    position: "stanowisko",
+    desc: "opis osoby",
+    email: "michal.hawelka@efektywnyaltruizm.org",
+    linkedin: "URL"
+  }
+
+]
+
 
 const AboutPage = () => {
 
@@ -62,9 +121,13 @@ const AboutPage = () => {
       <Row className="about__team">
         <Col>
             <h3 className="text-center">Nasz zespół</h3>
+            <div className="d-flex flex-wrap justify-content-center about__team--list">
+              {teamMembers.map(member => (
+                <MemberCard key={member.name} teamMember={member} />
+              ))}
+            </div>
         </Col>
       </Row>
-      <TeamSection />
     </div>
   );
 };
