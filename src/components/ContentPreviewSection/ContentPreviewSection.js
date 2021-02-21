@@ -1,12 +1,10 @@
 import React from "react";
-//import { useTranslation } from "react-i18next";
 import "./ContentPreviewSection.scss";
 import { Col, Row } from "reactstrap";
 import Fade from "react-reveal/Fade";
 import EAButton from "../Common/EAButton/EAButton";
 
 const ContentPreviewSection = ({ reversed, content }) => {
-  //const { t, i18n } = useTranslation("common");
 
   return (
     <Fade bottom cascade>

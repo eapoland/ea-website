@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import { useTranslation } from "react-i18next";
 import { useLocation } from "react-router-dom";
 import "./TopBar.scss";
 import {
@@ -17,16 +16,12 @@ import {
 import { ReactComponent as Logo } from "../../assets/images/efektywny-altruizm-logo.svg";
 import { ReactComponent as WhiteLogo } from "../../assets/images/efektywny-altruizm-logo-white.svg";
 import { Link } from "react-router-dom";
-// import plFlag from "../../assets/images/pl.png";
-// import ukFlag from "../../assets/images/uk.png";
 import { HashLink, NavHashLink } from "react-router-hash-link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFacebookSquare, faLinkedinIn, faYoutube } from "@fortawesome/free-brands-svg-icons";
 
 const TopBar = () => {
-  const { t } = useTranslation("common");
   const [isOpen, setIsOpen] = useState(false);
-  // const [lang, setLang] = useState("pl");
   const [aboutDropdownOpen, setAboutDropdownOpen] = useState(false);
   const [coopDropdownOpen, setCoopDropdownOpen] = useState(false);
   const [actDropdownOpen, setActDropdownOpen] = useState(false);
@@ -38,12 +33,6 @@ const TopBar = () => {
 
   const toggle = () => setIsOpen(!isOpen);
   const location = useLocation();
-
-  // const switchLanguage = () => {
-  //   const langToSet = lang === "pl" ? "en" : "pl";
-  //   setLang(langToSet);
-  //   i18n.changeLanguage(langToSet);
-  // };
 
   const handleScroll = () => {
     setScrolled(window.scrollY > 50);
@@ -94,7 +83,7 @@ const TopBar = () => {
                     to={{ pathname: "/about", hash: "#movement" }}
                     className="main-nav__dropdown-item"
                   >
-                    {t("main_nav.about_us.movement")}
+                    O ruchu
                   </HashLink>
                 </DropdownItem>
                 <DropdownItem>
@@ -103,7 +92,7 @@ const TopBar = () => {
                     to={{ pathname: "/about", hash: "#foundation" }}
                     className="main-nav__dropdown-item"
                   >
-                    {t("main_nav.about_us.foundation")}
+                    O fundacji
                   </HashLink>
                 </DropdownItem>
                 <DropdownItem>
@@ -112,7 +101,7 @@ const TopBar = () => {
                     to={{ pathname: "/about", hash: "#team" }}
                     className="main-nav__dropdown-item"
                   >
-                    {t("main_nav.about_us.team")}
+                    Zespół
                   </HashLink>
                 </DropdownItem>
               </DropdownMenu>
@@ -130,7 +119,7 @@ const TopBar = () => {
                 to="/activities"
                 activeClassName="main-nav__item--active"
               >
-                {t("main_nav.coop.title")}
+                Działania
               </DropdownToggle>
               <DropdownMenu>
                 <DropdownItem>
@@ -139,7 +128,7 @@ const TopBar = () => {
                     to={{ pathname: "/activities", hash: "#companies" }}
                     className="main-nav__dropdown-item"
                   >
-                    {t("main_nav.coop.company")}
+                    Dla firm
                   </HashLink>
                 </DropdownItem>
                 <DropdownItem>
@@ -148,13 +137,13 @@ const TopBar = () => {
                     to={{ pathname: "/activities", hash: "#media" }}
                     className="main-nav__dropdown-item"
                   >
-                    {t("main_nav.coop.media")}
+                    Dle mediów
                   </HashLink>
                 </DropdownItem>
               </DropdownMenu>
             </Dropdown>
             <NavHashLink to="/workshops" className="main-nav__item" activeClassName="main-nav__item--active">
-              {t("main_nav.workshops")}
+              Warsztaty
             </NavHashLink>
             <Dropdown
               isOpen={actDropdownOpen}
@@ -169,26 +158,26 @@ const TopBar = () => {
                 to="/act"
                 activeClassName="main-nav__item--active"
               >
-                {t("main_nav.act.title")}
+                Wspieraj
               </DropdownToggle>
               <DropdownMenu>
                 <DropdownItem>
                   <Link to="/donate" className="main-nav__dropdown-item">
-                    {t("main_nav.act.donate")}
+                    Przekaż darowiznę
                   </Link>
                 </DropdownItem>
                 <DropdownItem>
                   <Link to="/movement" className="main-nav__dropdown-item">
-                    {t("main_nav.act.join")}
+                    Wolontariat
                   </Link>
                 </DropdownItem>
               </DropdownMenu>
             </Dropdown>
             <NavHashLink to="/blog" className="main-nav__item" activeClassName="main-nav__item--active">
-              {t("main_nav.blog")}
+              Blog
             </NavHashLink>
             <NavHashLink to="/contact" className="main-nav__item" activeClassName="main-nav__item--active">
-              {t("main_nav.contact")}
+              Kontakt
             </NavHashLink>
             {/* <div onClick={switchLanguage} className="main-nav__item">
               <img src={lang === "pl" ? ukFlag : plFlag} alt={lang === "pl" ? "ukFlag" : "plFlag"} />
@@ -229,7 +218,7 @@ const TopBar = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Button className="main-nav__button">{t("main_nav.act.donate")}</Button>
+            <Button className="main-nav__button">Przekaż darowiznę</Button>
           </a>
         </div>
       </Navbar>

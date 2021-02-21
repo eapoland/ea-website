@@ -1,14 +1,12 @@
 import { faFacebookSquare, faLinkedinIn, faYoutube } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
-//import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import { Col, Nav, NavItem, NavLink, Row } from "reactstrap";
 import { ReactComponent as WhiteLogo } from "../../assets/images/efektywny-altruizm-logo-white.svg";
 import "./Footer.scss";
 
 const Footer = () => {
-  //const { t } = useTranslation("common");
 
   return (
     <Row className="footer ea-row">
@@ -74,19 +72,6 @@ const Footer = () => {
           </Nav>
           <p className="footer__text">© 2020 Fundacja Efektywny Altruizm</p>
         </div>
-
-        {/* <p className="footer__info m-0">
-          {t("footer.foundation.name")}
-          <br />
-          {t("footer.foundation.address")}
-          <br />
-          {t("footer.foundation.identifiers")}
-          <br />
-          {t("footer.foundation.account.name")}
-          <br />
-          {t("footer.foundation.account.number")}
-          <br />
-        </p> */}
       </Col>
       <Col className="footer__column">
         <h4>Adres</h4>

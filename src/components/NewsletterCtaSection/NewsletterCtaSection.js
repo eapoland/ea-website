@@ -1,12 +1,9 @@
 import React, { useState } from "react";
-import { useTranslation } from "react-i18next";
 import "./NewsletterCtaSection.scss";
 import { Col, Row } from "reactstrap";
 
 const NewsletterCtaSection = () => {
-  //const { t, i18n } = useTranslation("common");
   const [email, setEmail] = useState("");
-  const { t } = useTranslation("common");
 
   return (
     <Row className="newsletter-cta-section ea-row">
@@ -24,7 +21,7 @@ const NewsletterCtaSection = () => {
           >
             <div id="mc_embed_signup_scroll">
               {/* <div className="indicates-required">
-                  <span className="asterisk">*</span> {t("newsletter.required")}
+                  <span className="asterisk">*</span> pole wymagane
                 </div> */}
               <div className="d-flex signup-form__input-group mc-field-group">
                 <input
@@ -33,12 +30,12 @@ const NewsletterCtaSection = () => {
                   name="EMAIL "
                   className="required email signup-form__email-input"
                   id="mce-EMAIL"
-                  placeholder={t("newsletter.email")}
+                  placeholder="Adres e-mail"
                   onChange={(e) => setEmail(e.target.value)}
                 />
                 <input
                   type="submit"
-                  value={t("newsletter.subscribe")}
+                  value="Zapisz się"
                   name="subscribe"
                   id="mc-embedded-subscribe"
                   className="signup-form__button btn btn-primary"

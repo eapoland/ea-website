@@ -1,6 +1,5 @@
 import React from "react";
 import { Row, Col } from "reactstrap";
-import SectionTitle from "../ContentSection/SectionTitle";
 import Person from "./Person";
 import "./TeamSection.scss";
 import mtrzesi from "../../assets/images/team/michaltrzesimiech.png";
@@ -65,7 +64,6 @@ const TeamSection = () => {
   return (
     <Row id="team" className={`team-section justify-content-center`}>
       <Col xs={9} className="mx-auto">
-        <SectionTitle title="about.team" />
         <div className="d-flex flex-wrap justify-content-around">
           {teamMembers.map((member) => (
             <Person key={member.name} data={member} />
