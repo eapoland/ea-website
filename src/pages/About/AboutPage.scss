@@ -99,6 +99,28 @@
     }
   }
   &__team {
+    &--slider {
+      width: 100%;
+      opacity: 1;
+      height: 15.625rem;
+      padding: 0 5rem;
+      &-content.col {
+        max-width: 75rem;
+      }
+
+      .slick-dots {
+        bottom: 2rem;
+        left: 0;
+      }
+
+      .slick-dots li button:before {
+        font-size: 0.625rem;
+      }
+
+      .slick-dots li.slick-active button:before {
+        font-size: 0.875rem;
+      }
+    }
     h3 {
       margin-bottom: 3.75rem;
     }
@@ -146,6 +168,26 @@
       min-width: 100%;
       min-height: 100%;
       z-index: -1;
+    }
+    &--consultants {
+      .about__team--details {
+        padding: 2.5rem 14.687rem 2.5rem 2.5rem;
+      }
+      .about__team--person {
+        display: inline-block;
+        overflow: hidden;
+        position: relative;
+        width: 45%;
+        height: 12.5rem;
+        transition: ease 0.5s;
+        .about__team--desc {
+          display: none;
+          transition: ease 1s;
+        }
+        &:hover {
+          background: unset;
+        }
+      }
     }
   }
 }
