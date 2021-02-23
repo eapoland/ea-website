@@ -46,9 +46,9 @@ class ContactPage extends React.Component {
     console.log(this.state)
     MailService.sendMail(this.state.name, this.state.email, this.state.subject, this.state.msg).then((result) => {
       console.log(result);
-      this.setState({
-        msgSent: true
-      })
+      // this.setState({
+      //   msgSent: true
+      // })
     });
     event.preventDefault();
   }
