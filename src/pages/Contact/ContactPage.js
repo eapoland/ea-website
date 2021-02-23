@@ -4,11 +4,56 @@ import ScrollToTop from "../../components/ScrollToTop";
 import SectionTitle from "../../components/SectionTitle/SectionTitle";
 import Row from "reactstrap/lib/Row";
 import Col from "reactstrap/lib/Col";
-import EAButton from "../../components/Common/EAButton/EAButton";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFacebookSquare, faLinkedinIn, faYoutube } from "@fortawesome/free-brands-svg-icons";
+import MailService from "../../utils/MailService";
 
-const ContactPage = () => {
+class ContactPage extends React.Component {
+  constructor(props) {
+    super();
+    this.state = {
+      name: "",
+      email: "",
+      subject: "",
+      msg: "",
+      msgSent: false
+    };
+
+    this.handleNameChange = this.handleNameChange.bind(this);
+    this.handleEmailChange = this.handleEmailChange.bind(this);
+    this.handleSubjectChange = this.handleSubjectChange.bind(this);
+    this.handleMsgChange = this.handleMsgChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
+
+  handleNameChange(event) {
+    this.setState({name: event.target.value});
+  }
+
+  handleEmailChange(event) {
+    this.setState({email: event.target.value});
+  }
+
+  handleSubjectChange(event) {
+    this.setState({subject: event.target.value});
+  }
+
+  handleMsgChange(event) {
+    this.setState({msg: event.target.value});
+  }
+
+  handleSubmit(event) {
+    console.log(this.state)
+    MailService.sendMail(this.state.name, this.state.email, this.state.subject, this.state.msg).then((result) => {
+      console.log(result);
+      this.setState({
+        msgSent: true
+      })
+    });
+    event.preventDefault();
+  }
+
+  render() {
   return (
     <div className="contact">
       <ScrollToTop />
@@ -83,21 +128,26 @@ const ContactPage = () => {
           </div>
         </Col>
         <Col className="contact__form">
-          <div className="d-flex justify-content-between">
-            <input placeholder="Imię" style={{ marginRight: "20px" }} />
-            <input placeholder="Adres e-mail" />
-          </div>
-          <div className="d-flex justify-content-between">
-            <input placeholder="Temat" />
-          </div>
-          <div>
-            <textarea placeholder="Wiadomość" />
-          </div>
-          <EAButton title="Wyślij" />
+          {this.state.msgSent ? (<div>Wiadomość została wysłana</div>) : (
+            <form onSubmit={this.handleSubmit}>
+            <div className="d-flex justify-content-between">
+              <input type="text" placeholder="Imię" style={{ marginRight: "20px" }} value={this.state.name} onChange={this.handleNameChange}/>
+              <input type="email" placeholder="Adres e-mail" value={this.state.email} onChange={this.handleEmailChange}/>
+            </div>
+            <div className="d-flex justify-content-between">
+              <input type="text" placeholder="Temat" value={this.state.subject} onChange={this.handleSubjectChange}/>
+            </div>
+            <div>
+              <textarea placeholder="Wiadomość" value={this.state.msg} onChange={this.handleMsgChange}/>
+            </div>
+            <input type="submit" value="Wyślij" />
+          </form>
+          )}
         </Col>
       </Row>
     </div>
   );
-};
+}
+}
 
 export default ContactPage;
