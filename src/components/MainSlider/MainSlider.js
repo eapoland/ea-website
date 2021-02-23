@@ -33,7 +33,7 @@ const MainSlider = () => {
             </p>
             <EAButton title="Dowiedz się więcej" size={160} target="about" />
           </div>
-          <div className="main-slider__item main-slider__item--second">TEST2</div>
+          {/* <div className="main-slider__item main-slider__item--second">TEST2</div> */}
         </Slider>
       </Col>
     </Row>

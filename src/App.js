@@ -11,25 +11,25 @@ import { Container } from "reactstrap";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import PrivacyPolicyPage from "./pages/PrivacyPolicy/PrivacyPolicyPage";
 import CookieConsent from "react-cookie-consent";
-import BlogPage from "./pages/Blog/BlogPage";
-import { Elements } from "@stripe/react-stripe-js";
-import { loadStripe } from "@stripe/stripe-js";
+// import { Elements } from "@stripe/react-stripe-js";
+// import { loadStripe } from "@stripe/stripe-js";
 import DonatePage from "./pages/Act/DonatePage";
 import WorkshopsPage from "./pages/WorkshopsPage/WorkshopsPage";
 import WorkshopDetailsPage from "./pages/WorkshopDetailsPage/WorkshopDetailsPage";
 import ContactPage from "./pages/Contact/ContactPage";
 import BlogPostPage from "./pages/BlogPostPage/BlogPostPage";
 import ActPage from "./pages/Act/ActPage";
+import NotFoundPage from "./pages/NotFoundPage/NotFoundPage";
 
-const stripePromise = loadStripe(
-  "pk_test_51HiOnnDDHV7JDkB9tHxmUobKY4ZezsR5lsWsviFG5NPEPbpgFGBeGqyYHyMeSnMi5Ulv5pV29i6Vr8sbDyfNJDcA00U862gUpU"
-);
+// const stripePromise = loadStripe(
+//   "pk_test_51HiOnnDDHV7JDkB9tHxmUobKY4ZezsR5lsWsviFG5NPEPbpgFGBeGqyYHyMeSnMi5Ulv5pV29i6Vr8sbDyfNJDcA00U862gUpU"
+// );
 
 function App() {
   return (
     <Router>
       <Suspense fallback="loading">
-        <Elements stripe={stripePromise}>
+        {/* <Elements stripe={stripePromise}> */}
           <Container className="p-0 ea-container">
             <TopBar />
             <Switch>
@@ -54,9 +54,9 @@ function App() {
               <Route path="/privacy-policy" exact>
                 <PrivacyPolicyPage />
               </Route>
-              <Route path="/blog" exact>
+              {/* <Route path="/blog" exact>
                 <BlogPage />
-              </Route>
+              </Route> */}
               <Route path="/act" exact>
                 <ActPage />
               </Route>
@@ -69,6 +69,7 @@ function App() {
               <Route path="/contact" exact>
                 <ContactPage />
               </Route>
+              <Route component={NotFoundPage} />
             </Switch>
             <CookieConsent
               location="bottom"
@@ -98,7 +99,7 @@ function App() {
               <NewsletterCtaSection />
             </div>
           </Container>
-        </Elements>
+        {/* </Elements> */}
       </Suspense>
     </Router>
   );

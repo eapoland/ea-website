@@ -34,14 +34,23 @@ const TopBar = () => {
     <div>
       <Navbar
         expand="lg"
+        // className={`p-0 main-nav ${
+        //   ((location.pathname !== "/" && !location.pathname.includes("/blog")) || scrolled) &&
+        //   "main-nav--scrolled"
+        // }`}
         className={`p-0 main-nav ${
-          ((location.pathname !== "/" && !location.pathname.includes("/blog")) || scrolled) &&
+          (location.pathname !== "/" || scrolled) &&
           "main-nav--scrolled"
         }`}
         fixed="top"
       >
         <NavbarBrand tag={Link} to="/" className="main-nav__brand">
-          {(location.pathname !== "/" && !location.pathname.includes("/blog")) || scrolled ? (
+          {/* {(location.pathname !== "/" && !location.pathname.includes("/blog")) || scrolled ? (
+            <Logo style={{ height: "60px" }}></Logo>
+          ) : (
+            <WhiteLogo style={{ height: "60px" }}></WhiteLogo>
+          )} */}
+          {location.pathname !== "/" || scrolled ? (
             <Logo style={{ height: "60px" }}></Logo>
           ) : (
             <WhiteLogo style={{ height: "60px" }}></WhiteLogo>
@@ -62,9 +71,9 @@ const TopBar = () => {
             <NavHashLink to="/act" className="main-nav__item" activeClassName="main-nav__item--active">
               Wspieraj
             </NavHashLink>
-            <NavHashLink to="/blog" className="main-nav__item" activeClassName="main-nav__item--active">
+            {/* <NavHashLink to="/blog" className="main-nav__item" activeClassName="main-nav__item--active">
               Blog
-            </NavHashLink>
+            </NavHashLink> */}
             <NavHashLink to="/contact" className="main-nav__item" activeClassName="main-nav__item--active">
               Kontakt
             </NavHashLink>

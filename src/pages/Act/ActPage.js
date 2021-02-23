@@ -62,7 +62,7 @@ const ActPage = () => {
           <img src={content[1].img} alt={content[1].imgAlt} />
         </Col>
       </Row>
-      <Row className="act__type">
+      {/* <Row className="act__type">
         <Col className="act__type--photo">
           <img src={content[2].img} alt={content[2].imgAlt} />
         </Col>
@@ -71,7 +71,7 @@ const ActPage = () => {
           <p>{content[2].text}</p>
           <EAButton title={content[2].cta} size={180} />
         </Col>
-      </Row>
+      </Row> */}
       <Row className="act__tabs">
         <Col>
           <h3>Jak jeszcze możesz pomóc?</h3>
