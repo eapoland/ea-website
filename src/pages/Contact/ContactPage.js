@@ -43,12 +43,14 @@ class ContactPage extends React.Component {
   }
 
   handleSubmit(event) {
-    console.log(this.state)
-    MailService.sendMail(this.state.name, this.state.email, this.state.subject, this.state.msg).then((result) => {
-      console.log(result);
-      // this.setState({
-      //   msgSent: true
-      // })
+    MailService.sendContactForm(this.state.name, "m.hawelka@gmail.com", this.state.email, this.state.subject, this.state.msg).then(() => {
+      MailService.sendContactFormAck(this.state.name, this.state.email, this.state.subject, this.state.msg).then((result) => {
+        if (result.status === 200) {
+          this.setState({
+            msgSent: true
+          })
+        }
+      });
     });
     event.preventDefault();
   }
@@ -129,8 +131,7 @@ class ContactPage extends React.Component {
         </Col>
         <Col className="contact__form">
           {this.state.msgSent ? (<div>Wiadomość została wysłana</div>) : (
-            <form onSubmit={this.handleSubmit}>
-            <div className="d-flex justify-content-between">
+            <><div className="d-flex justify-content-between">
               <input type="text" placeholder="Imię" style={{ marginRight: "20px" }} value={this.state.name} onChange={this.handleNameChange}/>
               <input type="email" placeholder="Adres e-mail" value={this.state.email} onChange={this.handleEmailChange}/>
             </div>
@@ -140,8 +141,8 @@ class ContactPage extends React.Component {
             <div>
               <textarea placeholder="Wiadomość" value={this.state.msg} onChange={this.handleMsgChange}/>
             </div>
-            <input type="submit" value="Wyślij" />
-          </form>
+            <button onClick={this.handleSubmit}>Wyślij</button>
+          </>
           )}
         </Col>
       </Row>

@@ -94,7 +94,7 @@ function App() {
                 plików cookie.
               </span>
             </CookieConsent>
-            <div className="d-flex">
+            <div className="d-flex app__footer">
               <Footer />
               <NewsletterCtaSection />
             </div>

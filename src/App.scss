@@ -54,3 +54,18 @@ div .wide-spinner {
   max-width: 1366px;
   margin-bottom: 0px;
 }
+
+@media (max-width: 1365px) {
+}
+
+@media (max-width: 991px) {
+  .app__footer {
+    flex-direction: column-reverse;
+  }
+}
+
+@media (max-width: 767px) {
+}
+
+@media (max-width: 479px) {
+}

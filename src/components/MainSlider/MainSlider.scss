@@ -30,7 +30,7 @@
           rgba(255, 255, 255, 0) 100%
         ),
         url("../../assets/images/baner.png") center no-repeat;
-      background-size: 100%;
+      background-size: cover;
     }
     &--second {
       background: linear-gradient(

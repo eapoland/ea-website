@@ -40,6 +40,12 @@
   }
 }
 
+@media (max-width: 1365px) {
+  .footer {
+    height: 30rem;
+  }
+}
+
 @media (max-width: 767.98px) {
   .footer__item {
     text-align: right;

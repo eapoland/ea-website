@@ -1,6 +1,7 @@
 .newsletter-cta-section {
   padding: 4.625rem 5.312rem 2.5rem 5.312rem;
   background-color: #edcf00;
+  align-items: center;
   height: 18.75rem;
   min-width: 32rem;
   &__button.btn {
@@ -51,6 +52,13 @@
   }
   &__input-group {
     margin-bottom: 1em;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 1365px) {
+  .newsletter-cta-section {
+    height: 30rem;
   }
 }
 
