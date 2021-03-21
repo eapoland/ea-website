@@ -14,6 +14,7 @@ import { ReactComponent as WhiteLogo } from "../../assets/images/efektywny-altru
 import { Link } from "react-router-dom";
 import { NavHashLink } from "react-router-hash-link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars, faHeart } from "@fortawesome/free-solid-svg-icons";
 import { faFacebookSquare, faLinkedinIn, faYoutube } from "@fortawesome/free-brands-svg-icons";
 
 const TopBar = () => {
@@ -51,12 +52,12 @@ const TopBar = () => {
             <WhiteLogo style={{ height: "60px" }}></WhiteLogo>
           )} */}
           {location.pathname !== "/" || scrolled ? (
-            <Logo style={{ height: "60px" }}></Logo>
+            <Logo className="main-nav__logo"></Logo>
           ) : (
-            <WhiteLogo style={{ height: "60px" }}></WhiteLogo>
+            <WhiteLogo className="main-nav__logo"></WhiteLogo>
           )}
         </NavbarBrand>
-        <NavbarToggler className="main-nav__toggler" onClick={toggle} />
+        <NavbarToggler className="main-nav__toggler" onClick={toggle}><FontAwesomeIcon icon={faBars} className="main-nav__icon" /></NavbarToggler>
         <Collapse isOpen={isOpen} navbar className="justify-content-end">
           <Nav navbar className="main-nav__nav justify-content-center">
             <NavHashLink to="/about" className="main-nav__item" activeClassName="main-nav__item--active">
@@ -113,7 +114,7 @@ const TopBar = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Button className="main-nav__button">Przekaż darowiznę</Button>
+            <Button className="main-nav__button"><span className="main-nav__donate--xl">Przekaż darowiznę</span><span className="main-nav__donate--mobile"><FontAwesomeIcon icon={faHeart} className="main-nav__icon" />&nbsp;&nbsp;Wesprzyj</span></Button>
           </a>
         </div>
       </Navbar>
