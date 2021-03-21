@@ -57,12 +57,27 @@
 
 @media (max-width: 575.98px) {
   .footer {
-    .d-flex {
-      flex-direction: column-reverse !important;
+    flex-direction: column;
+    width: 100%;
+    height: fit-content;
+    .footer__column {
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .footer__column:last-of-type {
+      display: none;
     }
     .footer__nav {
       align-items: center !important;
+      font-size: 1.5rem;
+      justify-content: space-between;
       margin-bottom: 2em;
+    }
+    .footer__text {
+      text-align: center;
+      font-size: 1rem;
     }
     p {
       text-align: center;
