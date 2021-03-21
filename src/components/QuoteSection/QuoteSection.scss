@@ -44,8 +44,9 @@
 
 @media (max-width: 575.98px) {
   .quote-section {
-    margin-top: 2em;
-    margin-bottom: 2em;
+    &__column.col {
+      padding: 4.687rem;
+    }
     &__quote {
       font-size: 20px;
       line-height: 32px;

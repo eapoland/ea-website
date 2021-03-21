@@ -19,6 +19,34 @@
     img {
       width: 80%;
     }
+    &__items {
+      flex-wrap: nowrap;
+    }
+  }
+}
+
+@media (max-width: 991.98px) {
+  .friendly-section {
+    padding: 2em 10px 5em 10px;
+    &__heading {
+      font-size: 30px;
+      line-height: 44px;
+    }
+    &__items {
+      flex-wrap: wrap;
+    }
+    &__logo {
+      flex: 0 0 25%;
+      margin-bottom: 2rem;
+    }
+  }
+}
+
+@media (max-width: 767.98px) {
+  .friendly-section {
+    &__logo {
+      margin: 0;
+    }
   }
 }
 
@@ -28,6 +56,12 @@
     &__heading {
       font-size: 30px;
       line-height: 44px;
+    }
+    &__logo {
+      margin: 2rem;
+    }
+    &__items {
+      flex-direction: column;
     }
   }
 }

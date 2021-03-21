@@ -14,7 +14,7 @@ const FriendlyOrganisationsSection = () => {
       <Row className="friendly-section ea-row">
         <Col className="friendly-section-column text-center mx-auto">
           <h3 className="friendly-section__heading">Przyjaciele</h3>
-          <div className="d-flex justify-content-center align-items-center">
+          <div className="friendly-section__items d-flex justify-content-center align-items-center">
             <div className="friendly-section__logo">
               <img src={okLogo} alt="OK logo" />
             </div>

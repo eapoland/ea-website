@@ -211,15 +211,15 @@
         height: 31.25rem;
       }
     }
-  }
-  img {
-    pointer-events: none;
-    position: absolute;
-    width: 50%;
-    height: 50%;
-    min-width: 50%;
-    min-height: 50%;
-    z-index: -1;
+    img {
+      pointer-events: none;
+      position: absolute;
+      width: 50%;
+      height: 50%;
+      min-width: 50%;
+      min-height: 50%;
+      z-index: -1;
+    }
   }
 }
 

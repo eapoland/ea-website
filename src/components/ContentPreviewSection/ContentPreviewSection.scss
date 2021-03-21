@@ -41,6 +41,12 @@
     .content-preview-section__column {
       max-width: 80%;
       flex: 0 0 80%;
+      .ea-button {
+        width: 100%;
+      }
+    }
+    .content-preview-section__info {
+      padding: 3.125rem 0;
     }
   }
 }
