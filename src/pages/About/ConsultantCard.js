@@ -7,8 +7,7 @@ import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 
 const ConsultantCard = ({consultant}) => {
     return (
-        <div className="about__team--person">
-            <img src={consultant.photo} alt='' />
+        <div className={`about__team--person about__team--consultant-${consultant.id}`}>
             <div className="about__team--details">
             <Row>
                 <Col sm={9}><h5>{consultant.name}</h5></Col>

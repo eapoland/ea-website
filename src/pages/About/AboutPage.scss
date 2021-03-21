@@ -36,6 +36,7 @@
     opacity: 1;
   }
   &__fields {
+    margin: 0 !important;
     padding: 5rem 6.25rem 4.25rem 6.25rem;
     &--intro {
       h3 {
@@ -98,7 +99,9 @@
       background-size: cover;
     }
   }
+  &__consultants,
   &__team {
+    margin: 0 !important;
     &--slider {
       width: 100%;
       opacity: 1;
@@ -142,9 +145,7 @@
       }
     }
     &--person {
-      display: inline-block;
       overflow: hidden;
-      position: relative;
       width: 30%;
       height: 31.25rem;
       transition: ease 0.5s;
@@ -158,6 +159,56 @@
           display: unset;
         }
       }
+      &-1 {
+        background: url("../../assets/images/team/kmizio.png") center no-repeat;
+        background-size: cover;
+      }
+      &-2 {
+        background: url("../../assets/images/team/mjaryczewska.png") center
+          no-repeat;
+        background-size: cover;
+      }
+      &-3 {
+        background: url("../../assets/images/team/mtruong.png") center no-repeat;
+        background-size: cover;
+      }
+      &-4 {
+        background: url("../../assets/images/team/mtrzesimiech.png") center
+          no-repeat;
+        background-size: cover;
+      }
+      &-5 {
+        background: url("../../assets/images/team/mtischner.png") center
+          no-repeat;
+        background-size: cover;
+      }
+      &-6 {
+        background: url("../../assets/images/team/mhawelka.png") center
+          no-repeat;
+        background-size: cover;
+      }
+    }
+    &--consultant {
+      &-1 {
+        background: url("../../assets/images/team/consulting/ksarek.png") center
+          no-repeat;
+        background-size: cover;
+      }
+      &-2 {
+        background: url("../../assets/images/team/consulting/dgogloza.png")
+          center no-repeat;
+        background-size: cover;
+      }
+      &-3 {
+        background: url("../../assets/images/team/consulting/mwozniak.png")
+          center no-repeat;
+        background-size: cover;
+      }
+      &-4 {
+        background: url("../../assets/images/team/consulting/dwyrzykowski.png")
+          center no-repeat;
+        background-size: cover;
+      }
     }
     &--details {
       padding: 2.5rem;
@@ -170,24 +221,43 @@
       z-index: -1;
     }
     &--consultants {
+      overflow: hidden;
       .about__team--details {
         padding: 2.5rem 14.687rem 2.5rem 2.5rem;
       }
       .about__team--person {
-        display: inline-block;
         overflow: hidden;
-        position: relative;
-        width: 45%;
+        width: 50%;
         height: 12.5rem;
         transition: ease 0.5s;
         .about__team--desc {
           display: none;
           transition: ease 1s;
         }
-        &:hover {
-          background: unset;
-        }
       }
+    }
+  }
+}
+
+.about__consultants.row {
+  padding: 4.35rem 0 0 0;
+  margin: 0;
+  .col {
+    padding: 0;
+  }
+}
+
+@media (max-width: 1365px) {
+  .about__fields {
+    padding: 5rem 0;
+    .col {
+      padding: 0;
+    }
+    .rc-tabs-tab-btn {
+      width: 16rem;
+    }
+    .rc-tabs-nav-list {
+      justify-content: space-around;
     }
   }
 }
@@ -201,14 +271,31 @@
       }
     }
   }
+  .rc-tabs-nav-list {
+    flex-wrap: wrap;
+  }
+  .about__fields {
+    .rc-tabs-tab {
+      width: 50%;
+      .rc-tabs-tab-btn {
+        width: 100%;
+      }
+    }
+  }
 }
 
 @media (max-width: 767px) {
   .about {
     &__team {
       &--person {
-        width: 33%;
+        width: 50%;
         height: 31.25rem;
+      }
+    }
+    &__consultants {
+      .about__team--person {
+        width: 100%;
+        height: 16rem;
       }
     }
     img {
@@ -223,5 +310,25 @@
   }
 }
 
-@media (max-width: 479px) {
+@media (max-width: 575.98px) {
+  .about__intro.row {
+    flex-direction: column-reverse;
+    .col-sm-6:first-of-type {
+      width: 100%;
+    }
+
+    .col-sm-6:last-of-type {
+      height: 30rem;
+    }
+  }
+  .about__work.row {
+    flex-direction: column;
+    .col-sm-6:last-of-type {
+      width: 100%;
+    }
+
+    .col-sm-6:first-of-type {
+      height: 30rem;
+    }
+  }
 }

@@ -21,51 +21,57 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronLeft, faChevronRight } from "@fortawesome/free-solid-svg-icons";
 
 const teamMembers = [
-  {
-    name: "Katarzyna Mizio",
-    photo: kmizio,
-    position: "stanowisko",
-    desc: "opis osoby",
-    email: "katarzyna.mizio@efektywnyaltruizm.org",
-    linkedin: "URL"
-  },
-  {
-    name: "Maja Laura Jaryczewska",
-    photo: mjaryczewska,
-    position: "stanowisko",
-    desc: "opis osoby",
-    email: "maja.laura.jaryczewska@efektywnyaltruizm.org",
-    linkedin: "URL"
-  },
-  {
-    name: "Maria Gembarzewska-Truong",
-    photo: mtruong,
-    position: "stanowisko",
-    desc: "opis osoby",
-    email: "maria.gembarzewska-truong@efektywnyaltruizm.org",
-    linkedin: "URL"
-  },
-  {
+  { 
+    id: 4,
     name: "Michał Trzęsimiech",
     photo: mtrzesimiech,
-    position: "stanowisko",
-    desc: "opis osoby",
+    position: "Prezes",
+    desc: "Przedsiębiorca dobroczynny działający w zaniedbanych, choć obiecujących obszarach aktywności publicznej. Organizator międzynarodowej społeczności Effective Altruism i inicjator jej struktur w Polsce. Pełni funkcję prezesa Fundacji od jej powstania w 2017 r.",
     email: "michal.trzesimiech@efektywnyaltruizm.org",
     linkedin: "URL"
   },
   {
+    id: 2,
+    name: "Maja Laura Jaryczewska",
+    photo: mjaryczewska,
+    position: "Dyrektorka wykonawcza",
+    desc: "Zajmuje się głównie muzyką: studiuje kompozycję oraz fortepian jazzowy na Akademii Muzycznej w Gdańsku, tworzy pod pseudonimem Maja Laura oraz współtworzy zespoły Abyss i Ścianka.  Dyrektorka Wykonawcza Fundacji Efektywny Altruizm oraz wolontariuszka Otwartych Klatek.",
+    email: "maja.laura.jaryczewska@efektywnyaltruizm.org",
+    linkedin: "URL"
+  },
+  {
+    id: 3,
+    name: "Maria Gembarzewska-Truong",
+    photo: mtruong,
+    position: "Dyrektorka ds. Komunikacji",
+    desc: "Psycholożka, trenerka, HRowiec. Przyświeca jej jeden cel - tworzyć lepszy świat. Miłośniczka jogi, wycieczek górskich i zwierzęcej behawiorystyki.",
+    email: "maria.gembarzewska-truong@efektywnyaltruizm.org",
+    linkedin: "URL"
+  },
+  {
+    id: 1,
+    name: "Katarzyna Mizio",
+    photo: kmizio,
+    position: "Dyrektorki ds. kapitału ludzkiego",
+    desc: "Doktorantka Uniwersytetu Wrocławskiego w dziedzinie biologii molekularnej. Od 2016 roku zaangażowana jest również w działania Otwartych Klatek. W wolnych chwilach lubi czytać.",
+    email: "katarzyna.mizio@efektywnyaltruizm.org",
+    linkedin: "URL"
+  },
+  {
+    id: 5,
     name: "Marcin Tischner",
     photo: mtischner,
-    position: "stanowisko",
-    desc: "opis osoby",
+    position: "Dyrektora ds. Rozwoju/Współpracy",
+    desc: "Poszukuje efektywnych sposobów na stworzenie bardziej zrównoważonej przyszłości żywności. Pracuje także dla ProVeg Polska, Too Good To Go i Targów Zero Waste.",
     email: "marcin.tischner@efektywnyaltruizm.org",
     linkedin: "URL"
   },
   {
+    id: 6,
     name: "Michał Hawełka",
     photo: mhawelka,
-    position: "stanowisko",
-    desc: "opis osoby",
+    position: "Główny programista",
+    desc: "Zawodowo zajmuje się programowaniem. Wspiera Otwarte Klatki w zakresie montażu wideo. W wolnym czasie przygotowuję się do przebiegnięcia maratonu, gotuje roślinne i gra w Minecrafta.",
     email: "michal.hawelka@efektywnyaltruizm.org",
     linkedin: "URL"
   }
@@ -74,6 +80,7 @@ const teamMembers = [
 
 const consultants = [
   {
+    id: 1,
     name: "Karolina Sarek",
     photo: ksarek,
     desc: "Współzałożycielka i Dyrektor Badań w Charity Entrepreneurship Fund Manager at Effective Altruism Animal Welfare Fund",
@@ -81,6 +88,7 @@ const consultants = [
     linkedin: "URL"
   },
   {
+    id: 2,
     name: "Dobrosława Gogłoza",
     photo: dgogloza,
     desc: "Współzałożycielka i Head of Strategy w All Hands Agency",
@@ -88,6 +96,7 @@ const consultants = [
     linkedin: "URL"
   },
   {
+    id: 3,
     name: "Marcin Woźniak",
     photo: mwozniak,
     desc: "Współzałożyciel Fundacji Optimum Pareto i twórca Swarmcheck - deliberatywnego systemu wspomagania decyzji.",
@@ -95,6 +104,7 @@ const consultants = [
     linkedin: "URL"
   },
   {
+    id: 4,
     name: "Daniel Wyrzykowski",
     photo: dwyrzykowski,
     desc: "Twórca Altruisto.com - aplikacji do zbiórki funduszy dla organizacji charytatywnych podczas zakupów online.",
@@ -180,7 +190,7 @@ const AboutPage = () => {
             </div>
         </Col>
       </Row>
-      <Row className="about__team">
+      <Row className="about__consultants">
         <Col>
             <h3 className="text-center">Doradzają nam</h3>
             <div className="d-flex flex-wrap justify-content-center about__team--consultants">
@@ -204,12 +214,6 @@ const AboutPage = () => {
                 <div>
                   <h5>Agnieszka Pisz</h5>
                   <p>Projektantka usług i interakcji. Skupia się na rozwiązaniach, które polepszają jakość życia ludzi i ich otoczenia.</p>
-                </div>
-              </div>
-              <div>
-                <div>
-                  <h5>Marcin Wosinek</h5>
-                  <p>Programista.</p>
                 </div>
               </div>
               <div>
