@@ -18,3 +18,35 @@
     opacity: 1;
   }
 }
+
+@media (max-width: 1365px) {
+  .testimonials {
+    min-height: 45rem;
+  }
+}
+
+@media (max-width: 991px) {
+  .promoted-workshop {
+    h3 {
+      font-size: 1.5rem;
+    }
+  }
+  .workshop-list .workshop-card:nth-of-type(even) {
+    margin-left: 0;
+  }
+  .faq-item.card {
+    width: 90vw;
+  }
+}
+
+@media (max-width: 767px) {
+  .promoted-workshop.d-flex {
+    display: none !important;
+  }
+}
+
+@media (max-width: 479px) {
+  .ea-button.btn {
+    width: 100%;
+  }
+}
