@@ -208,6 +208,14 @@
   }
 }
 
+@media (max-width: 767.98px) {
+  .main-nav__brand {
+    .main-nav__logo {
+      height: 5rem;
+    }
+  }
+}
+
 @media (max-width: 575.98px) {
   .logo {
     width: 150px;
@@ -215,7 +223,7 @@
   }
   .main-nav__brand {
     .main-nav__logo {
-      height: 5rem;
+      height: 4rem;
     }
   }
 }
