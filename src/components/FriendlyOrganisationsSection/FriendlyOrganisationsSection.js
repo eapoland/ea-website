@@ -16,19 +16,29 @@ const FriendlyOrganisationsSection = () => {
           <h3 className="friendly-section__heading">Przyjaciele</h3>
           <div className="friendly-section__items d-flex justify-content-center align-items-center">
             <div className="friendly-section__logo">
-              <img src={okLogo} alt="OK logo" />
+              <a href="https://www.otwarteklatki.pl/" target="_blank" rel="noopener noreferrer">
+                <img src={okLogo} alt="OK logo" />
+              </a>
             </div>
             <div className="friendly-section__logo">
-              <img src={schweitzerLogo} alt="Albert Schweitzer logo" />
+              <a href="https://www.schweitzer.pl/" target="_blank" rel="noopener noreferrer">
+                <img src={schweitzerLogo} alt="Albert Schweitzer logo" />
+              </a>
             </div>
             <div className="friendly-section__logo">
-              <img src={provegLogo} alt="ProVeg logo" />
+              <a href="https://proveg.com/" target="_blank" rel="noopener noreferrer">
+                <img src={provegLogo} alt="ProVeg logo" />
+              </a>
             </div>
             <div className="friendly-section__logo">
-              <img src={altruistoLogo} alt="Altruisto logo" />
+              <a href="https://altruisto.com/" target="_blank" rel="noopener noreferrer">
+                <img src={altruistoLogo} alt="Altruisto logo" />
+              </a>
             </div>
             <div className="friendly-section__logo">
-              <img src={paretoLogo} alt="Pareto logo" />
+              <a href="https://optimumpareto.pl/" target="_blank" rel="noopener noreferrer">
+                <img src={paretoLogo} alt="Pareto logo" />
+              </a>
             </div>
           </div>
         </Col>
