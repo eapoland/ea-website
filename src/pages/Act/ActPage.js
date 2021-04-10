@@ -43,22 +43,22 @@ const ActPage = () => {
       <ScrollToTop />
       <SectionTitle title="Działaj z nami" text="Wesprzyj nas" />
       <Row className="act__type" style={{ backgroundColor: "#edcf00" }}>
-        <Col className="act__type--photo">
+        <Col xs={12} md={6} className="act__type--photo">
           <img src={content[0].img} alt={content[0].imgAlt} />
         </Col>
-        <Col className="act__type--desc">
+        <Col xs={12} md={6} className="act__type--desc">
           <h3>{content[0].heading}</h3>
           <p>{content[0].text}</p>
           <EAButton title={content[0].cta} size={180} />
         </Col>
       </Row>
       <Row className="act__type">
-        <Col className="act__type--desc">
+        <Col xs={12} md={6} className="act__type--desc">
           <h3>{content[1].heading}</h3>
           <p>{content[1].text}</p>
           <EAButton title={content[1].cta} size={180} />
         </Col>
-        <Col className="act__type--photo">
+        <Col xs={12} md={6} className="act__type--photo">
           <img src={content[1].img} alt={content[1].imgAlt} />
         </Col>
       </Row>
