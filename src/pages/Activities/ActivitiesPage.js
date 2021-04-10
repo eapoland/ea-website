@@ -3,18 +3,54 @@ import SectionTitle from "../../components/SectionTitle/SectionTitle";
 import { Row, Col } from "reactstrap";
 import EAButton from "../../components/Common/EAButton/EAButton";
 import "./ActivitiesPage.scss";
-import michal from "../../assets/images/marcin.png";
+import marcin from "../../assets/images/marcin.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 import { NavHashLink } from "react-router-hash-link";
 import ScrollToTop from "../../components/ScrollToTop";
+import MailService from "../../utils/MailService";
 
-const ActivitiesPage = () => {
+class ActivitiesPage extends React.Component {
+  constructor(props) {
+    super();
+    this.state = {
+      email: "",
+      msg: "",
+      msgSent: false
+    };
+
+    this.handleEmailChange = this.handleEmailChange.bind(this);
+    this.handleMsgChange = this.handleMsgChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
+
+  handleEmailChange(event) {
+    this.setState({email: event.target.value});
+  }
+
+  handleMsgChange(event) {
+    this.setState({msg: event.target.value});
+  }
+
+  handleSubmit(event) {
+    MailService.sendContactForm("", "m.hawelka@gmail.com", this.state.email, "Współpraca - formularz kontaktowy", this.state.msg).then(() => {
+      MailService.sendContactFormAck("", this.state.email, "Współpraca - formularz kontaktowy", this.state.msg).then((result) => {
+        if (result.status === 200) {
+          this.setState({
+            msgSent: true
+          })
+        }
+      });
+    });
+    event.preventDefault();
+  }
+
+ render() {
   return (
     <div className="activities">
       <ScrollToTop />
       <SectionTitle title="Nasze działania" text="Współpraca i doradztwo" />
-      <Row className="activities__cta justify-content-center" id="companies">
+      <Row className="activities__cta ea-row justify-content-center" id="companies">
         <Col
           className="d-flex flex-column justify-content-center align-items-center"
           style={{ maxWidth: "683px" }}
@@ -27,14 +63,19 @@ const ActivitiesPage = () => {
         </Col>
         <Col
           className="d-flex flex-column justify-content-center"
-          style={{ maxWidth: "683px", paddingLeft: "53px" }}
+          style={{ maxWidth: "683px" }}
         >
-          <input placeholder="Adres e-mail..." />
-          <textarea placeholder="Wiadomość..." />
-          <EAButton title="Wyślij" />
+          {this.state.msgSent ? (<div>Wiadomość została wysłana</div>) : (
+            <>
+              <input type="email" placeholder="Adres e-mail" value={this.state.email} onChange={this.handleEmailChange} />
+              <textarea placeholder="Wiadomość" value={this.state.msg} onChange={this.handleMsgChange} />
+              <button className="btn ea-button" onClick={this.handleSubmit} style={{ width: "10rem" }}>Wyślij</button>
+          </>
+          )}
+          
         </Col>
       </Row>
-      <Row>
+      <Row className="ea-row">
         <Col className="activities__col--narrow">
           <h3>Szkolenia i warsztaty</h3>
           <p className="activities__paragraph">
@@ -42,28 +83,28 @@ const ActivitiesPage = () => {
             ślad, lub społeczną odpowiedzialność! Na Twoje zamówienie przygotujemy treści dostosowane do
             potrzeb Twojej organizacji.
           </p>
-          <EAButton title="Zapoznaj się z ofertą" />
+          <div className="d-flex justify-content-center"><EAButton title="Zapoznaj się z ofertą" target="workshops"/></div>
         </Col>
       </Row>
       <Row className="activities__advisory ea-row">
         <Col>
           <h3>Doradztwo</h3>
-          <Row className="justify-content-center">
+          <Row className="justify-content-center ea-row">
             <Col style={{ maxWidth: "683px" }}>
-              <img src={michal} alt="" />
+              <img src={marcin} alt="" />
             </Col>
             <Col className="d-flex flex-column justify-content-center" style={{ maxWidth: "683px" }}>
               <h4>Marcin Tischner</h4>
               <p>
                 Porozmawiajmy o sposobach, na jaki Twoja organizacja może osiągnać największy dobroczynny
-                zwrot, lub wzmonić swoją odpowiedzialność społeczną *kontakt do Marcina Tischnera*.
+                zwrot, lub wzmonić swoją odpowiedzialność społeczną.
               </p>
-              <EAButton title="napisz do mnie" size={140} />
+              <a href="mailto:marcin.tischner@efektywnyaltruizm.org"><button className="btn ea-button" style={{ width: "10rem" }}>Napisz do mnie</button></a>
             </Col>
           </Row>
         </Col>
       </Row>
-      <Row id="media">
+      <Row className="ea-row" id="media">
         <Col className="activities__col--narrow">
           <h3>Media</h3>
           <p className="activities__paragraph">
@@ -78,7 +119,7 @@ const ActivitiesPage = () => {
               <button className="activities__media--btn">
                 <div className="d-flex justify-content-between align-items-center">
                   <p>O fundacji</p>
-                  <FontAwesomeIcon icon={faChevronRight} style={{ marginTop: "-20px" }} />
+                  <FontAwesomeIcon icon={faChevronRight} className="activities__media--icon" />
                 </div>{" "}
               </button>
             </NavHashLink>
@@ -90,7 +131,7 @@ const ActivitiesPage = () => {
               <button className="activities__media--btn">
                 <div className="d-flex justify-content-between align-items-center">
                   <p>Materiały</p>
-                  <FontAwesomeIcon icon={faChevronRight} style={{ marginTop: "-20px" }} />
+                  <FontAwesomeIcon icon={faChevronRight} className="activities__media--icon" />
                 </div>{" "}
               </button>
             </a>
@@ -98,15 +139,14 @@ const ActivitiesPage = () => {
               <button className="activities__media--btn">
                 <div className="d-flex justify-content-between align-items-center">
                   <p>Kontakt</p>
-                  <FontAwesomeIcon icon={faChevronRight} style={{ marginTop: "-20px" }} />
+                  <FontAwesomeIcon icon={faChevronRight} className="activities__media--icon" />
                 </div>{" "}
               </button>
             </NavHashLink>
           </div>
         </Col>
       </Row>
-    </div>
-  );
+    </div>);
 };
-
+}
 export default ActivitiesPage;
