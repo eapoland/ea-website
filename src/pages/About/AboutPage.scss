@@ -270,6 +270,12 @@
         height: 50rem;
       }
     }
+    .about__ex {
+      padding: 4.35rem 0 0 0;
+      .slick-slide {
+        margin: 0 1rem;
+      }
+    }
   }
   .rc-tabs-nav-list {
     flex-wrap: wrap;

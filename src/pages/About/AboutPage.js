@@ -28,7 +28,7 @@ const teamMembers = [
     position: "Prezes",
     desc: "Przedsiębiorca dobroczynny działający w zaniedbanych, choć obiecujących obszarach aktywności publicznej. Organizator międzynarodowej społeczności Effective Altruism i inicjator jej struktur w Polsce. Pełni funkcję prezesa Fundacji od jej powstania w 2017 r.",
     email: "michal.trzesimiech@efektywnyaltruizm.org",
-    linkedin: "URL"
+    linkedin: "https://www.linkedin.com/in/trzesimiech/"
   },
   {
     id: 2,
@@ -37,7 +37,7 @@ const teamMembers = [
     position: "Dyrektorka wykonawcza",
     desc: "Zajmuje się głównie muzyką: studiuje kompozycję oraz fortepian jazzowy na Akademii Muzycznej w Gdańsku, tworzy pod pseudonimem Maja Laura oraz współtworzy zespoły Abyss i Ścianka.  Dyrektorka Wykonawcza Fundacji Efektywny Altruizm oraz wolontariuszka Otwartych Klatek.",
     email: "maja.laura.jaryczewska@efektywnyaltruizm.org",
-    linkedin: "URL"
+    linkedin: "https://www.linkedin.com/in/maja-laura-jaryczewska-846106193/"
   },
   {
     id: 3,
@@ -46,7 +46,7 @@ const teamMembers = [
     position: "Dyrektorka ds. Komunikacji",
     desc: "Psycholożka, trenerka, HRowiec. Przyświeca jej jeden cel - tworzyć lepszy świat. Miłośniczka jogi, wycieczek górskich i zwierzęcej behawiorystyki.",
     email: "maria.gembarzewska-truong@efektywnyaltruizm.org",
-    linkedin: "URL"
+    linkedin: "https://www.linkedin.com/in/maria-gembarzewska-truong/"
   },
   {
     id: 1,
@@ -55,7 +55,7 @@ const teamMembers = [
     position: "Dyrektorki ds. kapitału ludzkiego",
     desc: "Doktorantka Uniwersytetu Wrocławskiego w dziedzinie biologii molekularnej. Od 2016 roku zaangażowana jest również w działania Otwartych Klatek. W wolnych chwilach lubi czytać.",
     email: "katarzyna.mizio@efektywnyaltruizm.org",
-    linkedin: "URL"
+    linkedin: "https://www.linkedin.com/in/katarzyna-m-069380175/"
   },
   {
     id: 5,
@@ -64,7 +64,7 @@ const teamMembers = [
     position: "Dyrektora ds. Rozwoju/Współpracy",
     desc: "Poszukuje efektywnych sposobów na stworzenie bardziej zrównoważonej przyszłości żywności. Pracuje także dla ProVeg Polska, Too Good To Go i Targów Zero Waste.",
     email: "marcin.tischner@efektywnyaltruizm.org",
-    linkedin: "URL"
+    linkedin: "https://www.linkedin.com/in/marcintischner/"
   },
   {
     id: 6,
@@ -73,7 +73,7 @@ const teamMembers = [
     position: "Główny programista",
     desc: "Zawodowo zajmuje się programowaniem. Wspiera Otwarte Klatki w zakresie montażu wideo. W wolnym czasie przygotowuję się do przebiegnięcia maratonu, gotuje roślinne i gra w Minecrafta.",
     email: "michal.hawelka@efektywnyaltruizm.org",
-    linkedin: "URL"
+    linkedin: "https://www.linkedin.com/in/michalhawelka/"
   }
 
 ]
@@ -85,7 +85,7 @@ const consultants = [
     photo: ksarek,
     desc: "Współzałożycielka i Dyrektor Badań w Charity Entrepreneurship Fund Manager at Effective Altruism Animal Welfare Fund",
     email: "EMAIL",
-    linkedin: "URL"
+    linkedin: "https://www.linkedin.com/in/karolinasarek/"
   },
   {
     id: 2,
@@ -93,7 +93,7 @@ const consultants = [
     photo: dgogloza,
     desc: "Współzałożycielka i Head of Strategy w All Hands Agency",
     email: "EMAIL",
-    linkedin: "URL"
+    linkedin: "https://www.linkedin.com/in/dgogloza/"
   },
   {
     id: 3,
@@ -101,7 +101,7 @@ const consultants = [
     photo: mwozniak,
     desc: "Współzałożyciel Fundacji Optimum Pareto i twórca Swarmcheck - deliberatywnego systemu wspomagania decyzji.",
     email: "EMAIL",
-    linkedin: "URL"
+    linkedin: "https://www.linkedin.com/in/marcin-wo%C5%BAniak-064128115/"
   },
   {
     id: 4,
@@ -109,7 +109,7 @@ const consultants = [
     photo: dwyrzykowski,
     desc: "Twórca Altruisto.com - aplikacji do zbiórki funduszy dla organizacji charytatywnych podczas zakupów online.",
     email: "EMAIL",
-    linkedin: "URL"
+    linkedin: "https://www.linkedin.com/in/danielwyrzykowski/"
   }
 ]
 
@@ -200,7 +200,7 @@ const AboutPage = () => {
             </div>
         </Col>
       </Row>
-      <Row className="about__team">
+      <Row className="about__team about__ex">
         <Col>
             <h3 className="text-center">Pracowali z nami</h3>
             <Slider {...settings} className="about__team--slider">
