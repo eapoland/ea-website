@@ -141,7 +141,7 @@ class ContactPage extends React.Component {
             <div>
               <textarea placeholder="Wiadomość" value={this.state.msg} onChange={this.handleMsgChange}/>
             </div>
-            <button onClick={this.handleSubmit}>Wyślij</button>
+            <button className="btn ea-button" onClick={this.handleSubmit}>Wyślij</button>
           </>
           )}
         </Col>
