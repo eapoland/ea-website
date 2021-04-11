@@ -1,6 +1,6 @@
 .contact {
   &__data.col {
-    padding: 70px 100px;
+    padding: 4.375rem 6.25rem;
     background: #fafafa 0% 0% no-repeat padding-box;
     h2 {
       text-align: left;
@@ -16,7 +16,7 @@
       a {
         text-align: left;
         text-decoration: underline;
-        font: normal normal bold 16px/24px Raleway;
+        font: normal normal bold 1rem/1.5rem Raleway;
         letter-spacing: 0px;
         color: #0b879d;
       }
@@ -42,7 +42,7 @@
     }
   }
   &__form.col {
-    padding: 70px 70px 70px 83px;
+    padding: 4.375rem 4.375rem 4.375rem 5.18rem;
     input {
       margin-bottom: 20px;
       background: #fafafa 0% 0% no-repeat padding-box;
@@ -72,4 +72,29 @@
       width: 100%;
     }
   }
+}
+
+@media (max-width: 1365px) {
+  .contact {
+    &__data.col {
+      padding: 3rem 4rem;
+    }
+    &__form.col {
+      padding: 3rem 3rem 3rem 4rem;
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .contact {
+    .ea-row {
+      flex-direction: column;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+}
+
+@media (max-width: 479px) {
 }
