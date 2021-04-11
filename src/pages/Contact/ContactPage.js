@@ -69,8 +69,8 @@ class ContactPage extends React.Component {
             <tr>
               <td>Główny kontakt:</td>
               <td>
-                <a href="mailto:michal.trzesimiech@efektywnyaltruizm.org">
-                  michal.trzesimiech@efektywnyaltruizm.org
+                <a href="mailto:kontakt@efektywnyaltruizm.org">
+                  kontakt@efektywnyaltruizm.org
                 </a>
               </td>
             </tr>

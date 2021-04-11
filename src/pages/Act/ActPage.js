@@ -80,7 +80,7 @@ const ActPage = () => {
               <div>
                 <h3>Przeczytaj o efektywnym altruizmie</h3>
                 <p>
-                  Na stronie <a href="https://effectivealtruism.org">effectivealtruism.org</a> znajduje się
+                  Na stronie <a href="https://effectivealtruism.org" target="_blank" rel="noopener noreferrer">effectivealtruism.org</a> znajduje się
                   lista artykułów poruszających wiele podstawowych kwestii, kilka nagrań wideo i lista
                   książek, które przybliżą Ci czym jest EA. Jeśli zastanawiasz się, na których obszarach się
                   skupić, zapoznaj się z narzędziem do priorytetyzacji i profilami obiecujących obszarów. W
@@ -133,13 +133,37 @@ const ActPage = () => {
               </p>
             </TabPane>
             <TabPane tab="Rozwijaj obszar" key="2">
-              Est vidit deseruisse in, mei ullum blandit maluisset ad. Ut sea iriure dolores. Vel tollit
-              eirmod dolores ea, errem periculis usu ut. Eum alii soleat dissentiet ne. Ridens accumsan cum
-              an, ei eum solum pertinacia democritum.
+                <h3>Napisz post na bloga</h3>
+                <p>Pisanie i publikowanie postów na blogu jest wspaniałym sposobem zarówno na przynoszenie korzyści innym, jak i praktykowanie swoich własnych umiejętności. W związku z tym, że przestrzeń EA jest w chwili obecnej stosunkowo młoda, każdy autor ma szansę przyczynić się do postępu w istotnej dziedzinie i rzucić nowe światło na pewne zagadnienia. Mimo, że zachęcamy wszystkich do krytycznego myślenia o tematach związanych z EA, taka aktywność najlepiej sprawdzi się w przypadku osób, które są dobrze zaznajomione z efektywnym altruizmem i/lub jego poszczególnymi obszarami.</p>
+                <h3>Przeprowadź wywiad z ekspertem</h3>
+                <p>W związku z tym, że efektywny altruizm jest wciąż kiełkującym obszarem, istnieje zapotrzebowanie na publikowanie informacji. Jeśli chciałbyś dowiedzieć się więcej na jakiś temat i podzielić się wiedzą z innymi, przeprowadź wywiad z odpowiednim ekspertem i udostępnij go szerszemu gronu. Eksperci mogą zapoznać Cię z wybraną dziedziną wiedzy lub problematyką i podzielić się doświadczeniem.</p>
+                <h3>Weryfikuj opublikowane badania</h3>
+                <p>Większość badań, które są przedmiotem zainteresowania efektywnych altruistów, jest nowa i przeprowadzona w ograniczonym zakresie, jeśli w ogóle. Aby podnieść standardy i jakość badań, jednostki i organizacje powinny przekazywać sobie nawzajem informacje zwrotne na temat sposobów myślenia i pracy. Dotyczy to weryfikowania prac publikowanych przez organizacje związane z EA, szczególnie, jeśli chodzi o pomoc potrzebującym i edukację: Czy prowadzone lekcje miały sens? Czy są jakieś kontrargumenty, które pominięto? Taka praca często wymaga budowania relacji z jednostkami i/lub organizacjami oraz gruntownej wiedzy na temat EA lub specyficznej dziedziny.</p>
+                <h3>Zrób przegląd literatury lub meta-analizę</h3>
+                <p>Zwykle ciężko uzyskać klarowny obraz najnowszych badań w dziedzinach istotnych dla EA. Meta-analizy - całościowe analizy licznych, pojedynczych badań - są o wiele silniejszym dowodem na korzystny wpływ poszczególnych działań niż jedno potwierdzające go badanie, są więc świetnym narzędziem dla osób chcących zmieniać świat na lepsze przy pomocy dowodów i rozumu. Podobnie jak the Cochrane Collaboration istnieje po to, by ewaluować i podsumowywać dowody wspierające najlepsze praktyki medyczne, tak również i efektywny altruizm mógłby skorzystać z przygotowywanych meta-analiz, np. na temat fortyfikacji i suplementacji jodem czy kalibracji.</p>
+                <h3>Napisz pracę na temat obszarów działalności lub problemów</h3>
+                <p>Społeczność efektywnych altruistów uzyskała dobre rozeznanie w kilku obszarach - działaniach na rzecz polepszenia opieki zdrowotnej na świecie, reformowania hodowli przemysłowej czy ogólnego zrozumienia zagrożeń związanych z rozwojem sztucznej inteligencji - ale mogłaby wykorzystać swoje zasoby umysłowe również w innych, obiecujących dziedzinach. W związku z tym, że prawie każda organizacja EA musiała zawęzić swoje pole działania, żeby móc się lepiej skupić na swoich zadaniach, wiele spraw, które mogłyby być priorytetyzowane ze względu na skalę i rozwiązywalność, jest zaniedbywanych. Potrzebne są osoby gotowe do tego, by zejść z utartego szlaku i badać dziedziny, które zwykle znajdują się poza kompetencjami istniejących organizacji, aby poinformować sieć EA o tym, czy istnieją jakieś obszary, które powinny się znaleźć na liście priorytetów.</p>
+                <h3>Staw czoła kluczowym problemom</h3>
+                <p>W przypadku znalezienia odpowiedzi na pewne pytania, nasze przekonania na temat tego, na czym należy się skupiać, mogłyby się drastycznie zmienić. Skoncentrowanie swoich badań na kluczowych problemach mogłoby mieć zasadniczy wpływ w porównaniu do innych możliwości. Pytania o tym charakterze są z definicji istotne, a brak odpowiedzi na nie często wynika z trudnej, interdyscyplinarnej i/lub niepewnej natury problemów, których one dotykają. Stawienie czoła jednemu z nich jest świetnym projektem dla ambitnych badaczy, którzy są szczególnie entuzjastycznie nastawieni do przyczyniania się do globalnych zmian.</p>
             </TabPane>
             <TabPane tab="Wybierz karierę" key="3">
-              Facete fierent ea mel, id nec delectus invenire elaboraret. Vel illum mollis eu, sit in latine
-              theophrastus, mei nulla suscipit comprehensam ad.
+                <h3>Rozważ ścieżki kariery polecane przez EA</h3>
+                <p>Jeśli jesteś studentem lub początkującym pracownikiem i chciałbyś robić to, co najlepsze dla świata i równocześnie poważnie podchodzisz do swoich wartości, możesz przenieść je na wyższy poziom i pracować w obszarze efektywnego altruizmu w pełnym wymiarze godzin. W swojej pracy będziesz spędzać naprawdę dużo czasu, a pamiętaj, że Twój czas jest jednym z najlepszych zasobów, które mogą przyczynić się do czynienia różnicy na świecie. Znalezienie sposobu, w jaki spędzać ten czas w najkorzystniejszy sposób może być jednak naprawdę trudne.</p>
+                <h3>Zaaplikuj o pracę związaną z EA</h3>
+                <p>Jeśli jesteś profesjonalistą, któremu bliskie są idee EA chcącym poświęcić swój czas i energię na rzeczy, które są najlepsze dla świata, możesz starać się o zatrudnienie pełnowymiarowe w pracy związanej z EA.</p>
+                <h3>Zaaplikuj o grant</h3>
+                <p>Masz pomysł na startup, który może mieć duży wpływ, ale nie masz wystarczającej ilości pieniędzy na jego sfinansowanie? Chciałbyś prowadzić badania, ale nie możesz znaleźć na to czasu? Jeśli tak, to jesteś doskonałym kandydatem do otrzymania grantu EA, nowej inicjatywy Centre for Effective Altruism mającej na celu wsparcie przedsiębiorczych altruistów w ich dążeniach do maksymalizacji dobra. Program grantowy jest otwarty dla wszystkich osób pełnoletnich i oferuje dofinansowania w wysokości nawet 100 000 funtów, jak również indywidualne porady w sprawie wyboru kariery udzielane przez doradcę z 80,000 Hours. Dodatkowymi atutami są prestiż i wsparcie, których prawdopodobnie nie gwarantowałoby indywidualne prowadzenie projektu.</p>
+                <p>Żeby dowiedzieć się więcej i zaaplikować, wejdź na stronę <a href="https://www.effectivealtruism.org/grants/" target="_blank" rel="noopener noreferrer">EA Grants</a>.</p>
+                <h3>Zacznij projekt zainspirowany EA</h3>
+                <p>Masz pomysł na projekt, który byłby wartościowy? Dysponujesz wolnym czasem i jesteś przedsiębiorczy? Jeśli dobrze odnajdujesz się w przestrzeni EA i uważasz, że Twój pomysł jest naprawdę wart realizacji, spisz plan projektu i podziel się nim z ekspertami w danej dziedzinie lub na odpowiednich grupach EA na Facebooku, a następnie postaraj się go urzeczywistnić. Istnieje wiele <a href="http://effective-altruism.com/ea/18p/concrete_project_lists/" target="_blank" rel="noopener noreferrer">pomysłów na projekty</a>, które warto by było zrealizować, więc możesz zainspirować się jednym z nich.</p>
+                <h3>Bądź aktywistą w pracy</h3>
+                <p>Twoi współpracownicy mogą potencjalnie stanowić ogromną, niewykorzystaną bazę darczyńców. Ludzie zwykle chcą przyczynić się do zmiany świata na lepsze, ale nie wiedzą, od czego zacząć. Możesz być ogniwem, które pomoże im przekuć ich chęci w praktykę. Poza tym, firmy zwykle prowadzą programy, które mogą nawet potroić ilość pieniędzy, która dotrze do organizacji.</p>
+                <h3>Zastosuj mindset EA w swoim życiu i w swoich społecznościach</h3>
+                <p>Efektywny altruizm jest społecznością młodą, która do 2012 roku nie uzyskała jeszcze nawet swojej nazwy. Od tamtej pory zrobiliśmy bardzo duże postępy, ale jest jeszcze o wiele więcej rzeczy do zrobienia. Jeśli dołączasz do efektywnego altruizmu z doświadczeniem w dziedzinie, która jest niedostatecznie reprezentowana w społeczności (tj. większość dziedzin poza filozofią akademicką i informatyką), prawdopodobnie nie doszliśmy jeszcze do tego, jak najlepiej wykorzystać dorobek Twojej dyscypliny — a być może nie wiemy nawet, że może być ona przydatna dla EA.</p>
+                <h3>Prowadź zajęcia dotyczące EA</h3>
+                <p>Jeśli pracujesz na uniwersytecie, jesteś nauczycielem lub studentem uczelni, która umożliwia prowadzenie kursów studentom, rozważ poprowadzenie kursu na temat efektywnego altruizmu. Tematyka EA historycznie jest powiązana z wydziałami filozofii i ekonomii, ale dobrze łączyłaby się również z dziedzinami STEM (naukowymi, technicznymi, inżynieryjnymi, matematycznymi), biznesowymi, statystycznymi czy społecznymi.</p>
+
+              
             </TabPane>
           </Tabs>
         </Col>
