@@ -9,6 +9,7 @@ import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 import { NavHashLink } from "react-router-hash-link";
 import ScrollToTop from "../../components/ScrollToTop";
 import MailService from "../../utils/MailService";
+import Spinner from "reactstrap/lib/Spinner";
 
 class ActivitiesPage extends React.Component {
   constructor(props) {
@@ -16,7 +17,7 @@ class ActivitiesPage extends React.Component {
     this.state = {
       email: "",
       msg: "",
-      msgSent: false
+      msgStatus: "notSent"
     };
 
     this.handleEmailChange = this.handleEmailChange.bind(this);
@@ -33,11 +34,12 @@ class ActivitiesPage extends React.Component {
   }
 
   handleSubmit(event) {
+    this.setState({msgStatus: "sending"})
     MailService.sendContactForm("", "m.hawelka@gmail.com", this.state.email, "Współpraca - formularz kontaktowy", this.state.msg).then(() => {
       MailService.sendContactFormAck("", this.state.email, "Współpraca - formularz kontaktowy", this.state.msg).then((result) => {
         if (result.status === 200) {
           this.setState({
-            msgSent: true
+            msgStatus: "sent"
           })
         }
       });
@@ -65,11 +67,12 @@ class ActivitiesPage extends React.Component {
           className="d-flex flex-column justify-content-center"
           style={{ maxWidth: "683px" }}
         >
-          {this.state.msgSent ? (<div>Wiadomość została wysłana</div>) : (
+          {this.state.msgStatus === "sent" ? (<h3>Wiadomość została wysłana</h3>) : (
             <>
               <input type="email" placeholder="Adres e-mail" value={this.state.email} onChange={this.handleEmailChange} />
               <textarea placeholder="Wiadomość" value={this.state.msg} onChange={this.handleMsgChange} />
               <button className="btn ea-button" onClick={this.handleSubmit} style={{ width: "10rem" }}>Wyślij</button>
+              { this.state.msgStatus === "sending" && <span><Spinner size="sm" /> Trwa wysyłanie wiadomości...</span>}
           </>
           )}
           

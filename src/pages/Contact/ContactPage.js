@@ -7,6 +7,7 @@ import Col from "reactstrap/lib/Col";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFacebookSquare, faLinkedinIn, faYoutube } from "@fortawesome/free-brands-svg-icons";
 import MailService from "../../utils/MailService";
+import Spinner from "reactstrap/lib/Spinner";
 
 class ContactPage extends React.Component {
   constructor(props) {
@@ -16,7 +17,7 @@ class ContactPage extends React.Component {
       email: "",
       subject: "",
       msg: "",
-      msgSent: false
+      msgStatus: "notSent"
     };
 
     this.handleNameChange = this.handleNameChange.bind(this);
@@ -43,11 +44,12 @@ class ContactPage extends React.Component {
   }
 
   handleSubmit(event) {
+    this.setState({msgStatus: "sending"});
     MailService.sendContactForm(this.state.name, "m.hawelka@gmail.com", this.state.email, this.state.subject, this.state.msg).then(() => {
       MailService.sendContactFormAck(this.state.name, this.state.email, this.state.subject, this.state.msg).then((result) => {
         if (result.status === 200) {
           this.setState({
-            msgSent: true
+            msgStatus: "sent"
           })
         }
       });
@@ -130,7 +132,7 @@ class ContactPage extends React.Component {
           </div>
         </Col>
         <Col className="contact__form">
-          {this.state.msgSent ? (<div>Wiadomość została wysłana</div>) : (
+          {this.state.msgStatus === "sent" ? (<h3>Wiadomość została wysłana</h3>) : (
             <><div className="d-flex justify-content-between">
               <input type="text" placeholder="Imię" style={{ marginRight: "20px" }} value={this.state.name} onChange={this.handleNameChange}/>
               <input type="email" placeholder="Adres e-mail" value={this.state.email} onChange={this.handleEmailChange}/>
@@ -142,6 +144,7 @@ class ContactPage extends React.Component {
               <textarea placeholder="Wiadomość" value={this.state.msg} onChange={this.handleMsgChange}/>
             </div>
             <button className="btn ea-button" onClick={this.handleSubmit}>Wyślij</button>
+            { this.state.msgStatus === "sending" && <span><Spinner size="sm" /> Trwa wysyłanie wiadomości...</span>}
           </>
           )}
         </Col>
