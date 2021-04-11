@@ -37,22 +37,27 @@ const Footer = () => {
               </NavLink>
             </NavItem>
             <NavItem>
-              <NavLink className="footer__item" tag={Link} to="/privacy-policy">
-                WSPÓŁPRACA
+              <NavLink className="footer__item" tag={Link} to="/activities">
+                DZIAŁANIA
               </NavLink>
             </NavItem>
             <NavItem>
-              <NavLink className="footer__item" tag={Link} to="/privacy-policy">
-                DZIAŁAJ
+              <NavLink className="footer__item" tag={Link} to="/workshops">
+                WARSZTATY
               </NavLink>
             </NavItem>
-            <NavItem>
+            {/* <NavItem>
               <NavLink className="footer__item" tag={Link} to="/blog">
                 BLOG
               </NavLink>
+            </NavItem> */}
+            <NavItem>
+              <NavLink className="footer__item" tag={Link} to="/act">
+                WSPIERAJ
+              </NavLink>
             </NavItem>
             <NavItem>
-              <NavLink className="footer__item" tag={Link} to="/privacy-policy">
+              <NavLink className="footer__item" tag={Link} to="/contact">
                 KONTAKT
               </NavLink>
             </NavItem>
@@ -70,7 +75,7 @@ const Footer = () => {
               </NavLink>
             </NavItem>
           </Nav>
-          <p className="footer__text">© 2020 Fundacja Efektywny Altruizm</p>
+          <p className="footer__text">© 2021 Fundacja Efektywny Altruizm</p>
         </div>
       </Col>
       <Col className="footer__column">
