@@ -1,84 +1,103 @@
 .workshop-details {
   &__summary.col {
-    padding: 70px 53px 99px 100px;
+    padding: 4.375rem 3.3rem 6.18rem 6.18rem;
     p {
       text-align: left;
-      font: normal normal normal 16px/24px Raleway;
+      font: normal normal normal 1rem/1.5rem Raleway;
       letter-spacing: 0px;
       color: #000000;
     }
   }
   &__pricing.col {
     background: #fafafa 0% 0% no-repeat padding-box;
-    padding: 70px 100px 99px 53px;
+    padding: 4.375rem 6.18rem 6.18rem 3.3rem;
     .workshop-details__pricing--title {
       text-align: left;
-      font: normal normal bold 16px/34px Raleway;
+      font: normal normal bold 1rem/2.12rem Raleway;
       letter-spacing: 0px;
       color: #000000;
       text-transform: uppercase;
-      width: 60px;
+      width: 3.75rem;
       margin: 0;
     }
     .workshop-details__pricing--content {
       text-align: left;
-      font: normal normal normal 16px/34px Raleway;
+      font: normal normal normal 1rem/2.12rem Raleway;
       letter-spacing: -0.08px;
       color: #000000;
       opacity: 1;
       margin: 0;
-      margin-left: 40px;
+      margin-left: 2.5rem;
     }
   }
   &__host {
     background-color: #edcf00;
     img {
-      padding-left: 150px;
+      padding-left: 9.375rem;
     }
     h1 {
-      margin-top: 70px;
-      margin-bottom: 60px;
+      margin-top: 4.375rem;
+      margin-bottom: 3.75rem;
       text-align: center;
-      font: normal normal normal 34px/45px Roboto Slab;
+      font: normal normal normal 2.125rem/2.812rem Roboto Slab;
       letter-spacing: 0px;
       color: #000000;
     }
     h3 {
       text-align: left;
-      font: normal normal bold 16px/24px Raleway;
+      font: normal normal bold 1rem/1.5rem Raleway;
       letter-spacing: 0px;
       color: #000000;
       text-transform: uppercase;
     }
     p {
       text-align: left;
-      font: normal normal normal 16px/24px Raleway;
+      font: normal normal normal 1rem/1.5rem Raleway;
       letter-spacing: -0.08px;
       color: #000000;
-      padding-right: 160px;
+      padding-right: 10rem;
+    }
+    &--desc {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .row:nth-child(odd) {
+      flex-direction: row-reverse;
+      .workshop-details__host {
+        &--desc {
+          p {
+            text-align: right;
+            padding-left: 10rem;
+            padding-right: 0;
+          }
+          align-items: flex-end;
+        }
+      }
     }
   }
   &__modules {
-    margin-bottom: 75px;
+    margin-bottom: 4.68rem;
     h1 {
-      margin-top: 70px;
-      margin-bottom: 60px;
+      margin-top: 4.375rem;
+      margin-bottom: 3.75rem;
       text-align: center;
-      font: normal normal normal 34px/45px Roboto Slab;
+      font: normal normal normal 2.125rem/2.812rem Roboto Slab;
       letter-spacing: 0px;
       color: #000000;
     }
     &--list {
-      width: 1000px;
+      width: 80%;
       background: #fafafa 0% 0% no-repeat padding-box;
-      border-radius: 10px;
-      padding: 34px 40px;
+      border-radius: 0.625rem;
+      padding: 2.125rem 2.5rem;
       ol {
         list-style-type: decimal-leading-zero;
+        margin: 0;
       }
       li {
         text-align: left;
-        font: normal normal normal 24px/54px Roboto Slab;
+        font: normal normal normal 1.5rem/3.375rem Roboto Slab;
         letter-spacing: 0px;
         color: #000000;
       }
@@ -86,41 +105,126 @@
   }
   &__cta {
     background: url("../../assets/images/cta-lightbulb.png") center no-repeat;
-    height: 530px;
+    height: 33.125rem;
     p {
       text-align: left;
-      font: normal normal normal 34px/54px Roboto Slab;
+      font: normal normal normal 2.125rem/3.375rem Roboto Slab;
       letter-spacing: 0px;
       color: #000000;
-      margin-left: 160px;
-      width: 440px;
+      margin-left: 10rem;
+      width: 27.5rem;
     }
-    input {
-      width: 260px;
-      margin-bottom: 20px;
-      background: #ffffff 0% 0% no-repeat padding-box;
-      border: 0px;
-      border-bottom: 2px solid #cccccc;
-      padding-left: 13px;
-      opacity: 1;
-      height: 42px;
-      font-size: 12px;
-      font-family: Raleway;
-      letter-spacing: 0px;
-    }
-    textarea {
-      height: 100px !important;
-      margin-bottom: 20px !important;
-      background: #ffffff 0% 0% no-repeat padding-box;
-      border: 0px;
-      border-bottom: 2px solid #cccccc;
-      padding-left: 13px;
-      padding-top: 13px;
-      width: 440px;
-      opacity: 1;
-      font-size: 12px;
-      font-family: Raleway;
-      letter-spacing: 0px;
+    &--form {
+      max-width: 683px;
+      padding-left: 53px;
+      input {
+        width: 16.25rem;
+        margin-bottom: 1.25rem;
+        background: #ffffff 0% 0% no-repeat padding-box;
+        border: 0px;
+        border-bottom: 2px solid #cccccc;
+        padding-left: 0.812rem;
+        opacity: 1;
+        height: 2.625rem;
+        font-size: 0.75rem;
+        font-family: Raleway;
+        letter-spacing: 0px;
+      }
+      textarea {
+        height: 6.25rem !important;
+        margin-bottom: 1.25rem !important;
+        background: #ffffff 0% 0% no-repeat padding-box;
+        border: 0px;
+        border-bottom: 2px solid #cccccc;
+        padding-left: 0.812rem;
+        padding-top: 0.812rem;
+        width: 16.25rem;
+        opacity: 1;
+        font-size: 0.75rem;
+        font-family: Raleway;
+        letter-spacing: 0px;
+      }
     }
   }
+}
+
+@media (max-width: 1365px) {
+  .workshop-details__host--photo {
+    max-width: 50%;
+    img {
+      padding: 0;
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .workshop-details__host--photo {
+    img {
+      width: 50vw;
+    }
+  }
+  .workshop-details__cta {
+    p {
+      margin-left: 5rem;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .workshop-details {
+    .row {
+      flex-direction: column;
+    }
+    .workshop-details__host {
+      p {
+        padding: 0 !important;
+      }
+    }
+  }
+  .workshop-details__host--photo {
+    display: flex;
+    justify-content: center;
+    img {
+      width: 75vw;
+    }
+  }
+  .workshop-details__host {
+    .row:nth-child(odd),
+    .row {
+      flex-direction: column;
+      .workshop-details__host {
+        &--desc {
+          h3 {
+            margin-top: 1rem;
+            font-size: 1.5rem;
+          }
+          p {
+            text-align: left;
+            padding-left: 0;
+            padding-right: 0;
+          }
+          align-items: center;
+        }
+      }
+    }
+  }
+  .workshop-details__cta {
+    background: linear-gradient(
+        0deg,
+        rgba(11, 135, 157, 0.5) 4%,
+        rgba(90, 174, 189, 0.5) 25%,
+        rgba(255, 255, 255, 0.5) 100%
+      ),
+      url("../../assets/images/cta-lightbulb.png") center no-repeat;
+    .col {
+      justify-content: center;
+      align-items: center;
+    }
+    &--form {
+      padding: 0;
+    }
+  }
+}
+
+@media (max-width: 479px) {
 }

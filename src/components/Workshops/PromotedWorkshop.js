@@ -2,7 +2,7 @@ import React from "react";
 import "./Workshops.scss";
 import { Col } from "reactstrap";
 import EAButton from "../Common/EAButton/EAButton";
-import workshops from "../../content/workshops.json";
+import workshops from "../../content/workshops";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
 

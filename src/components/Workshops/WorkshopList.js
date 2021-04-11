@@ -2,7 +2,7 @@ import React from "react";
 import Row from "reactstrap/lib/Row";
 import WorkshopCard from "./WorkshopCard";
 import "./Workshops.scss";
-import workshops from "../../content/workshops.json";
+import workshops from "../../content/workshops";
 
 const WorkshopList = () => {
   return (
