@@ -64,7 +64,7 @@ const WorkshopDetailsPage = () => {
           </Row>
         )
       }
-      <Row className="workshop-details__modules ea-row flex-column align-items-center">
+      {workshopDetails.modules && <Row className="workshop-details__modules ea-row flex-column align-items-center">
         <h1>Spis modułów</h1>
         <div className="workshop-details__modules--list">
           <ol>
@@ -74,6 +74,7 @@ const WorkshopDetailsPage = () => {
           </ol>
         </div>
       </Row>
+      }
       <Row className="workshop-details__cta ea-row justify-content-center">
         <Col className="d-flex align-items-center" style={{ maxWidth: "683px" }}>
           <p>Chcesz wiedzieć więcej? Użyj formularza kontaktowego</p>

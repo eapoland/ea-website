@@ -7,7 +7,6 @@ import SectionTitle from "../../components/SectionTitle/SectionTitle";
 import act from "../../assets/images/act.png";
 import change from "../../assets/images/change.png";
 import volunteer from "../../assets/images/volunteer.png";
-import EAButton from "../../components/Common/EAButton/EAButton";
 import Tabs, { TabPane } from "rc-tabs";
 
 const content = [
@@ -22,7 +21,7 @@ const content = [
   {
     heading: "Wolontariat",
     text:
-      "Twoja darowizna może wspomóc działania EA w Polce. Dzięki niej będziemy mogli utworzyć specjalistyczne etaty, co przełoży się na dynamikę rozwoju ruchu, zwiększenie naszych możliwości edukacyjnych, a w efekcie zwielokrotni efektywność wpłat tysięcy darczyńców. Możesz również wybrać aby EA przekazał Twoje pieniądze organizacjom rekomendowanym przez GiveWell, Animal Charity Evaluators lub The Life You Can Save., a więc organizacjom najskuteczniejszym na świecie, czyniącym najwiecej dobra ze przekazywane im dary.",
+      "Fundację Efektywny Altruizm buduje grupa wolontariuszy i wolontariuszek zainteresowanych różnymi obszarami i na różnych szczeblach kariery. Jeśli rozważasz przeznaczenie części swojego czasu na rozwijanie Efektywnego Altruizmu w Polsce, dołącz do naszego zespołu!",
     cta: "Dołącz do nas",
     img: volunteer,
     imgAlt: "test",
@@ -49,14 +48,14 @@ const ActPage = () => {
         <Col xs={12} md={6} className="act__type--desc">
           <h3>{content[0].heading}</h3>
           <p>{content[0].text}</p>
-          <EAButton title={content[0].cta} size={180} />
+          <a href="https://www.paypal.com/donate/?cmd=_s-xclick&hosted_button_id=FFLJ8KDN5CAUA" target="_blank" rel="noopener noreferrer"><button className="btn ea-button" style={{ width: "12rem" }}>{content[0].cta}</button></a>
         </Col>
       </Row>
       <Row className="act__type">
         <Col xs={12} md={6} className="act__type--desc">
           <h3>{content[1].heading}</h3>
           <p>{content[1].text}</p>
-          <EAButton title={content[1].cta} size={180} />
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSeG6DrBAcLSaMM27_tsKmUEfF79B1DsxqAeEify8ZnAuvS6PQ/viewform" target="_blank" rel="noopener noreferrer"><button className="btn ea-button" style={{ width: "11rem" }}>{content[1].cta}</button></a>
         </Col>
         <Col xs={12} md={6} className="act__type--photo">
           <img src={content[1].img} alt={content[1].imgAlt} />
