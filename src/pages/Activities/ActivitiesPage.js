@@ -110,13 +110,13 @@ class ActivitiesPage extends React.Component {
       <Row className="ea-row" id="media">
         <Col className="activities__col--narrow">
           <h3>Media</h3>
-          <p className="activities__paragraph">
+          {/* <p className="activities__paragraph">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
             labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
             nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit
             esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt
             in culpa qui officia deserunt mollit anim id est laborum.
-          </p>
+          </p> */}
           <div className="activities__media--links d-flex justify-content-between">
             <NavHashLink to={`about`}>
               <button className="activities__media--btn">

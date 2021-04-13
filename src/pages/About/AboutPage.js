@@ -10,10 +10,10 @@ import mtischner from "../../assets/images/team/mtischner.png";
 import mtrzesimiech from "../../assets/images/team/mtrzesimiech.png";
 import mjaryczewska from "../../assets/images/team/mjaryczewska.png";
 import mhawelka from "../../assets/images/team/mhawelka.png";
-import ksarek from "../../assets/images/team/consulting/ksarek.png";
+// import ksarek from "../../assets/images/team/consulting/ksarek.png";
 import dgogloza from "../../assets/images/team/consulting/dgogloza.png";
-import dwyrzykowski from "../../assets/images/team/consulting/dwyrzykowski.png";
-import mwozniak from "../../assets/images/team/consulting/mwozniak.png";
+// import dwyrzykowski from "../../assets/images/team/consulting/dwyrzykowski.png";
+// import mwozniak from "../../assets/images/team/consulting/mwozniak.png";
 import MemberCard from "./MemberCard";
 import ConsultantCard from "./ConsultantCard";
 import Slider from "react-slick";
@@ -79,14 +79,14 @@ const teamMembers = [
 ]
 
 const consultants = [
-  {
-    id: 1,
-    name: "Karolina Sarek",
-    photo: ksarek,
-    desc: "Współzałożycielka i Dyrektor Badań w Charity Entrepreneurship Fund Manager at Effective Altruism Animal Welfare Fund",
-    email: "EMAIL",
-    linkedin: "https://www.linkedin.com/in/karolinasarek/"
-  },
+  // {
+  //   id: 1,
+  //   name: "Karolina Sarek",
+  //   photo: ksarek,
+  //   desc: "Współzałożycielka i Dyrektor Badań w Charity Entrepreneurship Fund Manager at Effective Altruism Animal Welfare Fund",
+  //   email: "EMAIL",
+  //   linkedin: "https://www.linkedin.com/in/karolinasarek/"
+  // },
   {
     id: 2,
     name: "Dobrosława Gogłoza",
@@ -95,22 +95,22 @@ const consultants = [
     email: "EMAIL",
     linkedin: "https://www.linkedin.com/in/dgogloza/"
   },
-  {
-    id: 3,
-    name: "Marcin Woźniak",
-    photo: mwozniak,
-    desc: "Współzałożyciel Fundacji Optimum Pareto i twórca Swarmcheck - deliberatywnego systemu wspomagania decyzji.",
-    email: "EMAIL",
-    linkedin: "https://www.linkedin.com/in/marcin-wo%C5%BAniak-064128115/"
-  },
-  {
-    id: 4,
-    name: "Daniel Wyrzykowski",
-    photo: dwyrzykowski,
-    desc: "Twórca Altruisto.com - aplikacji do zbiórki funduszy dla organizacji charytatywnych podczas zakupów online.",
-    email: "EMAIL",
-    linkedin: "https://www.linkedin.com/in/danielwyrzykowski/"
-  }
+  // {
+  //   id: 3,
+  //   name: "Marcin Woźniak",
+  //   photo: mwozniak,
+  //   desc: "Współzałożyciel Fundacji Optimum Pareto i twórca Swarmcheck - deliberatywnego systemu wspomagania decyzji.",
+  //   email: "EMAIL",
+  //   linkedin: "https://www.linkedin.com/in/marcin-wo%C5%BAniak-064128115/"
+  // },
+  // {
+  //   id: 4,
+  //   name: "Daniel Wyrzykowski",
+  //   photo: dwyrzykowski,
+  //   desc: "Twórca Altruisto.com - aplikacji do zbiórki funduszy dla organizacji charytatywnych podczas zakupów online.",
+  //   email: "EMAIL",
+  //   linkedin: "https://www.linkedin.com/in/danielwyrzykowski/"
+  // }
 ]
 
 const AboutPage = () => {
@@ -220,6 +220,24 @@ const AboutPage = () => {
                 <div>
                   <h5>Marcin Wosinek</h5>
                   <p>Programista.</p>
+                </div>
+              </div>
+              <div>
+                <div>
+                  <h5>Karolina Sarek</h5>
+                  <p>Współzałożycielka i Dyrektor Badań w Charity Entrepreneurship Fund Manager at Effective Altruism Animal Welfare Fund.</p>
+                </div>
+              </div>
+              <div>
+                <div>
+                  <h5>Marcin Woźniak</h5>
+                  <p>Współzałożyciel Fundacji Optimum Pareto i twórca Swarmcheck - deliberatywnego systemu wspomagania decyzji.</p>
+                </div>
+              </div>
+              <div>
+                <div>
+                  <h5>Daniel Wyrzykowski</h5>
+                  <p>Twórca Altruisto.com - aplikacji do zbiórki funduszy dla organizacji charytatywnych podczas zakupów online.</p>
                 </div>
               </div>
             </Slider>
