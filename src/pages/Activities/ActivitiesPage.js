@@ -99,8 +99,8 @@ class ActivitiesPage extends React.Component {
             <Col className="d-flex flex-column justify-content-center" style={{ maxWidth: "683px" }}>
               <h4>Marcin Tischner</h4>
               <p>
-                Porozmawiajmy o sposobach, na jaki Twoja organizacja może osiągnać największy dobroczynny
-                zwrot, lub wzmonić swoją odpowiedzialność społeczną.
+                Porozmawiajmy o sposobach, na jaki Twoja organizacja może osiągnąć największy dobroczynny
+                zwrot, lub wzmocnić swoją odpowiedzialność społeczną.
               </p>
               <a href="mailto:marcin.tischner@efektywnyaltruizm.org"><button className="btn ea-button" style={{ width: "10rem" }}>Napisz do mnie</button></a>
             </Col>

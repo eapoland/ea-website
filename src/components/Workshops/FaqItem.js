@@ -22,7 +22,7 @@ const FaqItem = ({ item }) => {
 
           <Collapse isOpen={collapse}>
             <div className="faq-item__content">
-              <p>{item.content}</p>
+              <p dangerouslySetInnerHTML={{__html: item.content}}></p>
             </div>
           </Collapse>
         </CardBody>

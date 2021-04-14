@@ -87,10 +87,10 @@ function App() {
               <br />
               <span style={{ fontSize: "10px" }}>
                 Wykorzystujemy pliki cookie do spersonalizowania treści i reklam, aby oferować funkcje
-                społecznościowe i analizować ruch w naszej witrynie. Informacje o tym, jak korzystasz z naszej
+                społecznościowe i analizować ruch na naszej witrynie. Informacje o tym, jak korzystasz z naszej
                 witryny, udostępniamy partnerom społecznościowym, reklamowym i analitycznym. Partnerzy mogą
                 połączyć te informacje z innymi danymi otrzymanymi od Ciebie lub uzyskanymi podczas
-                korzystania z ich usług. Kontynuując korzystanie z naszej witryny, zgadasz się na używanie
+                korzystania z ich usług. Kontynuując korzystanie z naszej witryny, zgadzasz się na używanie
                 plików cookie.
               </span>
             </CookieConsent>

@@ -11,17 +11,17 @@ const hosts = {
   },
   "mjaryczewska": {
     "name": "Maja Laura Jaryczewska",
-    "desc": "Przedsiębiorca dobroczynny działający w zaniedbanych, choć obiecujących obszarach aktywności publicznej. Organizator międzynarodowej społeczności Effective Altruism i inicjator jej struktur w Polsce. Prezes Fundacji Efektywny Altruizm - pełni tę funkcję od jej powstania w 2017 r.",
+    "desc": "Zajmuje się głównie muzyką: studiuje kompozycję oraz fortepian jazzowy na Akademii Muzycznej w Gdańsku, tworzy pod pseudonimem Maja Laura oraz współtworzy zespoły Abyss i Ścianka.  Dyrektorka Wykonawcza Fundacji Efektywny Altruizm oraz wolontariuszka Otwartych Klatek.",
     "photo": maja
   },
   "mtischner": {
     "name": "Marcin Tischner",
-    "desc": "Przedsiębiorca dobroczynny działający w zaniedbanych, choć obiecujących obszarach aktywności publicznej. Organizator międzynarodowej społeczności Effective Altruism i inicjator jej struktur w Polsce. Prezes Fundacji Efektywny Altruizm - pełni tę funkcję od jej powstania w 2017 r.",
+    "desc": "Poszukuje efektywnych sposobów na stworzenie bardziej zrównoważonej przyszłości żywności. Pracuje także dla ProVeg Polska, Too Good To Go i Targów Zero Waste. Dyrektor ds. rozwoju/współpracy Fundacji Efektywny Altruizm.",
     "photo": marcin
   },
   "mtruong": {
     "name": "Maria Gembarzewska-Truong",
-    "desc": "Przedsiębiorca dobroczynny działający w zaniedbanych, choć obiecujących obszarach aktywności publicznej. Organizator międzynarodowej społeczności Effective Altruism i inicjator jej struktur w Polsce. Prezes Fundacji Efektywny Altruizm - pełni tę funkcję od jej powstania w 2017 r.",
+    "desc": "Psycholożka, trenerka, HRowiec. Przyświeca jej jeden cel - tworzyć lepszy świat. Miłośniczka jogi, wycieczek górskich i zwierzęcej behawiorystyki. Dyrektorka ds. komunikacji Fundacji Efektywny Altruizm.",
     "photo": maria
   }
 }

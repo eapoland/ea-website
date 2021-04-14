@@ -43,7 +43,7 @@ const teamMembers = [
     id: 3,
     name: "Maria Gembarzewska-Truong",
     photo: mtruong,
-    position: "Dyrektorka ds. Komunikacji",
+    position: "Dyrektorka ds. komunikacji",
     desc: "Psycholożka, trenerka, HRowiec. Przyświeca jej jeden cel - tworzyć lepszy świat. Miłośniczka jogi, wycieczek górskich i zwierzęcej behawiorystyki.",
     email: "maria.gembarzewska-truong@efektywnyaltruizm.org",
     linkedin: "https://www.linkedin.com/in/maria-gembarzewska-truong/"
@@ -52,7 +52,7 @@ const teamMembers = [
     id: 1,
     name: "Katarzyna Mizio",
     photo: kmizio,
-    position: "Dyrektorki ds. kapitału ludzkiego",
+    position: "Dyrektorka ds. kapitału ludzkiego",
     desc: "Doktorantka Uniwersytetu Wrocławskiego w dziedzinie biologii molekularnej. Od 2016 roku zaangażowana jest również w działania Otwartych Klatek. W wolnych chwilach lubi czytać.",
     email: "katarzyna.mizio@efektywnyaltruizm.org",
     linkedin: "https://www.linkedin.com/in/katarzyna-m-069380175/"
@@ -61,7 +61,7 @@ const teamMembers = [
     id: 5,
     name: "Marcin Tischner",
     photo: mtischner,
-    position: "Dyrektora ds. Rozwoju/Współpracy",
+    position: "Dyrektor ds. rozwoju/współpracy",
     desc: "Poszukuje efektywnych sposobów na stworzenie bardziej zrównoważonej przyszłości żywności. Pracuje także dla ProVeg Polska, Too Good To Go i Targów Zero Waste.",
     email: "marcin.tischner@efektywnyaltruizm.org",
     linkedin: "https://www.linkedin.com/in/marcintischner/"

@@ -13,7 +13,7 @@ const content = [
   {
     heading: "Przekaż darowiznę",
     text:
-      "Twoja darowizna może wspomóc działania EA w Polce. Dzięki niej będziemy mogli utworzyć specjalistyczne etaty, co przełoży się na dynamikę rozwoju ruchu, zwiększenie naszych możliwości edukacyjnych, a w efekcie zwielokrotni efektywność wpłat tysięcy darczyńców. Możesz również wybrać aby EA przekazał Twoje pieniądze organizacjom rekomendowanym przez GiveWell, Animal Charity Evaluators lub The Life You Can Save., a więc organizacjom najskuteczniejszym na świecie, czyniącym najwiecej dobra ze przekazywane im dary.",
+      "Twoja darowizna może wspomóc działania EA w Polce. Dzięki niej będziemy mogli utworzyć specjalistyczne etaty, co przełoży się na dynamikę rozwoju ruchu, zwiększenie naszych możliwości edukacyjnych, a w efekcie zwielokrotni efektywność wpłat tysięcy darczyńców. Możesz również wybrać przekazanie Twoich pieniędzy organizacjom rekomendowanym przez GiveWell, Animal Charity Evaluators lub The Life You Can Save, a więc organizacjom najskuteczniejszym na świecie, czyniącym najwięcej dobra ze przekazywane im dary.",
     cta: "Przekaż darowiznę",
     img: change,
     imgAlt: "test",
@@ -98,7 +98,7 @@ const ActPage = () => {
                   ale również powiązanych rozważań dotyczących EA.
                 </p>
                 <p>
-                  Jeśli znasz idęę EA, przyłącz się do dyskusji na Effective Altruism Forum. Autorzy należący
+                  Jeśli znasz ideę EA, przyłącz się do dyskusji na Effective Altruism Forum. Autorzy należący
                   do społeczności prowadzą tu ważne rozważania w dziedzinach zgodnych z ich kompetencjami.
                 </p>
                 <p>
@@ -113,6 +113,12 @@ const ActPage = () => {
                 kryteriach efektywnego altruizmu. Dostępne są także kanały internetowe RSS, np Blogtrottr,
                 dzięki którym otrzymasz mail, gdy pojawi się nowy wpis na EA Forum (RSS) lub na EA Blogs
                 (RSS).
+              </p>
+              <h3>Zainstaluj wtyczkę Altruisto</h3>
+              <p>Podobnie jak z bezpośrednimi wpłatami na najefektywniejsze organizacje charytatywne, prostym sposobem na czynienie mierzalnego wpływu na świecie jest zainstalowanie wtyczki Altruisto.
+                Altruisto pozwala użytkownikom zbierać fundusze podczas zakupów online na najefektywniejsze organizacje charytatywne rekomendowane przez GiveWell, Animal Charity Evaluators i The Life You Can Save. Użytkownik nie ponosi żadnych dodatkowych kosztów za kupione produkty/usługi, Altruisto również nie śledzi aktywności online indywidualnych użytkowników.
+                Więcej informacji i możliwość pobrania wtyczki na oficjalnej stronie: <a href="https://altruisto.com" target="_blank" rel="noopener noreferrer">https://altruisto.com</a></p>
+                <p>Autorem wtyczki jest Daniel Wyrzykowski, jeden z doradców Fundacji Efektywny Altruizm.
               </p>
               <h3>Weź udział w EAGx lub spotkaniu lokalnej grupy</h3>
               <p>
@@ -135,7 +141,7 @@ const ActPage = () => {
                 <h3>Napisz post na bloga</h3>
                 <p>Pisanie i publikowanie postów na blogu jest wspaniałym sposobem zarówno na przynoszenie korzyści innym, jak i praktykowanie swoich własnych umiejętności. W związku z tym, że przestrzeń EA jest w chwili obecnej stosunkowo młoda, każdy autor ma szansę przyczynić się do postępu w istotnej dziedzinie i rzucić nowe światło na pewne zagadnienia. Mimo, że zachęcamy wszystkich do krytycznego myślenia o tematach związanych z EA, taka aktywność najlepiej sprawdzi się w przypadku osób, które są dobrze zaznajomione z efektywnym altruizmem i/lub jego poszczególnymi obszarami.</p>
                 <h3>Przeprowadź wywiad z ekspertem</h3>
-                <p>W związku z tym, że efektywny altruizm jest wciąż kiełkującym obszarem, istnieje zapotrzebowanie na publikowanie informacji. Jeśli chciałbyś dowiedzieć się więcej na jakiś temat i podzielić się wiedzą z innymi, przeprowadź wywiad z odpowiednim ekspertem i udostępnij go szerszemu gronu. Eksperci mogą zapoznać Cię z wybraną dziedziną wiedzy lub problematyką i podzielić się doświadczeniem.</p>
+                <p>W związku z tym, że efektywny altruizm jest wciąż kiełkującym obszarem, istnieje zapotrzebowanie na publikowanie informacji. Jeśli chciałabyś/chciałbyś dowiedzieć się więcej na jakiś temat i podzielić się wiedzą z innymi, przeprowadź wywiad z odpowiednim ekspertem i udostępnij go szerszemu gronu. Eksperci mogą zapoznać Cię z wybraną dziedziną wiedzy lub problematyką i podzielić się doświadczeniem.</p>
                 <h3>Weryfikuj opublikowane badania</h3>
                 <p>Większość badań, które są przedmiotem zainteresowania efektywnych altruistów, jest nowa i przeprowadzona w ograniczonym zakresie, jeśli w ogóle. Aby podnieść standardy i jakość badań, jednostki i organizacje powinny przekazywać sobie nawzajem informacje zwrotne na temat sposobów myślenia i pracy. Dotyczy to weryfikowania prac publikowanych przez organizacje związane z EA, szczególnie, jeśli chodzi o pomoc potrzebującym i edukację: Czy prowadzone lekcje miały sens? Czy są jakieś kontrargumenty, które pominięto? Taka praca często wymaga budowania relacji z jednostkami i/lub organizacjami oraz gruntownej wiedzy na temat EA lub specyficznej dziedziny.</p>
                 <h3>Zrób przegląd literatury lub meta-analizę</h3>
@@ -147,11 +153,11 @@ const ActPage = () => {
             </TabPane>
             <TabPane tab="Wybierz karierę" key="3">
                 <h3>Rozważ ścieżki kariery polecane przez EA</h3>
-                <p>Jeśli jesteś studentem lub początkującym pracownikiem i chciałbyś robić to, co najlepsze dla świata i równocześnie poważnie podchodzisz do swoich wartości, możesz przenieść je na wyższy poziom i pracować w obszarze efektywnego altruizmu w pełnym wymiarze godzin. W swojej pracy będziesz spędzać naprawdę dużo czasu, a pamiętaj, że Twój czas jest jednym z najlepszych zasobów, które mogą przyczynić się do czynienia różnicy na świecie. Znalezienie sposobu, w jaki spędzać ten czas w najkorzystniejszy sposób może być jednak naprawdę trudne.</p>
+                <p>Jeśli jesteś studentem lub początkującym pracownikiem i chciałabyś/chciałbyś robić to, co najlepsze dla świata i równocześnie poważnie podchodzisz do swoich wartości, możesz przenieść je na wyższy poziom i pracować w obszarze efektywnego altruizmu w pełnym wymiarze godzin. W swojej pracy będziesz spędzać naprawdę dużo czasu, a pamiętaj, że Twój czas jest jednym z najlepszych zasobów, które mogą przyczynić się do czynienia różnicy na świecie. Znalezienie sposobu, w jaki spędzać ten czas w najkorzystniejszy sposób może być jednak naprawdę trudne.</p>
                 <h3>Zaaplikuj o pracę związaną z EA</h3>
                 <p>Jeśli jesteś profesjonalistą, któremu bliskie są idee EA chcącym poświęcić swój czas i energię na rzeczy, które są najlepsze dla świata, możesz starać się o zatrudnienie pełnowymiarowe w pracy związanej z EA.</p>
                 <h3>Zaaplikuj o grant</h3>
-                <p>Masz pomysł na startup, który może mieć duży wpływ, ale nie masz wystarczającej ilości pieniędzy na jego sfinansowanie? Chciałbyś prowadzić badania, ale nie możesz znaleźć na to czasu? Jeśli tak, to jesteś doskonałym kandydatem do otrzymania grantu EA, nowej inicjatywy Centre for Effective Altruism mającej na celu wsparcie przedsiębiorczych altruistów w ich dążeniach do maksymalizacji dobra. Program grantowy jest otwarty dla wszystkich osób pełnoletnich i oferuje dofinansowania w wysokości nawet 100 000 funtów, jak również indywidualne porady w sprawie wyboru kariery udzielane przez doradcę z 80,000 Hours. Dodatkowymi atutami są prestiż i wsparcie, których prawdopodobnie nie gwarantowałoby indywidualne prowadzenie projektu.</p>
+                <p>Masz pomysł na startup, który może mieć duży wpływ, ale nie masz wystarczającej ilości pieniędzy na jego sfinansowanie? Chciałabyś/chciałbyś prowadzić badania, ale nie możesz znaleźć na to czasu? Jeśli tak, to jesteś doskonałym kandydatem do otrzymania grantu EA, nowej inicjatywy Centre for Effective Altruism mającej na celu wsparcie przedsiębiorczych altruistów w ich dążeniach do maksymalizacji dobra. Program grantowy jest otwarty dla wszystkich osób pełnoletnich i oferuje dofinansowania w wysokości nawet 100 000 funtów, jak również indywidualne porady w sprawie wyboru kariery udzielane przez doradcę z 80,000 Hours. Dodatkowymi atutami są prestiż i wsparcie, których prawdopodobnie nie gwarantowałoby indywidualne prowadzenie projektu.</p>
                 <p>Żeby dowiedzieć się więcej i zaaplikować, wejdź na stronę <a href="https://www.effectivealtruism.org/grants/" target="_blank" rel="noopener noreferrer">EA Grants</a>.</p>
                 <h3>Zacznij projekt zainspirowany EA</h3>
                 <p>Masz pomysł na projekt, który byłby wartościowy? Dysponujesz wolnym czasem i jesteś przedsiębiorczy? Jeśli dobrze odnajdujesz się w przestrzeni EA i uważasz, że Twój pomysł jest naprawdę wart realizacji, spisz plan projektu i podziel się nim z ekspertami w danej dziedzinie lub na odpowiednich grupach EA na Facebooku, a następnie postaraj się go urzeczywistnić. Istnieje wiele <a href="http://effective-altruism.com/ea/18p/concrete_project_lists/" target="_blank" rel="noopener noreferrer">pomysłów na projekty</a>, które warto by było zrealizować, więc możesz zainspirować się jednym z nich.</p>

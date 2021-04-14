@@ -6,7 +6,7 @@ const items = [
   {
     title: "Czy istnieje możliwość przygotowania indywidualnego szkolenia?",
     content:
-      "Chętnie o tym porozmawiamy. Napisz proszę maila na adres marcin.tischner@efektywnyaltruizm.org i opisz jakie masz oczekiwania wobec szkolenia/warsztatu. Wkrótce wrócimy z odpowiedzią."
+      "Chętnie o tym porozmawiamy. Napisz proszę maila na adres <a href='mailto:marcin.tischner@efektywnyaltruizm.org'>marcin.tischner@efektywnyaltruizm.org</a> i opisz jakie masz oczekiwania wobec szkolenia/warsztatu. Wkrótce wrócimy z odpowiedzią."
   },
   {
     title: "Czy możliwe jest przeprowadzenie warsztatów online?",
