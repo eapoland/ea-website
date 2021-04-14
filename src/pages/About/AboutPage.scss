@@ -101,6 +101,14 @@
   }
   &__consultants,
   &__team {
+    &--list {
+      .about__team--person:hover {
+        background: rgba(237, 207, 0, 0.9);
+        .about__team--desc {
+          display: unset;
+        }
+      }
+    }
     margin: 0 !important;
     &--slider {
       width: 100%;
@@ -152,12 +160,6 @@
       .about__team--desc {
         display: none;
         transition: ease 1s;
-      }
-      &:hover {
-        background: rgba(237, 207, 0, 0.9);
-        .about__team--desc {
-          display: unset;
-        }
       }
       &-1 {
         background: url("../../assets/images/team/kmizio.png") center no-repeat;

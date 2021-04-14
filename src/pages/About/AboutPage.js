@@ -92,7 +92,7 @@ const consultants = [
     name: "Dobrosława Gogłoza",
     photo: dgogloza,
     desc: "Współzałożycielka i Head of Strategy w All Hands Agency",
-    email: "EMAIL",
+    email: "dobroslawa.gogloza@gmail.com",
     linkedin: "https://www.linkedin.com/in/dgogloza/"
   },
   // {
