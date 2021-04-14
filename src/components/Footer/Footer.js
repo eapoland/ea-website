@@ -12,7 +12,7 @@ const Footer = () => {
     <Row className="footer ea-row">
       <Col className="footer__column">
         <div className="d-flex align-items-center" style={{ marginBottom: "24px" }}>
-          <WhiteLogo style={{ height: "60px" }}></WhiteLogo>
+          <WhiteLogo className="main-nav__logo"></WhiteLogo>
           <div className="main-nav__item main-nav__item--social">
             <a href="https://www.facebook.com/efektywnyaltruizmfundacja">
               <FontAwesomeIcon icon={faFacebookSquare} className="main-nav__icon" />
