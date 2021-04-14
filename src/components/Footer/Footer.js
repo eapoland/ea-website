@@ -1,5 +1,5 @@
-import { faFacebookSquare, faLinkedinIn, faYoutube } from "@fortawesome/free-brands-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import { faFacebookSquare, faLinkedinIn, faYoutube } from "@fortawesome/free-brands-svg-icons";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import { Link } from "react-router-dom";
 import { Col, Nav, NavItem, NavLink, Row } from "reactstrap";
@@ -13,7 +13,7 @@ const Footer = () => {
       <Col className="footer__column">
         <div className="d-flex align-items-center" style={{ marginBottom: "24px" }}>
           <WhiteLogo className="main-nav__logo"></WhiteLogo>
-          <div className="main-nav__item main-nav__item--social">
+          {/* <div className="main-nav__item main-nav__item--social">
             <a href="https://www.facebook.com/efektywnyaltruizmfundacja">
               <FontAwesomeIcon icon={faFacebookSquare} className="main-nav__icon" />
             </a>
@@ -27,7 +27,7 @@ const Footer = () => {
             <a href="https://www.youtube.com/channel/UCj6HkTu_5nYypCRKc-7y27A">
               <FontAwesomeIcon icon={faYoutube} className="main-nav__icon" />
             </a>
-          </div>
+          </div> */}
         </div>
         <div>
           <Nav className="footer__nav flex-row align-items-end">

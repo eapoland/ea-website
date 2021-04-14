@@ -60,22 +60,22 @@ const TopBar = () => {
         <NavbarToggler className="main-nav__toggler" onClick={toggle}><FontAwesomeIcon icon={faBars} className="main-nav__icon" /></NavbarToggler>
         <Collapse isOpen={isOpen} navbar className="justify-content-end">
           <Nav navbar className="main-nav__nav justify-content-center">
-            <NavHashLink to="/about" className="main-nav__item" activeClassName="main-nav__item--active">
+            <NavHashLink to="/about" className="main-nav__item" activeClassName="main-nav__item--active" onClick={() => setIsOpen(false)}>
               O&nbsp;nas
             </NavHashLink>
-            <NavHashLink to="/activities" className="main-nav__item" activeClassName="main-nav__item--active">
+            <NavHashLink to="/activities" className="main-nav__item" activeClassName="main-nav__item--active" onClick={() => setIsOpen(false)}>
               Działania
             </NavHashLink>
-            <NavHashLink to="/workshops" className="main-nav__item" activeClassName="main-nav__item--active">
+            <NavHashLink to="/workshops" className="main-nav__item" activeClassName="main-nav__item--active" onClick={() => setIsOpen(false)}>
               Warsztaty
             </NavHashLink>
-            <NavHashLink to="/act" className="main-nav__item" activeClassName="main-nav__item--active">
+            <NavHashLink to="/act" className="main-nav__item" activeClassName="main-nav__item--active" onClick={() => setIsOpen(false)}>
               Wspieraj
             </NavHashLink>
-            {/* <NavHashLink to="/blog" className="main-nav__item" activeClassName="main-nav__item--active">
+            {/* <NavHashLink to="/blog" className="main-nav__item" activeClassName="main-nav__item--active" onClick={() => setIsOpen(false)}>
               Blog
             </NavHashLink> */}
-            <NavHashLink to="/contact" className="main-nav__item" activeClassName="main-nav__item--active">
+            <NavHashLink to="/contact" className="main-nav__item" activeClassName="main-nav__item--active" onClick={() => setIsOpen(false)}>
               Kontakt
             </NavHashLink>
             <div className="main-nav__item main-nav__item--social">
