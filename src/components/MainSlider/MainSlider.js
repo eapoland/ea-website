@@ -19,8 +19,8 @@ const MainSlider = () => {
     arrows: false,
   };
   return (
-    <Row className="main-slider">
-      <Col className="recommended-slider-column text-center mx-auto">
+    <Row className="main-slider ea-row">
+      <Col className="recommended-slider-column ea-col text-center mx-auto">
         <Slider {...settings}>
           <div className="d-flex flex-column justify-content-center align-items-start main-slider__item main-slider__item--first">
             <h2 className="text-white">

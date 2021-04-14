@@ -11,7 +11,7 @@ const WorkshopsPage = () => {
   return (
     <>
       <ScrollToTop />
-      <Row className="flex-column align-items-center" style={{ marginRight: "0px", marginLeft: "0px" }}>
+      <Row className="flex-column align-items-center ea-row">
         <SectionTitle title="Warsztaty i szkolenia" text="Zapoznaj się z naszą ofertą" />
         <PromotedWorkshop />
         <WorkshopList />

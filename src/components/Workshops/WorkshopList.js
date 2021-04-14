@@ -6,7 +6,7 @@ import workshops from "../../content/workshops";
 
 const WorkshopList = () => {
   return (
-    <Row className="justify-content-center workshop-list">
+    <Row className="ea-row justify-content-center workshop-list">
       {workshops.map(
         (workshop) => !workshop.recommended && <WorkshopCard workshopData={workshop} key={workshop.id} />
       )}
