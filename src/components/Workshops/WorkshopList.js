@@ -8,7 +8,7 @@ const WorkshopList = () => {
   return (
     <Row className="ea-row justify-content-center workshop-list">
       {workshops.map(
-        (workshop) => !workshop.recommended && <WorkshopCard workshopData={workshop} key={workshop.id} />
+        (workshop) => <WorkshopCard workshopData={workshop} key={workshop.id} />
       )}
     </Row>
   );

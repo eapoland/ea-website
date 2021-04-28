@@ -25,7 +25,7 @@
   padding: 2em 0;
   margin-left: auto;
   margin-right: auto;
-  &__button.btn {
+  button {
     text-align: center;
     font: normal normal bold 0.75em/0.875rem Raleway;
     letter-spacing: 0px;
@@ -37,7 +37,7 @@
     border: 0px;
     border-radius: unset;
   }
-  &__email-input {
+  input {
     background: #ffffff 0% 0% no-repeat padding-box;
     border: 0px;
     border-bottom: 2px solid #cccccc;
@@ -48,7 +48,12 @@
     font-size: 0.75em;
     font-family: Raleway;
     letter-spacing: 0px;
-    color: #bfbfbf;
+    color: black;
+  }
+  .msg-alert {
+    p {
+      text-align: center;
+    }
   }
   &__input-group {
     margin-bottom: 1em;
