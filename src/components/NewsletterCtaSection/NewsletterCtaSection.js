@@ -1,11 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import "./NewsletterCtaSection.scss";
 import { Col, Row } from "reactstrap";
 import Mailchimp from 'react-mailchimp-form';
 
 const NewsletterCtaSection = () => {
-  const [email, setEmail] = useState("");
-
   return (
     <Row className="newsletter-cta-section ea-row">
       <Col className="text-center mx-auto">
