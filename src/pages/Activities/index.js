@@ -9,7 +9,7 @@ import EAButton from '../../components/Common/EAButton/EAButton'
 import marcin from '../../assets/images/marcin.png'
 import SectionTitle from '../../components/SectionTitle/SectionTitle'
 import ScrollToTop from '../../components/ScrollToTop'
-import MailService from '../../utils/MailService'
+import MailService from '../../services/MailService'
 
 const Activities = () => {
   const [email, setEmail] = useState('')

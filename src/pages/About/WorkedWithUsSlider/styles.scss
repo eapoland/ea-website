@@ -1,0 +1,33 @@
+.about__team--slider {
+  width: 100%;
+  opacity: 1;
+  height: 15.625rem;
+  padding: 0 5rem;
+  &-content.col {
+    max-width: 75rem;
+  }
+
+  .slick-dots {
+    bottom: 2rem;
+    left: 0;
+  }
+
+  .slick-dots li button:before {
+    font-size: 0.625rem;
+  }
+
+  .slick-dots li.slick-active button:before {
+    font-size: 0.875rem;
+  }
+}
+
+@media (max-width: 991px) {
+  .about {
+    .about__ex {
+      padding: 4.35rem 0 0 0;
+      .slick-slide {
+        margin: 0 1rem;
+      }
+    }
+  }
+}

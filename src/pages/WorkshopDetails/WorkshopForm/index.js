@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import Spinner from 'reactstrap/lib/Spinner'
-import MailService from '../../../utils/MailService'
+import MailService from '../../../services/MailService'
 
 const WorkshopForm = ({ name }) => {
   const [email, setEmail] = useState('')

@@ -1,5 +1,5 @@
 import React from 'react'
-import './ContentPreviewSection.scss'
+import './styles.scss'
 import { Col, Row } from 'reactstrap'
 import Fade from 'react-reveal/Fade'
 import EAButton from '../../../components/Common/EAButton/EAButton'

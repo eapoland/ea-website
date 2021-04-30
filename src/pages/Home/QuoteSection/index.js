@@ -1,5 +1,5 @@
 import React from 'react'
-import './QuoteSection.scss'
+import './styles.scss'
 import { Col, Row } from 'reactstrap'
 import Slide from 'react-reveal/Slide'
 

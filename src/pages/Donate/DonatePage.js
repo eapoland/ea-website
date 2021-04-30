@@ -11,7 +11,7 @@ import {
   InputGroupText,
   Row,
 } from 'reactstrap'
-import PaymentService from '../../utils/PaymentService'
+import PaymentService from '../../services/PaymentService'
 
 const DonatePage = () => {
   const [paymentStep, setPaymentStep] = useState(1)

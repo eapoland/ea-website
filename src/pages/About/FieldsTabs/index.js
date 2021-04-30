@@ -1,6 +1,7 @@
 import React from 'react'
 import Tabs, { TabPane } from 'rc-tabs'
 import fields from '../content/fields'
+import './styles.scss'
 
 const FieldsTabs = () => (
   <Tabs defaultActiveKey="1" tabPosition="top">

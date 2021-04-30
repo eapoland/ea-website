@@ -18,8 +18,8 @@ import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
 import { NavHashLink } from 'react-router-hash-link'
 import WithLoading from '../../components/WithLoading'
 import TagButton from '../../components/Common/TagButton/TagButton'
-import DateService from '../../utils/DateService'
-import WordpressService from '../../utils/WordpressService'
+import DateService from '../../services/DateService'
+import WordpressService from '../../services/WordpressService'
 import ScrollToTop from '../../components/ScrollToTop'
 
 const BlogPostPage = ({ setLoading }) => {

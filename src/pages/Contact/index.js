@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import './Contact.scss'
+import './styles.scss'
 import Row from 'reactstrap/lib/Row'
 import Col from 'reactstrap/lib/Col'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -9,7 +9,7 @@ import {
   faYoutube,
 } from '@fortawesome/free-brands-svg-icons'
 import Spinner from 'reactstrap/lib/Spinner'
-import MailService from '../../utils/MailService'
+import MailService from '../../services/MailService'
 import SectionTitle from '../../components/SectionTitle/SectionTitle'
 import ScrollToTop from '../../components/ScrollToTop'
 

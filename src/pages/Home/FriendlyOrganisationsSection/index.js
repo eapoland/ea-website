@@ -1,5 +1,5 @@
 import React from 'react'
-import './FriendlyOrganisationsSection.scss'
+import './styles.scss'
 import { Col, Row } from 'reactstrap'
 import { Fade } from 'react-reveal'
 import okLogo from '../../../assets/images/ok-logo.png'

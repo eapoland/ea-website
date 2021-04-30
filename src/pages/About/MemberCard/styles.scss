@@ -1,0 +1,55 @@
+.about__team--person {
+  overflow: hidden;
+  width: 30%;
+  height: 31.25rem;
+  transition: ease 0.5s;
+  .about__team--desc {
+    display: none;
+    transition: ease 1s;
+  }
+  &-1 {
+    background: url('../../../assets/images/team/kmizio.png') center no-repeat;
+    background-size: cover;
+  }
+  &-2 {
+    background: url('../../../assets/images/team/mjaryczewska.png') center
+      no-repeat;
+    background-size: cover;
+  }
+  &-3 {
+    background: url('../../../assets/images/team/mtruong.png') center no-repeat;
+    background-size: cover;
+  }
+  &-4 {
+    background: url('../../../assets/images/team/mtrzesimiech.png') center
+      no-repeat;
+    background-size: cover;
+  }
+  &-5 {
+    background: url('../../../assets/images/team/mtischner.png') center
+      no-repeat;
+    background-size: cover;
+  }
+  &-6 {
+    background: url('../../../assets/images/team/mhawelka.png') center no-repeat;
+    background-size: cover;
+  }
+}
+
+@media (max-width: 991px) {
+  .about__team {
+    &--person {
+      width: 50%;
+      height: 50rem;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .about__team {
+    &--person {
+      width: 50%;
+      height: 31.25rem;
+    }
+  }
+}
