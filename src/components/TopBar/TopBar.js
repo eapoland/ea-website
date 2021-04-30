@@ -108,38 +108,43 @@ const TopBar = () => {
             >
               Kontakt
             </NavHashLink>
-            <div className="main-nav__item main-nav__item--social">
-              <a
-                href="https://www.facebook.com/efektywnyaltruizmfundacja"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <FontAwesomeIcon
-                  icon={faFacebookSquare}
-                  className="main-nav__icon"
-                />
-              </a>
-            </div>
-            <div className="main-nav__item main-nav__item--social">
-              <a
-                href="https://www.linkedin.com/company/efektywnyaltruizm/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <FontAwesomeIcon
-                  icon={faLinkedinIn}
-                  className="main-nav__icon"
-                />
-              </a>
-            </div>
-            <div className="main-nav__item main-nav__item--social">
-              <a
-                href="https://www.youtube.com/channel/UCj6HkTu_5nYypCRKc-7y27A"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <FontAwesomeIcon icon={faYoutube} className="main-nav__icon" />
-              </a>
+            <div className="d-flex justify-content-center">
+              <div className="main-nav__item main-nav__item--social">
+                <a
+                  href="https://www.facebook.com/efektywnyaltruizmfundacja"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FontAwesomeIcon
+                    icon={faFacebookSquare}
+                    className="main-nav__icon"
+                  />
+                </a>
+              </div>
+              <div className="main-nav__item main-nav__item--social">
+                <a
+                  href="https://www.linkedin.com/company/efektywnyaltruizm/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FontAwesomeIcon
+                    icon={faLinkedinIn}
+                    className="main-nav__icon"
+                  />
+                </a>
+              </div>
+              <div className="main-nav__item main-nav__item--social">
+                <a
+                  href="https://www.youtube.com/channel/UCj6HkTu_5nYypCRKc-7y27A"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FontAwesomeIcon
+                    icon={faYoutube}
+                    className="main-nav__icon"
+                  />
+                </a>
+              </div>
             </div>
           </Nav>
         </Collapse>
