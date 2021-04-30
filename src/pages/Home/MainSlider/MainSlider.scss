@@ -1,0 +1,46 @@
+.carousel-item img {
+  width: 100%;
+  max-height: 36.25rem;
+}
+
+.main-slider {
+  color: #ffffff;
+  .slick-dots {
+    bottom: 1.25rem;
+  }
+  .slick-dots li button:before {
+    color: #ffffff;
+    font-size: 0.625em;
+    opacity: 0.75;
+  }
+
+  .slick-dots li.slick-active button:before {
+    color: #ffffff;
+    font-size: 0.875em;
+    opacity: 1;
+  }
+  &__item {
+    height: 36.25rem;
+    padding-left: 6.25rem;
+    &--first {
+      background: linear-gradient(
+          180deg,
+          rgba(0, 0, 0, 0.5452556022408963) 0%,
+          rgba(9, 9, 121, 0) 40%,
+          rgba(255, 255, 255, 0) 100%
+        ),
+        url('../../../assets/images/baner.png') center no-repeat;
+      background-size: cover;
+    }
+    &--second {
+      background: linear-gradient(
+          180deg,
+          rgba(0, 0, 0, 0.5452556022408963) 0%,
+          rgba(9, 9, 121, 0) 40%,
+          rgba(255, 255, 255, 0) 100%
+        ),
+        url('../../../assets/images/test-photo.jpg') center no-repeat;
+      background-size: 100%;
+    }
+  }
+}

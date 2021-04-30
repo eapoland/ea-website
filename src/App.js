@@ -4,21 +4,21 @@ import { Container } from 'reactstrap'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import CookieConsent from 'react-cookie-consent'
 import TopBar from './components/TopBar/TopBar'
-import HomePage from './pages/Home/HomePage'
+import Home from './pages/Home'
 import About from './pages/About'
 import Activities from './pages/Activities'
 import Footer from './components/Footer/Footer'
 import NewsletterCtaSection from './components/NewsletterCtaSection/NewsletterCtaSection'
-import PrivacyPolicyPage from './pages/PrivacyPolicy/PrivacyPolicyPage'
+import PrivacyPolicy from './pages/PrivacyPolicy/PrivacyPolicy'
 // import { Elements } from "@stripe/react-stripe-js";
 // import { loadStripe } from "@stripe/stripe-js";
 import DonatePage from './pages/Donate/DonatePage'
-import WorkshopsPage from './pages/WorkshopsPage/WorkshopsPage'
-import WorkshopDetailsPage from './pages/WorkshopDetailsPage/WorkshopDetailsPage'
+import Workshops from './pages/Workshops'
+import WorkshopDetails from './pages/WorkshopDetails'
 import Contact from './pages/Contact'
 import BlogPostPage from './pages/BlogPostPage/BlogPostPage'
 import Act from './pages/Act'
-import NotFoundPage from './pages/NotFoundPage/NotFoundPage'
+import NotFound from './pages/NotFound'
 
 // const stripePromise = loadStripe(
 //   "pk_test_51HiOnnDDHV7JDkB9tHxmUobKY4ZezsR5lsWsviFG5NPEPbpgFGBeGqyYHyMeSnMi5Ulv5pV29i6Vr8sbDyfNJDcA00U862gUpU"
@@ -33,22 +33,22 @@ function App() {
           <TopBar />
           <Switch>
             <Route path="/" exact>
-              <HomePage />
+              <Home />
             </Route>
             <Route path="/about" exact>
               <About />
             </Route>
             <Route path="/workshops" exact>
-              <WorkshopsPage />
+              <Workshops />
             </Route>
             <Route path="/workshops/:id" exact>
-              <WorkshopDetailsPage />
+              <WorkshopDetails />
             </Route>
             <Route path="/activities" exact>
               <Activities />
             </Route>
             <Route path="/privacy-policy" exact>
-              <PrivacyPolicyPage />
+              <PrivacyPolicy />
             </Route>
             {/* <Route path="/blog" exact>
                 <BlogPage />
@@ -65,7 +65,7 @@ function App() {
             <Route path="/contact" exact>
               <Contact />
             </Route>
-            <Route component={NotFoundPage} />
+            <Route component={NotFound} />
           </Switch>
           <CookieConsent
             location="bottom"
