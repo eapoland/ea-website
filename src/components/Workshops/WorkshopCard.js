@@ -1,6 +1,6 @@
-import React from "react";
-import EAButton from "../Common/EAButton/EAButton";
-import "./Workshops.scss";
+import React from "react"
+import EAButton from "../Common/EAButton/EAButton"
+import "./Workshops.scss"
 
 const WorkshopCard = ({ workshopData }) => {
   return (
@@ -9,7 +9,7 @@ const WorkshopCard = ({ workshopData }) => {
       <p>{workshopData.shortSummary}</p>
       <EAButton title="Czytaj więcej" target={`workshops/${workshopData.id}`} />
     </div>
-  );
-};
+  )
+}
 
-export default WorkshopCard;
+export default WorkshopCard

@@ -1,7 +1,7 @@
-import React from "react";
-import { NavHashLink } from "react-router-hash-link";
-import Button from "reactstrap/lib/Button";
-import "./EAButton.scss";
+import React from "react"
+import { NavHashLink } from "react-router-hash-link"
+import Button from "reactstrap/lib/Button"
+import "./EAButton.scss"
 
 const EAButton = ({ title, target, size, customClass }) => {
   return (
@@ -21,7 +21,7 @@ const EAButton = ({ title, target, size, customClass }) => {
         {title}
       </Button>
     </NavHashLink>
-  );
-};
+  )
+}
 
-export default EAButton;
+export default EAButton

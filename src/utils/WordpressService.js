@@ -1,7 +1,7 @@
-import axios from "axios";
+import axios from "axios"
 
 const WordpressService = {
-  getPosts: (page) =>
+  getPosts: page =>
     axios.get(
       `https://ea-poland-wordpress.azurewebsites.net/wp-json/wp/v2/posts?_embed=1&per_page=7&page=${page}`
     ),
@@ -11,14 +11,25 @@ const WordpressService = {
       `https://ea-poland-wordpress.azurewebsites.net/wp-json/wp/v2/posts?_embed=1&per_page=3&page=1&sticky=1`
     ),
 
-  getPost: (slug) =>
-    axios.get(`https://ea-poland-wordpress.azurewebsites.net/wp-json/wp/v2/posts?_embed=1&slug=${slug}`),
+  getPost: slug =>
+    axios.get(
+      `https://ea-poland-wordpress.azurewebsites.net/wp-json/wp/v2/posts?_embed=1&slug=${slug}`
+    ),
 
-  getUsers: () => axios.get("https://ea-poland-wordpress.azurewebsites.net/wp-json/wp/v2/users"),
+  getUsers: () =>
+    axios.get(
+      "https://ea-poland-wordpress.azurewebsites.net/wp-json/wp/v2/users"
+    ),
 
-  getCategories: () => axios.get("https://ea-poland-wordpress.azurewebsites.net/wp-json/wp/v2/categories"),
+  getCategories: () =>
+    axios.get(
+      "https://ea-poland-wordpress.azurewebsites.net/wp-json/wp/v2/categories"
+    ),
 
-  getTags: (tagIds) => axios.get("https://ea-poland-wordpress.azurewebsites.net/wp-json/wp/v2/tags?include="),
-};
+  getTags: tagIds =>
+    axios.get(
+      "https://ea-poland-wordpress.azurewebsites.net/wp-json/wp/v2/tags?include="
+    ),
+}
 
-export default WordpressService;
+export default WordpressService

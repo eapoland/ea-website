@@ -1,11 +1,11 @@
-import React from "react";
-import QuoteSection from "../../components/QuoteSection/QuoteSection";
-import ContentPreviewSection from "../../components/ContentPreviewSection/ContentPreviewSection";
-import FriendlyOrganisationsSection from "../../components/FriendlyOrganisationsSection/FriendlyOrganisationsSection";
-import photo from "../../assets/images/test-photo.jpg";
-import photo2 from "../../assets/images/preview2.png";
-import MainSlider from "../../components/MainSlider/MainSlider";
-import ScrollToTop from "../../components/ScrollToTop";
+import React from "react"
+import QuoteSection from "../../components/QuoteSection/QuoteSection"
+import ContentPreviewSection from "../../components/ContentPreviewSection/ContentPreviewSection"
+import FriendlyOrganisationsSection from "../../components/FriendlyOrganisationsSection/FriendlyOrganisationsSection"
+import photo from "../../assets/images/test-photo.jpg"
+import photo2 from "../../assets/images/preview2.png"
+import MainSlider from "../../components/MainSlider/MainSlider"
+import ScrollToTop from "../../components/ScrollToTop"
 
 const content = [
   {
@@ -28,7 +28,7 @@ const content = [
     imgAlt: "test",
     page: "activities",
   },
-];
+]
 
 const HomePage = () => {
   return (
@@ -40,7 +40,7 @@ const HomePage = () => {
       <ContentPreviewSection reversed content={content[1]} />
       <FriendlyOrganisationsSection />
     </>
-  );
-};
+  )
+}
 
-export default HomePage;
+export default HomePage

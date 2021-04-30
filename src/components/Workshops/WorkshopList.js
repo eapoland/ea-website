@@ -1,17 +1,17 @@
-import React from "react";
-import Row from "reactstrap/lib/Row";
-import WorkshopCard from "./WorkshopCard";
-import "./Workshops.scss";
-import workshops from "../../content/workshops";
+import React from "react"
+import Row from "reactstrap/lib/Row"
+import WorkshopCard from "./WorkshopCard"
+import "./Workshops.scss"
+import workshops from "../../content/workshops"
 
 const WorkshopList = () => {
   return (
     <Row className="ea-row justify-content-center workshop-list">
-      {workshops.map(
-        (workshop) => <WorkshopCard workshopData={workshop} key={workshop.id} />
-      )}
+      {workshops.map(workshop => (
+        <WorkshopCard workshopData={workshop} key={workshop.id} />
+      ))}
     </Row>
-  );
-};
+  )
+}
 
-export default WorkshopList;
+export default WorkshopList

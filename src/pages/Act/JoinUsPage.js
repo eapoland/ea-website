@@ -1,6 +1,6 @@
-import React from "react";
-import SectionTitle from "../../components/SectionTitle/SectionTitle";
-import ContentPreviewSection from "../../components/ContentPreviewSection/ContentPreviewSection";
+import React from "react"
+import SectionTitle from "../../components/SectionTitle/SectionTitle"
+import ContentPreviewSection from "../../components/ContentPreviewSection/ContentPreviewSection"
 
 const JoinUsPage = () => {
   return (
@@ -8,7 +8,7 @@ const JoinUsPage = () => {
       <SectionTitle title="Dołącz do nas!" />
       <ContentPreviewSection />
     </>
-  );
-};
+  )
+}
 
-export default JoinUsPage;
+export default JoinUsPage

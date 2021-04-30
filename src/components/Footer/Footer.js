@@ -1,17 +1,19 @@
 // import { faFacebookSquare, faLinkedinIn, faYoutube } from "@fortawesome/free-brands-svg-icons";
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React from "react";
-import { Link } from "react-router-dom";
-import { Col, Nav, NavItem, NavLink, Row } from "reactstrap";
-import { ReactComponent as WhiteLogo } from "../../assets/images/efektywny-altruizm-logo-white.svg";
-import "./Footer.scss";
+import React from "react"
+import { Link } from "react-router-dom"
+import { Col, Nav, NavItem, NavLink, Row } from "reactstrap"
+import { ReactComponent as WhiteLogo } from "../../assets/images/efektywny-altruizm-logo-white.svg"
+import "./Footer.scss"
 
 const Footer = () => {
-
   return (
     <Row className="footer ea-row">
       <Col className="footer__column">
-        <div className="d-flex align-items-center" style={{ marginBottom: "24px" }}>
+        <div
+          className="d-flex align-items-center"
+          style={{ marginBottom: "24px" }}
+        >
           <WhiteLogo className="main-nav__logo"></WhiteLogo>
           {/* <div className="main-nav__item main-nav__item--social">
             <a href="https://www.facebook.com/efektywnyaltruizmfundacja">
@@ -89,7 +91,7 @@ const Footer = () => {
         </p>
       </Col>
     </Row>
-  );
-};
+  )
+}
 
-export default Footer;
+export default Footer

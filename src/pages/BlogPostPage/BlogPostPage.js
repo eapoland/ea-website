@@ -1,32 +1,40 @@
-import React, { useState, useEffect } from "react";
-import WithLoading from "../../components/WithLoading";
-import WordpressService from "../../utils/WordpressService";
-import { useParams } from "react-router-dom";
-import "./BlogPostPage.scss";
-import DateService from "../../utils/DateService";
-import Row from "reactstrap/lib/Row";
-import Col from "reactstrap/lib/Col";
-import TagButton from "../../components/Common/TagButton/TagButton";
-import { FacebookShareButton, LinkedinShareButton, TwitterShareButton } from "react-share";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faFacebookSquare, faLinkedinIn, faTwitter } from "@fortawesome/free-brands-svg-icons";
-import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
-import { NavHashLink } from "react-router-hash-link";
-import ScrollToTop from "../../components/ScrollToTop";
+import React, { useState, useEffect } from "react"
+import WithLoading from "../../components/WithLoading"
+import WordpressService from "../../utils/WordpressService"
+import { useParams } from "react-router-dom"
+import "./BlogPostPage.scss"
+import DateService from "../../utils/DateService"
+import Row from "reactstrap/lib/Row"
+import Col from "reactstrap/lib/Col"
+import TagButton from "../../components/Common/TagButton/TagButton"
+import {
+  FacebookShareButton,
+  LinkedinShareButton,
+  TwitterShareButton,
+} from "react-share"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import {
+  faFacebookSquare,
+  faLinkedinIn,
+  faTwitter,
+} from "@fortawesome/free-brands-svg-icons"
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons"
+import { NavHashLink } from "react-router-hash-link"
+import ScrollToTop from "../../components/ScrollToTop"
 
 const BlogPostPage = ({ setLoading }) => {
-  const { slug } = useParams();
+  const { slug } = useParams()
 
-  const [post, setPost] = useState(null);
-  const [categories, setCategories] = useState([]);
-  const [tags, setTags] = useState([]);
-  const [recommendedPosts, setRecommendedPosts] = useState([]);
+  const [post, setPost] = useState(null)
+  const [categories, setCategories] = useState([])
+  const [tags, setTags] = useState([])
+  const [recommendedPosts, setRecommendedPosts] = useState([])
 
   useEffect(() => {
     WordpressService.getCategories()
-      .then((res) =>
+      .then(res =>
         setCategories(
-          res.data.map((category) => ({
+          res.data.map(category => ({
             id: category.id,
             name: category.name,
             slug: category.slug,
@@ -34,27 +42,29 @@ const BlogPostPage = ({ setLoading }) => {
         )
       )
       .then(() => {
-        WordpressService.getPost(slug).then((res) => setPost(res.data[0]));
+        WordpressService.getPost(slug).then(res => setPost(res.data[0]))
       })
       .then(() => {
         post &&
-          WordpressService.getTags(post.tags.join()).then((res) => {
+          WordpressService.getTags(post.tags.join()).then(res => {
             setTags(
-              res.data.map((tag) => ({
+              res.data.map(tag => ({
                 id: tag.id,
                 name: tag.name,
                 slug: tag.slug,
               }))
-            );
-          });
+            )
+          })
       })
       .then(() => {
-        WordpressService.getRecommendedPosts().then((res) => setRecommendedPosts(res.data));
+        WordpressService.getRecommendedPosts().then(res =>
+          setRecommendedPosts(res.data)
+        )
       })
       .then(() => {
-        setLoading(false);
-      });
-  }, [setLoading, post, slug]);
+        setLoading(false)
+      })
+  }, [setLoading, post, slug])
 
   return (
     post && (
@@ -73,30 +83,38 @@ const BlogPostPage = ({ setLoading }) => {
           >
             <span className="d-flex align-items-center">
               <p className="recommended-post__author">
-                {categories.filter((cat) => cat.id === post.categories[0]).map((cat) => cat.name)}
+                {categories
+                  .filter(cat => cat.id === post.categories[0])
+                  .map(cat => cat.name)}
               </p>
             </span>
             <h1>{post.title.rendered}</h1>
             <p>
-              {post._embedded.author[0].name} / {DateService.prepareDate(post.date)}
+              {post._embedded.author[0].name} /{" "}
+              {DateService.prepareDate(post.date)}
             </p>
           </div>
         </div>
         <div className="post">
           <div
             className="post__content"
-            dangerouslySetInnerHTML={{ __html: post ? post.content.rendered : "" }}
+            dangerouslySetInnerHTML={{
+              __html: post ? post.content.rendered : "",
+            }}
           ></div>
           <div className="post__tags d-flex justify-content-between align-items-center">
             <div>
-              {tags.map((tag) => (
+              {tags.map(tag => (
                 //CREATE TAG BUTTON
                 <TagButton title={tag.name} slug={tag.slug} />
               ))}
             </div>
             <div>
               <FacebookShareButton url={window.location.href}>
-                <FontAwesomeIcon icon={faFacebookSquare} className="social-icon" />
+                <FontAwesomeIcon
+                  icon={faFacebookSquare}
+                  className="social-icon"
+                />
               </FacebookShareButton>
               <TwitterShareButton url={window.location.href}>
                 <FontAwesomeIcon icon={faTwitter} className="social-icon" />
@@ -119,8 +137,15 @@ const BlogPostPage = ({ setLoading }) => {
               <h2>{post._embedded.author[0].name}</h2>
               <p>{post._embedded.author[0].description}</p>
               <div>
-                <a href={post._embedded.author[0].acf.linkedin} target="_blank" rel="noopener noreferrer">
-                  <FontAwesomeIcon icon={faLinkedinIn} className="social-icon" />
+                <a
+                  href={post._embedded.author[0].acf.linkedin}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FontAwesomeIcon
+                    icon={faLinkedinIn}
+                    className="social-icon"
+                  />
                 </a>
                 <a
                   href={`mailto:${post._embedded.author[0].acf.email}`}
@@ -137,9 +162,13 @@ const BlogPostPage = ({ setLoading }) => {
           <Col>
             <h2>Polecamy</h2>
             <Row className="post__recommended--list justify-content-between">
-              {recommendedPosts.map((post) => {
+              {recommendedPosts.map(post => {
                 return (
-                  <NavHashLink to={`${post.slug}`} style={{ textDecoration: "none" }} key={post.id}>
+                  <NavHashLink
+                    to={`${post.slug}`}
+                    style={{ textDecoration: "none" }}
+                    key={post.id}
+                  >
                     <div>
                       <img
                         src={`https://ea-poland-wordpress.azurewebsites.net${post._embedded["wp:featuredmedia"][0].source_url}`}
@@ -151,19 +180,21 @@ const BlogPostPage = ({ setLoading }) => {
                         }}
                       />
                       <h4>
-                        {categories.filter((cat) => cat.id === post.categories[0]).map((cat) => cat.name)}
+                        {categories
+                          .filter(cat => cat.id === post.categories[0])
+                          .map(cat => cat.name)}
                       </h4>
                       <h3>{post.title.rendered}</h3>
                     </div>
                   </NavHashLink>
-                );
+                )
               })}
             </Row>
           </Col>
         </Row>
       </div>
     )
-  );
-};
+  )
+}
 
-export default WithLoading(BlogPostPage);
+export default WithLoading(BlogPostPage)

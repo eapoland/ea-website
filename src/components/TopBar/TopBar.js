@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from "react";
-import { useLocation } from "react-router-dom";
-import "./TopBar.scss";
+import React, { useState, useEffect } from "react"
+import { useLocation } from "react-router-dom"
+import "./TopBar.scss"
 import {
   Collapse,
   Navbar,
@@ -8,28 +8,32 @@ import {
   NavbarBrand,
   Nav,
   Button,
-} from "reactstrap";
-import { ReactComponent as Logo } from "../../assets/images/efektywny-altruizm-logo.svg";
-import { ReactComponent as WhiteLogo } from "../../assets/images/efektywny-altruizm-logo-white.svg";
-import { Link } from "react-router-dom";
-import { NavHashLink } from "react-router-hash-link";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars, faHeart } from "@fortawesome/free-solid-svg-icons";
-import { faFacebookSquare, faLinkedinIn, faYoutube } from "@fortawesome/free-brands-svg-icons";
+} from "reactstrap"
+import { ReactComponent as Logo } from "../../assets/images/efektywny-altruizm-logo.svg"
+import { ReactComponent as WhiteLogo } from "../../assets/images/efektywny-altruizm-logo-white.svg"
+import { Link } from "react-router-dom"
+import { NavHashLink } from "react-router-hash-link"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faBars, faHeart } from "@fortawesome/free-solid-svg-icons"
+import {
+  faFacebookSquare,
+  faLinkedinIn,
+  faYoutube,
+} from "@fortawesome/free-brands-svg-icons"
 
 const TopBar = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
+  const [isOpen, setIsOpen] = useState(false)
+  const [scrolled, setScrolled] = useState(false)
 
-  const toggle = () => setIsOpen(!isOpen);
-  const location = useLocation();
+  const toggle = () => setIsOpen(!isOpen)
+  const location = useLocation()
 
   const handleScroll = () => {
-    setScrolled(window.scrollY > 50);
-  };
+    setScrolled(window.scrollY > 50)
+  }
   useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-  });
+    window.addEventListener("scroll", handleScroll)
+  })
 
   return (
     <div>
@@ -40,8 +44,7 @@ const TopBar = () => {
         //   "main-nav--scrolled"
         // }`}
         className={`p-0 main-nav ${
-          (location.pathname !== "/" || scrolled) &&
-          "main-nav--scrolled"
+          (location.pathname !== "/" || scrolled) && "main-nav--scrolled"
         }`}
         fixed="top"
       >
@@ -57,25 +60,52 @@ const TopBar = () => {
             <WhiteLogo className="main-nav__logo"></WhiteLogo>
           )}
         </NavbarBrand>
-        <NavbarToggler className="main-nav__toggler" onClick={toggle}><FontAwesomeIcon icon={faBars} className="main-nav__icon" /></NavbarToggler>
+        <NavbarToggler className="main-nav__toggler" onClick={toggle}>
+          <FontAwesomeIcon icon={faBars} className="main-nav__icon" />
+        </NavbarToggler>
         <Collapse isOpen={isOpen} navbar className="justify-content-end">
           <Nav navbar className="main-nav__nav justify-content-center">
-            <NavHashLink to="/about" className="main-nav__item" activeClassName="main-nav__item--active" onClick={() => setIsOpen(false)}>
+            <NavHashLink
+              to="/about"
+              className="main-nav__item"
+              activeClassName="main-nav__item--active"
+              onClick={() => setIsOpen(false)}
+            >
               O&nbsp;nas
             </NavHashLink>
-            <NavHashLink to="/activities" className="main-nav__item" activeClassName="main-nav__item--active" onClick={() => setIsOpen(false)}>
+            <NavHashLink
+              to="/activities"
+              className="main-nav__item"
+              activeClassName="main-nav__item--active"
+              onClick={() => setIsOpen(false)}
+            >
               Działania
             </NavHashLink>
-            <NavHashLink to="/workshops" className="main-nav__item" activeClassName="main-nav__item--active" onClick={() => setIsOpen(false)}>
+            <NavHashLink
+              to="/workshops"
+              className="main-nav__item"
+              activeClassName="main-nav__item--active"
+              onClick={() => setIsOpen(false)}
+            >
               Warsztaty
             </NavHashLink>
-            <NavHashLink to="/act" className="main-nav__item" activeClassName="main-nav__item--active" onClick={() => setIsOpen(false)}>
+            <NavHashLink
+              to="/act"
+              className="main-nav__item"
+              activeClassName="main-nav__item--active"
+              onClick={() => setIsOpen(false)}
+            >
               Wspieraj
             </NavHashLink>
             {/* <NavHashLink to="/blog" className="main-nav__item" activeClassName="main-nav__item--active" onClick={() => setIsOpen(false)}>
               Blog
             </NavHashLink> */}
-            <NavHashLink to="/contact" className="main-nav__item" activeClassName="main-nav__item--active" onClick={() => setIsOpen(false)}>
+            <NavHashLink
+              to="/contact"
+              className="main-nav__item"
+              activeClassName="main-nav__item--active"
+              onClick={() => setIsOpen(false)}
+            >
               Kontakt
             </NavHashLink>
             <div className="main-nav__item main-nav__item--social">
@@ -84,7 +114,10 @@ const TopBar = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <FontAwesomeIcon icon={faFacebookSquare} className="main-nav__icon" />
+                <FontAwesomeIcon
+                  icon={faFacebookSquare}
+                  className="main-nav__icon"
+                />
               </a>
             </div>
             <div className="main-nav__item main-nav__item--social">
@@ -93,7 +126,10 @@ const TopBar = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <FontAwesomeIcon icon={faLinkedinIn} className="main-nav__icon" />
+                <FontAwesomeIcon
+                  icon={faLinkedinIn}
+                  className="main-nav__icon"
+                />
               </a>
             </div>
             <div className="main-nav__item main-nav__item--social">
@@ -114,12 +150,18 @@ const TopBar = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Button className="main-nav__button"><span className="main-nav__donate--xl">Przekaż darowiznę</span><span className="main-nav__donate--mobile"><FontAwesomeIcon icon={faHeart} className="main-nav__icon" />&nbsp;&nbsp;Wesprzyj</span></Button>
+            <Button className="main-nav__button">
+              <span className="main-nav__donate--xl">Przekaż darowiznę</span>
+              <span className="main-nav__donate--mobile">
+                <FontAwesomeIcon icon={faHeart} className="main-nav__icon" />
+                &nbsp;&nbsp;Wesprzyj
+              </span>
+            </Button>
           </a>
         </div>
       </Navbar>
     </div>
-  );
-};
+  )
+}
 
-export default TopBar;
+export default TopBar
