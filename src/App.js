@@ -5,20 +5,19 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import CookieConsent from 'react-cookie-consent'
 import TopBar from './components/TopBar/TopBar'
 import HomePage from './pages/Home/HomePage'
-import AboutPage from './pages/About/AboutPage'
-import ActivitiesPage from './pages/Activities/ActivitiesPage'
-import JoinUsPage from './pages/Act/JoinUsPage'
+import About from './pages/About'
+import Activities from './pages/Activities'
 import Footer from './components/Footer/Footer'
 import NewsletterCtaSection from './components/NewsletterCtaSection/NewsletterCtaSection'
 import PrivacyPolicyPage from './pages/PrivacyPolicy/PrivacyPolicyPage'
 // import { Elements } from "@stripe/react-stripe-js";
 // import { loadStripe } from "@stripe/stripe-js";
-import DonatePage from './pages/Act/DonatePage'
+import DonatePage from './pages/Donate/DonatePage'
 import WorkshopsPage from './pages/WorkshopsPage/WorkshopsPage'
 import WorkshopDetailsPage from './pages/WorkshopDetailsPage/WorkshopDetailsPage'
-import ContactPage from './pages/Contact/ContactPage'
+import Contact from './pages/Contact'
 import BlogPostPage from './pages/BlogPostPage/BlogPostPage'
-import ActPage from './pages/Act/ActPage'
+import Act from './pages/Act'
 import NotFoundPage from './pages/NotFoundPage/NotFoundPage'
 
 // const stripePromise = loadStripe(
@@ -37,7 +36,7 @@ function App() {
               <HomePage />
             </Route>
             <Route path="/about" exact>
-              <AboutPage />
+              <About />
             </Route>
             <Route path="/workshops" exact>
               <WorkshopsPage />
@@ -46,10 +45,7 @@ function App() {
               <WorkshopDetailsPage />
             </Route>
             <Route path="/activities" exact>
-              <ActivitiesPage />
-            </Route>
-            <Route path="/join-us" exact>
-              <JoinUsPage />
+              <Activities />
             </Route>
             <Route path="/privacy-policy" exact>
               <PrivacyPolicyPage />
@@ -58,7 +54,7 @@ function App() {
                 <BlogPage />
               </Route> */}
             <Route path="/act" exact>
-              <ActPage />
+              <Act />
             </Route>
             <Route path="/blog/:slug" exact>
               <BlogPostPage />
@@ -67,7 +63,7 @@ function App() {
               <DonatePage />
             </Route>
             <Route path="/contact" exact>
-              <ContactPage />
+              <Contact />
             </Route>
             <Route component={NotFoundPage} />
           </Switch>

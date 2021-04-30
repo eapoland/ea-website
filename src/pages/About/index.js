@@ -2,7 +2,7 @@ import React from 'react'
 import { Row, Col } from 'reactstrap'
 import ScrollToTop from '../../components/ScrollToTop'
 import SectionTitle from '../../components/SectionTitle/SectionTitle'
-import './AboutPage.scss'
+import './About.scss'
 import teamMembers from './content/teamMembers'
 import consultants from './content/consultants'
 import MemberCard from './MemberCard'
@@ -10,7 +10,7 @@ import ConsultantCard from './ConsultantCard'
 import WorkedWithUsSlider from './WorkedWithUsSlider'
 import FieldsTabs from './FieldsTabs'
 
-const AboutPage = () => (
+const About = () => (
   <div className="about">
     <ScrollToTop />
     <SectionTitle text="O nas" title="Czym jest Efektywny Altruizm?" />
@@ -110,4 +110,4 @@ const AboutPage = () => (
   </div>
 )
 
-export default AboutPage
+export default About
