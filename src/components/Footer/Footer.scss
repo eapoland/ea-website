@@ -1,3 +1,5 @@
+@import '../../styles/variables';
+
 .footer {
   padding: 3.75rem 0;
   height: 18.75rem;
@@ -7,9 +9,9 @@
   -ms-flex-pack: center;
   justify-content: center;
   align-items: center;
-  background-color: #0b879d;
+  background-color: $color-primary;
   opacity: 1;
-  color: #fff;
+  color: $color-light;
   &__column {
     &:first-of-type {
       margin-left: 3.75rem;
@@ -19,7 +21,7 @@
     }
   }
   h4 {
-    color: #ffffff;
+    color: $color-light;
   }
   &__item.nav-link {
     padding: 0px 1rem 0px 0px;

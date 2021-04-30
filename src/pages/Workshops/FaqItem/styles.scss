@@ -1,0 +1,27 @@
+@import '../../../styles/variables';
+
+@media (max-width: 991px) {
+  .faq-item.card {
+    width: 90vw;
+  }
+}
+
+.faq-item {
+  &.card {
+    width: 62.5rem;
+    margin-bottom: 0.625rem;
+    background: $color-secondary 0% 0% no-repeat padding-box;
+    opacity: 1;
+  }
+  &__content {
+    margin-top: 1.25rem;
+  }
+
+  &__toggle {
+    border: 0;
+    width: 2rem;
+    height: 2rem;
+    background-color: inherit;
+    transition: 0.3s ease;
+  }
+}

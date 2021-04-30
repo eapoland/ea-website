@@ -5,7 +5,7 @@ import SectionTitle from '../../components/SectionTitle/SectionTitle'
 import PromotedWorkshop from './PromotedWorkshop'
 import WorkshopList from './WorkshopList'
 import WorkshopFaq from './WorkshopFaq'
-import './Workshops.scss'
+import './styles.scss'
 
 const Workshops = () => (
   <>

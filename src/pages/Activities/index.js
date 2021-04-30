@@ -120,7 +120,7 @@ const Activities = () => {
               className="d-flex flex-column justify-content-center"
               style={{ maxWidth: '683px' }}
             >
-              <h4>Marcin Tischner</h4>
+              <h5>Marcin Tischner</h5>
               <p>
                 Porozmawiajmy o sposobach, na jaki Twoja organizacja może
                 osiągnąć największy dobroczynny zwrot, lub wzmocnić swoją

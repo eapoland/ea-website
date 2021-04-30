@@ -1,0 +1,52 @@
+@import '../../../styles/variables';
+
+.testimonials {
+  min-height: 43.75rem;
+  width: 100%;
+  background: $color-secondary 0% 0% no-repeat padding-box;
+  opacity: 1;
+  &-content.col {
+    max-width: 75rem;
+  }
+  padding-top: 4.375rem;
+  h5 {
+    margin-top: 3.125rem;
+  }
+  h6 {
+    font: normal normal normal 1em/1.5rem Raleway;
+    letter-spacing: -0.08px;
+    margin-top: 1.25rem;
+    text-transform: unset;
+  }
+  .testimonial {
+    margin-top: 60px;
+  }
+  p {
+    font: normal normal normal 1.5em Roboto Slab;
+  }
+
+  .slick-dots {
+    bottom: -3.125rem;
+  }
+
+  .slick-dots li button:before {
+    font-size: 0.625rem;
+  }
+
+  .slick-dots li.slick-active button:before {
+    font-size: 0.875rem;
+  }
+}
+
+.slick-prev.slick-arrow,
+.slick-next.slick-arrow {
+  color: $color-dark;
+  font-size: 4rem;
+  height: 4rem;
+}
+
+@media (max-width: 1365px) {
+  .testimonials {
+    min-height: 45rem;
+  }
+}

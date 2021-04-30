@@ -1,0 +1,22 @@
+.promoted-workshop {
+  margin: 0 7%;
+  height: 26.25rem;
+  background: url('../../../assets/images/recommended_workshop.png') center
+    no-repeat;
+  background-size: 100%;
+  padding-right: 5.687rem;
+}
+
+@media (max-width: 991px) {
+  .promoted-workshop {
+    h3 {
+      font-size: 1.5rem;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .promoted-workshop.d-flex {
+    display: none !important;
+  }
+}

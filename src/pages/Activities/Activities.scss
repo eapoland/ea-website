@@ -1,9 +1,5 @@
 .activities {
   h3 {
-    text-align: center;
-    font: normal normal normal 34px/45px Roboto Slab;
-    letter-spacing: 0px;
-    color: #000000;
     margin-top: 70px;
   }
   &__media {
@@ -45,10 +41,7 @@
     background: url('../../assets/images/cta-activities.png') center no-repeat;
     height: 530px;
     h2 {
-      text-align: left;
       font: normal normal normal 34px/45px Roboto Slab;
-      letter-spacing: 0px;
-      color: #000000;
       margin-left: 160px;
       width: 440px;
     }
@@ -109,17 +102,7 @@
     h1 {
       margin-top: 70px;
       margin-bottom: 60px;
-      text-align: center;
       font: normal normal normal 34px/45px Roboto Slab;
-      letter-spacing: 0px;
-      color: #000000;
-    }
-    h4 {
-      text-align: left;
-      font: normal normal bold 16px/24px Raleway;
-      letter-spacing: 0px;
-      color: #000000;
-      text-transform: uppercase;
     }
     p {
       text-align: left;
@@ -206,7 +189,7 @@
     }
   }
   .activities__advisory {
-    h4 {
+    h5 {
       margin-top: 3rem;
     }
     .ea-row {

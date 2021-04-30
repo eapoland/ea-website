@@ -1,7 +1,7 @@
 import React from 'react'
 import Col from 'reactstrap/lib/Col'
 import Row from 'reactstrap/lib/Row'
-import '../Workshops.scss'
+import './styles.scss'
 import Slider from 'react-slick'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {

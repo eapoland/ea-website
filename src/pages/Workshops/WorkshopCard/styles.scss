@@ -1,0 +1,31 @@
+@media (max-width: 991px) {
+  .workshop-list .workshop-card:nth-of-type(even) {
+    margin-left: 0;
+  }
+}
+
+.workshop-card {
+  width: 35rem;
+  height: 24.375rem;
+  margin-top: 2.5rem;
+  padding: 3.75rem 3.75rem 3.125rem 3.75rem;
+  &:nth-of-type(1n) {
+    background: url('../../../assets/images/workshop-bg-1.png') center no-repeat;
+  }
+  &:nth-of-type(2n) {
+    background: url('../../../assets/images/workshop-bg-2.png') center no-repeat;
+  }
+  &:nth-of-type(3n) {
+    background: url('../../../assets/images/workshop-bg-3.png') center no-repeat;
+  }
+  &:nth-of-type(4n) {
+    background: url('../../../assets/images/workshop-bg-4.png') center no-repeat;
+  }
+}
+
+.workshop-list {
+  .workshop-card:nth-of-type(even) {
+    margin-left: 2.875rem;
+  }
+  margin-bottom: 5rem;
+}

@@ -1,5 +1,5 @@
 import React from 'react'
-import '../Workshops.scss'
+import './styles.scss'
 import { Col } from 'reactstrap'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faStar } from '@fortawesome/free-solid-svg-icons'

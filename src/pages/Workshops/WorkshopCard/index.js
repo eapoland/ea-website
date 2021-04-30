@@ -1,6 +1,6 @@
 import React from 'react'
 import EAButton from '../../../components/Common/EAButton/EAButton'
-import '../Workshops.scss'
+import './styles.scss'
 
 const WorkshopCard = ({ workshopData }) => (
   <div className="workshop-card d-flex flex-column">
