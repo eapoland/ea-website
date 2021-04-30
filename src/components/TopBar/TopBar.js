@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from "react"
-import { useLocation } from "react-router-dom"
-import "./TopBar.scss"
+import React, { useState, useEffect } from 'react'
+import { useLocation, Link } from 'react-router-dom'
+import './TopBar.scss'
 import {
   Collapse,
   Navbar,
@@ -8,18 +8,18 @@ import {
   NavbarBrand,
   Nav,
   Button,
-} from "reactstrap"
-import { ReactComponent as Logo } from "../../assets/images/efektywny-altruizm-logo.svg"
-import { ReactComponent as WhiteLogo } from "../../assets/images/efektywny-altruizm-logo-white.svg"
-import { Link } from "react-router-dom"
-import { NavHashLink } from "react-router-hash-link"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faBars, faHeart } from "@fortawesome/free-solid-svg-icons"
+} from 'reactstrap'
+
+import { NavHashLink } from 'react-router-hash-link'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faBars, faHeart } from '@fortawesome/free-solid-svg-icons'
 import {
   faFacebookSquare,
   faLinkedinIn,
   faYoutube,
-} from "@fortawesome/free-brands-svg-icons"
+} from '@fortawesome/free-brands-svg-icons'
+import { ReactComponent as WhiteLogo } from '../../assets/images/efektywny-altruizm-logo-white.svg'
+import { ReactComponent as Logo } from '../../assets/images/efektywny-altruizm-logo.svg'
 
 const TopBar = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -32,7 +32,7 @@ const TopBar = () => {
     setScrolled(window.scrollY > 50)
   }
   useEffect(() => {
-    window.addEventListener("scroll", handleScroll)
+    window.addEventListener('scroll', handleScroll)
   })
 
   return (
@@ -44,7 +44,7 @@ const TopBar = () => {
         //   "main-nav--scrolled"
         // }`}
         className={`p-0 main-nav ${
-          (location.pathname !== "/" || scrolled) && "main-nav--scrolled"
+          (location.pathname !== '/' || scrolled) && 'main-nav--scrolled'
         }`}
         fixed="top"
       >
@@ -54,10 +54,10 @@ const TopBar = () => {
           ) : (
             <WhiteLogo style={{ height: "60px" }}></WhiteLogo>
           )} */}
-          {location.pathname !== "/" || scrolled ? (
-            <Logo className="main-nav__logo"></Logo>
+          {location.pathname !== '/' || scrolled ? (
+            <Logo className="main-nav__logo" />
           ) : (
-            <WhiteLogo className="main-nav__logo"></WhiteLogo>
+            <WhiteLogo className="main-nav__logo" />
           )}
         </NavbarBrand>
         <NavbarToggler className="main-nav__toggler" onClick={toggle}>

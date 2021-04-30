@@ -1,12 +1,12 @@
-import React from "react"
-import { useParams } from "react-router-dom"
-import Col from "reactstrap/lib/Col"
-import Row from "reactstrap/lib/Row"
-import ScrollToTop from "../../components/ScrollToTop"
-import SectionTitle from "../../components/SectionTitle/SectionTitle"
-import workshops from "../../content/workshops"
-import "./WorkshopDetailsPage.scss"
-import WorkshopForm from "./WorkshopForm"
+import React from 'react'
+import { useParams } from 'react-router-dom'
+import Col from 'reactstrap/lib/Col'
+import Row from 'reactstrap/lib/Row'
+import ScrollToTop from '../../components/ScrollToTop'
+import SectionTitle from '../../components/SectionTitle/SectionTitle'
+import workshops from '../../content/workshops'
+import './WorkshopDetailsPage.scss'
+import WorkshopForm from './WorkshopForm'
 
 const WorkshopDetailsPage = () => {
   const { id } = useParams()
@@ -21,15 +21,15 @@ const WorkshopDetailsPage = () => {
       <Row className="justify-content-center ea-row ">
         <Col
           className="workshop-details__summary"
-          style={{ maxWidth: "683px" }}
+          style={{ maxWidth: '683px' }}
         >
           <p>{workshopDetails.summary}</p>
         </Col>
         <Col
           className="workshop-details__pricing"
-          style={{ maxWidth: "683px" }}
+          style={{ maxWidth: '683px' }}
         >
-          <div style={{ marginBottom: "37px" }}>
+          <div style={{ marginBottom: '37px' }}>
             <div className="d-flex">
               <p className="workshop-details__pricing--title">DLA</p>
               <p className="workshop-details__pricing--content">
@@ -62,13 +62,13 @@ const WorkshopDetailsPage = () => {
               <Row key={host.name} className="justify-content-center">
                 <Col
                   className="workshop-details__host--photo"
-                  style={{ maxWidth: "683px" }}
+                  style={{ maxWidth: '683px' }}
                 >
                   <img src={host.photo} alt="" />
                 </Col>
                 <Col
                   className="workshop-details__host--desc"
-                  style={{ maxWidth: "683px" }}
+                  style={{ maxWidth: '683px' }}
                 >
                   <h3>{host.name}</h3>
                   <p>{host.desc}</p>
@@ -93,7 +93,7 @@ const WorkshopDetailsPage = () => {
       <Row className="workshop-details__cta ea-row justify-content-center">
         <Col
           className="d-flex align-items-center"
-          style={{ maxWidth: "683px" }}
+          style={{ maxWidth: '683px' }}
         >
           <p>Chcesz wiedzieć więcej? Użyj formularza kontaktowego</p>
         </Col>

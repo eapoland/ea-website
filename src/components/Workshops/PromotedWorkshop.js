@@ -1,13 +1,13 @@
-import React from "react"
-import "./Workshops.scss"
-import { Col } from "reactstrap"
-import EAButton from "../Common/EAButton/EAButton"
-import workshops from "../../content/workshops"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faStar } from "@fortawesome/free-solid-svg-icons"
+import React from 'react'
+import './Workshops.scss'
+import { Col } from 'reactstrap'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faStar } from '@fortawesome/free-solid-svg-icons'
+import EAButton from '../Common/EAButton/EAButton'
+import workshops from '../../content/workshops'
 
-const PromotedWorkshop = () => {
-  return workshops
+const PromotedWorkshop = () =>
+  workshops
     .filter(workshop => workshop.recommended)
     .map(item => (
       <div
@@ -25,6 +25,5 @@ const PromotedWorkshop = () => {
         </Col>
       </div>
     ))
-}
 
 export default PromotedWorkshop

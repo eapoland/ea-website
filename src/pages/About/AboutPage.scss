@@ -18,7 +18,7 @@
       width: 50%;
     }
     .col-sm-6:last-of-type {
-      background: url("../../assets/images/aboutIntro.png") center no-repeat;
+      background: url('../../assets/images/aboutIntro.png') center no-repeat;
       background-size: cover;
     }
   }
@@ -95,7 +95,7 @@
       width: 50%;
     }
     .col-sm-6:first-of-type {
-      background: url("../../assets/images/aboutRoad.png") center no-repeat;
+      background: url('../../assets/images/aboutRoad.png') center no-repeat;
       background-size: cover;
     }
   }
@@ -162,52 +162,52 @@
         transition: ease 1s;
       }
       &-1 {
-        background: url("../../assets/images/team/kmizio.png") center no-repeat;
+        background: url('../../assets/images/team/kmizio.png') center no-repeat;
         background-size: cover;
       }
       &-2 {
-        background: url("../../assets/images/team/mjaryczewska.png") center
+        background: url('../../assets/images/team/mjaryczewska.png') center
           no-repeat;
         background-size: cover;
       }
       &-3 {
-        background: url("../../assets/images/team/mtruong.png") center no-repeat;
+        background: url('../../assets/images/team/mtruong.png') center no-repeat;
         background-size: cover;
       }
       &-4 {
-        background: url("../../assets/images/team/mtrzesimiech.png") center
+        background: url('../../assets/images/team/mtrzesimiech.png') center
           no-repeat;
         background-size: cover;
       }
       &-5 {
-        background: url("../../assets/images/team/mtischner.png") center
+        background: url('../../assets/images/team/mtischner.png') center
           no-repeat;
         background-size: cover;
       }
       &-6 {
-        background: url("../../assets/images/team/mhawelka.png") center
+        background: url('../../assets/images/team/mhawelka.png') center
           no-repeat;
         background-size: cover;
       }
     }
     &--consultant {
       &-1 {
-        background: url("../../assets/images/team/consulting/ksarek.png") center
+        background: url('../../assets/images/team/consulting/ksarek.png') center
           no-repeat;
         background-size: cover;
       }
       &-2 {
-        background: url("../../assets/images/team/consulting/dgogloza.png")
+        background: url('../../assets/images/team/consulting/dgogloza.png')
           center no-repeat;
         background-size: cover;
       }
       &-3 {
-        background: url("../../assets/images/team/consulting/mwozniak.png")
+        background: url('../../assets/images/team/consulting/mwozniak.png')
           center no-repeat;
         background-size: cover;
       }
       &-4 {
-        background: url("../../assets/images/team/consulting/dwyrzykowski.png")
+        background: url('../../assets/images/team/consulting/dwyrzykowski.png')
           center no-repeat;
         background-size: cover;
       }

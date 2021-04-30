@@ -1,7 +1,7 @@
-import axios from "axios"
+import axios from 'axios'
 
-const contactFormEATemplateId = "d-410bf93d63c542cb942da5fd2478bd69"
-const contactFormAckTemplateId = "d-0ebdd476938a42548085491228209eb6"
+const contactFormEATemplateId = 'd-410bf93d63c542cb942da5fd2478bd69'
+const contactFormAckTemplateId = 'd-0ebdd476938a42548085491228209eb6'
 
 const MailService = {
   sendContactFormAck(
@@ -9,25 +9,25 @@ const MailService = {
     email,
     subject,
     msg,
-    formName = "Formularz kontaktowy"
+    formName = 'Formularz kontaktowy'
   ) {
     return axios.post(
-      "https://ea-website-mail.azurewebsites.net/api/mail?code=ujJvutExsTSUPGf30prVxT7UVOVZ4OMn38EheQO8jnhRdN5OfWY8xQ==",
+      'https://ea-website-mail.azurewebsites.net/api/mail?code=ujJvutExsTSUPGf30prVxT7UVOVZ4OMn38EheQO8jnhRdN5OfWY8xQ==',
       {
         sender: {
-          name: "Fundacja Efektywny Altruizm",
-          email: "michal.trzesimiech@efektywnyaltruizm.org",
+          name: 'Fundacja Efektywny Altruizm',
+          email: 'michal.trzesimiech@efektywnyaltruizm.org',
         },
         recipients: [
           {
-            name: name,
-            email: email,
+            name,
+            email,
           },
         ],
         templateId: contactFormAckTemplateId,
         templateData: {
           formType: formName,
-          subject: subject,
+          subject,
           content: msg,
         },
       }
@@ -40,18 +40,18 @@ const MailService = {
     senderEmail,
     subject,
     msg,
-    formName = "Formularz kontaktowy"
+    formName = 'Formularz kontaktowy'
   ) {
     return axios.post(
-      "https://ea-website-mail.azurewebsites.net/api/mail?code=ujJvutExsTSUPGf30prVxT7UVOVZ4OMn38EheQO8jnhRdN5OfWY8xQ==",
+      'https://ea-website-mail.azurewebsites.net/api/mail?code=ujJvutExsTSUPGf30prVxT7UVOVZ4OMn38EheQO8jnhRdN5OfWY8xQ==',
       {
         sender: {
-          name: "Fundacja Efektywny Altruizm",
-          email: "michal.trzesimiech@efektywnyaltruizm.org",
+          name: 'Fundacja Efektywny Altruizm',
+          email: 'michal.trzesimiech@efektywnyaltruizm.org',
         },
         recipients: [
           {
-            name: "Fundacja Efektywny Altruizm",
+            name: 'Fundacja Efektywny Altruizm',
             email: eaEmail,
           },
         ],
@@ -59,7 +59,7 @@ const MailService = {
         templateData: {
           formType: formName,
           senderName: name,
-          senderEmail: senderEmail,
+          senderEmail,
           querySubject: subject,
           queryContent: msg,
         },

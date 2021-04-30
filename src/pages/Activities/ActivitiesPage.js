@@ -1,23 +1,23 @@
-import React from "react"
-import SectionTitle from "../../components/SectionTitle/SectionTitle"
-import { Row, Col } from "reactstrap"
-import EAButton from "../../components/Common/EAButton/EAButton"
-import "./ActivitiesPage.scss"
-import marcin from "../../assets/images/marcin.png"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faChevronRight } from "@fortawesome/free-solid-svg-icons"
-import { NavHashLink } from "react-router-hash-link"
-import ScrollToTop from "../../components/ScrollToTop"
-import MailService from "../../utils/MailService"
-import Spinner from "reactstrap/lib/Spinner"
+import React from 'react'
+import { Row, Col } from 'reactstrap'
+import Spinner from 'reactstrap/lib/Spinner'
+import './ActivitiesPage.scss'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faChevronRight } from '@fortawesome/free-solid-svg-icons'
+import { NavHashLink } from 'react-router-hash-link'
+import EAButton from '../../components/Common/EAButton/EAButton'
+import marcin from '../../assets/images/marcin.png'
+import SectionTitle from '../../components/SectionTitle/SectionTitle'
+import ScrollToTop from '../../components/ScrollToTop'
+import MailService from '../../utils/MailService'
 
 class ActivitiesPage extends React.Component {
-  constructor(props) {
+  constructor() {
     super()
     this.state = {
-      email: "",
-      msg: "",
-      msgStatus: "notSent",
+      email: '',
+      msg: '',
+      msgStatus: 'notSent',
     }
 
     this.handleEmailChange = this.handleEmailChange.bind(this)
@@ -34,23 +34,24 @@ class ActivitiesPage extends React.Component {
   }
 
   handleSubmit(event) {
-    this.setState({ msgStatus: "sending" })
+    this.setState({ msgStatus: 'sending' })
+    const { email, msg } = this.state
     MailService.sendContactForm(
-      "",
-      "m.hawelka@gmail.com",
-      this.state.email,
-      "Współpraca - formularz kontaktowy",
-      this.state.msg
+      '',
+      'm.hawelka@gmail.com',
+      email,
+      'Współpraca - formularz kontaktowy',
+      msg
     ).then(() => {
       MailService.sendContactFormAck(
-        "",
-        this.state.email,
-        "Współpraca - formularz kontaktowy",
-        this.state.msg
+        '',
+        email,
+        'Współpraca - formularz kontaktowy',
+        msg
       ).then(result => {
         if (result.status === 200) {
           this.setState({
-            msgStatus: "sent",
+            msgStatus: 'sent',
           })
         }
       })
@@ -59,6 +60,7 @@ class ActivitiesPage extends React.Component {
   }
 
   render() {
+    const { msgStatus, msg, email } = this.state
     return (
       <div className="activities">
         <ScrollToTop />
@@ -69,7 +71,7 @@ class ActivitiesPage extends React.Component {
         >
           <Col
             className="d-flex flex-column justify-content-center align-items-center"
-            style={{ maxWidth: "683px" }}
+            style={{ maxWidth: '683px' }}
           >
             <h2>Współpraca z&nbsp;organizacjami</h2>
             <p>
@@ -80,31 +82,32 @@ class ActivitiesPage extends React.Component {
           </Col>
           <Col
             className="d-flex flex-column justify-content-center"
-            style={{ maxWidth: "683px" }}
+            style={{ maxWidth: '683px' }}
           >
-            {this.state.msgStatus === "sent" ? (
+            {msgStatus === 'sent' ? (
               <h3>Wiadomość została wysłana</h3>
             ) : (
               <>
                 <input
                   type="email"
                   placeholder="Adres e-mail"
-                  value={this.state.email}
+                  value={email}
                   onChange={this.handleEmailChange}
                 />
                 <textarea
                   placeholder="Wiadomość"
-                  value={this.state.msg}
+                  value={msg}
                   onChange={this.handleMsgChange}
                 />
                 <button
+                  type="submit"
                   className="btn ea-button"
                   onClick={this.handleSubmit}
-                  style={{ width: "10rem" }}
+                  style={{ width: '10rem' }}
                 >
                   Wyślij
                 </button>
-                {this.state.msgStatus === "sending" && (
+                {msgStatus === 'sending' && (
                   <span>
                     <Spinner size="sm" /> Trwa wysyłanie wiadomości...
                   </span>
@@ -131,12 +134,12 @@ class ActivitiesPage extends React.Component {
           <Col>
             <h3>Doradztwo</h3>
             <Row className="justify-content-center ea-row">
-              <Col style={{ maxWidth: "683px" }}>
+              <Col style={{ maxWidth: '683px' }}>
                 <img src={marcin} alt="" />
               </Col>
               <Col
                 className="d-flex flex-column justify-content-center"
-                style={{ maxWidth: "683px" }}
+                style={{ maxWidth: '683px' }}
               >
                 <h4>Marcin Tischner</h4>
                 <p>
@@ -145,7 +148,11 @@ class ActivitiesPage extends React.Component {
                   odpowiedzialność społeczną.
                 </p>
                 <a href="mailto:marcin.tischner@efektywnyaltruizm.org">
-                  <button className="btn ea-button" style={{ width: "10rem" }}>
+                  <button
+                    type="button"
+                    className="btn ea-button"
+                    style={{ width: '10rem' }}
+                  >
                     Napisz do mnie
                   </button>
                 </a>
@@ -164,15 +171,15 @@ class ActivitiesPage extends React.Component {
             in culpa qui officia deserunt mollit anim id est laborum.
           </p> */}
             <div className="activities__media--links d-flex justify-content-between">
-              <NavHashLink to={`about`}>
-                <button className="activities__media--btn">
+              <NavHashLink to="about">
+                <button className="activities__media--btn" type="button">
                   <div className="d-flex justify-content-between align-items-center">
                     <p>O fundacji</p>
                     <FontAwesomeIcon
                       icon={faChevronRight}
                       className="activities__media--icon"
                     />
-                  </div>{" "}
+                  </div>{' '}
                 </button>
               </NavHashLink>
               <a
@@ -180,25 +187,25 @@ class ActivitiesPage extends React.Component {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <button className="activities__media--btn">
+                <button className="activities__media--btn" type="button">
                   <div className="d-flex justify-content-between align-items-center">
                     <p>Materiały</p>
                     <FontAwesomeIcon
                       icon={faChevronRight}
                       className="activities__media--icon"
                     />
-                  </div>{" "}
+                  </div>{' '}
                 </button>
               </a>
-              <NavHashLink to={`contact`}>
-                <button className="activities__media--btn">
+              <NavHashLink to="contact">
+                <button className="activities__media--btn" type="button">
                   <div className="d-flex justify-content-between align-items-center">
                     <p>Kontakt</p>
                     <FontAwesomeIcon
                       icon={faChevronRight}
                       className="activities__media--icon"
                     />
-                  </div>{" "}
+                  </div>{' '}
                 </button>
               </NavHashLink>
             </div>

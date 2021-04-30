@@ -1,14 +1,20 @@
-import React, { useState, useEffect } from "react"
-import WithLoading from "../../components/WithLoading"
-import WordpressService from "../../utils/WordpressService"
-import { Row, Col } from "reactstrap"
-import Slider from "react-slick"
-import "./BlogPage.scss"
-import EAButton from "../../components/Common/EAButton/EAButton"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faChevronRight, faSearch } from "@fortawesome/free-solid-svg-icons"
-import { InputGroup, InputGroupText, InputGroupAddon, Input } from "reactstrap"
-import { NavHashLink } from "react-router-hash-link"
+import React, { useState, useEffect } from 'react'
+import {
+  Row,
+  Col,
+  InputGroup,
+  InputGroupText,
+  InputGroupAddon,
+  Input,
+} from 'reactstrap'
+import Slider from 'react-slick'
+import './BlogPage.scss'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faChevronRight, faSearch } from '@fortawesome/free-solid-svg-icons'
+import { NavHashLink } from 'react-router-hash-link'
+import WithLoading from '../../components/WithLoading'
+import EAButton from '../../components/Common/EAButton/EAButton'
+import WordpressService from '../../utils/WordpressService'
 
 const BlogPage = ({ setLoading }) => {
   const [recommendedPosts, setRecommendedPosts] = useState([])
@@ -46,9 +52,9 @@ const BlogPage = ({ setLoading }) => {
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 6000,
-    cssEase: "linear",
+    cssEase: 'linear',
     pauseOnHover: true,
-    className: "d-flex align-items-center",
+    className: 'd-flex align-items-center',
     dots: true,
     arrows: false,
   }
@@ -67,11 +73,11 @@ const BlogPage = ({ setLoading }) => {
                         rgba(0, 0, 0, 0.5452556022408963) 0%,
                         rgba(9, 9, 121, 0) 40%,
                         rgba(255, 255, 255, 0) 100%
-                      ), url(https://ea-poland-wordpress.azurewebsites.net${post._embedded["wp:featuredmedia"][0].source_url})`,
-                    backgroundSize: "cover",
-                    height: "580px",
-                    width: "100%",
-                    color: "#f5f5f5",
+                      ), url(https://ea-poland-wordpress.azurewebsites.net${post._embedded['wp:featuredmedia'][0].source_url})`,
+                    backgroundSize: 'cover',
+                    height: '580px',
+                    width: '100%',
+                    color: '#f5f5f5',
                   }}
                 >
                   <span className="d-flex align-items-center">
@@ -81,7 +87,7 @@ const BlogPage = ({ setLoading }) => {
                       alt={post._embedded.author[0].slug}
                     />
                     <p className="recommended-post__author">
-                      {post._embedded.author[0].name} /{" "}
+                      {post._embedded.author[0].name} /{' '}
                       {categories
                         .filter(cat => cat.id === post.categories[0])
                         .map(cat => cat.name)}
@@ -107,16 +113,16 @@ const BlogPage = ({ setLoading }) => {
           {posts[0] && (
             <NavHashLink
               to={`blog/${posts[0].slug}`}
-              style={{ textDecoration: "none" }}
+              style={{ textDecoration: 'none' }}
             >
               <div
                 style={{
-                  backgroundImage: `url(https://ea-poland-wordpress.azurewebsites.net${posts[0]._embedded["wp:featuredmedia"][0].source_url})`,
+                  backgroundImage: `url(https://ea-poland-wordpress.azurewebsites.net${posts[0]._embedded['wp:featuredmedia'][0].source_url})`,
                 }}
                 className="d-flex flex-column justify-content-end first-post"
                 key={posts[0].id}
               >
-                <h3 style={{ color: "white" }}>
+                <h3 style={{ color: 'white' }}>
                   {categories
                     .filter(cat => cat.id === posts[0].categories[0])
                     .map(cat => cat.name)}
@@ -141,47 +147,49 @@ const BlogPage = ({ setLoading }) => {
           <div>
             <h3>ZAGADNIENIA</h3>
             {categories.map(category => (
-              <button className="blog-post__first--btn" key={category.slug}>
+              <button
+                className="blog-post__first--btn"
+                key={category.slug}
+                type="submit"
+              >
                 <div className="d-flex justify-content-between align-items-center">
                   <p>{category.name}</p>
                   <FontAwesomeIcon
                     icon={faChevronRight}
-                    style={{ marginTop: "-20px" }}
+                    style={{ marginTop: '-20px' }}
                   />
-                </div>{" "}
+                </div>{' '}
               </button>
             ))}
           </div>
         </Col>
       </Row>
       <Row className="blog-posts justify-content-between">
-        {posts.slice(1).map(post => {
-          return (
-            <NavHashLink
-              to={`blog/${post.slug}`}
-              style={{ textDecoration: "none" }}
-              key={post.id}
-            >
-              <div>
-                <img
-                  src={`https://ea-poland-wordpress.azurewebsites.net${post._embedded["wp:featuredmedia"][0].source_url}`}
-                  alt={post._embedded.author[0].slug}
-                  style={{
-                    height: "220px",
-                    width: "362px",
-                    borderRadius: "10px",
-                  }}
-                />
-                <h3>
-                  {categories
-                    .filter(cat => cat.id === post.categories[0])
-                    .map(cat => cat.name)}
-                </h3>
-                <h2>{post.title.rendered}</h2>
-              </div>
-            </NavHashLink>
-          )
-        })}
+        {posts.slice(1).map(post => (
+          <NavHashLink
+            to={`blog/${post.slug}`}
+            style={{ textDecoration: 'none' }}
+            key={post.id}
+          >
+            <div>
+              <img
+                src={`https://ea-poland-wordpress.azurewebsites.net${post._embedded['wp:featuredmedia'][0].source_url}`}
+                alt={post._embedded.author[0].slug}
+                style={{
+                  height: '220px',
+                  width: '362px',
+                  borderRadius: '10px',
+                }}
+              />
+              <h3>
+                {categories
+                  .filter(cat => cat.id === post.categories[0])
+                  .map(cat => cat.name)}
+              </h3>
+              <h2>{post.title.rendered}</h2>
+            </div>
+          </NavHashLink>
+        ))}
       </Row>
     </div>
   )

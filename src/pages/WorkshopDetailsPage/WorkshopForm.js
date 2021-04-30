@@ -1,14 +1,14 @@
-import React, { Component } from "react"
-import Spinner from "reactstrap/lib/Spinner"
-import MailService from "../../utils/MailService"
+import React, { Component } from 'react'
+import Spinner from 'reactstrap/lib/Spinner'
+import MailService from '../../utils/MailService'
 
 export default class WorkshopForm extends Component {
-  constructor(props) {
+  constructor() {
     super()
     this.state = {
-      email: "",
-      msg: "",
-      msgStatus: "notSent",
+      email: '',
+      msg: '',
+      msgStatus: 'notSent',
     }
 
     this.handleEmailChange = this.handleEmailChange.bind(this)
@@ -26,57 +26,62 @@ export default class WorkshopForm extends Component {
 
   handleSubmit(event) {
     this.setState({
-      msgStatus: "sending",
+      msgStatus: 'sending',
     })
+    const { email, msg } = this.state
+    const { name } = this.props
     MailService.sendContactForm(
-      "",
-      "m.hawelka@gmail.com",
-      this.state.email,
-      `Zapytanie o szkolenie ${this.props.name}`,
-      this.state.msg
+      '',
+      'm.hawelka@gmail.com',
+      email,
+      `Zapytanie o szkolenie ${name}`,
+      msg
     ).then(() => {
       MailService.sendContactFormAck(
-        "",
-        this.state.email,
-        `Zapytanie o szkolenie ${this.props.name}`,
-        this.state.msg
+        '',
+        email,
+        `Zapytanie o szkolenie ${name}`,
+        msg
       ).then(result => {
         if (result.status === 200) {
           this.setState({
-            msgStatus: "sent",
+            msgStatus: 'sent',
           })
         }
       })
     })
     event.preventDefault()
   }
+
   render() {
+    const { msgStatus, email, msg } = this.state
     return (
       <>
-        {this.state.msgStatus === "sent" ? (
+        {msgStatus === 'sent' ? (
           <h3>Wiadomość została wysłana</h3>
         ) : (
           <>
             <input
               type="email"
               placeholder="Adres e-mail"
-              value={this.state.email}
+              value={email}
               onChange={this.handleEmailChange}
             />
             <textarea
               placeholder="Wiadomość"
-              value={this.state.msg}
+              value={msg}
               onChange={this.handleMsgChange}
             />
             <button
+              type="submit"
               className="btn ea-button"
               onClick={this.handleSubmit}
-              style={{ width: "10rem" }}
-              disabled={this.state.msgStatus === "sending"}
+              style={{ width: '10rem' }}
+              disabled={msgStatus === 'sending'}
             >
               Wyślij
             </button>
-            {this.state.msgStatus === "sending" && (
+            {msgStatus === 'sending' && (
               <span>
                 <Spinner size="sm" /> Trwa wysyłanie wiadomości...
               </span>

@@ -1,6 +1,6 @@
-import React, { useState } from "react"
-import { CardElement, useStripe, useElements } from "@stripe/react-stripe-js"
-import "./DonatePage.scss"
+import React, { useState } from 'react'
+import { CardElement, useStripe, useElements } from '@stripe/react-stripe-js'
+import './DonatePage.scss'
 import {
   Button,
   ButtonGroup,
@@ -10,17 +10,17 @@ import {
   InputGroupAddon,
   InputGroupText,
   Row,
-} from "reactstrap"
-import PaymentService from "../../utils/PaymentService"
+} from 'reactstrap'
+import PaymentService from '../../utils/PaymentService'
 
 const DonatePage = () => {
   const [paymentStep, setPaymentStep] = useState(1)
   const [paymentAmount, setPaymentAmount] = useState(50)
   const [succeeded, setSucceeded] = useState(false)
   const [error, setError] = useState(null)
-  const [processing, setProcessing] = useState("")
+  const [processing, setProcessing] = useState('')
   const [disabled, setDisabled] = useState(true)
-  const [clientSecret, setClientSecret] = useState("")
+  const [clientSecret, setClientSecret] = useState('')
   const stripe = useStripe()
   const elements = useElements()
 
@@ -42,17 +42,17 @@ const DonatePage = () => {
   const cardStyle = {
     style: {
       base: {
-        color: "#32325d",
-        fontFamily: "Arial, sans-serif",
-        fontSmoothing: "antialiased",
-        fontSize: "16px",
-        "::placeholder": {
-          color: "#32325d",
+        color: '#32325d',
+        fontFamily: 'Arial, sans-serif',
+        fontSmoothing: 'antialiased',
+        fontSize: '16px',
+        '::placeholder': {
+          color: '#32325d',
         },
       },
       invalid: {
-        color: "#fa755a",
-        iconColor: "#fa755a",
+        color: '#fa755a',
+        iconColor: '#fa755a',
       },
     },
   }
@@ -60,7 +60,7 @@ const DonatePage = () => {
     // Listen for changes in the CardElement
     // and display any errors as the customer types their card details
     setDisabled(event.empty)
-    setError(event.error ? event.error.message : "")
+    setError(event.error ? event.error.message : '')
   }
   const handlePaymentSubmit = async ev => {
     ev.preventDefault()
@@ -120,7 +120,7 @@ const DonatePage = () => {
               value={paymentAmount}
               onChange={handleValueInput}
               type="number"
-            ></Input>
+            />
             <InputGroupAddon addonType="append">
               <InputGroupText>zł</InputGroupText>
             </InputGroupAddon>
@@ -136,13 +136,13 @@ const DonatePage = () => {
               options={cardStyle}
               onChange={handleChange}
             />
-            <button disabled={processing || disabled || succeeded} id="submit">
+            <button
+              disabled={processing || disabled || succeeded}
+              id="submit"
+              type="submit"
+            >
               <span id="button-text">
-                {processing ? (
-                  <div className="spinner" id="spinner"></div>
-                ) : (
-                  "Pay"
-                )}
+                {processing ? <div className="spinner" id="spinner" /> : 'Pay'}
               </span>
             </button>
             {/* Show any error that happens when processing the payment */}
@@ -153,13 +153,13 @@ const DonatePage = () => {
             )}
             {/* Show a success message upon completion */}
             <p
-              className={succeeded ? "result-message" : "result-message hidden"}
+              className={succeeded ? 'result-message' : 'result-message hidden'}
             >
               Payment succeeded, see the result in your
-              <a href={`https://dashboard.stripe.com/test/payments`}>
-                {" "}
+              <a href="https://dashboard.stripe.com/test/payments">
+                {' '}
                 Stripe dashboard.
-              </a>{" "}
+              </a>{' '}
               Refresh the page to pay again.
             </p>
           </form>

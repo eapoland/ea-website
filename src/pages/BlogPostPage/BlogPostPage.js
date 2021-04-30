@@ -1,26 +1,26 @@
-import React, { useState, useEffect } from "react"
-import WithLoading from "../../components/WithLoading"
-import WordpressService from "../../utils/WordpressService"
-import { useParams } from "react-router-dom"
-import "./BlogPostPage.scss"
-import DateService from "../../utils/DateService"
-import Row from "reactstrap/lib/Row"
-import Col from "reactstrap/lib/Col"
-import TagButton from "../../components/Common/TagButton/TagButton"
+import React, { useState, useEffect } from 'react'
+import { useParams } from 'react-router-dom'
+import './BlogPostPage.scss'
+import Row from 'reactstrap/lib/Row'
+import Col from 'reactstrap/lib/Col'
 import {
   FacebookShareButton,
   LinkedinShareButton,
   TwitterShareButton,
-} from "react-share"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+} from 'react-share'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
   faFacebookSquare,
   faLinkedinIn,
   faTwitter,
-} from "@fortawesome/free-brands-svg-icons"
-import { faEnvelope } from "@fortawesome/free-solid-svg-icons"
-import { NavHashLink } from "react-router-hash-link"
-import ScrollToTop from "../../components/ScrollToTop"
+} from '@fortawesome/free-brands-svg-icons'
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
+import { NavHashLink } from 'react-router-hash-link'
+import WithLoading from '../../components/WithLoading'
+import TagButton from '../../components/Common/TagButton/TagButton'
+import DateService from '../../utils/DateService'
+import WordpressService from '../../utils/WordpressService'
+import ScrollToTop from '../../components/ScrollToTop'
 
 const BlogPostPage = ({ setLoading }) => {
   const { slug } = useParams()
@@ -45,7 +45,7 @@ const BlogPostPage = ({ setLoading }) => {
         WordpressService.getPost(slug).then(res => setPost(res.data[0]))
       })
       .then(() => {
-        post &&
+        if (post) {
           WordpressService.getTags(post.tags.join()).then(res => {
             setTags(
               res.data.map(tag => ({
@@ -55,6 +55,7 @@ const BlogPostPage = ({ setLoading }) => {
               }))
             )
           })
+        }
       })
       .then(() => {
         WordpressService.getRecommendedPosts().then(res =>
@@ -74,11 +75,11 @@ const BlogPostPage = ({ setLoading }) => {
           <div
             className="d-flex flex-column justify-content-center align-items-center post__header"
             style={{
-              backgroundImage: `linear-gradient(180deg, #00000080 0%, #80808000 100%), url(https://ea-poland-wordpress.azurewebsites.net${post._embedded["wp:featuredmedia"][0].source_url})`,
-              backgroundSize: "cover",
-              height: "580px",
-              width: "100%",
-              color: "#f5f5f5",
+              backgroundImage: `linear-gradient(180deg, #00000080 0%, #80808000 100%), url(https://ea-poland-wordpress.azurewebsites.net${post._embedded['wp:featuredmedia'][0].source_url})`,
+              backgroundSize: 'cover',
+              height: '580px',
+              width: '100%',
+              color: '#f5f5f5',
             }}
           >
             <span className="d-flex align-items-center">
@@ -90,7 +91,7 @@ const BlogPostPage = ({ setLoading }) => {
             </span>
             <h1>{post.title.rendered}</h1>
             <p>
-              {post._embedded.author[0].name} /{" "}
+              {post._embedded.author[0].name} /{' '}
               {DateService.prepareDate(post.date)}
             </p>
           </div>
@@ -99,13 +100,13 @@ const BlogPostPage = ({ setLoading }) => {
           <div
             className="post__content"
             dangerouslySetInnerHTML={{
-              __html: post ? post.content.rendered : "",
+              __html: post ? post.content.rendered : '',
             }}
-          ></div>
+          />
           <div className="post__tags d-flex justify-content-between align-items-center">
             <div>
               {tags.map(tag => (
-                //CREATE TAG BUTTON
+                // CREATE TAG BUTTON
                 <TagButton title={tag.name} slug={tag.slug} />
               ))}
             </div>
@@ -162,33 +163,31 @@ const BlogPostPage = ({ setLoading }) => {
           <Col>
             <h2>Polecamy</h2>
             <Row className="post__recommended--list justify-content-between">
-              {recommendedPosts.map(post => {
-                return (
-                  <NavHashLink
-                    to={`${post.slug}`}
-                    style={{ textDecoration: "none" }}
-                    key={post.id}
-                  >
-                    <div>
-                      <img
-                        src={`https://ea-poland-wordpress.azurewebsites.net${post._embedded["wp:featuredmedia"][0].source_url}`}
-                        alt={post._embedded.author[0].slug}
-                        style={{
-                          height: "220px",
-                          width: "362px",
-                          borderRadius: "10px",
-                        }}
-                      />
-                      <h4>
-                        {categories
-                          .filter(cat => cat.id === post.categories[0])
-                          .map(cat => cat.name)}
-                      </h4>
-                      <h3>{post.title.rendered}</h3>
-                    </div>
-                  </NavHashLink>
-                )
-              })}
+              {recommendedPosts.map(blogPost => (
+                <NavHashLink
+                  to={`${blogPost.slug}`}
+                  style={{ textDecoration: 'none' }}
+                  key={blogPost.id}
+                >
+                  <div>
+                    <img
+                      src={`https://ea-poland-wordpress.azurewebsites.net${post._embedded['wp:featuredmedia'][0].source_url}`}
+                      alt={post._embedded.author[0].slug}
+                      style={{
+                        height: '220px',
+                        width: '362px',
+                        borderRadius: '10px',
+                      }}
+                    />
+                    <h4>
+                      {categories
+                        .filter(cat => cat.id === post.categories[0])
+                        .map(cat => cat.name)}
+                    </h4>
+                    <h3>{post.title.rendered}</h3>
+                  </div>
+                </NavHashLink>
+              ))}
             </Row>
           </Col>
         </Row>

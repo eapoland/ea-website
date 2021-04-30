@@ -1,5 +1,5 @@
-import React, { useState } from "react"
-import { Spinner } from "reactstrap"
+import React, { useState } from 'react'
+import { Spinner } from 'reactstrap'
 
 const WithLoading = WrappedComponent => {
   function LoadedComponent(props) {

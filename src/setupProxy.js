@@ -1,9 +1,10 @@
-const { createProxyMiddleware } = require("http-proxy-middleware")
+const { createProxyMiddleware } = require('http-proxy-middleware')
+
 module.exports = function (app) {
   app.use(
-    "/wp-json",
+    '/wp-json',
     createProxyMiddleware({
-      target: "http://ea-poland-wordpress.azurewebsites.net",
+      target: 'http://ea-poland-wordpress.azurewebsites.net',
       changeOrigin: true,
     })
   )

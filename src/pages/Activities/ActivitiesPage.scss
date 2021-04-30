@@ -42,7 +42,7 @@
     color: #000000;
   }
   &__cta {
-    background: url("../../assets/images/cta-activities.png") center no-repeat;
+    background: url('../../assets/images/cta-activities.png') center no-repeat;
     height: 530px;
     h2 {
       text-align: left;
@@ -178,7 +178,7 @@
         rgba(90, 174, 189, 0.5) 25%,
         rgba(255, 255, 255, 0.5) 100%
       ),
-      url("../../assets/images/cta-activities.png") center no-repeat;
+      url('../../assets/images/cta-activities.png') center no-repeat;
     flex-direction: column;
     align-items: center;
     input,

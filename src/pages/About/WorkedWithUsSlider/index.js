@@ -1,10 +1,10 @@
-import React from "react"
-import Slider from "react-slick"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import React from 'react'
+import Slider from 'react-slick'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
   faChevronLeft,
   faChevronRight,
-} from "@fortawesome/free-solid-svg-icons"
+} from '@fortawesome/free-solid-svg-icons'
 
 const WorkedWithUsSlider = () => {
   const sliderSettings = {
@@ -13,9 +13,9 @@ const WorkedWithUsSlider = () => {
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 6000,
-    cssEase: "linear",
+    cssEase: 'linear',
     pauseOnHover: true,
-    className: "d-flex align-items-center",
+    className: 'd-flex align-items-center',
     dots: true,
     prevArrow: (
       <FontAwesomeIcon icon={faChevronLeft} className="ea-slider__arrow" />

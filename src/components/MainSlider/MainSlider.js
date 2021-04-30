@@ -1,9 +1,9 @@
-import React from "react"
-import Slider from "react-slick"
-import { Row, Col } from "reactstrap"
-import EAButton from "../Common/EAButton/EAButton"
+import React from 'react'
+import Slider from 'react-slick'
+import { Row, Col } from 'reactstrap'
+import EAButton from '../Common/EAButton/EAButton'
 
-import "./MainSlider.scss"
+import './MainSlider.scss'
 
 const MainSlider = () => {
   const settings = {
@@ -12,9 +12,9 @@ const MainSlider = () => {
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 6000,
-    cssEase: "linear",
+    cssEase: 'linear',
     pauseOnHover: true,
-    className: "d-flex align-items-center",
+    className: 'd-flex align-items-center',
     dots: true,
     arrows: false,
   }

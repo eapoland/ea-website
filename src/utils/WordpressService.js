@@ -1,4 +1,4 @@
-import axios from "axios"
+import axios from 'axios'
 
 const WordpressService = {
   getPosts: page =>
@@ -18,17 +18,19 @@ const WordpressService = {
 
   getUsers: () =>
     axios.get(
-      "https://ea-poland-wordpress.azurewebsites.net/wp-json/wp/v2/users"
+      'https://ea-poland-wordpress.azurewebsites.net/wp-json/wp/v2/users'
     ),
 
   getCategories: () =>
     axios.get(
-      "https://ea-poland-wordpress.azurewebsites.net/wp-json/wp/v2/categories"
+      'https://ea-poland-wordpress.azurewebsites.net/wp-json/wp/v2/categories'
     ),
 
   getTags: tagIds =>
     axios.get(
-      "https://ea-poland-wordpress.azurewebsites.net/wp-json/wp/v2/tags?include="
+      `https://ea-poland-wordpress.azurewebsites.net/wp-json/wp/v2/tags?include=${tagIds.join(
+        ','
+      )}`
     ),
 }
 

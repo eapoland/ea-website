@@ -18,7 +18,7 @@ jobs:
       - name: Set up Node.js version
         uses: actions/setup-node@v1
         with:
-          node-version: "12.13.0"
+          node-version: '12.13.0'
 
       - name: npm install, build, and test
         run: |
@@ -28,10 +28,10 @@ jobs:
         env:
           REACT_APP_MAILCHIMP_ACTION: ${{ secrets.REACT_APP_MAILCHIMP_ACTION }}
 
-      - name: "Deploy to Azure Web App"
+      - name: 'Deploy to Azure Web App'
         uses: azure/webapps-deploy@v2
         with:
-          app-name: "ea-poland-website"
-          slot-name: "production"
+          app-name: 'ea-poland-website'
+          slot-name: 'production'
           publish-profile: ${{ secrets.AzureAppService_PublishProfile_28ec4e08f81d42ba973357c18aaf74b4 }}
           package: build

@@ -1,19 +1,19 @@
-import React from "react"
-import ReactDOM from "react-dom"
-import App from "./App"
-import * as serviceWorker from "./serviceWorker"
-import "bootstrap/dist/css/bootstrap.min.css"
-import "slick-carousel/slick/slick.css"
-import "slick-carousel/slick/slick-theme.css"
-import "./index.scss"
-import { BrowserRouter } from "react-router-dom"
-import ReactGA from "react-ga"
+import React from 'react'
+import ReactDOM from 'react-dom'
+import { BrowserRouter } from 'react-router-dom'
+import ReactGA from 'react-ga'
+import App from './App'
+import * as serviceWorker from './serviceWorker'
+import 'bootstrap/dist/css/bootstrap.min.css'
+import 'slick-carousel/slick/slick.css'
+import 'slick-carousel/slick/slick-theme.css'
+import './index.scss'
 
-ReactGA.initialize("UA-79994527-1")
+ReactGA.initialize('UA-79994527-1')
 
 ReactGA.event({
-  category: "Test event",
-  action: "User got to the site",
+  category: 'Test event',
+  action: 'User got to the site',
 })
 
 ReactDOM.render(
@@ -22,7 +22,7 @@ ReactDOM.render(
       <App />
     </BrowserRouter>
   </React.StrictMode>,
-  document.getElementById("root")
+  document.getElementById('root')
 )
 
 // If you want your app to work offline and load faster, you can change

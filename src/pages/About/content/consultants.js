@@ -1,5 +1,5 @@
 // import ksarek from "../../assets/images/team/consulting/ksarek.png";
-import dgogloza from "../../../assets/images/team/consulting/dgogloza.png"
+import dgogloza from '../../../assets/images/team/consulting/dgogloza.png'
 // import dwyrzykowski from "../../assets/images/team/consulting/dwyrzykowski.png";
 // import mwozniak from "../../assets/images/team/consulting/mwozniak.png";
 
@@ -14,11 +14,11 @@ const consultants = [
   // },
   {
     id: 2,
-    name: "Dobrosława Gogłoza",
+    name: 'Dobrosława Gogłoza',
     photo: dgogloza,
-    desc: "Współzałożycielka i Head of Strategy w All Hands Agency",
-    email: "dobroslawa.gogloza@gmail.com",
-    linkedin: "https://www.linkedin.com/in/dgogloza/",
+    desc: 'Współzałożycielka i Head of Strategy w All Hands Agency',
+    email: 'dobroslawa.gogloza@gmail.com',
+    linkedin: 'https://www.linkedin.com/in/dgogloza/',
   },
   // {
   //   id: 3,

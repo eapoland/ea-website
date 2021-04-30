@@ -1,27 +1,27 @@
-import React from "react"
-import "./ContactPage.scss"
-import ScrollToTop from "../../components/ScrollToTop"
-import SectionTitle from "../../components/SectionTitle/SectionTitle"
-import Row from "reactstrap/lib/Row"
-import Col from "reactstrap/lib/Col"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import React from 'react'
+import './ContactPage.scss'
+import Row from 'reactstrap/lib/Row'
+import Col from 'reactstrap/lib/Col'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
   faFacebookSquare,
   faLinkedinIn,
   faYoutube,
-} from "@fortawesome/free-brands-svg-icons"
-import MailService from "../../utils/MailService"
-import Spinner from "reactstrap/lib/Spinner"
+} from '@fortawesome/free-brands-svg-icons'
+import Spinner from 'reactstrap/lib/Spinner'
+import MailService from '../../utils/MailService'
+import SectionTitle from '../../components/SectionTitle/SectionTitle'
+import ScrollToTop from '../../components/ScrollToTop'
 
 class ContactPage extends React.Component {
-  constructor(props) {
+  constructor() {
     super()
     this.state = {
-      name: "",
-      email: "",
-      subject: "",
-      msg: "",
-      msgStatus: "notSent",
+      name: '',
+      email: '',
+      subject: '',
+      msg: '',
+      msgStatus: 'notSent',
     }
 
     this.handleNameChange = this.handleNameChange.bind(this)
@@ -48,23 +48,19 @@ class ContactPage extends React.Component {
   }
 
   handleSubmit(event) {
-    this.setState({ msgStatus: "sending" })
+    this.setState({ msgStatus: 'sending' })
+    const { name, email, subject, msg } = this.state
     MailService.sendContactForm(
-      this.state.name,
-      "m.hawelka@gmail.com",
-      this.state.email,
-      this.state.subject,
-      this.state.msg
+      name,
+      'm.hawelka@gmail.com',
+      email,
+      subject,
+      msg
     ).then(() => {
-      MailService.sendContactFormAck(
-        this.state.name,
-        this.state.email,
-        this.state.subject,
-        this.state.msg
-      ).then(result => {
+      MailService.sendContactFormAck(name, email, subject, msg).then(result => {
         if (result.status === 200) {
           this.setState({
-            msgStatus: "sent",
+            msgStatus: 'sent',
           })
         }
       })
@@ -73,6 +69,7 @@ class ContactPage extends React.Component {
   }
 
   render() {
+    const { msgStatus, name, email, subject, msg } = this.state
     return (
       <div className="contact">
         <ScrollToTop />
@@ -130,7 +127,7 @@ class ContactPage extends React.Component {
               </tr>
             </table>
             <div className="contact__social d-flex justify-content-between">
-              <div style={{ padding: "10px" }}>
+              <div style={{ padding: '10px' }}>
                 <a
                   href="https://www.facebook.com/efektywnyaltruizmfundacja"
                   target="_blank"
@@ -142,7 +139,7 @@ class ContactPage extends React.Component {
                   />
                 </a>
               </div>
-              <div style={{ padding: "10px" }}>
+              <div style={{ padding: '10px' }}>
                 <a
                   href="https://www.linkedin.com/company/efektywnyaltruizm/"
                   target="_blank"
@@ -154,7 +151,7 @@ class ContactPage extends React.Component {
                   />
                 </a>
               </div>
-              <div style={{ padding: "10px" }}>
+              <div style={{ padding: '10px' }}>
                 <a
                   href="https://www.youtube.com/channel/UCj6HkTu_5nYypCRKc-7y27A"
                   target="_blank"
@@ -166,7 +163,7 @@ class ContactPage extends React.Component {
             </div>
           </Col>
           <Col className="contact__form">
-            {this.state.msgStatus === "sent" ? (
+            {msgStatus === 'sent' ? (
               <h3>Wiadomość została wysłana</h3>
             ) : (
               <>
@@ -174,14 +171,14 @@ class ContactPage extends React.Component {
                   <input
                     type="text"
                     placeholder="Imię"
-                    style={{ marginRight: "20px" }}
-                    value={this.state.name}
+                    style={{ marginRight: '20px' }}
+                    value={name}
                     onChange={this.handleNameChange}
                   />
                   <input
                     type="email"
                     placeholder="Adres e-mail"
-                    value={this.state.email}
+                    value={email}
                     onChange={this.handleEmailChange}
                   />
                 </div>
@@ -189,21 +186,25 @@ class ContactPage extends React.Component {
                   <input
                     type="text"
                     placeholder="Temat"
-                    value={this.state.subject}
+                    value={subject}
                     onChange={this.handleSubjectChange}
                   />
                 </div>
                 <div>
                   <textarea
                     placeholder="Wiadomość"
-                    value={this.state.msg}
+                    value={msg}
                     onChange={this.handleMsgChange}
                   />
                 </div>
-                <button className="btn ea-button" onClick={this.handleSubmit}>
+                <button
+                  type="submit"
+                  className="btn ea-button"
+                  onClick={this.handleSubmit}
+                >
                   Wyślij
                 </button>
-                {this.state.msgStatus === "sending" && (
+                {msgStatus === 'sending' && (
                   <span>
                     <Spinner size="sm" /> Trwa wysyłanie wiadomości...
                   </span>
