@@ -14,7 +14,7 @@ import { faChevronRight, faSearch } from '@fortawesome/free-solid-svg-icons'
 import { NavHashLink } from 'react-router-hash-link'
 import WithLoading from '../../components/WithLoading'
 import EAButton from '../../components/Common/EAButton/EAButton'
-import WordpressService from '../../utils/WordpressService'
+import WordpressService from '../../services/WordpressService'
 
 const BlogPage = ({ setLoading }) => {
   const [recommendedPosts, setRecommendedPosts] = useState([])

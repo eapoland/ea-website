@@ -12,7 +12,7 @@ const teamMembers = [
     photo: mtrzesimiech,
     position: 'Prezes',
     desc:
-      'Przedsiębiorca dobroczynny działający w zaniedbanych, choć obiecujących obszarach aktywności publicznej. Organizator międzynarodowej społeczności Effective Altruism i inicjator jej struktur w Polsce. Pełni funkcję prezesa Fundacji od jej powstania w 2017 r.',
+      'Założyciel Fundacji Efektywny Altruizm. Przedsiębiorca non-profit oraz konsultant działający w zaniedbanych, choć ważnych obszarach aktywności publicznej. Organizator międzynarodowej społeczności Effective Altruism i inicjator jej struktur w Polsce.',
     email: 'michal.trzesimiech@efektywnyaltruizm.org',
     linkedin: 'https://www.linkedin.com/in/trzesimiech/',
   },
@@ -20,9 +20,9 @@ const teamMembers = [
     id: 2,
     name: 'Maja Laura Jaryczewska',
     photo: mjaryczewska,
-    position: 'Dyrektorka wykonawcza',
+    position: 'PR & Fundraising Manager',
     desc:
-      'Zajmuje się głównie muzyką: studiuje kompozycję oraz fortepian jazzowy na Akademii Muzycznej w Gdańsku, tworzy pod pseudonimem Maja Laura oraz współtworzy zespoły Abyss i Ścianka.  Dyrektorka Wykonawcza Fundacji Efektywny Altruizm oraz wolontariuszka Otwartych Klatek.',
+      'Członkini Zarządu oraz PR & Fundraising Manager Fundacji Efektywny Altruizm. Studiuje kompozycję oraz fortepian jazzowy na Akademii Muzycznej w Gdańsku. Tworzy pod pseudonimem Maja Laura oraz współtworzy zespoły Abyss i Ścianka. Do niedawna wolontariuszka Otwartych Klatek.',
     email: 'maja.laura.jaryczewska@efektywnyaltruizm.org',
     linkedin: 'https://www.linkedin.com/in/maja-laura-jaryczewska-846106193/',
   },
@@ -32,7 +32,7 @@ const teamMembers = [
     photo: mtruong,
     position: 'Dyrektorka ds. komunikacji',
     desc:
-      'Psycholożka, trenerka, HRowiec. Przyświeca jej jeden cel - tworzyć lepszy świat. Miłośniczka jogi, wycieczek górskich i zwierzęcej behawiorystyki.',
+      'Członkini Zarządu, zajmuje się komunikacją oraz koordynuje prace zespołu social media. Psycholożka, trenerka, HRowiec. Przyświeca jej jeden cel – tworzyć lepszy świat. Miłośniczka jogi, wycieczek górskich i zwierzęcej behawiorystyki.',
     email: 'maria.gembarzewska-truong@efektywnyaltruizm.org',
     linkedin: 'https://www.linkedin.com/in/maria-gembarzewska-truong/',
   },
@@ -42,7 +42,7 @@ const teamMembers = [
     photo: kmizio,
     position: 'Dyrektorka ds. kapitału ludzkiego',
     desc:
-      'Doktorantka Uniwersytetu Wrocławskiego w dziedzinie biologii molekularnej. Od 2016 roku zaangażowana jest również w działania Otwartych Klatek. W wolnych chwilach lubi czytać.',
+      'Członkini Zarządu, odpowiedzialna za blog i podcast Fundacji Efektywny Altruizm oraz organizowanie społeczności. Doktorantka Uniwersytetu Wrocławskiego w dziedzinie biologii molekularnej. Od 2016 roku zaangażowana jest również w działania Otwartych Klatek. W wolnych chwilach lubi czytać.',
     email: 'katarzyna.mizio@efektywnyaltruizm.org',
     linkedin: 'https://www.linkedin.com/in/katarzyna-m-069380175/',
   },
@@ -52,7 +52,7 @@ const teamMembers = [
     photo: mtischner,
     position: 'Dyrektor ds. rozwoju/współpracy',
     desc:
-      'Poszukuje efektywnych sposobów na stworzenie bardziej zrównoważonej przyszłości żywności. Pracuje także dla ProVeg Polska, Too Good To Go i Targów Zero Waste.',
+      'Członek Zarządu odpowiedzialny za obszar rozwoju i współpracy. Poszukuje efektywnych sposobów na stworzenie bardziej zrównoważonej przyszłości żywności. Pracuje także dla ProVeg Polska, Targów Zero Waste oraz prowadzi podcast "Przyszłość. Żywność. Planeta”.',
     email: 'marcin.tischner@efektywnyaltruizm.org',
     linkedin: 'https://www.linkedin.com/in/marcintischner/',
   },
@@ -62,7 +62,7 @@ const teamMembers = [
     photo: mhawelka,
     position: 'Główny programista',
     desc:
-      'Zawodowo zajmuje się programowaniem. Wspiera Otwarte Klatki w zakresie montażu wideo. W wolnym czasie przygotowuję się do przebiegnięcia maratonu, gotuje roślinne i gra w Minecrafta.',
+      'W Fundacji odpowiedzialny za szeroko pojęty web development. Zawodowo - Frontend Developer w jednej z zachodnich korporacji. Działa również w Otwartych Klatkach jako montażysta wideo. W wolnych chwilach przygotowuje się do przebiegnięcia swojego pierwszego maratonu.',
     email: 'michal.hawelka@efektywnyaltruizm.org',
     linkedin: 'https://www.linkedin.com/in/michalhawelka/',
   },

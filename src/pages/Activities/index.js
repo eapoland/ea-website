@@ -99,13 +99,15 @@ const Activities = () => {
         <Col className="activities__col--narrow">
           <h3>Szkolenia i warsztaty</h3>
           <p className="activities__paragraph">
-            Prowadzisz firmę lub organizację pozarządową? Porozmawiajmy o tym,
-            jak powiększyć Twój dobroczynny ślad, lub społeczną
-            odpowiedzialność! Na Twoje zamówienie przygotujemy treści
-            dostosowane do potrzeb Twojej organizacji.
+            Na Twoje{' '}
+            <a href="mailto:kontakt@efektywnyaltruizm.org">zamówienie</a>{' '}
+            przygotujemy treści dostosowane do potrzeb Twojej organizacji.
           </p>
           <div className="d-flex justify-content-center">
-            <EAButton title="Zapoznaj się z ofertą" target="workshops" />
+            <EAButton
+              title="Zapoznaj się z ofertą warsztatową"
+              target="workshops"
+            />
           </div>
         </Col>
       </Row>
@@ -122,8 +124,8 @@ const Activities = () => {
             >
               <h5>Marcin Tischner</h5>
               <p>
-                Porozmawiajmy o sposobach, na jaki Twoja organizacja może
-                osiągnąć największy dobroczynny zwrot, lub wzmocnić swoją
+                Porozmawiajmy o sposobach, dzięki którym Twoja organizacja może
+                osiągnąć największy dobroczynny zwrot lub wzmocnić swoją
                 odpowiedzialność społeczną.
               </p>
               <a href="mailto:marcin.tischner@efektywnyaltruizm.org">

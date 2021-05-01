@@ -6,7 +6,7 @@ const content = [
     label: 'O NAS',
     heading: 'Czym jest Efektywny Altruizm?',
     text:
-      'Efektywny Altruizm to pytanie o to, jak przynieść światu najwięcej dobra. To międzynarodowa społeczność, której to pytanie spędza sen z powiek i miesza w życiowych planach. Budujemy nowe organizacje dobroczynne i zasilamy te istniejące. Prowadzimy projekty badawcze i wykłady popularyzatorskie.',
+      'Efektywny Altruizm to filozofia i międzynarodowy ruch społeczny, który opowiada się za wykorzystaniem dowodu naukowego i starannego rozumowania w celu określenia najefektywniejszych sposobów czynienia dobra.',
     cta: 'czytaj więcej',
     img: photo,
     imgAlt: 'test',
@@ -16,7 +16,7 @@ const content = [
     label: 'O NAS',
     heading: 'Jak działamy w Polsce?',
     text:
-      'W Polsce szkolimy z podstaw i dobrych praktyk dobroczynności. W trakcie naszych spotkań szukamy odpowiedzi na trudne pytania. Przyglądamy się problemom filozoficznym, naukowym, jak i praktycznym aspektom czynienia dobra. Łączymy ludzi i organizacje. Tym pierwszym doradzamy w wyborze priorytetów w zgodzie z ich wartościami. Tym drugim pomagamy w maksymalizacji ich korzystnego wpływu.',
+      'Szkolimy z podstaw i dobrych praktyk efektywnej dobroczynności. Mówimy o ważnych i zaniedbanych obszarach. Przyglądamy się problemom filozoficznym, naukowym, jak i praktycznym aspektom czynienia dobra.',
     cta: 'czytaj więcej',
     img: photo2,
     imgAlt: 'test',

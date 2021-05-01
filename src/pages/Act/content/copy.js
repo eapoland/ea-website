@@ -14,7 +14,7 @@ const content = [
   {
     heading: 'Wolontariat',
     text:
-      'Fundację Efektywny Altruizm buduje grupa wolontariuszy i wolontariuszek zainteresowanych różnymi obszarami i na różnych szczeblach kariery. Jeśli rozważasz przeznaczenie części swojego czasu na rozwijanie Efektywnego Altruizmu w Polsce, dołącz do naszego zespołu!',
+      'Fundację Efektywny Altruizm buduje grupa wolontariuszy i wolontariuszek na różnych szczeblach kariery, zainteresowanych różnymi obszarami. Jeśli rozważasz przeznaczenie części swojego czasu na rozwijanie Efektywnego Altruizmu w Polsce, dołącz do naszego zespołu!',
     cta: 'Dołącz do nas',
     img: volunteer,
     imgAlt: 'test',

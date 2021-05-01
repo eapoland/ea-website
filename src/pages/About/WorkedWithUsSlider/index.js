@@ -63,15 +63,6 @@ const WorkedWithUsSlider = () => {
       </div>
       <div>
         <div>
-          <h5>Marcin Woźniak</h5>
-          <p>
-            Współzałożyciel Fundacji Optimum Pareto i twórca Swarmcheck -
-            deliberatywnego systemu wspomagania decyzji.
-          </p>
-        </div>
-      </div>
-      <div>
-        <div>
           <h5>Daniel Wyrzykowski</h5>
           <p>
             Twórca Altruisto.com - aplikacji do zbiórki funduszy dla organizacji

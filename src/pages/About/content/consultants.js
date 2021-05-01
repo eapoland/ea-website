@@ -1,7 +1,7 @@
 // import ksarek from "../../assets/images/team/consulting/ksarek.png";
 import dgogloza from '../../../assets/images/team/consulting/dgogloza.png'
 // import dwyrzykowski from "../../assets/images/team/consulting/dwyrzykowski.png";
-// import mwozniak from "../../assets/images/team/consulting/mwozniak.png";
+import mwozniak from '../../../assets/images/team/consulting/mwozniak.png'
 
 const consultants = [
   // {
@@ -20,14 +20,15 @@ const consultants = [
     email: 'dobroslawa.gogloza@gmail.com',
     linkedin: 'https://www.linkedin.com/in/dgogloza/',
   },
-  // {
-  //   id: 3,
-  //   name: "Marcin Woźniak",
-  //   photo: mwozniak,
-  //   desc: "Współzałożyciel Fundacji Optimum Pareto i twórca Swarmcheck - deliberatywnego systemu wspomagania decyzji.",
-  //   email: "EMAIL",
-  //   linkedin: "https://www.linkedin.com/in/marcin-wo%C5%BAniak-064128115/"
-  // },
+  {
+    id: 3,
+    name: 'Marcin Woźniak',
+    photo: mwozniak,
+    desc:
+      'Współzałożyciel Fundacji Optimum Pareto i twórca Swarmcheck - deliberatywnego systemu wspomagania decyzji.',
+    email: 'EMAIL',
+    linkedin: 'https://www.linkedin.com/in/marcin-wo%C5%BAniak-064128115/',
+  },
   // {
   //   id: 4,
   //   name: "Daniel Wyrzykowski",

@@ -1,31 +1,31 @@
 const fields = [
   {
-    name: 'Zdrowie publiczne',
-    key: 'field_publicHealth',
-    title: 'Globalne zdrowie publiczne, w tym zdrowie psychiczne',
+    name: 'Walka ze skrajnym ubóstwem',
+    key: 'field_poverty',
+    title: 'Walka ze skrajnym ubóstwem',
     content:
-      'W krajach o niskim i średnim dochodzie ludzie codziennie umierają na skutek chorób (takich jak malaria), którym potrafimy już łatwo zapobiegać. Wspierając najefektywniejsze organizacje walczące z tym problemem możemy niewielkim nakładem środków chronić zdrowie i życie innych ludzi. Wspieramy też działalność badawczą w domenie globalnego zdrowia psychicznego.',
+      'Zaniedbane choroby tropikalne odpowiadają za śmierć milionów ludzi każdego roku. Sama malaria zabija około 500 000 (głównie dzieci poniżej 5 roku życia mieszkające Afrykę i Azję Południowo-Wschodnią). Tymczasem znane są niedrogie interwencje, które mogą zapobiec tragicznym skutkom tej choroby – wśród nich dystrybucja siatek przeciwmalarycznych (koszt jednej to 8 złotych). Na podobnie wielką skalę rozprzestrzenione są choroby pasożytnicze, takie jak schistosomatoza (zapewnienie leku jednej osobie przez cały sezon wysokiego ryzyka kosztuje około 19 złotych) oraz ślepota, będąca często efektem niedoboru witamin  (doustna suplementacja witaminą A może zapobiec ślepocie u dzieci i zmniejszyć śmiertelność o 12-24%, a kosztuje tylko około 5 złotych za suplement). Poprawa zdrowia nie tylko zapobiega bezpośredniemu cierpieniu związanemu z chorobą i śmiercią – umożliwia też powrót do nauki, a później do pracy i szerszego udziału w życiu społecznym.',
   },
   {
-    name: 'Technologia',
-    key: 'field_technology',
-    title: 'Dalekosiężna przyszłość, w tym regulacja technologii',
+    name: 'Poprawa dalekosiężnej przyszłości',
+    key: 'field_future',
+    title: 'Poprawa dalekosiężnej przyszłości',
     content:
-      'Nie ograniczamy się do walki z dotykającymi nas obecnie problemami. Musimy myśleć także o przyszłych pokoleniach oraz o świecie, jaki dla nich pozostawimy. Przykładem jest zapobieżenie przyszłym pandemiom, ale też zagrożeniom, jakie niosą ze sobą nowe technologie: zaawansowana sztuczna inteligencja lub biologia syntetyczna. Obecnie tylko kilkaset osób na świecie zajmuje się tymi problemami, choć zagadnienia te mogą okazać się kluczowe dla bezpieczeństwa przyszłości.',
+      'Zależy nam na poprawie świata na korzyść nie tylko nas samych, ale też przyszłych pokoleń. Ponieważ przyszłość jest tak rozległa, liczba istnień, które mogą w niej zaistnieć, znacznie przewyższa tę istniejących obecnie. Z tego względu niezwykle ważnym problemem jest zapewnienie dobrych warunków do życia pokoleniom, które nadejdą po nas. Ten pomysł wydaje się nieintuicyjny - nie myślimy zbyt często o życiu naszych praprawnuków, nie mówiąc już o ich praprawnukach. Lecz podobnie jak nie powinniśmy ignorować trudnej sytuacji ubogich na świecie tylko dlatego, że mieszkają w obcym kraju - nie powinniśmy ignorować losów przyszłych pokoleń.',
   },
   {
-    name: 'Prawa zwierząt',
+    name: 'Dobrostan zwierząt',
     key: 'field_animalRights',
-    title: 'Dobrostan zwierząt hodowlanych',
+    title: 'Dobrostan zwierząt',
     content:
-      'Na świecie co roku 60 miliardów zwierząt lądowych i 80 miliardów zwierząt wodnych jest hodowanych i zabijanych w okropnych warunkach.  Obecnie tylko znikoma część funduszy charytatywnych przekazywanych jest na poprawę tej sytuacji. W połączeniu z dużą skalą zjawiska oznacza to, że posiadamy obecnie możliwość ograniczenia ogromnej skali cierpienia i tylko od nas zależy jak tą szansę wykorzystamy.',
+      'Każdego roku miliardy zwierząt, w tym ponad 60 miliardów brojlerów, hodowanych jest w krzywdzących warunkach na fermach przemysłowych. Ze względu na tak ogromnę liczbę żyć, adresowanie tego problemu może zapobiec bardzo dużej ilości cierpienia. Biorąc pod uwagę skalę problemu, dobrostan zwierząt wydaje się również skrajnie zaniedbany. Przykładowo, spośród udomowionych zwierząt lądowych, które są wykorzystywane i zabijane w Stanach Zjednoczonych, ponad 99.6% to zwierzęta hodowlane. Jednak spośród wszystkich środków przeznaczanych na cele poprawy dobrostanu zwierząt, zaledwie 0.8% darowizn jest przekazywanych do organizacji specjalizujących się w pomocy zwierzętom hodowlanym, pomimo ogromnego cierpienia, jakiego doświadczają.',
   },
   {
-    name: 'Klimat i środowisko',
-    key: 'field_environment',
-    title: 'Efektywny enwironmentalizm',
+    name: 'Inne obszary',
+    key: 'field_other',
+    title: 'Inne obszary',
     content:
-      'Silnie rozwinięte ekonomie, jak USA i kraje UE skupiają się dzisiaj na redukcji emisji gazów cieplarnianych. Jednak w 2040 roku 75% emisji pochodzić będzie z dynamicznie rozwijających się państw, takich jak Chiny czy Indie. Czysta energia może rozpowszechnić się we wszystkich krajach tylko wtedy, jeśli stanie się odpowiednio tania - do tego potrzebny jest rozwój technologii. Niestety obecnie na samą energię wydajemy 300 razy więcej niż na prace badawcze, których zadaniem jest jej udoskonalenie.',
+      'Istnieje wiele obiecujących obszarów działań dobroczynnych, którym nasza społeczność przygląda się z wielką nadzieją i zainteresowaniem. Od badań nad globalnym zdrowiem psychicznym po efektywny enwironmentalizm, nasza dyskusja przez cały czas rozrasta się o nowe, niedoeksplorowane dotąd obszary.',
   },
 ]
 

@@ -22,11 +22,12 @@ const About = () => (
           najwięcej dobra?”
         </h3>
         <p>
-          Efektywny Altruizm to międzynarodowa społeczność szukająca odpowiedzi
-          na to pytanie. Zdobytą tą drogą wiedzę wykorzystujemy później w
-          praktyce, pracując na rzecz obszarów, które najbardziej potrzebują
-          naszej pomocy. Okazuje się, że przy użyciu ograniczonych środków
-          możemy mieć wpływ na realne zmiany na świecie.
+          Jesteśmy polską gałęzią międzynarodowego ruchu Effective Altruism,
+          który od 2013 r. zrzesza ludzi, których pragnieniem jest czynić
+          najwięcej dobra. To, co kluczowe dla naszej działalności to odwołanie
+          do naukowego światopoglądu i starannego rozumowania – wierzymy, że to
+          najlepszy sposób, by identyfikować zaniedbane obszary dobroczynności i
+          priorytetyzować działania w ich obrębie.
         </p>
       </Col>
       <Col sm={6} />
@@ -51,33 +52,28 @@ const About = () => (
       <Col sm={6}>
         <h3>Jak działamy w Polsce?</h3>
         <p>
-          Fundacja Efektywny Altruizm to polska gałąź globalnego ruchu Effective
-          Altruism.
+          Naszym celem jest budowanie w Polsce świadomości istotnych, lecz
+          zaniedbanych obszarów działalności dobroczynnej, a przy tym kultury
+          efektywnej filantropii.
         </p>
         <p>
-          <b>Prowadzimy działalność badawczą</b> w zakresie priorytetów
-          dobroczynnych dla Polski i regionu.
+          Jesteśmy gałęzią międzynarodowego ruchu Effective Altruism.
+          Popularyzujemy wiedzę naukową (badaczy jak Daniel Kahneman, Barbara
+          Oakley) i namysł filozoficzny (czołowych myślicieli jak Derek Parfit,
+          lub Peter Singer) dotyczące dobroczynności.
         </p>
         <p>
-          <b>Szkolimy</b> z podstaw i dobrych praktyk efektywnej dobroczynności.
-          W trakcie naszych spotkań szukamy odpowiedzi na trudne pytania.
-          Przyglądamy się problemom filozoficznym, naukowym, jak i praktycznym
-          aspektom czynienia dobra.
+          Podczas naszych spotkań przyglądamy zarówno teoretycznym, jak i
+          praktycznym aspektom czynienia dobra. Zadajemy pytania ekspertom.
+          Wspólnie z nimi edukujemy w zakresie podstaw i dobrych praktyk
+          dobroczynności. Łączymy ludzi i organizacje w Polsce i na świecie.
         </p>
         <p>
-          <b>Łączymy ludzi i organizacje</b>. Tym pierwszym doradzamy w wyborze
-          kariery lub celu darowizn w zgodzie z ich wartościami. Tym drugim
-          pomagamy w pozyskaniu talentu i maksymalizacji ich korzystnego wpływu
-          poprzez doradztwo.
-        </p>
-        <p>
-          <b>Prowadzimy zbiórki</b> na rzecz najefektywniejszych organizacji
-          dobroczynnych wg. ewaluatorów <b>GiveWell</b> i{' '}
-          <b>Animal Charity Evaluators</b>.
-        </p>
-        <p>
-          Działamy we współpracy z <b>The Centre for Effective Altruism</b> w
-          Oksfordzie i zaprzyjaźnionymi organizacjami na całym świecie.
+          Prowadzimy zbiórki na rzecz najefektywniejszych organizacji
+          dobroczynnych rekomendowanych przez ewaluatorów GiveWell oraz Animal
+          Charity Evaluators. Prowadzimy też działalność badawczą badawczą w
+          zakresie priorytetów dobroczynnych dla Polski i Europy
+          Środkowo-Wschodniej.
         </p>
       </Col>
     </Row>
