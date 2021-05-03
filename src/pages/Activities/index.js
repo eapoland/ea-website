@@ -20,7 +20,7 @@ const Activities = () => {
     setStatus('sending')
     MailService.sendContactForm(
       '',
-      'm.hawelka@gmail.com',
+      'kontakt@efektywnyaltruizm.org',
       email,
       'Współpraca - formularz kontaktowy',
       msg

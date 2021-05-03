@@ -11,7 +11,7 @@ const WorkshopForm = ({ name }) => {
     setStatus('sending')
     MailService.sendContactForm(
       '',
-      'm.hawelka@gmail.com',
+      'kontakt@efektywnyaltruizm.org',
       email,
       `Zapytanie o szkolenie ${name}`,
       msg

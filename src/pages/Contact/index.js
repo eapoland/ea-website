@@ -24,7 +24,7 @@ const Contact = () => {
     setStatus('sending')
     MailService.sendContactForm(
       name,
-      'm.hawelka@gmail.com',
+      'kontakt@efektywnyaltruizm.org',
       email,
       subject,
       msg
