@@ -78,14 +78,6 @@ const Contact = () => {
               </td>
             </tr>
             <tr>
-              <td>Zbiórki dla EA:</td>
-              <td>
-                <a href="mailto:zbiorka@efektywnyaltruizm.org">
-                  zbiorka@efektywnyaltruizm.org
-                </a>
-              </td>
-            </tr>
-            <tr>
               <td>Media:</td>
               <td>
                 <a href="mailto:media@efektywnyaltruizm.org">
