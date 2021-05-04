@@ -26,7 +26,7 @@ const consultants = [
     photo: mwozniak,
     desc:
       'Współzałożyciel Fundacji Optimum Pareto i twórca Swarmcheck - deliberatywnego systemu wspomagania decyzji.',
-    email: 'EMAIL',
+    email: 'wozniakk.marcin@gmail.com',
     linkedin: 'https://www.linkedin.com/in/marcin-wo%C5%BAniak-064128115/',
   },
   // {
