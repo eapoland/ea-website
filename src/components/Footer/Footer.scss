@@ -61,12 +61,15 @@
   .footer {
     flex-direction: column;
     width: 100%;
-    height: fit-content;
+    height: 20rem;
     .footer__column {
       margin: 0;
       display: flex;
       flex-direction: column;
       align-items: center;
+    }
+    .footer__logo {
+      width: 50vw;
     }
     .footer__column:last-of-type {
       display: none;

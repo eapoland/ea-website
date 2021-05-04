@@ -13,7 +13,7 @@ const Footer = () => (
         className="d-flex align-items-center"
         style={{ marginBottom: '24px' }}
       >
-        <WhiteLogo className="main-nav__logo" />
+        <WhiteLogo className="main-nav__logo footer__logo" />
         {/* <div className="main-nav__item main-nav__item--social">
             <a href="https://www.facebook.com/efektywnyaltruizmfundacja">
               <FontAwesomeIcon icon={faFacebookSquare} className="main-nav__icon" />

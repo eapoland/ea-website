@@ -24,6 +24,15 @@ const WorkedWithUsSlider = () => {
     nextArrow: (
       <FontAwesomeIcon icon={faChevronRight} className="ea-slider__arrow" />
     ),
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
   }
 
   return (
