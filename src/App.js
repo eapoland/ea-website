@@ -1,70 +1,56 @@
-import React, { Suspense } from 'react'
+import React, { Suspense, lazy } from 'react'
 import './App.scss'
 import { Container } from 'reactstrap'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import CookieConsent from 'react-cookie-consent'
 import TopBar from './components/TopBar/TopBar'
-import Home from './pages/Home'
-import About from './pages/About'
-import Activities from './pages/Activities'
 import Footer from './components/Footer/Footer'
 import NewsletterCtaSection from './components/NewsletterCtaSection/NewsletterCtaSection'
-import PrivacyPolicy from './pages/PrivacyPolicy/PrivacyPolicy'
+import LoadingScreen from './components/LoadingScreen'
+// import BlogPage from './pages/Blog/BlogPage'
 // import { Elements } from "@stripe/react-stripe-js";
 // import { loadStripe } from "@stripe/stripe-js";
-import DonatePage from './pages/Donate/DonatePage'
-import Workshops from './pages/Workshops'
-import WorkshopDetails from './pages/WorkshopDetails'
-import Contact from './pages/Contact'
-import BlogPostPage from './pages/BlogPostPage/BlogPostPage'
-import Act from './pages/Act'
-import NotFound from './pages/NotFound'
-
+// import DonatePage from './pages/Donate/DonatePage'
+// import BlogPostPage from './pages/BlogPostPage/BlogPostPage'
 // const stripePromise = loadStripe(
 //   "pk_test_51HiOnnDDHV7JDkB9tHxmUobKY4ZezsR5lsWsviFG5NPEPbpgFGBeGqyYHyMeSnMi5Ulv5pV29i6Vr8sbDyfNJDcA00U862gUpU"
 // );
 
+const Home = lazy(() => import('./pages/Home'))
+const About = lazy(() => import('./pages/About'))
+const Workshops = lazy(() => import('./pages/Workshops'))
+const WorkshopDetails = lazy(() => import('./pages/WorkshopDetails'))
+const Activities = lazy(() => import('./pages/Activities'))
+const PrivacyPolicy = lazy(() => import('./pages/PrivacyPolicy/PrivacyPolicy'))
+const Act = lazy(() => import('./pages/Act'))
+const Contact = lazy(() => import('./pages/Contact'))
+const NotFound = lazy(() => import('./pages/NotFound'))
+
 function App() {
   return (
     <Router>
-      <Suspense fallback="loading">
+      <Suspense fallback={<LoadingScreen />}>
         {/* <Elements stripe={stripePromise}> */}
         <Container className="p-0 ea-container">
           <TopBar />
           <Switch>
-            <Route path="/" exact>
-              <Home />
-            </Route>
-            <Route path="/about" exact>
-              <About />
-            </Route>
-            <Route path="/workshops" exact>
-              <Workshops />
-            </Route>
-            <Route path="/workshops/:id" exact>
-              <WorkshopDetails />
-            </Route>
-            <Route path="/activities" exact>
-              <Activities />
-            </Route>
-            <Route path="/privacy-policy" exact>
-              <PrivacyPolicy />
-            </Route>
+            <Route path="/" exact component={Home} />
+            <Route path="/about" exact component={About} />
+            <Route path="/workshops" exact component={Workshops} />
+            <Route path="/workshops/:id" exact component={WorkshopDetails} />
+            <Route path="/activities" exact component={Activities} />
+            <Route path="/privacy-policy" exact component={PrivacyPolicy} />
             {/* <Route path="/blog" exact>
-                <BlogPage />
-              </Route> */}
-            <Route path="/act" exact>
-              <Act />
-            </Route>
-            <Route path="/blog/:slug" exact>
+              <BlogPage />
+            </Route> */}
+            <Route path="/act" exact component={Act} />
+            {/* <Route path="/blog/:slug" exact>
               <BlogPostPage />
-            </Route>
-            <Route path="/donate" exact>
+            </Route> */}
+            {/* <Route path="/donate" exact>
               <DonatePage />
-            </Route>
-            <Route path="/contact" exact>
-              <Contact />
-            </Route>
+            </Route> */}
+            <Route path="/contact" exact component={Contact} />
             <Route component={NotFound} />
           </Switch>
           <CookieConsent
