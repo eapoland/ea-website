@@ -34,15 +34,5 @@
         url('../../../assets/images/baner_alt.jpg') center no-repeat;
       background-size: cover;
     }
-    &--second {
-      background: linear-gradient(
-          180deg,
-          rgba(0, 0, 0, 0.5452556022408963) 0%,
-          rgba(9, 9, 121, 0) 40%,
-          rgba(255, 255, 255, 0) 100%
-        ),
-        url('../../../assets/images/test-photo.jpg') center no-repeat;
-      background-size: 100%;
-    }
   }
 }
