@@ -3,10 +3,11 @@ import { NavHashLink } from 'react-router-hash-link'
 import Button from 'reactstrap/lib/Button'
 import './EAButton.scss'
 
-const EAButton = ({ title, target, customClass }) => (
+const EAButton = ({ title, target, customClass, onClick }) => (
   <NavHashLink to={`${target}`}>
     <Button
       className={`ea-button ${customClass}`}
+      onClick={onClick}
       // style={
       //   // size
       //   //   ? {

@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import Spinner from 'reactstrap/lib/Spinner'
+import GAService from '../../../services/GAService'
 import MailService from '../../../services/MailService'
 
 const WorkshopForm = ({ name }) => {
@@ -23,6 +24,7 @@ const WorkshopForm = ({ name }) => {
         msg
       ).then(result => {
         if (result.status === 200) {
+          GAService.sendWorkshopsEvent(`Contact form used - ${name}`)
           setStatus('sent')
         }
       })

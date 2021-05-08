@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faStar } from '@fortawesome/free-solid-svg-icons'
 import EAButton from '../../../components/Common/EAButton/EAButton'
 import workshops from '../../WorkshopDetails/content/workshops'
+import GAService from '../../../services/GAService'
 
 const PromotedWorkshop = () =>
   workshops
@@ -21,7 +22,13 @@ const PromotedWorkshop = () =>
           </h5>
           <h3 className="text-left">{item.title}</h3>
           <p>{item.shortSummary}</p>
-          <EAButton title="Czytaj więcej" target={`workshops/${item.id}`} />
+          <EAButton
+            title="Czytaj więcej"
+            target={`workshops/${item.id}`}
+            onClick={() => {
+              GAService.sendWorkshopsEvent(`Details clicked - ${item.title}`)
+            }}
+          />
         </Col>
       </div>
     ))

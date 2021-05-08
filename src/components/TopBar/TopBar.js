@@ -20,6 +20,7 @@ import {
 } from '@fortawesome/free-brands-svg-icons'
 import { ReactComponent as WhiteLogo } from '../../assets/images/efektywny-altruizm-logo-white.svg'
 import { ReactComponent as Logo } from '../../assets/images/efektywny-altruizm-logo.svg'
+import GAService from '../../services/GAService'
 
 const TopBar = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -31,6 +32,7 @@ const TopBar = () => {
   const handleScroll = () => {
     setScrolled(window.scrollY > 50)
   }
+
   useEffect(() => {
     window.addEventListener('scroll', handleScroll)
   })
@@ -154,6 +156,9 @@ const TopBar = () => {
             href="https://www.paypal.com/donate/?cmd=_s-xclick&hosted_button_id=FFLJ8KDN5CAUA"
             target="_blank"
             rel="noopener noreferrer"
+            onClick={() => {
+              GAService.sendDonationEvent('Top bar donate button clicked')
+            }}
           >
             <Button className="main-nav__button">
               <span className="main-nav__donate--xl">Przekaż darowiznę</span>
