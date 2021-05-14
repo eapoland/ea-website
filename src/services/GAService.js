@@ -15,7 +15,9 @@ const GAService = {
   },
   sendWorkshopsEvent: action => {
     GAService.sendEvent('Workshops', action)
-    console.log(action)
+  },
+  sendVolunteerEvent: action => {
+    GAService.sendEvent('Volunteer', action)
   },
 }
 

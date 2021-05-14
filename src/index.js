@@ -11,11 +11,6 @@ import './index.scss'
 
 ReactGA.initialize('UA-79994527-1')
 
-ReactGA.event({
-  category: 'Test event',
-  action: 'User got to the site',
-})
-
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>

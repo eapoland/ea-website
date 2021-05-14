@@ -6,6 +6,7 @@ import ScrollToTop from '../../components/ScrollToTop'
 import './Act.scss'
 import SectionTitle from '../../components/SectionTitle/SectionTitle'
 import content from './content/copy'
+import GAService from '../../services/GAService'
 
 const Act = () => (
   <div className="act">
@@ -38,7 +39,7 @@ const Act = () => (
         <h3>{content[1].heading}</h3>
         <p>{content[1].text}</p>
         <a
-          href="https://docs.google.com/forms/d/e/1FAIpQLSeG6DrBAcLSaMM27_tsKmUEfF79B1DsxqAeEify8ZnAuvS6PQ/viewform"
+          href="http://bit.ly/3qRaVfV"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -46,6 +47,9 @@ const Act = () => (
             className="btn ea-button"
             style={{ width: '11rem' }}
             type="button"
+            onClick={() => {
+              GAService.sendVolunteerEvent(`Registration form button clicked`)
+            }}
           >
             {content[1].cta}
           </button>
