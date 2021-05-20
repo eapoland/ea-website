@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import {
   Row,
   Col,
@@ -7,44 +7,111 @@ import {
   InputGroupAddon,
   Input,
 } from 'reactstrap'
+import { useQuery, gql } from '@apollo/client'
 import Slider from 'react-slick'
 import './BlogPage.scss'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faChevronRight, faSearch } from '@fortawesome/free-solid-svg-icons'
+import {
+  faChevronRight,
+  faChevronLeft,
+  faSearch,
+} from '@fortawesome/free-solid-svg-icons'
 import { NavHashLink } from 'react-router-hash-link'
-import WithLoading from '../../components/WithLoading'
 import EAButton from '../../components/Common/EAButton/EAButton'
-import WordpressService from '../../services/WordpressService'
+import LoadingScreen from '../../components/LoadingScreen'
 
-const BlogPage = ({ setLoading }) => {
-  const [recommendedPosts, setRecommendedPosts] = useState([])
-  const [posts, setPosts] = useState([])
-  const [categories, setCategories] = useState([])
+const GET_BLOG_DATA = gql`
+  query GET_DATA($first: Int, $last: Int, $after: String, $before: String) {
+    categories {
+      nodes {
+        id
+        slug
+        name
+      }
+    }
+    recommendedPosts: posts(where: { tag: "recommended" }) {
+      nodes {
+        author {
+          node {
+            customuser {
+              photo {
+                sourceUrl
+              }
+            }
+            slug
+            name
+          }
+        }
+        featuredImage {
+          node {
+            sourceUrl
+          }
+        }
+        excerpt(format: RENDERED)
+        slug
+        title(format: RENDERED)
+        id
+        categories {
+          nodes {
+            id
+            name
+          }
+        }
+      }
+    }
+    posts(first: $first, last: $last, after: $after, before: $before) {
+      nodes {
+        author {
+          node {
+            customuser {
+              photo {
+                sourceUrl
+              }
+            }
+            slug
+            name
+          }
+        }
+        featuredImage {
+          node {
+            sourceUrl
+            slug
+          }
+        }
+        excerpt(format: RENDERED)
+        slug
+        title(format: RENDERED)
+        id
+        categories {
+          nodes {
+            id
+            name
+          }
+        }
+      }
+      pageInfo {
+        hasNextPage
+        hasPreviousPage
+        endCursor
+        startCursor
+      }
+    }
+  }
+`
 
-  useEffect(() => {
-    WordpressService.getCategories()
-      .then(res =>
-        setCategories(
-          res.data.map(category => ({
-            id: category.id,
-            name: category.name,
-            slug: category.slug,
-          }))
-        )
-      )
-      .then(() => {
-        WordpressService.getRecommendedPosts().then(res =>
-          setRecommendedPosts(res.data)
-        )
-      })
-      .then(() => {
-        WordpressService.getPosts(1)
-          .then(res => setPosts(res.data))
-          .then(() => {
-            setLoading(false)
-          })
-      })
-  }, [setLoading])
+const updateQuery = (previousResult, { fetchMoreResult }) =>
+  fetchMoreResult.posts.nodes.length ? fetchMoreResult : previousResult
+
+const BlogPage = () => {
+  const variables = {
+    first: 7,
+    last: null,
+    after: null,
+    before: null,
+  }
+  const { data, loading, fetchMore } = useQuery(GET_BLOG_DATA, {
+    variables,
+  })
 
   const settings = {
     infinite: true,
@@ -58,12 +125,15 @@ const BlogPage = ({ setLoading }) => {
     dots: true,
     arrows: false,
   }
-  return (
+
+  return loading ? (
+    <LoadingScreen />
+  ) : (
     <div>
       <Row className="recommended-slider">
         <Col className="recommended-slider-column text-center mx-auto">
           <Slider {...settings}>
-            {recommendedPosts.map(post => (
+            {data.recommendedPosts.nodes.map(post => (
               <div className="d-flex flex-column justify-content-center align-items-start">
                 <div
                   className="d-flex flex-column justify-content-center align-items-start recommended-slider__item"
@@ -71,9 +141,9 @@ const BlogPage = ({ setLoading }) => {
                     backgroundImage: `linear-gradient(
                         180deg,
                         rgba(0, 0, 0, 0.5452556022408963) 0%,
-                        rgba(9, 9, 121, 0) 40%,
+                        rgba(9, 9, 121, 0) 90%,
                         rgba(255, 255, 255, 0) 100%
-                      ), url(https://ea-poland-wordpress.azurewebsites.net${post._embedded['wp:featuredmedia'][0].source_url})`,
+                      ), url(https://ea-poland-wordpress.azurewebsites.net${post.featuredImage.node.sourceUrl})`,
                     backgroundSize: 'cover',
                     height: '580px',
                     width: '100%',
@@ -83,19 +153,22 @@ const BlogPage = ({ setLoading }) => {
                   <span className="d-flex align-items-center">
                     <img
                       className="author__img"
-                      src={`https://ea-poland-wordpress.azurewebsites.net${post._embedded.author[0].acf.photo}`}
-                      alt={post._embedded.author[0].slug}
+                      src={`https://ea-poland-wordpress.azurewebsites.net${
+                        post.author.node.customuser.photo &&
+                        post.author.node.customuser.photo.sourceUrl
+                      }`}
+                      alt={post.author.node.slug}
                     />
                     <p className="recommended-post__author">
-                      {post._embedded.author[0].name} /{' '}
-                      {categories
-                        .filter(cat => cat.id === post.categories[0])
-                        .map(cat => cat.name)}
+                      {post.author.node.name} /{' '}
+                      {post.categories.nodes.map(cat => cat.name)}
                     </p>
                   </span>
-                  <h1>{post.title.rendered}</h1>
+                  <h1>{post.title}</h1>
                   <div
-                    dangerouslySetInnerHTML={{ __html: post.excerpt.rendered }}
+                    dangerouslySetInnerHTML={{
+                      __html: post.excerpt,
+                    }}
                   />
                   <EAButton
                     title="Czytaj dalej"
@@ -110,24 +183,22 @@ const BlogPage = ({ setLoading }) => {
       </Row>
       <Row className="blog-post__first">
         <Col xs={8}>
-          {posts[0] && (
+          {data.posts.nodes[0] && (
             <NavHashLink
-              to={`blog/${posts[0].slug}`}
+              to={`blog/${data.posts.nodes[0].slug}`}
               style={{ textDecoration: 'none' }}
             >
               <div
                 style={{
-                  backgroundImage: `url(https://ea-poland-wordpress.azurewebsites.net${posts[0]._embedded['wp:featuredmedia'][0].source_url})`,
+                  backgroundImage: `url(https://ea-poland-wordpress.azurewebsites.net${data.posts.nodes[0].featuredImage.node.sourceUrl})`,
                 }}
                 className="d-flex flex-column justify-content-end first-post"
-                key={posts[0].id}
+                key={data.posts.nodes[0].id}
               >
                 <h3 style={{ color: 'white' }}>
-                  {categories
-                    .filter(cat => cat.id === posts[0].categories[0])
-                    .map(cat => cat.name)}
+                  {data.posts.nodes[0].categories.nodes.map(cat => cat.name)}
                 </h3>
-                <h1>{posts[0].title.rendered}</h1>
+                <h1>{data.posts.nodes[0].title}</h1>
               </div>
             </NavHashLink>
           )}
@@ -146,18 +217,15 @@ const BlogPage = ({ setLoading }) => {
           </InputGroup>
           <div>
             <h3>ZAGADNIENIA</h3>
-            {categories.map(category => (
+            {data.categories.nodes.map(category => (
               <button
                 className="blog-post__first--btn"
                 key={category.slug}
                 type="submit"
               >
                 <div className="d-flex justify-content-between align-items-center">
-                  <p>{category.name}</p>
-                  <FontAwesomeIcon
-                    icon={faChevronRight}
-                    style={{ marginTop: '-20px' }}
-                  />
+                  <h5>{category.name}</h5>
+                  <FontAwesomeIcon icon={faChevronRight} />
                 </div>{' '}
               </button>
             ))}
@@ -165,7 +233,7 @@ const BlogPage = ({ setLoading }) => {
         </Col>
       </Row>
       <Row className="blog-posts justify-content-between">
-        {posts.slice(1).map(post => (
+        {data.posts.nodes.slice(1).map(post => (
           <NavHashLink
             to={`blog/${post.slug}`}
             style={{ textDecoration: 'none' }}
@@ -173,26 +241,66 @@ const BlogPage = ({ setLoading }) => {
           >
             <div>
               <img
-                src={`https://ea-poland-wordpress.azurewebsites.net${post._embedded['wp:featuredmedia'][0].source_url}`}
-                alt={post._embedded.author[0].slug}
+                src={`https://ea-poland-wordpress.azurewebsites.net${post.featuredImage.node.sourceUrl}`}
+                alt={post.featuredImage.node.slug}
                 style={{
                   height: '220px',
                   width: '362px',
                   borderRadius: '10px',
                 }}
               />
-              <h3>
-                {categories
-                  .filter(cat => cat.id === post.categories[0])
-                  .map(cat => cat.name)}
-              </h3>
-              <h2>{post.title.rendered}</h2>
+              <h3>{post.categories.nodes.map(cat => cat.name)}</h3>
+              <h2>{post.title}</h2>
             </div>
           </NavHashLink>
         ))}
       </Row>
+      <div className="page-controls">
+        {data.posts.pageInfo.hasNextPage ? (
+          <button
+            className="page-btn"
+            type="button"
+            onClick={() => {
+              fetchMore({
+                variables: {
+                  first: 7,
+                  after: data.posts.pageInfo.endCursor || null,
+                  last: null,
+                  before: null,
+                },
+                updateQuery,
+              })
+            }}
+          >
+            <FontAwesomeIcon icon={faChevronLeft} />
+            <FontAwesomeIcon icon={faChevronLeft} />
+            <h6>Starsze wpisy</h6>
+          </button>
+        ) : null}
+        {data.posts.pageInfo.hasPreviousPage ? (
+          <button
+            className="page-btn"
+            type="button"
+            onClick={() => {
+              fetchMore({
+                variables: {
+                  first: null,
+                  after: null,
+                  last: 7,
+                  before: data.posts.pageInfo.startCursor || null,
+                },
+                updateQuery,
+              })
+            }}
+          >
+            <h6>Nowsze wpisy</h6>
+            <FontAwesomeIcon icon={faChevronRight} />
+            <FontAwesomeIcon icon={faChevronRight} />
+          </button>
+        ) : null}
+      </div>
     </div>
   )
 }
 
-export default WithLoading(BlogPage)
+export default BlogPage

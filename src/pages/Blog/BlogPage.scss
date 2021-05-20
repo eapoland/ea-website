@@ -89,6 +89,9 @@
     letter-spacing: 0px;
     color: #ffffff;
   }
+  h5 {
+    margin-bottom: 0;
+  }
   padding: 70px 100px 40px 100px;
   div {
     padding: 0px;
@@ -165,5 +168,23 @@
 
   .first-post:hover {
     background-size: 200%;
+  }
+}
+
+.page-controls {
+  display: flex;
+  justify-content: center;
+}
+
+.page-btn {
+  border: none;
+  width: 15%;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  margin: 1em 0.5em;
+  justify-content: center;
+  h6 {
+    margin: 0 0.5em;
   }
 }
