@@ -48,7 +48,7 @@ const About = () => (
               </li>
               <li>
                 <b>wykonalności</b> – czy i jakim kosztem jesteśmy w stanie coś
-                z tym zrobić
+                z tym zrobić?
               </li>
             </ul>
           </p>
