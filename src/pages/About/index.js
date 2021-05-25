@@ -80,9 +80,8 @@ const About = () => (
         <p>
           Prowadzimy zbiórki na rzecz najefektywniejszych organizacji
           dobroczynnych rekomendowanych przez ewaluatorów GiveWell oraz Animal
-          Charity Evaluators. Prowadzimy też działalność badawczą badawczą w
-          zakresie priorytetów dobroczynnych dla Polski i Europy
-          Środkowo-Wschodniej.
+          Charity Evaluators. Prowadzimy też działalność badawczą w zakresie
+          priorytetów dobroczynnych dla Polski i Europy Środkowo-Wschodniej.
         </p>
       </Col>
     </Row>
